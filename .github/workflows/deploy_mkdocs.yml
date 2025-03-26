@@ -30,5 +30,11 @@ jobs:
           rsync -av --delete temp_wiki/ docs/
           rm -rf temp_wiki
 
+      - name: Build MkDocs Site
+        run: mkdocs build
+
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
