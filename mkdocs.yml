@@ -1,4 +1,4 @@
-site_name: Kitodo Production Documentation!
+site_name: Kitodo Production Documentation
 nav:
   - Home: index.md
   # Add other pages as needed
