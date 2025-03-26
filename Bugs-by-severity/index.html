@@ -1,0 +1,662 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Bugs by severity - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-dangerous" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bugs by severity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-dangerous" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Dangerous
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-unusable" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 Unusable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-faulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Faulty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-fragile" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Fragile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-unsightly" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Unsightly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inconvenient" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Inconvenient
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-at-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 At a loss
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-opaque" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Opaque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-non-interoperable" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Non-interoperable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-new-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 New feature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-conception" class="md-nav__link">
+    <span class="md-ellipsis">
+      0 Conception
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Bugs by severity</h1>
+
+<p>ℹ️ As of January 27, 2021. Issues recorded up to № 4,168. ✓ = linked branch awaiting merge.</p>
+<p>⚠️ This classification is highly subjective.</p>
+<h3 id="10-dangerous">10 Dangerous</h3>
+<p><em>A risk of life or limb, property damage, security issue or the risk of loss of work.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/4106">Update Java (and maybe Tomcat) version (#4106)</a> <kbd>security</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/456">Replace current mechanism to store encrypted passwords (#456)</a> <kbd>security</kbd></li>
+</ul>
+<h3 id="9-unusable">9 Unusable</h3>
+<p><em>An essential functionality of the application is not given. There is no work-around.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3190">Migrating hierarchical processes uses wrong template (#3190)</a> <kbd>migration</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3275">Process link cannot be deleted (#3275)</a> <kbd>metadata editor</kbd> <kbd>hierarchical processes</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3368">CopyData has stopped working (#3368)</a> <kbd>import</kbd> <kbd>export</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3569">For process with workflow created by migration, all tasks are closed (#3569)</a> <kbd>migration</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3713">Indexing is pausing on long index run (#3713)</a> <kbd>search</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3722">Calendar cannot be saved (#3722)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3741">Double setting for beginning of the year (#3741)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3751">Structure tree is not sorted correctly (#3751)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3762">Metadata editor crashes with metadata group not defined in the ruleset (#3762)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4064">On Export: Duplication of smLink entries (#4064)</a> <kbd>export</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4068">Always showing multi-select metadata is not saved (#4068)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4069">Multi-line single-select metadata is not saved (#4069)</a> <kbd>metadata editor</kbd></li>
+</ul>
+<h3 id="8-faulty">8 Faulty</h3>
+<p><em>A target functionality is not given or behaves wrong.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3156">Edit metadata in the task being performed (#3156)</a> <kbd>tasks</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3154">Allow configuration of acquisition stage per workflow step (#3155)</a> <kbd>tasks</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3292">Show existence of images in process list (#3292)</a> <kbd>list view</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3341">Advanced search’s task status filter not working (#3341)</a> <kbd>search</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3403">Incomplete validation by creation of new processes (#3403)</a> <kbd>process creation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3408">Generation of “TSL/ATS” for volumes of multivolume works without title (#3408)</a> <kbd>process creation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3486">Add new InsertionPosition for structural elements in metadata editor (#3486)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3512">Metadata should be searchable via advanced search (#3512)</a> <kbd>search</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3523">Extended Search: "does not contain" option for project-search does not work (#3523)</a> <kbd>search</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3586">Missing notification function to all users (#3586)</a> <kbd>administrability</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3640">Import breaks user interface when person has multiple roles (#3640)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3646">"Assign to next element" not available in the Erweiterter Strukturbaum (#3646)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3649">Error deleting 'project' (#3649)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3664">Don't forget metadata when changing DocType (#3664)</a> <kbd>process creation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3672">Script task as first task is not started (#3672)</a> <kbd>workflow engine</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3673">Faulty script task is completed (#3673)</a> <kbd>workflow engine</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3692">Setting task to 'in process' via administrative action should also set processing user (#3692)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3692">VariableReplacer does not work properly in the script step (#3718)</a> <kbd>workflow engine</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3800">pica2kitodo_default.xsl not working with all catalogs (#3800)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3812">Configuration of metadata for year-elements (#3812)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3818">Automatic Tasks in strange state: somehow finished, but process is not propagated to next state (#3818)</a> <kbd>workflow engine</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3880">OPAC import replces shelfmarksource with CatalogIDDigital (#3880)</a> <kbd>process creation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3938">Wildcard search does not work properly (#3938)</a> <kbd>search</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4017">There is no possibility to choose a teaser image (#4017)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4099">Limitation of processes in the excel file (#4099)</a> <kbd>statistics</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4129">Difficult to tell if someone is active (#4129)</a> <kbd>session management</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4150">When saving a copied project, additional production templates are linked (#4150)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4152">Production templates deleted from a project cannot be added again (#4152)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4155">The same page can only be linked to two chapters (#4155)</a> <kbd>metadata editor</kbd></li>
+</ul>
+<h3 id="7-fragile">7 Fragile</h3>
+<p><em>An error is badly intercepted. A tiny incorrect operation leads to incredibly bad things.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3311">Remove switch to create unreachable production templates (#3311)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3546">Folder labels are not validated (#3546)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3864">Calendar editor missing confirmation when deleting blocks (#3864)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4097">Support setting type of the physical structure tree root (#4097)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4154">Inconsistent creation of processes in the event of errors (#4154)</a> <kbd>process creation</kbd></li>
+</ul>
+<h3 id="6-unsightly">6 Unsightly</h3>
+<p><em>Slipped layout, typographical errors, …</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3309">Keep the menu in place when the display gets small (#3309)</a> <kbd>layout</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3394">Pages twice in create structure element dialog (#3394)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3420">Duplicate notification when generating images (#3420)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3500">Misnomer: Permissions referred to as authorities (#3500)</a> <kbd>text</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3533">Improve reaction speed of pages with a table (#3533)</a> <kbd>list view</kbd> <kbd>performance</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3641">Deleting last list element of a page does not navigate to the previous page (#3641)</a> <kbd>list view</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3642">Duplicate 'correction message' entry in list column configuration (#3642)</a> <kbd>list view</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3704">Wrong header in "Permissions" tab of Workflow editor (#3704)</a> <kbd>workflow editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3721">Days of the week in the calendar are cut off in English (#3721)</a> <kbd>layout</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3882">Size of metadata field does not adjust to content (#3882)</a> <kbd>layout</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4019">Wrong and alien warning message when starting export (#4019)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4061">Metadata with multiple options not saved without preset (#4061)</a> <kbd>editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4080">Too long texts in ReadTheDocs (#4080)</a> <kbd>documentation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/4088">Make folder settings a page (#4088)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4139">Misnomer: Tenants referred to as clients (#4139)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4139">Deleted projects showing greyed-out in production template settings (#4153)</a> <kbd>business objects</kbd></li>
+</ul>
+<h3 id="5-inconvenient">5 Inconvenient</h3>
+<p><em>A target functionality is not available, but there is a work-around. Likewise: A target functionality can only be achieved with an unnecessarily high operating effort.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3170">Add button for everything on the migration page (#3170)</a> <kbd>migration</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3264">Move flag 'separateStructure' from Task to Workflow (#3264)</a> <kbd>workflow editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3293">Remember sort order of the process list (#3293)</a> <kbd>list view</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3300">Optimize the performance of series migration (#3300)</a> <kbd>migration</kbd> <kbd>performance</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3305">Make calendar editor change year on 'enter' press (#3305)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3316">Reports successful export only once (#3316)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3333">Kitodo script for adding images to the meta file (#3333)</a> <kbd>workflow engine</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3346">Allow to save changes to the project immediately (#3346)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3384">Folder properties not visible when locked for changes (#3384)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3392">Metadata editor is small after many mistakes (#3392)</a> <kbd>layout</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3407">Automatic recognition of multivolume works (#3407)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3413">Order of structure elements by adding a new docstruct (#3413)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3463">Missing TSL/ATS in parent process of multivolume work (#3463)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3472">Focused PF components block other PF components (#3472)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3476">Leaving pages unstructured needs always a retry of the moving action in the structure tree (#3476)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3501">Title metadata not updated on change/blur (#3501)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3519">Make "Extended Search" more visible (#3519)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3529">Combination of "process data" and "process metadata" for creation of a new process (#3529)</a> <kbd>process creation</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3561">Default values in kitodo_opac.xml (#3561)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3572">Pagination popup impedes pagination (#3572)</a> <kbd>metadata editor</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3576">Cumbersome to view workflow details (#3576)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3578">Process title cannot be selected to copy it (#3578)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3593">Selection list missing by adding matadata for newspaper issues (#3593)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3600">TSL/ATS is formed too late (#3600)</a> <kbd>import</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3606">Missing search button on the process list (#3606)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3658">Use rulesets automatically (#3658)</a> <kbd>business objects</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3661">Allow to duplicate project across clients (#3661)</a> <kbd>multitenancy</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3674">Date is lost in the calendar editor (#3674)</a> <kbd>calendar hierarchies</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3677">Application restart cannot occur during bulk process creation (#3677)</a> <kbd>administrability</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3702">Update display for other users on changes (#3702)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3703">Also attach the option to change to the next page above (#3703)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3723">Role selection ignores client changes (#3723)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3727">Processes selection rises from the dead (#3727)</a> <kbd>list view</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3738">ID column to short for big IDs (#3738)</a> <kbd>layout</kbd></li>
+<li><a href="/kitodo/kitodo-production/issues/3747">All processes selection should be possible for one or all table pages (#3747)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3817">Automatic meta data creation (linkage of files) (#3817)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3821">Meta data editor: At first time need to press the Save-Button twice (#3821)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3860">MetadataLock not updated when user leaves metadata editor via menu (#3860)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3868">Automatic date completion causes input problems (#3868)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3966">Unnecessary OPAC search in creation of processes for periodical volumes (#3966)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3970">Make catalogue search for creating of children processes configurable (#3970)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3974">Creation of processes for newspaper issues: Depiction of button "Add metadata" (#3974)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3999">Indexing does not work (#3999)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4029">Application should start and log an error if Active MQ server cannot be reached (#4029)</a> ✓</li>
+<li><a href="/kitodo/kitodo-production/issues/4034">Complaint about missing SVG when duplicating workflow (#4034)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4067">Changes in "Sub-folders and METS file groups" cannot be saved (#4067)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4101">Default sorting in list should be alphabetical by first column (#4101)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4123">Error displaying images with filenames containing non-ascii characters in MetdataEditor (#4123)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4132">When filtering lists, their "FirstRow" is not reset (#4132)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4140">User list: No distinction between enabled and disabled users (#4140)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4149">Folder usage is lost when copying a project (#4149)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4156">The text disappears when the correction message is switched on (#4156)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4164">Export to DMS should show validation errors immediately (#4164)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4165">Compact individual metadata entries in the newspaper editor (#4165)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4165">Export fails when using XSLT 2.0 (#4167)</a> ✓ <kbd>administrability</kbd></li>
+</ul>
+<h3 id="4-at-a-loss">4 At a loss</h3>
+<p><em>Poor operator guidance, the meaning of input elements is not revealed, nothing seems to happen when a function is triggered (if the function actually works). Likewise: No error message in the event of an error, it gives the impression that the function</em> has worked <em>where it did not.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3137">Missing ruleset files (#3137)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3158">Document the search index implementation (#3158)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3158">Show message when user is logged out (#3169)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3177">Combine read and write access in the workflow editor (#3177)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3183">Show progress when assigning production templates (#3183)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3192">Visual hint for resizable columns (#3192)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3294">Don’t check existence of files when saving project (#3294)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3295">Sort project titles case-insensitive (#3295)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3301">Show result when searching for subordinate processes (#3301)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3304">Improve example LDAP group (#3304)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3334">Display message if login fails due to missing LDAP server configuration (#3334)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3339">Complete and improve LDAP server configuration (#3339)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3358">Errors disappear when the task list is filtered (#3358)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3370">Error message unsightly (#3370)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3388">On desktop, projects list is incomplete (#3388)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3389">Misleading error if import returns no docType (#3389)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3390">Generate process title results in error (#3390)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3440">Inconsistent information about export in the taskmanager (#3440)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3450">Mandatory fields are not marked (#3450)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3478">Help text is missing (#3478)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3490">Edit permissions inconsistent (#3490)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3496">White page if ElasticSearch cannot be reached (#3496)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3511">Adjustments on filter menu "Add filter" (#3511)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3555">Provide XSD file for kitodo_opac.xml (#3555)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3571">Update configuration files in the repository (#3571)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3579">Tasks in list is correction: false (#3579)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3589">Deactivate delete-button for alwaysShowing (#3589)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3629">Enable multiselect in structure trees (#3629)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3632">Improve error message if no source folder for generating images is selected (#3632)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3648">Edit user shows more projects than project list (#3648)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3653">Add permission descriptions in role editor (#3653)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3654">Help texts not translated in the workflow editor (#3654)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3659">Do not use secret subfolder ”images” for linking (#3659)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3671">After a script task has finished, the process is updated slowly (#3671)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3676">No progress in creating newspaper processes (#3676)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3682">System accepts endless workflows (#3682)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3724">Roles have the same name (#3724)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3726">Rulesets of several clients must not have the same name (#3726)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3734">Export step is not completed (#3734)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3746">Active workflow can be edited (#3746)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3748">KitodoScript unaware of no selection (#3748)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3756">All tasks of prepared workflow are parallel task (#3756)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3777">Get rid of kitodo_projects.xml (#3777)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3789">Preset name when duplicating projects and process templates (#3789)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3791">Automatic task stays at 0% in task manager (#3791)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3918">Metadata editor: detail view incorrect if the size of the browser window is reduced (#3918)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3957">Re-opening closed child processes does not update the state of potentially closed parent process (#3957)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3997">SqlExceptionHelper - Connections could not be acquired from the underlying database! (#3997)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3998">Schema-validation: missing table [client_x_listColumn] (#3998)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4015">Show errors when creating symbolic links (#4015)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4016">script_createSymLink.sh with wrong content in release (#4016)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4018">Remove METS PURL and CONTENTIDS from project settings (#4018)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4038">Structure tree should show image number (or name), not internal order number (#4038)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4073">Unhelpful error message on error in ruleset XML (#4073)</a> ✓</li>
+<li><a href="/kitodo/kitodo-production/issues/4081">Not filled DialogBox in Metadata-Editor "Validate" (#4081)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4082">Not filled dialog box when pressing "Import to DMS" (#4082)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4131">UI crashes when loading ruleset fails (#4131)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4158">Show task list after correction step (#4158)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4160">In the pagination dialog, set value of the first selected page (#4160)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4161">Page list in the pagination dialog is not updated (#4161)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4162">Added image appears in an unexpected position in the structure tree (#4162)</a></li>
+</ul>
+<h3 id="3-opaque">3 Opaque</h3>
+<p><em>Confusing program code, cleaning up necessary.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3153">Change the way the Elasticsearch index is addressed (#3153)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3159">Unify source code names (#3159)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3327">Make more functions static (#3327)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3328">Structure the repository more clearly (#3328)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3330">Selenium tests link existing processes / delete link (#3330)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3331">Replace short variable names (#3331)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3335">Simplify properties of processes (#3335)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3448">Deleting a process is inefficient (#3448)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3497">Application tries to load missing resources (#3497)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3540">Missing shared interface for objects from database or index (#3540)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3719">Column indexAction not updated (#3719)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3889">Remove or repair user property configProductionDateShow (#3889)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3890">User contains JSON data where a relation should be (#3890)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3934">Clean up lists implementation in Hibernate (#3934)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3939">Tests failing because of deleted mets.xml file (#3939)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4032">Misnomer: Rename ConfigCore and ParameterCore (#4032)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4087">Use primitives for null checks (#4087)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4130">Change all table names to consist of lowercase letters only (#4130)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4168">Dead code: org.kitodo.production.editor.XMLEditor (#4168)</a></li>
+</ul>
+<h3 id="2-non-interoperable">2 Non-interoperable</h3>
+<p><em>An in-house solution is used where a standard solution could be used.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3371">Support image processing by an image server (#3371)</a></li>
+</ul>
+<h3 id="1-new-feature">1 New feature</h3>
+<p><em>A completely new type of functionality is desired.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/25">Save filter settings per user (#25)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3154">Support different modules per interface simultaneously (#3154)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3258">Deleting process directory through script call (#3258)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3337">Search for ruleset name with no result (#3337)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3779">How to configure Folders for PDF (#3779)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3792">Sorting in lists (#3792)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3834">Meta data editor - validation warning (#3834)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3837">Support mets:area (#3837)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3932">Missing issue title in the METS-files of issues (#3932)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4014">Enable individual users are authenticated against database even when LDAP is on (#4014)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4159">Add filter to show only correction steps (#4159)</a></li>
+</ul>
+<h3 id="0-conception">0 Conception</h3>
+<p><em>Discussion with an open outcome, no clear goal yet.</em></p>
+<ul>
+<li><a href="/kitodo/kitodo-production/issues/3336">What about the LDAP on/off switch? (#3336)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3396">How to update minor version (#3396)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3694">Indexing issue: illegal character in path (#3694)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/3745">Desktop sometimes appears incomplete in Vivaldi (#3745)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4039">Shouldn't the "unstructured media" be labeled with the doctype? (#4039)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4157">Why the drop-down with the current task in the correction message? (#4157)</a></li>
+<li><a href="/kitodo/kitodo-production/issues/4163">Function to insert pictures does not work (#4163)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

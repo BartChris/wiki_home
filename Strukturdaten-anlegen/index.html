@@ -1,0 +1,409 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Strukturdaten anlegen - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#allgemeines" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strukturdaten anlegen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#allgemeines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allgemeines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anlegen-im-strukturbaum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anlegen im Strukturbaum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anlegen-in-der-galerie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anlegen in der Galerie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiele
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiele">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strukturierung-in-der-galerie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strukturierung in der Galerie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strukturierung-im-strukturbaum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strukturierung im Strukturbaum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verknupfung-eines-images-an-zwei-strukturelemente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verknüpfung eines Images an zwei Strukturelemente
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Strukturdaten anlegen</h1>
+
+<h2 id="allgemeines">Allgemeines</h2>
+<p>Strukturdaten können auf unterschiedliche Weise angelegt werden: </p>
+<ol>
+<li>Im Strukturbaum mit der rechten Maustaste das Strukturelement anklicken, unter dem das neue Element erstellt werden soll und "Element hinzufügen" auswählen. Es öffnet sich ein Fenster, in dem der Strukturtyp und die zugewiesenen Seiten ausgewählt werden können. </li>
+<li>In der Galerie-Ansicht die Images auswählen, die einem Strukturelement zugewiesen werden sollen. Mit der rechten Maustaste das Menü "Element hinzufügen und ausgewählte Medien zuweisen" anzeigen und auswählen. Es öffnet sich ein Fenster, in dem der Strukturtyp und die zugewiesenen Seiten ausgewählt werden können. </li>
+</ol>
+<p>ℹ️ <strong>Hinweis</strong>: Bei der Variante 1 wird in einigen Fällen die Image-Nummerierung angepasst, wodurch die ursprüngliche Reihenfolge nicht mehr rekonstruierbar ist. </p>
+<p>ℹ️ <strong>Tipp</strong>: In dem Menü zur Auswahl des Strukturelements kann der Anfangsbuchstabe des Elements eingegeben werden, um rascher das Element zu finden. In dem Menü zur Auswahl der Seiten kann die Imagenummer und die Paginierungsnummer eingetragen werden. </p>
+<h2 id="anlegen-im-strukturbaum">Anlegen im Strukturbaum</h2>
+<p>Mit Rechts-Klick auf des Strukturelement, von dem aus ein neues Strukturelement angelegt werden soll, wird das Menü aufgerufen. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/66619864/169521728-e52f3d11-502c-40a2-b0c7-acaf6bf37597.png" /></p>
+<p>Danach wird die Position und der Typ des neuen Strukturelements festgelegt.</p>
+<p>ℹ️ <strong>Tipp</strong>: Nach dem Aufklappen des Menüs werden mit Eingabe des Anfangsbuchstabens des Elements (E für Einband) alle Elemente mit dem Anfangsbuchstaben nacheinander angezeigt. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/66619864/169521859-e90aab4e-47d5-4082-9fdd-0cc4efcf24c2.png" /></p>
+<p>Danach werden dem Strukturelement die zugehörigen Seiten zugewiesen.  </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/66619864/169521922-d484fe16-2df1-412c-adfc-df046cec9d8c.png" /></p>
+<p>Danach wird das Strukturelement im Strukturbaum und in der Bild-Galerie angezeigt. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/66619864/169521977-16e57ffe-439f-4cde-952a-e89b05b7fbcc.png" /></p>
+<h2 id="anlegen-in-der-galerie">Anlegen in der Galerie</h2>
+<p>Strukturelemente können auch über die Galerie erstellt werden. Die Auswahl der Images erfolgt über:</p>
+<ul>
+<li>"Strg" + Mausklick → Auswahl mehrerer einzelner Images</li>
+<li>Mausklick erstes Image / "Umschalt" (Shift) + Mausklick letztes Image →   Auswahl mehrerer zusammenhängender Images </li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/66619864/169522091-e3854bd3-f493-4d79-8429-f6b95143e67e.png" /></p>
+<h2 id="beispiele">Beispiele</h2>
+<p>ℹ️ <strong>Hinweis</strong>: Die Dateigröße der nachfolgenden zwei Beispiele musste auf Grund von Limitierungen durch Github verkleinert werden, dadurch kommt es zu Artefakten und Unschärfen. Wir bitten dies zu entschuldigen. </p>
+<h3 id="strukturierung-in-der-galerie">Strukturierung in der Galerie</h3>
+<p><img alt="Strukturierung-Galerie" src="https://user-images.githubusercontent.com/66619864/169524367-60f9f2a9-e41c-4ac8-a39c-e7747030453b.gif" /></p>
+<h3 id="strukturierung-im-strukturbaum">Strukturierung im Strukturbaum</h3>
+<p><img alt="Strukturierung-Strukturbaum" src="https://user-images.githubusercontent.com/66619864/169522905-992d0e29-0d1d-4b11-b73e-63d57b916b12.gif" /></p>
+<h2 id="verknupfung-eines-images-an-zwei-strukturelemente">Verknüpfung eines Images an zwei Strukturelemente</h2>
+<p>Ein Image kann nur einem Strukturelement zugewiesen werden. Wenn auf einem Image ein Strukturelement endet und ein neues Strukturelement beginnt, kann eine Verknüpfung erstellt werden. Dies erfolgt in folgenden Schritten: </p>
+<ol>
+<li>Das Strukturelement mit dem "geteilten" Image anlegen</li>
+<li>Das folgende Strukturelement ohne das "geteilte" Image anlegen (ansonsten wird es nur dem zweiten Strukturelement zugewiesen)</li>
+<li>Mit rechter Maustaste das "geteilte" Image im Strukturbaum auswählen und Verknüpfung einfügen</li>
+</ol>
+<p><img alt="Strukturierung-Mehrfach-Elemente" src="https://user-images.githubusercontent.com/66619864/170945404-a6ca60b1-e965-4cb0-9d99-678ad545ccff.gif" /></p>
+<p>Ein Image kann auch mehreren Strukturelementen zugewiesen werden. Zum Beispiel, falls sich mehrere Abbildungen auf einer Seite befinden. </p>
+<p><img alt="VerknüpfungImages" src="https://github.com/kitodo/kitodo-production/assets/14835770/bbfdfad9-b3ed-4c98-ae8a-34876d403a8c" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

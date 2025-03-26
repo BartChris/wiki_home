@@ -1,0 +1,490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Paginierung einlesen - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#paginierung-einlesen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Paginierung einlesen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="paginierung-einlesen">Paginierung einlesen</h1>
+<p>Seit der Version 1.10 werden die Images automatisch eingelesen und als <em>uncounted</em> bezeichnet. Zudem werden alle Images dem Band, beziehungsweise der Monografie als ungezählte Seite zugewiesen. </p>
+<p>Da dies in aller Regel nicht mit der Paginierung des Originals übereinstimmt, kann die Paginierung anhand des Originals eingegeben werden. Die Paginierung dient jedoch nur der besseren Benutzbarkeit. Technisch gesehen, kann jedem Image eine beliebige Seitenummerierung zugewiesen werden. Bevor der Ablauf an einem Beispiel demonstriert wird, werden einige allgemeine Funktionen beschrieben.</p>
+<h1 id="auswahlflachen">Auswahlflächen</h1>
+<p>Die Funktionen der Paginierung sind auf zwei Felder aufgeteilt:</p>
+<ul>
+<li><em>Auswahl der Seiten</em></li>
+<li><em>Paginierung festlegen</em></li>
+</ul>
+<p><img alt="" src="../images/paginierung2.jpg" /></p>
+<h2 id="auswahl-der-seiten">Auswahl der Seiten</h2>
+<p>Hier können die Images ausgewählt werden, die umbenannt werden sollen und es wird die bestehende Paginierung der Images angezeigt. Die linke Ziffer ist die Nummer des Images, die rechte Ziffer stellt die Seitenzählung des Mediums dar.</p>
+<h2 id="paginierung-festlegen">Paginierung festlegen</h2>
+<p>Hier können unterschiedliche Funktionen genutzt werden:</p>
+<ul>
+<li>Auswahl der Zählung<ul>
+<li>arabisch</li>
+<li>römisch</li>
+<li>unnummeriert</li>
+<li>Freitext</li>
+<li>Für Fortgeschrittene</li>
+</ul>
+</li>
+<li>Eingabe der Ziffer, mit der die Zählung beginnen soll<ul>
+<li>Wenn eine Seitenzählung erst mit 5 beginnt, kann hier 5 eingetragen werden.</li>
+</ul>
+</li>
+<li>Auswahlbox fikitve Paginierung<ul>
+<li>die ausgewählte Zählung wird in eckigen Klammern dargestellt</li>
+</ul>
+</li>
+<li>Seitenzählung<ul>
+<li>Seitenzählung</li>
+<li>Spaltenzählung</li>
+<li>Blattzählung</li>
+<li>RectoVerso</li>
+<li>Blattzählung</li>
+<li>RectoVerso</li>
+<li>Seitenzählung</li>
+</ul>
+</li>
+<li>Auswahl der Images, die von der Zählung betroffen sind ( oder )<ul>
+<li><em>Nur die markierten Seiten</em>: Zuweisung der ausgewählten Zählung auf bestimmte Images</li>
+<li><em>Ab der ersten markierten Seite</em>: Zuweisung der ausgewählten Zählung auf alle Images ab einem bestimmten Image</li>
+</ul>
+</li>
+</ul>
+<h1 id="ablauf">Ablauf</h1>
+<p><img alt="" src="../images/Images%20einlesen2.jpg" /></p>
+<p>Die verschiedenen Zählungen innerhalb einer Vorlage werden nacheinander abgebildet. Über die Funktion <em>Ab dem gewählten Image</em> kann eine neue Zählung die vorher Gewählte überschreiben.</p>
+<p>Arbeitsschritt Paginierung ausführen:</p>
+<p>Ungezählte Seiten am Anfang und/oder am Ende der Vorlage (Einband, Titel, sonstiges):</p>
+<ul>
+<li>Imagenummern markieren</li>
+<li>Paginierung festlegen: unnummeriert –&gt; Funktion <em>Nur die markierten Seiten</em></li>
+</ul>
+<p>oder:</p>
+<ul>
+<li>erstes Image markieren</li>
+<li>Paginierung festlegen: unnummeriert –&gt; Funktion <em>Ab der ersten markierten Seite</em></li>
+</ul>
+<p>Erste gezählte Seite ermitteln:</p>
+<ul>
+<li>erstes Image mit eingedruckter Seitenzählung aufblättern und in der Auswahl markieren</li>
+<li>Paginierung festlegen<ul>
+<li>Art der Zählung arabisch/römisch/Freitext</li>
+<li>erste eingedruckte Seitenzahl eingeben</li>
+<li>Art der Zählung: Seitenzählung/Spaltenzählung/Blattzählung/Recto-Verso</li>
+<li>Funktion <em>Ab der markierten Seite</em> für Übernahme als fortlaufende Zählung</li>
+</ul>
+</li>
+</ul>
+<p>Weitere Seitenzählungen einfügen:</p>
+<ul>
+<li>oben genannten Ablauf wiederholen: Images auswählen - Paginierung festlegen - Funktion Ab der ersten markierten Seite (neu beginnende Zählung) oder Nur die markierten Seiten (zwischengeschobene, abweichende Zählung)</li>
+</ul>
+<p><img alt="" src="../images/Images%20einlesen3.jpg" /></p>
+<p>Abschließen der Paginierung:</p>
+<ul>
+<li>Funktion <em>Speichern</em>: Zwischenspeichern der Eingaben</li>
+<li>Funktion <em>Speichern und Zurück</em>: Speichern der Eingaben und Beenden der Bearbeitung des Vorgangs im Metadateneditor</li>
+<li>Funktion <em>Zurück</em>: Beenden der Bearbeitung des Vorgangs im Metadateneditor ohne Speichern</li>
+</ul>
+<h1 id="paginierung-fur-fortgeschrittene">Paginierung für Fortgeschrittene</h1>
+<p>Kompliziertere Paginierungen lassen sich mit der Menüfunktion <em>Für Fortgeschrittene</em> erstellen. In einfachen Fällen verhält sich die Paginierung intuitiv, erkennt Wörter, Ziffern, groß- und kleingeschriebene römische Zahlen sowie Doppelseitenpaginierung in beiden Richtungen automatisch.</p>
+<table>
+<thead>
+<tr>
+<th>Beispiel</th>
+<th>Eingabe</th>
+<th>Erwartbare Paginierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ziffer in Klammern</td>
+<td><code>(4)</code></td>
+<td>(4), (5), (6), …</td>
+</tr>
+<tr>
+<td>Wort und Ziffer</td>
+<td><code>Seite 1</code></td>
+<td>Seite 1, Seite 2, Seite 3, …</td>
+</tr>
+<tr>
+<td>Fiktive kleine römische Zahlen</td>
+<td><code>[iii]</code></td>
+<td>[iii], [iv], [v], …</td>
+</tr>
+<tr>
+<td>Spaltenzählung, teils fikitiv</td>
+<td><code>[4] [5] 6</code></td>
+<td>[4] [5] 6, [7] [8] 9, [10] [11] 12, …</td>
+</tr>
+<tr>
+<td>Doppelseitenpaginierung rechts-nach-links</td>
+<td><code>3 2</code></td>
+<td>3 2, 5 4, 7 6, …</td>
+</tr>
+<tr>
+<td>Zahlen überspringen</td>
+<td><code>3 6</code></td>
+<td>3 6, 9 12, 15 18, …</td>
+</tr>
+<tr>
+<td>Gemischte Zahlentypen</td>
+<td><code>[ii] 3</code></td>
+<td>[ii] 3, [iv] 5, [vi] 7, …</td>
+</tr>
+</tbody>
+</table>
+<p>Die Schrittweite des Zählers lässt sich auch explizit durch anhängen einer hochgestellten Ziffer bestimmen. Diese lassen sich durch Buttons oder, je nach Betriebssystem und Tastatureinstellungen durch Tastenkombinationen eingeben:</p>
+<table>
+<thead>
+<tr>
+<th>Zeichen</th>
+<th>Schrittweite</th>
+<th>Button</th>
+<th>QWERTZ, Windows</th>
+<th>Neo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>°</code></td>
+<td>0</td>
+<td><kbd>+0</kbd></td>
+<td><kbd>⇧</kbd> + <kbd>^</kbd></td>
+<td><kbd>⇧</kbd> + <kbd>1</kbd></td>
+</tr>
+<tr>
+<td><code>½</code></td>
+<td>+½</td>
+<td><kbd>+½</kbd></td>
+<td><kbd>Alt</kbd> + (<kbd>1</kbd>, <kbd>7</kbd>, <kbd>1</kbd>)*</td>
+<td><kbd>Mod3</kbd> + <kbd>Tab</kbd>, <kbd>1</kbd>, <kbd>2</kbd></td>
+</tr>
+<tr>
+<td><code>¹</code></td>
+<td>+1</td>
+<td><kbd>+1</kbd></td>
+<td><kbd>Alt</kbd> + (<kbd>0</kbd>, <kbd>1</kbd>, <kbd>8</kbd>, <kbd>5</kbd>)*</td>
+<td><kbd>^</kbd>, <kbd>1</kbd></td>
+</tr>
+<tr>
+<td><code>²</code></td>
+<td>+2</td>
+<td><kbd>+2</kbd></td>
+<td><kbd>AltGr</kbd> + <kbd>2</kbd></td>
+<td><kbd>^</kbd>, <kbd>2</kbd></td>
+</tr>
+<tr>
+<td><code>³</code></td>
+<td>+3</td>
+<td><kbd>+3</kbd></td>
+<td><kbd>AltGr</kbd> + <kbd>3</kbd></td>
+<td><kbd>^</kbd>, <kbd>3</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>*) <kbd>Alt</kbd> gedrückt halten, die Ziffernfolge <em>auf dem Nummernblock</em> eingeben, <kbd>Alt</kbd> loslassen</p>
+<p>Das Zeichen <code>½</code> führt zur halben Schrittweite, das heißt zur doppelten Zählung (für Blattzählung). Die Eingabe <code>3½</code> erzeugt die Zählung 3, 3, 4, 4, …. Mit dem umgekehrten Fragezeichen (<code>¿</code>) wird das jeweils nachfolgende Zeichen nur auf der zwischengeschobenen Seite ausgegeben, mit dem umgekehrten Rufzeichen (<code>¡</code>) nur auf der eigentlichen Seite. Die Eingabe <code>1°¡r¿v½</code> erzeugt die Paginierung 1r, 1v, 2r, 2v, …. (Nach der 1 wird der Zähler noch nicht hochgezählt (sonst bekämen wir 1r, 2v, 4r, 5v, …), am Ende der Sequenz um ½.) Um mit einem halben Zählerstand zu beginnen, kann das <code>½</code> auch an den Anfang gestellt werden. Die Eingabe <code>½2°¡r¿v½</code> erzeugt die Paginierung 2v, 3r, 3v, …. Auch folgendes wäre möglich: <code>1° (¡`Vorder`¿`Rück`seite)½</code> erzeugt 1 (Vorderseite), 1 (Rückseite), 2 (Vorderseite), 2 (Rückseite), …</p>
+<p>Von <em>Accent Graves</em> umschlossener Text (z.B. <code>`mil.`</code>, die römische Zahl MIL ≙ 1049) wird als Text verstanden. Dies kann eingesetzt werden, um die Unterseitenzählung enthaltener Werke zu generieren.</p>
+<p><strong>Beispiel:</strong> In einer Publikumszeitschrift ist auf Seite [26] ein elfseitiger Werbeträger eingeklebt (die Rückseite des Werbeträgers ist vollflächig verklebt). Erreicht werden soll folgende Paginierung:</p>
+<ul>
+<li>…</li>
+<li>25</li>
+<li>([26] - [1])</li>
+<li>([26] - 2 3)</li>
+<li>([26] - 4 5)</li>
+<li>([26] - 6 7)</li>
+<li>([26] - 8 9)</li>
+<li>([26] - 10 11)</li>
+<li>27</li>
+</ul>
+<p>Während die Zeile <code>([26] - [1])</code> am einfachsten durch Freitexteingabe erstellt wird, wäre es schön, die folgenden Zeilen automatisch erzeugen zu lassen. Dies kann durch Eingabe des folgenden Textes in das Feld erreicht werden: <code>([`26` - 2 3)</code>. </p>
+<p>Die Paginierung für Fortgeschrittene kann über den Konfigurationsparameter <code>advancedPaginationEnabled=false</code> ausgeschaltet werden, falls dieses erforderlich ist.</p>
+<h1 id="weitere-informationen">Weitere Informationen</h1>
+<p>Tutorial: <a href="https://github.com/kitodo/kitodo-tutorials/blob/master/kitodo2/07_paginierung-definieren.md">Paginierung definieren</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Installationsanleitung für Kitodo.Production 2.0 - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#grundinstallation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installationsanleitung für Kitodo.Production 2.0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-debian-8-jessie-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Debian 8 (Jessie) installieren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mysql-konfiguration-fur-innodb-anpassen-in-etcmysqlmycnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. MySQL-Konfiguration für InnoDB anpassen (in /etc/mysql/my.cnf)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mysql-datenbank-und-nutzer-fur-kitodo-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MySQL-Datenbank und -Nutzer für Kitodo anlegen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tomcat-konfiguration-fur-speichermanagement-anpassen-in-etcdefaulttomcat7" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tomcat-Konfiguration für Speichermanagement anpassen (in /etc/default/tomcat7)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-kitodoproduction-war-datei-von-github-ins-webapps-verzeichnis-des-tomcat-kopieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Kitodo.Production WAR-Datei von GitHub ins webapps Verzeichnis des Tomcat kopieren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-datenbank-fur-kitodo-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Datenbank für Kitodo anlegen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>Die folgende Anleitung beschreibt exemplarisch die Installation von Kitodo.Production auf einem Debian-System mit lokaler Datenbank. Für andere Distributionen sind insbesondere die Pfadangaben entsprechend anzupassen. Soll ein separater Datenbankserver verwendet werden, ist dies beim Anlegen des Datenbanknutzers für Kitodo bei der Rechtevergabe zu beachten (Schritt 3 der Grundinstallation).</p>
+<p>Kitodo.Production benötigt mindestens 1 leistungsstarke CPU und 2 GB RAM sowie ca. 10 GB Festplattenspeicher. Darin ist der Speicherplatzbedarf der Digitalisierungsdaten nicht enthalten!</p>
+<p>Stand: Oktober 2016.</p>
+<h1 id="grundinstallation">Grundinstallation</h1>
+<h2 id="1-debian-8-jessie-installieren">1. Debian 8 (Jessie) installieren</h2>
+<ul>
+<li>OpenJDK7</li>
+<li>Tomcat7</li>
+<li>MySQL-Server 5.5 / MariaDB</li>
+</ul>
+<h2 id="2-mysql-konfiguration-fur-innodb-anpassen-in-etcmysqlmycnf">2. MySQL-Konfiguration für InnoDB anpassen (in <code>/etc/mysql/my.cnf</code>)</h2>
+<ul>
+<li><code>[mysqld] innodb_file_per_table</code></li>
+<li>MySQL-Dienst neustarten</li>
+</ul>
+<h2 id="3-mysql-datenbank-und-nutzer-fur-kitodo-anlegen">3. MySQL-Datenbank und -Nutzer für Kitodo anlegen</h2>
+<ul>
+<li><code>mysql -uroot -p</code></li>
+<li><code>create database kitodo;</code></li>
+<li><code>grant all privileges on kitodo.* to kitodo@localhost identified by ´kitodo´;</code></li>
+<li><code>flush privileges;</code></li>
+<li><code>exit;</code></li>
+</ul>
+<h2 id="4-tomcat-konfiguration-fur-speichermanagement-anpassen-in-etcdefaulttomcat7">4. Tomcat-Konfiguration für Speichermanagement anpassen (in /<code>etc/default/tomcat7</code>)</h2>
+<ul>
+<li><code>JAVA_OPTS="-Djava.awt.headless=true -Xmx1920m -XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC"</code></li>
+<li>Tomcat-Dienst neustarten</li>
+</ul>
+<p>Hinweis: Wenn unter Tomcat neben Kitodo.Production noch weitere Applikationen (beispielsweise Solr für Kitodo.Presentation) laufen, dann sollte ein größerer Wert für MaxPermSize konfiguriert werden, beispielsweise <code>-XX:MaxPermSize=256m</code>.</p>
+<h2 id="5-kitodoproduction-war-datei-von-github-ins-webapps-verzeichnis-des-tomcat-kopieren">5. Kitodo.Production WAR-Datei von GitHub ins <code>webapps</code> Verzeichnis des Tomcat kopieren</h2>
+<p>Die WAR-Datei findet man auf https://github.com/kitodo/kitodo-production/releases, und man kopiert sie bei Debian nach <code>/var/lib/tomcat7/webapps/</code>.</p>
+<ul>
+<li>Deployment läuft automatisch</li>
+<li><code>WEB-INF/classes/hibernate.cfg.xml</code> anpassen</li>
+<li><code>hibernate.connection.url</code></li>
+<li><code>hibernate.connection.username</code></li>
+<li><code>hibernate.connection.password</code></li>
+</ul>
+<h2 id="6-datenbank-fur-kitodo-anlegen">6. Datenbank für Kitodo anlegen</h2>
+<ul>
+<li>DatenbankSchema (schema.sql) und Beispieldaten (default.sql) aus Unterverzeichnis <code>database-setup</code> der entpackten Kitodo Anwendung einspielen:</li>
+<li><code>mysql -ukitodo -Dkitodo --password=kitodo &lt; schema.sql</code></li>
+<li><code>mysql -ukitodo -Dkitodo --password=kitodo &lt; default.sql</code></li>
+<li>Tomcat neu starten, damit die erstellte Datenbank gefunden und genutzt werden kann</li>
+</ul>
+<h1 id="grundkonfiguration">Grundkonfiguration</h1>
+<h2 id="1-verzeichnisse-anlegen-pfade-nach-bedarf-anpassen">1. Verzeichnisse anlegen (Pfade nach Bedarf anpassen)</h2>
+<ul>
+<li><code>/usr/local/kitodo/config/</code> (Konfiguration)</li>
+<li><code>/usr/local/kitodo/debug/</code> (*) (Debug-Meldungen des OPAC-Beautifiers)</li>
+<li><code>/usr/local/kitodo/import/</code></li>
+<li><code>/usr/local/kitodo/logs/</code> (*) (Log-Meldungen)</li>
+<li><code>/usr/local/kitodo/messages/</code> (Lokalisierungsdateien)</li>
+<li><code>/usr/local/kitodo/metadata/</code> (*) (Vorgangsverzeichnisse)</li>
+<li><code>/usr/local/kitodo/plugins/</code> (Funktionsmodule)</li>
+<li><code>./command/</code></li>
+<li><code>./import/</code></li>
+<li><code>./opac/</code></li>
+<li><code>./step/</code></li>
+<li><code>./validation/</code></li>
+<li><code>/usr/local/kitodo/rulesets/</code> (Regelsätze)</li>
+<li><code>/usr/local/kitodo/scripts/</code> (Shell-Skripte)</li>
+<li><code>/usr/local/kitodo/swap/</code> (*) (ausgelagerte Vorgänge)</li>
+<li><code>/usr/local/kitodo/temp/</code> (*) (Temporäre Dateien)</li>
+<li><code>/usr/local/kitodo/users/</code> (*) (Benutzer-Verzeichnisse)</li>
+<li><code>/usr/local/kitodo/xslt/</code> (XSL-Stylesheets)</li>
+</ul>
+<h2 id="2-zugriffsrechte-fur-tomcat-user-z-b-tomcat7-fur-die-verzeichnisse-anpassen">2. Zugriffsrechte für Tomcat-User (z. B. tomcat7) für die Verzeichnisse anpassen</h2>
+<ul>
+<li>Lese-/Schreibzugriff als auch Ausführungsrecht für mit * markierte Verzeichnisse</li>
+<li>Lesezugriff und Ausführungsrecht für alle anderen Verzeichnisse</li>
+</ul>
+<h2 id="3-web-infclassesgoobi_configproperties-anpassen">3. <code>WEB-INF/classes/goobi_config.properties</code> anpassen</h2>
+<ul>
+<li>Verzeichnisse konfigurieren</li>
+<li><code>MetadatenVerzeichnis=/usr/local/kitodo/metadata/</code></li>
+<li><code>RegelsaetzeVerzeichnis=/usr/local/kitodo/rulesets/</code></li>
+<li><code>KonfigurationVerzeichnis=/usr/local/kitodo/config/</code></li>
+<li><code>xsltFolder=/usr/local/kitodo/xslt/</code></li>
+<li><code>dir_Users=/usr/local/kitodo/users/</code></li>
+<li><code>debugFolder=/usr/local/kitodo/debug/</code></li>
+<li><code>pluginFolder=/usr/local/kitodo/plugins/</code></li>
+<li><code>swapPath=/usr/local/kitodo/swap/</code></li>
+<li><code>tempfolder=/usr/local/kitodo/temp/</code></li>
+<li>
+<p><code>localMessages=/usr/local/kitodo/messages/</code></p>
+</li>
+<li>
+<p>Shell-Skripte konfigurieren (Vorlagen unter scripts/)</p>
+</li>
+<li><code>script_createDirUserHome=/usr/local/kitodo/scripts/script_createDirUserHome.sh</code> (Neues Benutzerverzeichnis anlegen)</li>
+<li><code>script_createDirMeta=/usr/local/kitodo/scripts/script_createDirMeta.sh</code> (Neues Vorgangsverzeichnis anlegen)</li>
+<li><code>script_createSymLink=/usr/local/kitodo/scripts/script_createSymLink.sh</code> (Vorgang im Home-Verzeichnis verlinken)</li>
+<li>
+<p><code>script_deleteSymLink=/usr/local/kitodo/scripts/script_deleteSymLink.sh</code> (Vorgang aus dem Home-Verzeichnis entfernen)</p>
+</li>
+<li>
+<p>Namenskonventionen</p>
+</li>
+<li><code>ImagePrefix=\\d{8}</code> (Namenskonvention für Image-Dateien)</li>
+<li><code>ImageSorting=number</code> (Numerische oder alphanumerische Sortierung)</li>
+</ul>
+<h2 id="4-web-infclasseslog4jproperties-anpassen">4. <code>WEB-INF/classes/log4j.properties</code> anpassen:</h2>
+<ul>
+<li><code>log4j.appender.rolling.File=/usr/local/kitodo/logs/kitodo.log</code></li>
+</ul>
+<h2 id="5-schritt">5. Schritt:</h2>
+<ul>
+<li>Alle <code>goobi_*.xml</code> und <code>modules.xml</code> aus <code>WEB-INF/classes/</code> in das in <code>goobi_config.properties</code> angegebene <code>KonfigurationVerzeichnis</code> kopieren </li>
+</ul>
+<h2 id="6-schritt">6. Schritt</h2>
+<ul>
+<li><code>docket.xsl</code> und <code>docket_multipage.xsl</code> aus <code>WEB-INF/classes/</code> in das in <code>goobi_config.properties</code> angegebene <code>xsltFolder</code> kopieren</li>
+</ul>
+<h2 id="7-schritt">7. Schritt:</h2>
+<ul>
+<li>Shell-Skripte (*.sh) aus dem Unterverzeichnis <code>scripts</code> der deployten Kitodo Anwendung in <code>goobi_config.properties</code> angegebenen Stellen (<code>script_*</code>) legen, Ausführungsrechte geben und ggf. anpassen</li>
+</ul>
+<h2 id="8-optional">8. <em>Optional</em>:</h2>
+<ul>
+<li>Verzeichnis <code>pages/imagesTemp/</code> in der WebApp als symbolischen Link auf ein temporäres Verzeichnis anlegen</li>
+<li>Damit Tomcat symbolischen Links folgt, muss auch dessen Konfiguration angepasst werden!</li>
+</ul>
+<h2 id="9-datei-goobi_projectsxml-im-konfigurationverzeichnis-anpassen">9. Datei <code>goobi_projects.xml</code> im <code>KonfigurationVerzeichnis</code> anpassen:</h2>
+<ul>
+<li><code>&lt;project name="default"&gt;</code> wird als Standard-Projekt verwendet, weitere Projekte können definiert werden</li>
+<li><code>&lt;item&gt;/&lt;hide&gt;</code> definiert das Mapping einzelner Metadatenfelder, wobei "hide"-Felder in der Oberfläche nicht angezeigt, aber dennoch prozessiert werden</li>
+<li><code>from="werk"</code> speichert Wert in Werkstückeigenschaften, <code>from="vorlage"</code> speichert Wert in Vorlageneigenschaften</li>
+<li><code>isdoctype</code>/<code>isnotdoctype</code> bestimmt, ob ein Feld für bestimmte Dokumenttypen angezeigt/nicht angezeigt werden soll; mehrere Dokumenttypen können durch "|" getrennt werden</li>
+<li><code>ughbinding</code> bestimmt, ob der Wert in der meta.xml gespeichert wird</li>
+<li><code>metadata</code> bestimmt, in welches Metadatenfeld der Wert gespeichert werden soll</li>
+<li><code>required</code> definiert Pflichtfelder</li>
+<li><code>docstruct="topstruct"</code> speichert den Wert im obersten Strukturelement (z. B. mehrbändiges Werk), docstruct="firstchild" speichert den Wert im ersten Kind-Strukturelement (z. B. Band)</li>
+<li><code>&lt;processtitle&gt;</code> bestimmt die Bildungsvorschrift für Vorgangstitel</li>
+<li><code>&lt;opac use="true"&gt;</code> definiert, ob ein Katalogimport möglich sein soll</li>
+<li><code>&lt;catalogue&gt;</code> gibt den Standard-Katalog aus goobi_opac.xml an</li>
+<li><code>&lt;defaultdoctype&gt;</code> gibt den voreingestellten Standard-Dokumenttyp aus goobi_opac.xml an</li>
+<li><code>&lt;templates use="true"/&gt;</code></li>
+<li><code>&lt;metadatageneration use="true"/&gt;</code></li>
+<li><code>&lt;tifheader&gt;</code> bestimmt die Bildungsvorschrift der TIF-Header</li>
+<li><code>&lt;dmsImport/&gt;</code></li>
+<li><code>&lt;validate&gt;</code> bestimmt Validierungs- und Umformungsregeln für einzelne Metadatenfelder</li>
+<li><code>docstruct</code> (Regel trifft nur auf bestimmte Dokumenttypen zu)</li>
+<li><code>metadata</code> (Regel trifft nur auf bestimmtes Metadatenfeld zu)</li>
+<li><code>startswith</code> (Metadatenfeld beginnt mit dieser Zeichenfolge)</li>
+<li><code>endswith</code> (Metadatenfeld endet mit dieser Zeichenfolge)</li>
+<li><code>createelementfrom</code> (Namen der zusammenzuführenden Metadatenfelder)</li>
+</ul>
+<h2 id="10-schritt">10. Schritt:</h2>
+<ul>
+<li>Datei <code>goobi_metadataDisplayRules.xml</code> im <code>KonfigurationVerzeichnis</code> anpassen</li>
+</ul>
+<h2 id="11-schritt">11. Schritt:</h2>
+<ul>
+<li>Datei <code>goobi_processProperties.xml</code> im <code>KonfigurationVerzeichnis</code> anpassen</li>
+</ul>
+<h2 id="12-schritt">12. Schritt:</h2>
+<ul>
+<li>Datei <code>goobi_digitalCollections.xml</code> im <code>KonfigurationVerzeichnis</code> anpassen</li>
+</ul>
+<h2 id="13-schritt">13. Schritt</h2>
+<ul>
+<li>die Regelsatzdateien aus dem <code>rulesets</code> Verzeichnis der deployten Kitodo Anwendung in das in <code>goobi_config.properties</code> angegebene <code>RegelsaetzeVerzeichnis</code> kopieren</li>
+</ul>
+<h1 id="plugins-installieren">Plugins installieren</h1>
+<h2 id="1-opac-import-plugin">1. OPAC-Import-Plugin</h2>
+<ul>
+<li>Datei <code>PicaPlugin.jar</code> aus dem <code>plugin/opac</code> Unterverzeichnis der deployten Kitodo Anwendung im Tomcat in das Unterverzeichnis <code>opac</code> des in <code>goobi_config.properties</code> angegebenen <code>pluginFolder</code> kopieren oder unter Beibehaltung des Namens zu verlinken</li>
+<li><code>goobi_opac.xml</code> im KonfigurationVerzeichnis anpassen</li>
+<li>Überprüfen, ob eigener Verbundkatalog in <code>&lt;catalogue&gt;</code> definiert ist</li>
+<li><code>&lt;doctypes&gt;</code> nach Bedarf um eigene Dokumenttypen aus PICA 0500/002@ ergänzen</li>
+<li><code>&lt;beautify&gt;</code> nach Bedarf um eigene Konditionen ergänzen</li>
+</ul>
+<h2 id="2-pica-massimport-plugin">2. Pica-Massimport-Plugin</h2>
+<ul>
+<li>Datei <code>PicaMassImport.jar</code> aus dem <code>plugin/import</code> Unterverzeichnis der deployten Kitodo Anwendung im Tomcat in das Unterverzeichnis <code>import</code> des in <code>goobi_config.properties</code> angegebenen <code>pluginFolder</code> kopieren oder unter Beibehaltung des Namens zu verlinken</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

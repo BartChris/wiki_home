@@ -1,0 +1,751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Aktualisierungshinweise auf Kitodo.Production 3.x - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ubersicht" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aktualisierungshinweise auf Kitodo.Production 3.x
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schatzungen-der-benotigten-zeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schätzungen der benötigten Zeit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voraussetzungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorbereitende-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorbereitende Schritte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vorbereitende Schritte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xstream-dateien-konvertieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      XStream-Dateien konvertieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadaten-in-zeitungsvorgangen-verschieben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadaten in Zeitungsvorgängen verschieben
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-des-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update des Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update des Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regelsatze-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regelsätze erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datenbank-migrieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datenbank migrieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      ElasticSearch installieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagemagick-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageMagick installieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmdateien-aktualisieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmdateien aktualisieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-der-anwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration der Anwendung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration der Anwendung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadaten-konvertieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadaten konvertieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suchmaschinenindex-aufbauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suchmaschinenindex aufbauen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bildderivate-generieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bildderivate generieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflows-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflows erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchien-erzeugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchien erzeugen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeitungsverlaufe-migrieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zeitungsverläufe migrieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Aktualisierungshinweise auf Kitodo.Production 3.x</h1>
+
+<h2 id="ubersicht">Übersicht</h2>
+<ul>
+<li><a href="#schätzungen-der-benötigten-zeit">Schätzung der benötigten Zeit</a></li>
+<li><a href="#voraussetzungen">Voraussetzungen</a></li>
+<li><a href="#vorbereitende-schritte">Vorbereitende Schritte</a><ul>
+<li><a href="#xstream-dateien-konvertieren">XStream-Dateien konvertieren</a></li>
+<li><a href="#metadaten-in-zeitungsvorgängen-verschieben">Metadaten in Zeitungsvorgängen verschieben</a></li>
+</ul>
+</li>
+<li><a href="#update-des-systems">Update des Systems</a><ul>
+<li><a href="#regelsätze-erstellen">Regelsätze erstellen</a></li>
+<li><a href="#datenbank-migrieren">Datenbank migrieren</a></li>
+<li><a href="#elasticsearch-installieren">ElasticSearch installieren</a></li>
+<li><a href="#imagemagick-installieren">ImageMagick installieren</a></li>
+<li><a href="#programmdateien-aktualisieren">Programmdateien aktualisieren</a></li>
+</ul>
+</li>
+<li><a href="#migration-der-anwendung">Migration der Anwendung</a><ul>
+<li><a href="#metadaten-konvertieren">Metadaten konvertieren</a></li>
+<li><a href="#suchmaschinenindex-aufbauen">Suchmaschinenindex aufbauen</a></li>
+<li><a href="#bildderivate-generieren">Bildderivate generieren</a></li>
+<li><a href="#workflows-erstellen">Workflows erstellen</a></li>
+<li><a href="#hierarchien-erzeugen">Hierarchien erzeugen</a></li>
+<li><a href="#zeitungsverläufe-migrieren">Zeitungsverläufe migrieren</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="schatzungen-der-benotigten-zeit">Schätzungen der benötigten Zeit</h2>
+<p>Die folgenden Werte sind grobe Zusammenfassungen erlebter Zeiträume, die unter verschiedenen technischen Umständen gewonnen wurden und Ihnen eine vage Vorstellung davon geben sollen, wie lange die technischen Prozesse der Migration dauern können. Ihre eigenen Erfahrungen können jedoch abweichen.</p>
+<p>🕑 Datenbankmigration: ≈ 1 Minute je 1000 Vorgänge<br />
+🕑 Metadaten konvertieren: ≈ 20 Min. / 1000 Vorgänge (abweichend wurden Werte bis zu 2 Std. / 1000 Vorgänge gemeldet)<br />
+🕑 Indexierung: ≈ 20 Min. / 1000 Vorgänge<br />
+🕑 Hierarchiemigration: ≈ 1 Stunde / 1000 Vorgänge<br />
+🕑 Bilder generieren: 1000 Bilder / Stunde und Thread<br />
+🕑 Zeitungsmigration: <em>keine Prognose bekannt</em></p>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+<p>Diese Anleitung setzt voraus, dass Sie Ihr System zuerst auf <a href="../releases/tag/kitodo-production-2.3.1">Version 2.3</a> [[migriert|Aktualisierungshinweise auf Kitodo.Production 2.3.0]] haben.</p>
+<h2 id="vorbereitende-schritte">Vorbereitende Schritte</h2>
+<h3 id="xstream-dateien-konvertieren">XStream-Dateien konvertieren</h3>
+<p>Die Production-Version 2.3 unterstützte zwei verschiedene interne Dateiformate: METS und XStream. Version 3.2 unterstützt nur METS. Daher müssen Sie Ihre Version 2.3 verwenden, um zuvor alle internen XStream-Dateien in METS-Dateien zu konvertieren.</p>
+<p>Gehen Sie dazu zu den Projekteinstellungen und ändern Sie die interne Formateinstellung in METS. Wählen Sie dann alle Vorgänge dieses Projekts aus und führen Sie KitodoScript <code>action:rewriteProcessMetadata</code> aus.</p>
+<h3 id="metadaten-in-zeitungsvorgangen-verschieben">Metadaten in Zeitungsvorgängen verschieben</h3>
+<p>In mehreren Einrichtungen wurden beim Anlegen von Zeitungsvorgängen in Production 2 Metadaten, die für die Ausgaben relevant sind, auf der obersten Ebene (im <code>topstruct</code>, z.B. <code>Newspaper</code>) oder auf der ersten Unterebene (im <code>firstchild</code>, also auf der Jahresebene, z.B. <code>NewspaperYear</code>) abgelegt und werden beim Export der Vorgänge mittels copyData-Ausdrücken an die richtige Stelle kopiert. copyData-Ausdrücke stehen in Production 3 in dieser Form nicht mehr zur Verfügung. Daher müssen Sie, wenn Sie betroffen sind, die Metadaten noch in Production 2 vor der Migration mit der KitodoScript <code>action:copyData</code> an die gewünschte Stelle innerhalb der Zeitungsvorgänge verschieben.</p>
+<p>Die Systax der <code>action:copyData</code> unterscheidet sich leicht von den anderen KitodoScript-Aktionen. Die Regeln werden direkt hinter dem Kommando ohne ein Präfix und ohne umschließende Anführungszeichen angegeben. Beispiel:</p>
+<pre><code>action:copyData /PublicationYear[0]/PublicationMonth[*]/PublicationDay[*]/Issue@DatePublished \=format "%1$04d-%2$02d-%3$02d" #1@TitleDocMain #2@TitleDocMainShort #3@TitleDocMainShort
+</code></pre>
+<h2 id="update-des-systems">Update des Systems</h2>
+<h3 id="regelsatze-erstellen">Regelsätze erstellen</h3>
+<p>In Version 3 wurde das Regelsatz-Dateiformat geändert. Sie sollten sich intensiv mit dem neuen Format beschäftigen und einen neuen Regelsatz für Ihre Daten erstellen. Wenn Sie möchten, können Sie einen von Zeutschel GmbH bereitgestellten experimentellen <a href="../../kitodo-contrib/tree/master/zeutschel/rulesetconverter">Regelsatzkonverter</a> verwenden, um einen Vorschlag zu generieren. Beachten Sie, dass die Ausgabe dieses Programms nicht perfekt ist und später manuell überprüft und korrigiert werden muss. (Sie ersparen sich jedoch einiges an Schreibarbeit).</p>
+<p>ℹ️ In Version 3.2 sind Import und Export nicht mehr im Regelsatz definiert, sondern in XSLT-Dateien, die ein gewisses Maß an Flexibilität bieten. XSLT ist eine Programmiersprache, die in XML geschrieben ist und zum Konvertieren von XML in andere Darstellungsformen (z.B. HTML) verwendet wird. Sie benötigen umfassende Kenntnisse in XSLT, um den Import und Export ordnungsgemäß zu konfigurieren.</p>
+<h3 id="datenbank-migrieren">Datenbank migrieren</h3>
+<p>⚠️ <strong>Erstellen Sie vor dem Ändern der Datenbank eine Sicherungskopie und stoppen Sie die laufende Webanwendung!</strong></p>
+<p>Bevor Sie das Migrationsskript ausführen, sollten Sie sicherstellen, dass Ihr Datenbankschema mit dem Standardschema der Version 2.3 übereinstimmt.</p>
+<p>Hier sind einige Skriptlösungen für die folgenden Inkonsistenzen:</p>
+<details><summary>Wenn Ihre Datenbank noch <code>bit</code>-Felder enthält, sollten Sie diese in <code>tinyint(1)</code> konvertieren.</summary>
+
+
+<pre><code class="language-sql">ALTER TABLE `benutzer` CHANGE `IstAktiv` `IstAktiv` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `benutzer` CHANGE `mitMassendownload` `mitMassendownload` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `benutzer` CHANGE `confVorgangsdatumAnzeigen` `confVorgangsdatumAnzeigen` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `benutzereigenschaften` CHANGE `IstObligatorisch` `IstObligatorisch` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `metadatenkonfigurationen` CHANGE `orderMetadataByRuleset` `orderMetadataByRuleset` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `projekte` CHANGE `useDmsImport` `useDmsImport` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `projekte` CHANGE `dmsImportCreateProcessFolder` `dmsImportCreateProcessFolder` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `projekte` CHANGE `projectIsArchived` `projectIsArchived` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `prozesse` CHANGE `IstTemplate` `IstTemplate` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `prozesse` CHANGE `swappedOut` `swappedOut` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `prozesse` CHANGE `inAuswahllisteAnzeigen` `inAuswahllisteAnzeigen` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `prozesseeigenschaften` CHANGE `IstObligatorisch` `IstObligatorisch` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typMetadaten` `typMetadaten` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typAutomatisch` `typAutomatisch` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typImportFileUpload` `typImportFileUpload` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typExportRus` `typExportRus` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typImagesLesen` `typImagesLesen` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typImagesSchreiben` `typImagesSchreiben` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typExportDMS` `typExportDMS` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typBeimAnnehmenModul` `typBeimAnnehmenModul` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typBeimAnnehmenAbschliessen` `typBeimAnnehmenAbschliessen` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typBeimAnnehmenModulUndAbschliessen` `typBeimAnnehmenModulUndAbschliessen` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typBeimAbschliessenVerifizieren` `typBeimAbschliessenVerifizieren` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `typScriptStep` `typScriptStep` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `schritte` CHANGE `batchStep` `batchStep` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `vorlageneigenschaften` CHANGE `IstObligatorisch` `IstObligatorisch` TINYINT(1) NULL DEFAULT NULL;
+ALTER TABLE `werkstueckeeigenschaften` CHANGE `IstObligatorisch` `IstObligatorisch` TINYINT(1) NULL DEFAULT NULL;
+
+ALTER TABLE `prozesse` CHANGE `wikifield` `wikifield` LONGTEXT NULL DEFAULT NULL;
+ALTER TABLE `prozesseeigenschaften` CHANGE `Wert` `Wert` LONGTEXT NULL DEFAULT NULL;
+ALTER TABLE `vorlageneigenschaften` CHANGE `Wert` `Wert` LONGTEXT NULL DEFAULT NULL;
+ALTER TABLE `werkstueckeeigenschaften` CHANGE `Wert` `Wert` LONGTEXT NULL DEFAULT NULL;
+</code></pre>
+
+</details>
+
+<details><summary>Wenn eines dieser booleschen Felder nicht initialisiert ist, sollten Sie es initialisieren</summary>
+
+
+<pre><code class="language-sql">UPDATE benutzer SET IstAktiv = 0 WHERE IstAktiv IS NULL OR IstAktiv != 1;
+UPDATE benutzer SET mitMassendownload = 0 WHERE mitMassendownload IS NULL OR mitMassendownload != 1;
+UPDATE benutzer SET confVorgangsdatumAnzeigen = 0 WHERE confVorgangsdatumAnzeigen IS NULL OR confVorgangsdatumAnzeigen != 1;
+UPDATE benutzereigenschaften SET IstObligatorisch = 0 WHERE IstObligatorisch IS NULL OR IstObligatorisch != 1;
+UPDATE metadatenkonfigurationen SET orderMetadataByRuleset = 0 WHERE orderMetadataByRuleset IS NULL OR orderMetadataByRuleset != 1;
+UPDATE projectfilegroups SET previewImage = 0 WHERE previewImage IS NULL OR previewImage != 1;
+UPDATE projekte SET useDmsImport = 0 WHERE useDmsImport IS NULL OR useDmsImport != 1;
+UPDATE projekte SET dmsImportCreateProcessFolder = 0 WHERE dmsImportCreateProcessFolder IS NULL OR dmsImportCreateProcessFolder != 1;
+UPDATE projekte SET projectIsArchived = 0 WHERE projectIsArchived IS NULL OR projectIsArchived != 1;
+UPDATE prozesse SET IstTemplate = 0 WHERE IstTemplate IS NULL OR IstTemplate != 1;
+UPDATE prozesse SET swappedOut = 0 WHERE swappedOut IS NULL OR swappedOut != 1;
+UPDATE prozesse SET inAuswahllisteAnzeigen = 0 WHERE inAuswahllisteAnzeigen IS NULL OR inAuswahllisteAnzeigen != 1;
+UPDATE prozesseeigenschaften SET IstObligatorisch = 0 WHERE IstObligatorisch IS NULL OR IstObligatorisch != 1;
+UPDATE schritte SET typMetadaten = 0 WHERE typMetadaten IS NULL OR typMetadaten != 1;
+UPDATE schritte SET typAutomatisch = 0 WHERE typAutomatisch IS NULL OR typAutomatisch != 1;
+UPDATE schritte SET typAutomatisch = 0 WHERE typAutomatisch IS NULL OR typAutomatisch != 1;
+UPDATE schritte SET typImportFileUpload = 0 WHERE typImportFileUpload IS NULL OR typImportFileUpload != 1;
+UPDATE schritte SET typExportRus = 0 WHERE typExportRus IS NULL OR typExportRus != 1;
+UPDATE schritte SET typImagesLesen = 0 WHERE typImagesLesen IS NULL OR typImagesLesen != 1;
+UPDATE schritte SET typImagesSchreiben = 0 WHERE typImagesSchreiben IS NULL OR typImagesSchreiben != 1;
+UPDATE schritte SET typExportDMS = 0 WHERE typExportDMS IS NULL OR typExportDMS != 1;
+UPDATE schritte SET typBeimAnnehmenModul = 0 WHERE typBeimAnnehmenModul IS NULL OR typBeimAnnehmenModul != 1;
+UPDATE schritte SET typBeimAnnehmenAbschliessen = 0 WHERE typBeimAnnehmenAbschliessen IS NULL OR typBeimAnnehmenAbschliessen != 1;
+UPDATE schritte SET typBeimAnnehmenModulUndAbschliessen = 0 WHERE typBeimAnnehmenModulUndAbschliessen IS NULL OR typBeimAnnehmenModulUndAbschliessen != 1;
+UPDATE schritte SET typBeimAbschliessenVerifizieren = 0 WHERE typBeimAbschliessenVerifizieren IS NULL OR typBeimAbschliessenVerifizieren != 1;
+UPDATE schritte SET typScriptStep = 0 WHERE typScriptStep IS NULL OR typScriptStep != 1;
+UPDATE schritte SET batchStep = 0 WHERE batchStep IS NULL OR batchStep != 1;
+UPDATE vorlageneigenschaften SET IstObligatorisch = 0 WHERE IstObligatorisch IS NULL OR IstObligatorisch != 1;
+UPDATE werkstueckeeigenschaften SET IstObligatorisch = 0 WHERE IstObligatorisch IS NULL OR IstObligatorisch != 1;
+</code></pre>
+
+</details>
+
+<details><summary>Es sollte keine toten Referenzen geben. Löschen Sie verwaiste Datensätze.</summary>
+
+
+<pre><code class="language-sql">SET FOREIGN_KEY_CHECKS=0;
+DELETE FROM batchesprozesse WHERE batchesprozesse.ProzesseID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+DELETE FROM batchesprozesse WHERE batchesprozesse.BatchID NOT IN (SELECT batches.BatchID FROM batches);
+UPDATE benutzer SET benutzer.ldapgruppenID = NULL WHERE benutzer.ldapgruppenID NOT IN (SELECT ldapgruppen.ldapgruppenID FROM ldapgruppen);
+DELETE FROM benutzereigenschaften WHERE benutzereigenschaften.BenutzerID NOT IN (SELECT benutzer.BenutzerID FROM benutzer);
+DELETE FROM benutzergruppenmitgliedschaft WHERE benutzergruppenmitgliedschaft.BenutzerGruppenID NOT IN (SELECT benutzergruppen.BenutzergruppenID FROM benutzergruppen);
+DELETE FROM benutzergruppenmitgliedschaft WHERE benutzergruppenmitgliedschaft.BenutzerID NOT IN (SELECT benutzer.BenutzerID FROM benutzer);
+DELETE FROM history WHERE history.processID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+DELETE FROM projectfilegroups WHERE projectfilegroups.ProjekteID NOT IN (SELECT projekte.ProjekteID FROM projekte);
+DELETE FROM projektbenutzer WHERE projektbenutzer.BenutzerID NOT IN (SELECT benutzer.BenutzerID FROM benutzer);
+DELETE FROM projektbenutzer WHERE projektbenutzer.ProjekteID NOT IN (SELECT projekte.ProjekteID FROM projekte);
+UPDATE prozesse SET prozesse.ProjekteID = NULL WHERE prozesse.ProjekteID NOT IN (SELECT projekte.ProjekteID FROM projekte);
+UPDATE prozesse SET prozesse.MetadatenKonfigurationID = NULL WHERE prozesse.MetadatenKonfigurationID NOT IN (SELECT metadatenkonfigurationen.MetadatenKonfigurationID FROM metadatenkonfigurationen);
+UPDATE prozesse SET prozesse.docketID = NULL WHERE prozesse.docketID NOT IN (SELECT dockets.docketID FROM dockets);
+DELETE FROM prozesseeigenschaften WHERE prozesseeigenschaften.prozesseID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+DELETE FROM schritte WHERE schritte.ProzesseID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+UPDATE schritte SET schritte.BearbeitungsBenutzerID = NULL WHERE schritte.BearbeitungsBenutzerID NOT IN (SELECT benutzer.BenutzerID FROM benutzer);
+DELETE FROM schritteberechtigtebenutzer WHERE schritteberechtigtebenutzer.BenutzerID NOT IN (SELECT benutzer.BenutzerID FROM benutzer);
+DELETE FROM schritteberechtigtebenutzer WHERE schritteberechtigtebenutzer.schritteID NOT IN (SELECT schritte.SchritteID FROM schritte);
+DELETE FROM schritteberechtigtegruppen WHERE schritteberechtigtegruppen.BenutzerGruppenID NOT IN (SELECT benutzergruppen.BenutzergruppenID FROM benutzergruppen);
+DELETE FROM schritteberechtigtegruppen WHERE schritteberechtigtegruppen.schritteID NOT IN (SELECT schritte.SchritteID FROM schritte);
+DELETE FROM vorlagen WHERE vorlagen.ProzesseID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+DELETE FROM vorlageneigenschaften WHERE vorlageneigenschaften.vorlagenID NOT IN (SELECT vorlagen.VorlagenID FROM vorlagen);
+DELETE FROM werkstuecke WHERE werkstuecke.ProzesseID NOT IN (SELECT prozesse.ProzesseID FROM prozesse);
+DELETE FROM werkstueckeeigenschaften WHERE werkstueckeeigenschaften.werkstueckeID NOT IN (SELECT werkstuecke.WerkstueckeID FROM werkstuecke);
+SET FOREIGN_KEY_CHECKS=1;
+</code></pre>
+
+</details>
+
+<details><summary>Das Datenbankmodul sollte InnoDB sein.</summary>
+
+
+<pre><code class="language-sql">ALTER TABLE batches ENGINE=innodb;
+ALTER TABLE benutzer ENGINE=innodb;
+ALTER TABLE benutzereigenschaften ENGINE=innodb;
+ALTER TABLE benutzergruppen ENGINE=innodb;
+ALTER TABLE benutzergruppenmitgliedschaft ENGINE=innodb;
+ALTER TABLE dockets ENGINE=innodb;
+ALTER TABLE history ENGINE=innodb;
+ALTER TABLE ldapgruppen ENGINE=innodb;
+ALTER TABLE metadatenkonfigurationen ENGINE=innodb;
+ALTER TABLE projectfilegroups ENGINE=innodb;
+ALTER TABLE projektbenutzer ENGINE=innodb;
+ALTER TABLE projekte ENGINE=innodb;
+ALTER TABLE prozesse ENGINE=innodb;
+ALTER TABLE prozesseeigenschaften ENGINE=innodb;
+ALTER TABLE schritte ENGINE=innodb;
+ALTER TABLE schritteberechtigtebenutzer ENGINE=innodb;
+ALTER TABLE schritteberechtigtegruppen ENGINE=innodb;
+ALTER TABLE vorlagen ENGINE=innodb;
+ALTER TABLE vorlageneigenschaften ENGINE=innodb;
+ALTER TABLE werkstuecke ENGINE=innodb;
+ALTER TABLE werkstueckeeigenschaften ENGINE=innodb;
+ALTER TABLE batches ENGINE=innodb;
+ALTER TABLE batches ENGINE=innodb;
+ALTER TABLE batches ENGINE=innodb;
+ALTER TABLE batches ENGINE=innodb;
+ALTER TABLE batches ENGINE=innodb;
+</code></pre>
+
+</details>
+
+<p>Wenn Ihr System diesen Inkonsistenzen nicht unterliegt, sollten die Skripte keine Änderungen vornehmen. Im Anschluss können Sie das Migrations-SQL-Skript ausführen. Das Migrations-SQL-Skript funktioniert teilweise nicht, <a href="https://github.com/kitodo/kitodo-production/pull/4049#issuecomment-795161923">diese Fehler sollen jedoch nicht behoben werden</a>. Sie können die Migration jedoch lokal wie <a href="https://github.com/kitodo/kitodo-production/pull/4049/files">hier angegeben</a> anpassen.</p>
+<h3 id="elasticsearch-installieren">ElasticSearch installieren</h3>
+<p>In Version 3 wird Production erneut durch einen Suchmaschinenindex unterstützt. ~~Da die Suchmaschinenintegration in Production 3.2 auf <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html#_why_are_mapping_types_being_removed">einem Missverständnis bei der Verwendung des Suchmaschinenindex</a> beruht, der in ElasticSearch-Version 6 entfernt wurde, können Sie keine neueren Versionen der Software verwenden. Stellen Sie sicher, dass Sie <strong>die neueste Veröffentlichung von Version 5</strong> installieren. Sie können dazu den Paketmanager verwenden:~~</p>
+<details><summary>Nicht mehr aktuell: Kommandos zum Installieren von ElasticSearch v. 5</summary>
+
+
+<pre><code class="language-sh">export JAVA_HOME=/usr/lib/jvm/default-java
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo add-apt-repository &quot;deb https://artifacts.elastic.co/packages/5.x/apt stable main&quot;
+sudo apt-get update
+sudo apt-get install elasticsearch
+sudo systemctl enable elasticsearch
+sudo systemctl start elasticsearch
+</code></pre>
+
+</details>
+
+<p>⚠️ Ab Production v. 3.4 wird ElasticSearch v. 7 benötigt. Hinweise zur Installation <a href="/kitodo/kitodo-production/issues/4839">hier</a>.</p>
+<h3 id="imagemagick-installieren">ImageMagick installieren</h3>
+<p>Production 3 verwendet das ImageMagick-Programm, um verschiedene Bilddateiformate zu generieren, z.B. um im Browser anzeigbare Bilder aus TIFF-Dateien zu erstellen, da die vollständige Unterstützung von TIFF-Dateien für Java 8 und neuer nicht mehr verfügbar ist. Sie können ImageMagick mit dem Paketmanager installieren:</p>
+<pre><code>sudo apt-get install imagemagick
+</code></pre>
+<p>⚠️ Stellen Sie sicher, dass das ältere <code>convert</code>-Programm installiert wird. (Dies ist unter Linux immer noch der Normalfall, muss jedoch bei der Installation unter Windows manuell aktiviert werden.)</p>
+<h3 id="programmdateien-aktualisieren">Programmdateien aktualisieren</h3>
+<p>Verschieben Sie das <code>kitodo</code>-Verzeichnis und die <code>kitodo.war</code>-Datei aus dem <code>webapps</code>-Verzeichnis von Tomcat. Löschen Sie das <code>kitodo</code>-Verzeichnis im <code>work/Catalina/localhost</code>-Verzeichnis von Tomcat.</p>
+<p>ℹ️ Production 3.2 wird mit Modulen geliefert, diese unterscheiden sich jedoch sowohl von den Modulen aus Version 2.3 (die in der Datei <code>modules.xml</code> konfiguriert werden mussten) als auch von den Plug-Ins. Keines von beidem wird in Production 3.2 mehr unterstützt. (Sie können die <code>modules.xml</code>-Datei und das <code>plugins</code>-Verzeichnis löschen.) Die Module in Production 3.2 sind nur ein Teil des Programms, das von der WAR-Datei der Webanwendung getrennt wurde, um Querbezüge zwischen verschiedenen Teilen des Programms zu reduzieren.</p>
+<p>Erstellen Sie ein Verzeichnis <code>/usr/local/kitodo/modules</code> und entpacken Sie dort die mit der Version gelieferten Module.</p>
+<p>Starten Sie Tomcat, damit er die Webanwendung entpackt. Dann halten Sie ihn wieder an.</p>
+<p>Überprüfen Sie die Einstellungen in der Datei <code>webapps/kitodo/WEB-INF/kitodo_config.properties</code> und passen Sie diese ggf. an.</p>
+<p>Erstellen Sie einen Ordner <code>/usr/local/kitodo/diagrams</code>. Dieser muss für den Tomcat schreibbar sein.</p>
+<p>Löschen Sie den Ordner <code>messages</code>.</p>
+<p>Kopieren Sie alle XSLT-Skripten aus <code>webapps/kitodo/WEB-INF/classes/xslt/</code> in den <code>xslt</code>-Ordner. Ersetzen Sie die vorhandenen Regelsätze durch die neu erstellten. Erstellen Sie für jeden Regelsatz eine Export-XSLT-Datei gleichen Namens (nur mit der Endung <code>.xsl</code> anstelle <code>.xml</code>). Sie können sich dabei am Beispiel <code>ruleset_default.xsl</code> orientieren.</p>
+<p>Hinterlegen Sie die Dateien <code>kitodo_opac.xml</code> und <code>kitodo_fileFormats.xml</code> aus der Config-Zip-Datei im <code>config</code>-Ordner und die XSL-Dateien aus der Zip-Datei im <code>xslt</code>-Ordner.</p>
+<p>Während der Migration empfehlen wir, den Log-Level auf die Einstellung <code>trace</code> (Ablaufverfolgung) zu erhöhen. Dies führt zu einer hilfreicheren Ausgabe während der Migration. Ändern Sie beispielsweise die Datei <code>webapps/kitodo/WEB-INF/log4j2.xml</code> wie folgt:</p>
+<pre><code class="language-xml">&lt;Loggers&gt;
+    &lt;!-- Die Logger de.unigoettingen.sub.search.opac und org.goobi werden nicht mehr benötigt --&gt;
+    &lt;Logger name=&quot;org.kitodo&quot; level=&quot;trace&quot; additivity=&quot;false&quot;&gt;
+        &lt;AppenderRef ref=&quot;LOGFILE&quot; /&gt; &lt;!-- Entfernen Sie hier das Attribut level=&quot;error&quot; --&gt;
+    &lt;/Logger&gt;
+    &lt;Root level=&quot;error&quot;&gt;
+        &lt;AppenderRef ref=&quot;STDOUT&quot;/&gt;
+        &lt;AppenderRef ref=&quot;LOGFILE&quot;/&gt;
+    &lt;/Root&gt;
+&lt;/Loggers&gt;
+</code></pre>
+<p>Starten Sie Tomcat wieder.</p>
+<h2 id="migration-der-anwendung">Migration der Anwendung</h2>
+<p>Melden Sie sich mit einem Benutzer mit Administratorrechten bei der Benutzeroberfläche an.</p>
+<p>ℹ️ Abhängig von der Konfiguration Ihres Benutzers müssen Sie dem Benutzer möglicherweise zusätzliche Berechtigungen über die Datenbank erteilen. Die Berechtigungen werden als Rollen in der Datenbank verwaltet, wobei jede <code>role</code> eine Sammlung mehrerer einzelner Berechtigungen ist. In Production 3.2 gibt es eine ganze Reihe von Einzelberechtigungen. Sie können Ihrem Benutzer Rollen zuweisen, indem Sie Verweise auf die Tabelle <code>user_x_role</code> hinzufügen.</p>
+<p>Nach der Anmeldung landen Sie auf der Konfigurationsseite "System" auf der Registerkarte "Indexierung" und werden mit den Informationen konfrontiert, dass der Index aktualisiert werden muss. Das stimmt, aber vor der Indizierung sollten wir die METS-Dateien Ihrer Prozesse konvertieren, um sie indexieren zu können.</p>
+<h3 id="metadaten-konvertieren">Metadaten konvertieren</h3>
+<p>Wechseln Sie zur Registerkarte Migration. Wählen Sie “Metadaten konvertieren”, wählen Sie alle Projekte aus, die Sie migrieren möchten, und klicken Sie auf "Metadaten konvertieren".</p>
+<h3 id="suchmaschinenindex-aufbauen">Suchmaschinenindex aufbauen</h3>
+<p>Wechseln Sie zurück zur Registerkarte “Indexierung”. Erstellen Sie das Indexprofil und starten Sie die Indexierung. Wenn die Indexierunghängt, müssen Sie möglicherweise Tomcat neu starten, sich erneut anmelden und die Indizierung neu starten. Warten Sie, bis die Indexierung abgeschlossen ist.</p>
+<h3 id="bildderivate-generieren">Bildderivate generieren</h3>
+<p>Überprüfen Sie zum Generieren von Bildableitungen zunächst Ihre Projektkonfiguration. Es gibt einen Ordnerbereich. Stellen Sie sicher, dass der Quellordner korrekt konfiguriert ist. Aktivieren Sie die Bilderzeugung für jeden Ordner, dessen Inhalt generiert werden soll.</p>
+<p>Zunächst müssen Sie möglicherweise zusätzliche Bildordner erstellen, falls diese noch nicht vorhanden sind. Gehen Sie zu Prozesse und wählen Sie alle Prozesse aus, deren Bilder Sie generieren möchten. Führen Sie KitodoScript <code>action:createFolders</code> aus.</p>
+<p>Anschließend können Sie KitodoScript <code>action:generateImages folders:all images:all</code> ausführen. Die Bilder werden asynchron im Hintergrund generiert. Sie können den Fortschritt im Task-Manager überwachen.</p>
+<h3 id="workflows-erstellen">Workflows erstellen</h3>
+<p>Das Erstellen von Workflows ist eine intellektuelle Aufgabe, die von einem Fachverantwortlichen zu bearbeiten ist. Sie gehen auf das <em>System</em>, und wählen die <em>Workflows-migrieren</em>-Schaltfläche. Wählen Sie Projekte aus. Die Analyse wird durchgeführt. (Dies kann einige Zeit dauern, abhängig davon, wie viele Datensätze aus der Datenbank gelesen werden müssen. Warten Sie einfach oder beobachten Sie die Protokolldatei, um den Fortschritt zu sehen.) Anschließend werden die nach Vorkommen absteigenden Workflows in der folgenden Liste angezeigt. Sie klicken auf die Kreuzpfeile, um einen Workflow zu erstellen (oder einen vorhandenen Workflow wiederzuverwenden).</p>
+<p>Beim Erstellen eines Workflows müssen Sie jeder Workflowaufgabe Rollen zuweisen. Sie können den Workflow bestehender Prozesse jedoch nicht ändern. Setzen Sie den Workflow auf aktiv und speichern Sie ab.</p>
+<p>Später müssen Sie aus dem von Ihnen erstellten Workflow eine Produktionsvorlage erstellen und dann zuweisen. Das kann ein bisschen dauern. Warten Sie, bis der Inhalt des Fensters ausgeblendet wird (oder sehen Sie sich die Protokolldatei an, um festzustellen, wann der Vorgang abgeschlossen ist).</p>
+<h3 id="hierarchien-erzeugen">Hierarchien erzeugen</h3>
+<p>Die Hierarchie-Migrationsaufgabe wird automatisch ausgeführt, um hierarchische Prozesse zu erstellen.</p>
+<p>ℹ️ Hierarchische Prozesse sind eine neue Funktion in Production 3, die eine weitere Komplexitätsebene hinzufügt. Prozesse können als Eltern − Kinder miteinander verknüpft werden, um hierarchische Abhängigkeiten von Katalogdatensätzen wie Serien oder mehrbändigen Werken darzustellen. Die übergeordneten Daten werden nur einmal in der übergeordneten Einheit gespeichert.</p>
+<p>Hier muss die Migration alle Metadaten aus Dateien aller Prozesse einlesen, um übergeordnete Metadaten hierarchischer Eltern zu sammeln, dann Eltern zu erstellen und Links in Datenbank und Dateien zu erstellen. Dies ist komplex und dauert einige Zeit, wird jedoch im Hintergrund vollautomatisch ausgeführt.</p>
+<h3 id="zeitungsverlaufe-migrieren">Zeitungsverläufe migrieren</h3>
+<p>Dies ist dasselbe wie für die Hierarchie, aber basierend auf einem Batch aus Production 2.3 für eine Zeitung wird eine Hierarchie der Zeitung erstellt, die noch komplexer ist. Dies passiert ebenfalls im Hintergrund.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

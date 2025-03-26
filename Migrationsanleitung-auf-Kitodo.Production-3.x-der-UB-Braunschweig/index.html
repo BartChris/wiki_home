@@ -1,0 +1,711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Migration von Kitodo.Production 2.x auf Kitodo.Production 3.X - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migration-von-kitodoproduction-2x-auf-kitodoproduction-3x" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration von Kitodo.Production 2.x auf Kitodo.Production 3.X
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorbereitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorbereitung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vorbereitung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datenvorbereitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datenvorbereitung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datensicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datensicherung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datensicherung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#die-datenbank-kitodo-bzw-goobi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Die Datenbank kitodo (bzw. goobi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#das-verzeichnis-metadaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Das Verzeichnis metadaten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weitere-sicherungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weitere Sicherungen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regelsatz-konvertieren-und-anpassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regelsatz konvertieren und anpassen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#durchfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Durchführung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Durchführung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Upgrade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datenbank-konvertierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datenbank Konvertierung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kitodo-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kitodo Software Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anpassen-der-nutzerrechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anpassen der Nutzerrechte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadaten-konvertierung-und-projekt-indexierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadaten Konvertierung und Projekt Indexierung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erstellen-der-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erstellen der Workflows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serielle-publikationen-migrieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serielle Publikationen migrieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachbereitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachbereitung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nachbereitung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einzelne-projekte-nach-bzw-erneut-migrieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einzelne Projekte nach- bzw. erneut Migrieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="migration-von-kitodoproduction-2x-auf-kitodoproduction-3x">Migration von Kitodo.Production 2.x auf Kitodo.Production 3.X</h1>
+<p>Die Migration besteht im Wesentlichen aus den Schritten: Vorbereitung, Durchführung, Nachbereitung. Für die Migration an der UBBS wurden u.a. die Aktualisierungshinweise auf GitHub (konkret Kitodo 3.x) verwendet. Zu erwähnen sei hier allerdings, das die Aktualisierungshinweise auf GitHub mittlerweile nicht mehr ganz aktuell sind (Stand 2022.04.30). Daraus folgt für die Migration hier, dass Anleitungsschritte zur Vor- und Nachbereitung der Datenbankintegrität (seien es SQL-Skripte oder direkte Datenbankmanipulationen) obsolet sind und im bereitgestellten Migrations-Skript migration_3-3.sql aufgenommen wurden. (Das Erstellen von min. einem benutzerdefinierten Filter muss jedoch weiter durchgeführt werden: Siehe Migration → Vorbereitung → Datenvorbereitung → Punkt 2.)</p>
+<h2 id="ubersicht">Übersicht</h2>
+<ul>
+<li><a href="#vorbereitung">Vorbereitung</a><ul>
+<li><a href="#datenvorbereitung">Datenvorbereitung</a></li>
+<li><a href="#Datensicherung">Datensicherung</a></li>
+<li><a href="#regelsatz-konvertieren-und-anpasen">Regelsatz konvertieren und anpassen</a></li>
+</ul>
+</li>
+<li><a href="#durchführung">Durchführung</a><ul>
+<li><a href="#server-upgrade">Server Upgrade</a></li>
+<li><a href="#datenbank-konvertierung">Datenbank Konvertierung</a></li>
+<li><a href="#kitodo-software-installation">Kitodo Software Installation</a></li>
+<li><a href="#anpassen-der-nutzerrechte">Anpassen der Nutzerrechte</a></li>
+<li><a href="#metadaten-konvertierung-und-projekt-indexierung">Metadaten Konvertierung und Projekt Indexierung</a></li>
+<li><a href="#erstellen-der-workflows">Erstellen der Workflows</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="vorbereitung">Vorbereitung</h2>
+<p>Die Vorbereitung dient der Datenvorbereitung sowie der Prüfung und Sicherung der (Meta-)Daten und Systemeinstellungen, um einen möglichst reibungslosen Übergang zu ermöglichen. Eine zusätzliche Möglichkeit bietet das Klonen des Produktivsystems um auch nach erfolgreicher Migration für eine begrenzte Zeit Einsicht auf die alten Vorgänge mit dem Vorgängersystem nehmen zu können. Dabei gilt es jedoch zu vermeiden, dass das geklonte System noch immer auf die Daten des (neuen) Produktivsystems zugreift. Wie bereits erwähnt, sollten vor der Datensicherung bestimmte Voraussetzungen geprüft bzw. hergestellt werden. Zu den Details:</p>
+<h3 id="datenvorbereitung">Datenvorbereitung</h3>
+<ul>
+<li>Aus dem Migrationsworkshop, der in Braunschweig im Juni 2020 stattgefunden hat (s.a. <a href="https://www.youtube.com/watch?v=-YeaARk3sSQ">Video</a>): "Die Migration setzt voraus, dass es auf dem System keine Vorgänge mehr im Internformat “XStream” gibt. Sollte das noch der Fall sein, muss mit Version 2 das Internformat (in der Projekteinstellungen) geändert und die Metadatendateien mit dem GoobiScript-Befehl <code>action:rewriteProcessMetadata</code> migriert werden. Der GoobiScript-Befehl steht ab Version 2.3 zur Verfügung. Bei einer älteren Version besteht nur die Möglichkeit, alle betroffenen Vorgänge einzeln im Metadaten-Editor zu öffnen und neu abzuspeichern.</li>
+<li>"Mindestens ein Benutzer muss mindestens einen benutzerdefinierten Filter gespeichert haben, damit hernach die Datenbankmigration durchgeführt werden kann." D.h.: "In der Datenbank nachschauen, ob die Tabelle benutzereigenschaften nicht leer ist." indem man den SQL-Befehl <code>select count(*) from benutzereigenschaften;</code> verwendet und prüft ob eine Zahl ≠ 0 angezeigt wird. "Falls es 0 ist, unter den Vorgängen rechts oben unter Filter: etwas eingeben und auf Filter hinzufügen (Diskettensymbol) klicken"</li>
+<li>Bei der Anwendung des Scripts migration_3-3.sql zum Konvertieren der Datenbank (siehe: Migration → Durchführung → Datenbank-Konvertierung) werden konkrete Nutzereinträge zu einzelnen Aufgaben eines Vorgangs nicht mit übernommen, Rollen aber schon. D.h., jede Aufgabe eines jeden Vorgangs sollte mindestens eine Rolle (nicht nur einem Nutzer) zugeschrieben werden. Das Identifizieren aller Aufgaben, die nur (einen) Nutzer, aber keine Rolle zugeordnet bekommen haben, kann bspw. mit folgender SQL-Anfrage umgesetzt werden (evtl. goobi zu kitodo anpassen):</li>
+</ul>
+<pre><code class="language-sql">select UserID, login, SchrittID, SchrittTitel, BearbStat, ProzID, ProzTitel, ProjID, goobi.projekte.Titel as ProjTitel 
+from goobi.projekte 
+join (
+        select UserID, login, SchrittID, SchrittTitel, BearbStat, ProzID, goobi.prozesse.Titel as ProzTitel, goobi.prozesse.ProjekteID as ProjID
+        from goobi.prozesse 
+        join (
+                select UserID, login, goobi.schritte.schritteID as SchrittID, Titel as SchrittTitel, Bearbeitungsstatus as BearbStat, ProzesseID as ProzID 
+                from goobi.schritte 
+                join (
+                        select goobi.benutzer.BenutzerID as UserID, login, schritteID
+                        from goobi.benutzer
+                        join (
+                                select schritteID, BenutzerID
+                                from goobi.schritteberechtigtebenutzer 
+                                where schritteID not in (select schritteID from goobi.schritteberechtigtegruppen)
+                            )
+                            as res0
+                            on
+                        goobi.benutzer.benutzerID=res0.BenutzerID
+                    ) 
+                    as res1 
+                    on 
+                goobi.schritte.schritteID=res1.schritteID
+            ) 
+            as res2 
+            on 
+        goobi.prozesse.ProzesseID=res2.ProzID
+    )
+    as res3 
+    on 
+goobi.projekte.ProjekteID=res3.ProjID;
+</code></pre>
+<ul>
+<li>Bei der Erzeugung von übergeordneten Vorgängen (siehe Migration → Durchführung → Serielle Publikationen migrieren) verwendet Kitodo 3.X die PPNs der Vorgänge. D.h., es sollte sichergestellt werden, dass diese in den Meta-Daten der Mehrbändigkeiten eindeutig und unverändert aufzufinden sind. Bspw. würde das Verwenden von [PPN]_[Jahr] dazu führen, dass für jeden Zeitschriftenvorgang eines Jahres ein separater, übergeordneter Vorgang (und damit zu viele dieser Vorgänge) erzeugt wird.</li>
+<li>Es Empfiehlt sich, einen dedizierten Migrations-Admin-Nutzer anzulegen (und ins LDAP zu schreiben), der unmittelbar nach Installation von Kitodo 3.X mit den zusätzlichen Rollen 11 bis 20 ausgestattet wird.</li>
+<li>Ein weiterer möglicher Schritt zur Datenvorbereitung besteht in der vorzeitigen Erstellung von zu migrierenden Workflows. Diese Aufgabe ist anspruchsvoll und kann die reine Durchführung der Migration dehnen. Details zur Lösung im Fall UBBS können unter Migration → Durchführung → Erstellen der Workflows gefunden werden.</li>
+</ul>
+<h3 id="datensicherung">Datensicherung</h3>
+<p>Kitodo (K2.X und K3.X) arbeitet im Wesentlichen auf und mit (1.) den Daten der Datenbank kitodo (vor der Migration ggf. namens goobi) und (2.) dem Verzeichnis metadaten.</p>
+<h4 id="die-datenbank-kitodo-bzw-goobi">Die Datenbank kitodo (bzw. goobi)</h4>
+<p>Die Datenbank beinhaltet neben den Nutzerdaten ausschließlich organisatorische und administrative Daten für die Verwaltung der einzelnen Digitalisate (d.h., zu deren Projekte, die Vorgänge selbst, deren Aufgaben, etc.). Rechts ein Vergleich der Tabellen der Datenbank aus K2.X und K3.X.
+Zur Sicherung reicht hier ein einfaches "dump" aus: </p>
+<pre><code class="language-sql">mysqldump -u root -p -R goobi &gt; goobi_backup.sql
+</code></pre>
+<p>ℹ️ Bei der Migration kann das Script migration_3-3.sql zum konvertieren der Datenbank unabhängig vom Namen (kitodo oder goobi) angewendet werden.</p>
+<h4 id="das-verzeichnis-metadaten">Das Verzeichnis <code>metadaten</code></h4>
+<p>Die Metadaten (Verzeichnis <code>/usr/local/&lt;goobi/kitodo&gt;/metadaten</code>) sind in Form einer flachen Orderstruktur angelegt, bei der für jeden einzelnen Vorgang ein Ordner (mit Vorgangs-ID als Name) von Kitodo erzeugt wird. Jeder Ordner enthält jeweils eine <code>meta.xml</code> (+ggf. Hilfsdateien) und die gescannten Bilder (in Unterordnern). Die einzelnen Ordner in <code>metadaten</code> beinhalten alle Meta-Daten für das jeweilige Digitalisat (ab K3.X) in einem internen METS-ähnlichen Kitodo-Format (Datei <code>meta.xml</code>).</p>
+<p>ℹ️ Aus der <code>meta.xml</code> wird unter Verwendung der Bilddaten beim Abschließen der Digitalisierung durch den Export eine METS-konforme Datei [Vorgangs-ID]_mets.xml im Home Verzeichnis des jeweiligen Nutzers generiert, die anschießend für die Publikation des Werkes verwendet wird.</p>
+<p>Zur Sicherung der Metadaten reicht hier ein einfaches Kopieren (z.B. via rsync) aus.</p>
+<h4 id="weitere-sicherungen">Weitere Sicherungen</h4>
+<p>Bei Bedarf kann selbstverständlich auch das ganze Hauptverzeichnis <code>/usr/local/goobi/</code> bzw. <code>/usr/local/kitodo/</code> und die deployte Webapp (normalerweise unter <code>/var/lib/tomcat&lt;7/8&gt;/webapps/kitodo&lt;X&gt;/</code>) gesichert werden.</p>
+<h3 id="regelsatz-konvertieren-und-anpassen">Regelsatz konvertieren und anpassen</h3>
+<p>Regelsätze müssen für K3.X neu erstellt bzw. angepasst werden. Die UBBS verfolgt dabei eine Strategie, bei der der (eine) alte Regelsatz aus K2.X NUR FÜR DIE MIGRATION mittels Regelsatzkonverter (bereitgestellt von der Firma Zeutschel GmbH) zunächst konvertiert, dann vereinheitlicht und letztendlich angepasst wurde um diesen dann zum Konvertieren der Vorgangs-Metadaten (<code>meta.xml</code>) des alten Produktivsystems zu verwenden. Um die neuen K3.X Features ausschöpfend nutzen zu können, wurde für die Bearbeitung alter, bereits migrierter aber auch das Anlegen neuer Vorgänge NACH DER MIGRATION ein neuer Regelsatz erstellt. Zu den Details:</p>
+<ul>
+<li>Der <a href="https://github.com/kitodo/kitodo-contrib/tree/master/zeutschel/rulesetconverter">Regelsatzkonverter</a> benötigt die folgenden Dateien (aus dem K2.X Produktivsystem):</li>
+<li><code>ruleset.xml</code></li>
+<li><code>goobi_digitalCollections.xml</code></li>
+<li><code>goobi_metadataDisplayRules.xml</code></li>
+<li><code>goobi_opac.xml</code></li>
+<li><code>goobi_processProperties.xml</code></li>
+<li><code>goobi_projects.xml</code></li>
+<li>Der Regelsatzkonverter erzeugt dabei mehrere "Vorschlags"-Regelsätze, die sich (im Fall UBBS) im Wesentlichen nur in den "Digital Collections" unterschieden und daher zu einer Datei <code>ruleset.xml</code> zusammengefasst werden konnten.</li>
+<li>Weiterhin wurden <code>division</code>, die ggf. in nur einem der "Vorschlags"-Regelsätze vorhanden waren, ebenfalls mit einbezogen, um einen kompletten Regelsatz mit dem Namen <code>ruleset.xml</code> für die Migration zu haben.</li>
+<li>Für die Generierung von übergeordneten Vorgängen ist es ratsam, die Zuweisung von Workflows zu unterbinden. Weiterhin kann der generierte Vorgangstitel für übergeordneten Vorgänge (aber auch allen anderen <code>divisions</code>) spezifiziert werden. Beides geschieht mit:
+<code>processTitle="TSL_ATS+'_'+CatalogIDDigital" withWorkflow="false"</code>
+in der Definition der jeweiligen <code>division</code>; CatalogIDDigital bezeichnet hierbei die PPN</li>
+<li>Zur Erstellung und Anpassung von K3.X konformen Regelsätzen kann und sollte die Datei Regelsatz-Beschreibung final.docx(LINK!!) genutzt werden.</li>
+</ul>
+<h2 id="durchfuhrung">Durchführung</h2>
+<p>Die Durchführung der Migration besteht aus den Punkten:</p>
+<ol>
+<li>Server Upgrade</li>
+<li>Datenbank Konvertierung</li>
+<li>Kitodo Software Installation</li>
+<li>Anpassung der Nutzerrechte</li>
+<li>Meta-Daten Konvertierung und Projekt Indexierung</li>
+<li>Erstellung der Workflows</li>
+<li>Serielle Publikationen migrieren</li>
+<li>Extrabehandlung von Zeitungsvorgängen (Nicht an UBBS nötig)</li>
+</ol>
+<h3 id="server-upgrade">Server Upgrade</h3>
+<p>Als erster Schritt der Migration sollte der Server auf den "aktuellen" Stand gebracht werden. An der UBBS wurde dafür der Kitodo-Server mit Ubuntu 16.04 LTS auf ein Ubuntu 18.04 LTS aktualisiert: </p>
+<pre><code class="language-sh">sudo apt-get update, sudo apt-get upgrade, do-release-upgrade
+</code></pre>
+<p>, ggf. <code>purge-old-kernel</code> wenn für das Betriebssystemupgrade mehr Speicherplatz benötigt wird.</p>
+<p>Dabei wird das Ersetzen/Beibehalten/Neuanlegen folgender Dateien erfragt:</p>
+<ul>
+<li><code>/etc/vim/vimrc</code></li>
+<li><code>/etc/default/snmpd</code></li>
+<li><code>/etc/ntp.conf</code></li>
+<li><code>/etc/apt/apt.conf.d/unattacheduppgrades</code> (für upgrades) → ersetzt</li>
+<li><code>/etc/tomcat8/tomcat-users.xml</code> (nur in VM, in Test-System wird Tomcat 7 duch Tomcat 8 ersetzt) → (ggf. 1 Anpassung nachträglich wenn manager-gui gewünscht)</li>
+<li><code>/etc/mysql/mysql.conf.d/mysqld.cnf</code> (nur in VM) → ersetzt (1 Anpassung nachträglich: prüfe <code>mysql&gt; show variables like 'innodb_file_per_table';</code> ggf. setzen der Variable <code>innodb_file_per_table</code>)</li>
+</ul>
+<p>Das Ersetzen der Dateien scheint problemlos zu funktionieren und ist ratsam für ein integeres System nach der Migration. Ein vorheriges Sichern der jeweiligen Dateien im Fall von nachträglich notwendigen Anpassungen wird jedoch empfohlen.</p>
+<p>ℹ️ Nach dem Server Upgrade kann Kitodo 2.X bei Bedarf erneut gestartet werden. Dafür ist ggf. eine Anpassung an der <code>/var/lib/tomcat&lt;7/8&gt;/webapps/kitodo&lt;2.X&gt;/WEB-INF/classes/hibernate.cfg.xml</code> notwendig</p>
+<pre><code>jdbc:mysql://localhost/goobi?useSSL=false&amp;amp;serverTimezone=UTC
+</code></pre>
+<p>Anschließend <code>/etc/init.d/tomcat&lt;7/8&gt; restart</code> nicht vergessen.</p>
+<h3 id="datenbank-konvertierung">Datenbank Konvertierung</h3>
+<ul>
+<li>Webapp, d.h. Tomcat ggf. stoppen: <code>/etc/init.d/tomcat&lt;X&gt; stop</code></li>
+<li>Ggf. erneutes Backup der Datenbank:  <code>mysqldump -u root -p -R goobi &gt; goobi_backup.sql</code></li>
+<li>Neue Datenbank mit Name kitodo erstellen: <code>create database kitodo;</code></li>
+<li>Neuen kitodo Nutzer erstelen und Rechte geben: <code>create user 'kitodo'@'localhost' identified by 'kitodo'; grant all on kitodo.* to 'kitodo'@'localhost';</code></li>
+<li>Struktur (d.h. "alte" Datenbank) von goobi einlesen:  <code>mysql -u root -p kitodo &lt; goobi_backup.sql</code></li>
+<li>Datenbank migrieren: <code>mysql -u root -p kitodo &lt; migration_3-3.sql;</code></li>
+<li>Ggf. Nachfolge-Script (für Zwischen-Release) anwenden:  <code>mysql -u root -p kitodo &lt; diff.sql;</code></li>
+<li>Ggf. erneutes Backup der Datenbank:  <code>mysqldump -u root -p -R kitodo &gt; kitodo_migrated_backup.sql</code></li>
+</ul>
+<h3 id="kitodo-software-installation">Kitodo Software Installation</h3>
+<p>Kitodo 2.X geht von einem Programmverzeichnis <code>/usr/local/goobi/</code> aus, Kitodo 3.X verwendet <code>/usr/local/kitodo/</code>. Da sich die Inhalte der beiden Hauptverzeichnisse auf Ordner-Ebene nur geringfügig unterscheiden, kann somit (1.) auf das Neuanlegen des Hauptverzeichnisses bei der Migration verzichtet werden und (2.) ein einfaches Kopieren <code>cp -r /usr/local/goobi/ /usr/local/kitodo/</code> ausgeführt werden, welches das ursprüngliche Hauptverzeichnisses gleichzeitig als Backup zurückbehält.</p>
+<p>Mit dem neuen (kopierten) Hauptverzeichnis <code>/usr/local/kitodo/</code> wird nun wie folgt verfahren:</p>
+<ul>
+<li>Tomcat als Owner des  Hauptverzeichnis setzen: <code>chown -R tomcatX:tomcatX /usr/local/kitodo/ (Wenn tomcat7 im Rahmen des Server Upgrades deinstalliert wurde, sollte hier die gleiche Owner-Number wie in</code>/usr/local/goobi/` verwendet werden, z.B: 107:115)</li>
+<li>Ggf. tomcat8 installieren und testen</li>
+<li>Ordner <code>diagrams</code> und <code>modules</code> erstellen und Rechte/Owner zuweisen:  <code>mkdir /usr/local/kitodo/diagrams; mkdir /usr/local/kitodo/modules; chown tomcat8:tomcant8 /usr/local/kitodo/diagrams</code></li>
+<li>in <code>diagrams</code> die beiden Beispieldateien <code>Example_Workflow.bpmn20.xml</code> und <code>Example_Workflow.svg</code> kopieren</li>
+<li>in <code>modules</code> die mitgelieferten Module kopieren: <a href="https://github.com/kitodo/kitodo-production/files/8629368/modules.zip">modules.zip</a></li>
+<li>Ordner <code>config</code> umbenennen (als Backup behalten) und in neuen Ordner <code>config</code> die Dateien kopieren: <a href="https://github.com/kitodo/kitodo-production/files/8629378/config.zip">config.zip</a></li>
+<li>Ordner <code>ruleset</code> umbenennen (als Backup behalten) und in neuen Ordner <code>ruleset</code> die Dateien kopieren: <a href="https://github.com/kitodo/kitodo-production/files/8629380/rulesets.zip">rulesets.zip</a></li>
+<li>Ordner <code>scripts</code> umbenennen (als Backup behalten) und in neuen Ordner <code>scripts</code> die Dateien kopieren: <a href="https://github.com/kitodo/kitodo-production/files/8629385/scripts.zip">scripts.zip</a></li>
+<li>Ordner <code>xslt</code> umbenennen (als Backup behalten) und in neuen Ordner <code>xslt</code> die Dateien kopieren: <a href="https://github.com/kitodo/kitodo-production/files/8629387/xslt.zip">xslt.zip</a></li>
+</ul>
+<p>Analog zur Installation eines neuen Kitodo 3.X sollte die Installation folgender Programme geprüft und ggf. nachgeholt werden:</p>
+<ul>
+<li>tomcat8</li>
+<li>mysql</li>
+<li>imagemagic</li>
+<li>slapd</li>
+<li>ldap-utils</li>
+<li>samba</li>
+<li>apt-transport-https</li>
+<li>unzip</li>
+<li>
+<p>dos2unix</p>
+</li>
+<li>
+<p>Elastic Seach installieren: Folge der <a href="https://github.com/kitodo/kitodo-production/wiki/Installationsanleitung">Installationsanleitung</a> auf GitHub (Schritt 5)</p>
+</li>
+<li>
+<p>Samba konfigurieren: Folge der <a href="https://github.com/kitodo/kitodo-production/wiki/Installationsanleitung">Installationsanleitung</a> auf GitHub (Schritt 8)</p>
+</li>
+</ul>
+<p>ℹ️ Windows Maschinen von Nutzern, die vorher bereits mit K2.X (und Samba) gearbeitet haben, können unter Umständen auch bei einem korrekt installierten und konfigurierten Samba nach dem (Betriebssystem-) Upgrade nicht sofort die Home Verzeichnisse auf dem K3.X Server einbinden. (Fehler: Falsches Kennwort). Dies konnte an der UBBS behoben werden, indem ein bestimmter Eintrag in der Registy entfernt wurde: <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa → LmCompatibilityLevel</code> → löschen</p>
+<ul>
+<li>
+<p><code>/etc/sudoers</code> mit Rechten für die Ausführung durch tomcat8 anpassen</p>
+</li>
+<li>
+<p>Tomcat konfigurieren und neustarten</p>
+</li>
+<li>
+<p><code>kitodo_config.properties</code> eventuell anpassen</p>
+</li>
+</ul>
+<p>Nun müsste K3.X installiert und online erreichbar sein.</p>
+<h3 id="anpassen-der-nutzerrechte">Anpassen der Nutzerrechte</h3>
+<p>An der Kitodo Webapp anmelden und den Migrations-Admin-Nutzer (MAN) mit allen Rechten ausstatten:</p>
+<ul>
+<li>Zuvor kann jedoch auch erst geprüft werden, ob der MAN auch alle notwendigen Rollen in der Datenbank zugeschrieben bekommen hat: Folge Installation → Installation Schritt für Schritt → Schritt 13</li>
+<li>Mit allen Rollen ausgestattet, kann eine Rolle mit allen Rechen (z.B.: "superuser") erzeugt und der Nutzer MAN damit ausgestattet werden.</li>
+</ul>
+<p>Als nächstes sollten der LDAP-Server und LDAP-Gruppe angepasst werden: Folge der <a href="https://github.com/kitodo/kitodo-production/wiki/Installationsanleitung">Installationsanleitung</a> auf GitHub (Schritt 13)</p>
+<h3 id="metadaten-konvertierung-und-projekt-indexierung">Metadaten Konvertierung und Projekt Indexierung</h3>
+<p>Die Konvertierung der Meta-Daten erfolgt in der Kitodo Webapp unter: Dashboard → System → Reiter Migration (siehe Screenshot).</p>
+<p><img alt="image2021-7-26_7-47-24" src="https://user-images.githubusercontent.com/66619864/166102801-969a27dc-b718-474d-9523-dd90fc4996fd.png" /></p>
+<p>Die zu konvertierenden Projekte können ausgewählt und der Prozess mit "Metadaten dieser Projekte konvertieren" gestartet werden. Konkret werden im Hintergrund nun alle Metadaten (d.h. die <code>meta.xml</code> und ggf. Hilfsdateien) eines jeden Vorgangs (des jeweiligen Projektes) im Verzeichnis <code>/usr/local/kitodo/metadaten/&lt;Vogangs-ID&gt;/meta.xml</code> unter Verwendung der <code>/usr/local/kitodo/xslt/MetsModsGoobi_to_MetsKitodo.xsl</code> in ein Kitodo 3.X konformes METS-ähnliches Format gebracht. Der Prozess kann je nach Projektgröße dauern und ist im Taskmanager einzusehen.</p>
+<p>ℹ️ Der Taskmanager in Kitodo ist immer eine gute Anlaufstelle, um nachzusehen, warum eine Aktion nicht oder nicht wie gewünscht funktioniert. </p>
+<p>Anschließend kann die Indexierung der jeweiligen Projekte gestartet werden (siehe Screenshot).</p>
+<p><img alt="image2021-7-26_7-59-22" src="https://user-images.githubusercontent.com/66619864/166103001-450526b1-18b3-4294-9174-4fbc93028522.png" /></p>
+<p>Dazu sollte erst "ElasticSearch Mapping erzeugen" angewendet werden. Die Erzeugung eines gesamten Such-Indexes erfolgt über den Button "Indexierung starten" unten links. Die anderen Buttons "Indexierung starten" dienen der Indexierung einzelner Komponenten, wie Vorgänge, Aufgaben, Projekte, usw. entweder von Neuem (linke Spalte "Komplette Indexierung starten") oder ergänzend für die einzelnen Komponente (rechte Spalte "Indexierung vervollständigen").</p>
+<p>ℹ️ Das Indexieren kann ggf. länger dauern. Sollte über einen längeren Zeitraum scheinbar kein Fortschritt mehr zu verzeichnen sein, hilft ein Aktualisieren der Seite (F5).</p>
+<h3 id="erstellen-der-workflows">Erstellen der Workflows</h3>
+<p>In K3.X ist jedem (neuen) Vorgang auch ein Workflow zugeordnet, der die Aufgabenliste zur Digitalisierung abbildet. Um nun auch allen Vorgängen aus K2.X so einen Workflow zuordnen zu können, müssen diese erst erstellt werden. Dies ist eine anspruchsvolle Arbeit, die unbedingt mit dem jeweiligen bibliothekarischen Fachbereich abgesprochen werden sollte. K3.X bietet bei der Migration verschiedene Workflow-Vorschläge an, eine Vereinheitlichung dieser, ggf. über verschiedene Projekte hinweg, ist ebenfalls möglich.</p>
+<p>Mit dem Button "Workflow erstellen" (Dashboard → System → Reiter Migrieren) werden die zu migrierenden Projekte gelistet und für die getätigte Auswahl von Projekten mit dem Button "Nach Vorgängen suchen" können dann alle Vorgänge gelistet werden, die noch keinen Workflow zugeschrieben bekommen haben. </p>
+<p>ℹ️ Hier gelistete Vorgänge ohne WorkfIow haben in der Datenbank noch den Wert <code>null</code> gesetzt.</p>
+<p>Besitzen Vorgänge (eines Projektes) eine identische Aufgabenliste (gleiche Namensgebung und Aufgabeneigenschaften), werden diese zusammengefasst dargestellt (siehe Screenshot).</p>
+<p><img alt="image2021-7-26_9-6-23" src="https://user-images.githubusercontent.com/66619864/166103328-91727921-8858-4bf0-9a59-bb71e9b54b99.png" /></p>
+<p>Das Erstellen und Zuweisen der Workflows zu den "alten" Vorgängen kann vor der Migration vorbereitet werden. Dafür empfiehlt es sich, eine Kopie der Datenbank des zu migrierenden Systems in ein Kitodo 3.X Test-System zu laden (bspw. in einer VM) und die Migration der Workflows zu simulieren. So können alle zur Verfügung stehenden (vorgeschlagenen) Workflows im Detail angesehen, testweise angepasst und ggf. vereinheitlicht werden. An der UBBS konnte aus allen Vorschlägen ein Minimal-Set von 7 "prototypischen" Workflows identifiziert werden, die bei der Migration eingesetzt wurden. </p>
+<p>Nach dem Drücken auf das Doppelpfeilsymbol <img alt="image2021-7-28_8-39-55" src="https://user-images.githubusercontent.com/66619864/166103587-8bc13f0b-fafb-48a8-985a-f1487622018b.png" /> erscheint die eigentliche Zuweisung der Vorgänge zu den Workflows und anschließend zu Produktionsvorlagen. Es gibt die Option, einen neuen oder bereits vorhandenen Workflow anzulegen. Wenn ein bereits existierender Workflow gewählt wurde, kann anschließend entschieden werden, ob die zu migrierenden Vorgänge (mit dem gewählten Workflow) zu einer neuen oder bereits vorhandenen Produktionsvorlage verknüpft werden sollen. Wurde ein neuer (oder angepasster alter bzw. prototypischer) Workflow erstellt, muss auch eine neue Produktionsvorlage dazu erstellt werden.</p>
+<p><img alt="7" src="https://user-images.githubusercontent.com/66619864/166878177-401775b6-3d9c-437c-a44a-fb3af3946d87.png" /></p>
+<p>ℹ️ Bei der Erstellung bzw. Anpassung der Workflows ist zu beachten, dass der Bearbeitungsstatus jeder Aufgabe nicht auf "Abgeschlossen", sondern auf "Gesperrt" gesetzt ist.
+ℹ️ Wenn ein prototypischer Workflow (der ggf. bei der Migration auch angepasst wurde) mit seiner neuen Produktionsvorlage P eines Projektes A bei der Migration auch für Vorgänge eines anderen Projektes B (im Rahmen einer Vereinheitlichung) ausgewählt wird, funktioniert dies während der Workflowerstellung problemlos. Das Projekt B (und ggf. weitere Projekte C, D, ...) werden dabei aber nicht mit der Produktionsvorlage P verknüpft. Daher muss im Anschluss der Migration in den jeweiligen Projekteinstellungen noch die Produktionsvorlage P zum Projekt B (C, D, ...) hinzugefügt werden.</p>
+<h3 id="serielle-publikationen-migrieren">Serielle Publikationen migrieren</h3>
+<p>Übergeordnete Vorgänge, d.h. (Vogänge zu) Mehrbändigkeiten, können nach der Metadaten-Konvertierung und Workflow-Erstellung in der Kitodo Webapp unter: Dashboard → System → Reiter Migrieren generiert werden. Im Rahmen der Datenvorbereitung (Vgl.: Migration → Vorbereitung → Datenvorbereitung) sollten daher zuvor (im K2.X Produktiv-System) die PNNs bereinigt worden sein. Weiterhin kann im Regelsatz (für die Migration) angegeben werden, wie die Titel der übergeordneten Vorgänge generiert werden sollen (Vgl.: Migration → Vorbereitung → Regelsatz konvertieren und anpassen).</p>
+<h2 id="nachbereitung">Nachbereitung</h2>
+<p>Sämtliche Vorgänge wurden nun migriert. Abschießend müssen noch die Projekte im Hinblick auf Ordnerstruktur und Bild-Derivate angepasst werden:</p>
+<ul>
+<li>Im Projekt die Einstellungen für METS-Dateigruppen und Ordnerverwendung prüfen</li>
+<li>Dateigruppe MAX/THUMBS entstehen bei der Migration</li>
+<li>Dateigruppe LOCAL muss auf die Quelldateien zeigen und unter Ordnerverwendung als Quelle angegeben sein</li>
+<li>KitodoScript <code>action:createFolders</code> auf (z.B. nach Projekt) gefilterte Vorgangsliste ausführen</li>
+<li>KitodoScript <code>action:generateImages folders:jpgs/max,jpgs/thumbs images:all</code> auf (z.B. nach Projekt) gefilterte Vorgangsliste ausführen</li>
+</ul>
+<p>ℹ️ Das Erstellen der Ordner für die Vorgänge eines Projektes erfordert, dass die entsprechenden Vorgänge in der Filter-Ansicht erst ausgewählt werden (die Checkbox muss angehakt werden), um anschließend das KitodoScript zum Ordner erstellen ausführen zu können. Hat ein Projekt sehr viele Vorgänge, ist das Auswählen aller Vorgänge aktuell noch etwas umständlich, da die Checkbox am Tabellenkopf lediglich dafür sorgt, dass die Vorgänge der sichtbaren Seite ausgewählt werden. Eine Erleichterung besteht darin, zuvor die Tabellengröße in den "Benutzerdaten &amp; Einstellungen" (ganz oben rechts) von 10 auf z.B. 100 zu setzen, da dann die Anzahl der angezeigten Vorgänge größer wird und damit mehr auf einmal ausgewählt werden können.</p>
+<h3 id="einzelne-projekte-nach-bzw-erneut-migrieren">Einzelne Projekte nach- bzw. erneut Migrieren</h3>
+<p>Sollte es Probleme mit den (migrierten) Metadaten eines Projektes geben, ist es möglich (aber nicht empfehlenswert), einzelne Projekte erneut zu migrieren. Das Vorgehen besteht dabei im Wesentlichen im Ersetzen der zu migrierenden Daten (<code>meta.xml</code>) in den Vorgangsordnern des betreffenden Projektes durch die ursprünglichen Daten und einem anschließenden (erneuten) Konvertieren der Metadaten im Migrieren-Reiter.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

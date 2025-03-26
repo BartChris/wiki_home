@@ -1,0 +1,505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>RAK-RDA Umstellung (SLUB - SWB) - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rak-rda-umstellung-slub-swb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RAK-RDA Umstellung (SLUB - SWB)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vorbemerkung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorbemerkung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-1100-4030-4060" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder 1100, 4030, 4060
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feld-3010" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feld 3010
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-4110-4119-4120" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder 4110, 4119, 4120
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feld-3210" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feld 3210
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quellen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rak-rda-umstellung-slub-swb">RAK-RDA Umstellung (SLUB - SWB)</h1>
+<h2 id="vorbemerkung">Vorbemerkung</h2>
+<p>Für die RDA-Umstellung muss in Kitodo.Production der Regelsatz angepasst werden, so dass weiterhin die Inhalte der benötigten Felder in den Verbünden in die dafür vorgesehenen Felder in Kitodo.Production, beziehungsweise nach MODS gemappt werden können. </p>
+<p>Dies ist einfach, wenn nur die Feldbezeichnungen geändert würden. Jedoch wurden zusätzlich Feldinhalte geändert, so dass nicht nur darauf geachtet werden muss, eine Feldnamenänderung zu übernehmen, sondern auch den korrekten Inhalt. </p>
+<p>Es lassen sich folgende Änderungen unterscheiden: </p>
+<ol>
+<li>Felder, die schon vorhanden sind, jedoch inhaltlich anders belegt werden</li>
+<li>Felder, die entfallen, deren Inhalt jedoch in einem anderen Feld eingetragen werden</li>
+<li>Felder, die neu hinzukommen </li>
+<li>Felder, die entfallen</li>
+</ol>
+<p>Damit lassen sich zum Beispiel im SWB folgende Felder kategorisieren: </p>
+<ul>
+<li>1100 (011@) -&gt; 1</li>
+<li>3210 (022A) -&gt; 1</li>
+<li>3220 (025@) -&gt; 4</li>
+<li>4022 (032C) -&gt; 4</li>
+<li>4030 (033A) -&gt; 1 </li>
+<li>4060 (034D) -&gt; 1 </li>
+<li>4110 (036L/00) -&gt; 2 </li>
+<li>4119 (036L/09) -&gt; 2</li>
+<li>4120 (036M/00) -&gt; 2</li>
+<li>4256 (039I) -&gt; 3</li>
+<li>3001 (028B) -&gt; 2</li>
+</ul>
+<p>Im Folgenden werden die Felder beschrieben, die in der Mailing Liste diskutiert wurden. Dies soll einen schnellen Überblick über die Thematik ermöglichen. </p>
+<h2 id="felder-1100-4030-4060">Felder 1100, 4030, 4060</h2>
+<p>Diese Feldinhalte ändern sich, weil in RDA Reproduktionen formal mit dem Erscheinungsdatum und Erscheinungsvermerk der Reproduktion beschrieben werden. Bisher wurden die Daten der Vorlage genutzt.  </p>
+<p>Nun muss ein Weg gefunden werden, wie die Daten der Vorlage genutzt werden können: </p>
+<ul>
+<li>1100: In Unterfeld $r wird das Erscheinungsjahr in Sortierform der Vorlage angegeben. Das Erscheinungsjahr in Vorlageform ist in 1100 nicht vorhanden.  </li>
+<li>4060: Der Inhalt ändert sich durch die Angabe "1 Online-Ressource", jedoch wird in Klammern der Umfang der Vorlage angegeben. </li>
+<li>4030: Die Angaben der Vorlage sind nicht hinterlegt. Es werden nur die Daten des Produzenten der Reproduktion angeboten. </li>
+</ul>
+<p>Es ist offensichtlich, dass es hier grundlegende Änderungen der Feldinhalte gibt, die nur schwer in Kitodo.Production umgesetzt werden können. Zumindest, wenn man weiterhin mit den Metadaten der Vorlage arbeiten will. Es scheint jedoch breite Übereinstimmung zu herrschen, mit den Metadaten der Vorlage arbeiten zu wollen. </p>
+<p>Eine weitere Lösungsmöglichkeit ist das Feld SWB-4256 (039I). In der PICA+-Ansicht werden die Inhalte der Vorlage angeboten, auch wenn es verknüpft ist. Die Expansion in PICA 3 zeigt diese Daten jedoch nicht an. Ein Beispiel könnte so aussehen: </p>
+<p><code>039I ƒaElektronische Reproduktion vonƒ9450162699ƒVTpiƒaEckardtƒdErnstƒE1889ƒ1Sachsens Fürsten-ZugƒDWurzenƒGTestƒF1889ƒH[4] Blatt, 100 Seiten, [2] Blatt</code></p>
+<p>Die Daten werden in folgenden Unterfeldern gespeichert:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>RAK (Pica 3)</th>
+<th>RDA (Pica+)</th>
+<th>RDA (Pica+ Unterfeld)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autor (Nachname)</td>
+<td></td>
+<td>039I</td>
+<td><strong>ƒa</strong></td>
+</tr>
+<tr>
+<td>Autor (Vorname)</td>
+<td></td>
+<td>039I</td>
+<td><strong>ƒd</strong></td>
+</tr>
+<tr>
+<td>Erscheinungsjahr (Sortierform)</td>
+<td>1100</td>
+<td>039I</td>
+<td><strong>ƒF</strong></td>
+</tr>
+<tr>
+<td>Titel</td>
+<td>4000</td>
+<td>039I</td>
+<td><strong>ƒ1</strong></td>
+</tr>
+<tr>
+<td>Verlagsort</td>
+<td>4030</td>
+<td>039I</td>
+<td><strong>ƒD</strong></td>
+</tr>
+<tr>
+<td>Verlagsname</td>
+<td>4030</td>
+<td>039I</td>
+<td><strong>ƒG</strong></td>
+</tr>
+<tr>
+<td>Umfangsangabe</td>
+<td>4060</td>
+<td>039I</td>
+<td><strong>ƒH</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Bisher werden diese Daten nicht über die Schnittstelle bereitgestellt und können somit nicht genutzt werden. Ob und wann diese Daten angeboten werden, wird noch entschieden. Die Vorrausetzungen in den Verbünden können sich jedoch unterscheiden. </p>
+<h2 id="feld-3010">Feld 3010</h2>
+<p>In RDA werden die Felder 3001, 3030 und 3040 nicht mehr verwendet. Alle dort aufgeführten Personen werden in dem Feld 3010 eingetragen. </p>
+<p>Dies führt dazu, dass diese Personen nicht mehr durch den Feldnamen identifiziert werden können. Die Funktion lässt sich nur durch die Beziehungskennzeichnung ableiten. Diese kann beim Import jedoch nicht genutzt werden. </p>
+<p>Folgende Szenarien stehen zur Verfügung: </p>
+<ol>
+<li>3000 wird importiert, 3010 wird nicht importiert 
+<code>+: einfach im Regelsatz abbildbar</code> 
+<code>-: viele Personenmetadaten werden nicht in die Metadaten aufgenommen, einschließlich weitere Verfasser</code> </li>
+<li>3000 und 3010 werden importiert, für 3000 wird die Rolle Autor vergeben; für 3010 wird die Rolle sonstige Person vergeben (Korrektur nachträglich im Metadateneditor manuell möglich)
+<code>+: relativ einfach im Regelsatz abbildbar</code>
+<code>+: alle Personenmetadaten werden übernommen</code> 
+<code>-: Rollen der Personen nur ungenau beschrieben, mit RDA auch die von Verfassern</code> 
+<code>-: wenn die Rollen manuell nachträglich vergeben werden, entsteht ein größerer Aufwand</code></li>
+<li>3000 und 3010 werden importiert, 3000 wird die Rolle Autor vergeben; 3010 wird die Rolle abhängig von der Beziehungskennzeichnung vergeben (wenn es technisch möglich ist!) 
+<code>+: alle Feldinhalte aus 3000 und 3010 werden mit korrekter Rolle übernommen</code> 
+<code>-: ungewiss, ob bedingter Import möglich ist</code> 
+<code>-: wenn möglich, ist die Umsetzung im Regelsatz sehr umfangreich</code> </li>
+</ol>
+<p>Dies sind erste Überlegungen, die gerne verbessert und ergänzt werden dürfen. </p>
+<p>Im Zuge der RDA-Umstellung sollte unbedingt auch der generelle Wunsch nach einem verbessertem Personen- und Körperschaften-Metadaten-Import beachtet werden. Zum Beispiel: <a href="https://github.com/kitodo/kitodo-production/wiki/New-features-for-METS-Editor">New features for METS Editor</a>. </p>
+<h2 id="felder-4110-4119-4120">Felder 4110, 4119, 4120</h2>
+<p>Gesamttitel und ungezählte Schriftenreihen der Sekundärausgabe werden in RDA in den Feldern 4170, 4180 und 4190 angegeben. </p>
+<p>Es sollte geprüft werden werden, ob die Inhalte dieser Felder in Kitodo.Production verarbeitet werden sollen, wie die Inhalte der Felder der Vorlage. Da nur die Felder 4170 - 4174, beziehungsweise 4180 - 4184 zur Verfügung stehen, sollte überlegt werden, auf welche Angaben unter Umständen verzichtet werden kann. </p>
+<h2 id="feld-3210">Feld 3210</h2>
+<p>Das Feld 3210 (022A) bleibt zwar erhalten. Jedoch werden die Inhalte in Unterfelder aufgeteilt. Je nachdem, welche Inhalte man benötigt, muss dies im Regelsatz berücksichtigt werden. </p>
+<p>Erste Versuche haben ergebn, dass die Inhalte mehrerer Unterfelder in PICA in ein Metadatumfeld in Kitodo.Production gemappt werden können. Problematisch sind wiederholbare Unterfelder wie im SWB zum Beispiel $m (Besetzungsangaben) oder $n (Zählung eines Musikwerks). Diese werden überschrieben, so dass letztendlich nur der letzte Wert übernommen wird. </p>
+<p>Auf der Seite <a href="https://github.com/kitodo/kitodo-production/wiki/Zeutschel-Dokumentation">Zeutschel Dokumentation</a> finden Sie einen Link auf das Dokument <a href="http://www.goobi.org/fileadmin/groups/goobi/dokumentation/TS-1105_Weiterentwicklungen-GOOBI-WLB.pdf">Goobi.Production 1.11 : Beauftragte Weiterentwicklungen</a>. Dieses enthält mehrere Beschreibungen zum Import und Mappen von Datenfeldern. </p>
+<h2 id="quellen">Quellen</h2>
+<p>Hier werden einige wichtige Informationsquellen aufgeführt. </p>
+<p>Titeldaten für RDA: </p>
+<ul>
+<li>https://vitruv.uni-tuebingen.de/ilias3/goto_bsz1_file_565_download.html</li>
+<li>In diesem Dokument werden nur PICA3-Felder aufgeführt. Eine korrekte Aussage über PICA+-Felder ist nicht möglich.</li>
+</ul>
+<p>Übersicht über Formatänderungen im SWB:</p>
+<ul>
+<li>https://vitruv.uni-tuebingen.de/ilias3/goto_bsz1_file_848_download.html</li>
+<li>In diesem Dokument werden nur PICA3-Felder aufgeführt. Eine korrekte Aussage über PICA+-Felder ist nicht möglich. </li>
+</ul>
+<p>Dokumentation des Formats der Pica-Verbunddatenbank des SWB (RDA - Ansicht): </p>
+<ul>
+<li>http://swbtools.bsz-bw.de/cgi-bin/help.pl?cmd=index&amp;regelwerk=RDA&amp;verbund=SWB</li>
+<li>Felder ohne Änderungen sind hier teilweise noch nicht aufgeführt.</li>
+</ul>
+<p>Dokumentation des Formats der Pica-Verbunddatenbank des SWB (RDA - Ansicht) - nach PICA+ sortiert: </p>
+<ul>
+<li>http://swbtools.bsz-bw.de/cgi-bin/help.pl?cmd=pp_list&amp;verbund=SWB&amp;regelwerk=RDA</li>
+<li>Felder ohne Änderungen sind hier teilweise noch nicht aufgeführt.</li>
+</ul>
+<p>Informationen zu Reproduktionen: </p>
+<ul>
+<li>https://wiki.dnb.de/display/RDAINFO/Original+-+Reproduktionen</li>
+<li>Auf dieser Seite wird die Verlinkung zwischen Original und Reproduktion beschrieben.</li>
+</ul>
+<p>Modul 5A.05 - Reproduktionen: </p>
+<ul>
+<li>https://vitruv.uni-tuebingen.de/ilias3/goto_bsz1_file_1063_download.html</li>
+<li>In dieser Präsentation wird erläutert, wie Reproduktionen nach RDA katalogisiert werden.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

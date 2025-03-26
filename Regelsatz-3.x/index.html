@@ -1,0 +1,1370 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Regelsatz 3.x - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ubersicht" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Regelsatz 3.x
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinweis-zur-verwendung-von-xml-editoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hinweis zur Verwendung von XML-Editoren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gliederungselemente-definieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gliederungselemente definieren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gliederungselemente definieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einteilungen-mit-besonderer-verwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einteilungen mit besonderer Verwendung
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mehrsprachige-regelsatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mehrsprachige Regelsätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadatenschlussel-definieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadatenschlüssel definieren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadatenschlüssel definieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definieren-des-wertebereichs-von-metadatenschlusseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definieren des Wertebereichs von Metadatenschlüsseln
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voreingestellte-werte-fur-metadatenschlussel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voreingestellte Werte für Metadatenschlüssel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gruppierte-metadatenschlussel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gruppierte Metadatenschlüssel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussel-mit-besonderer-verwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schlüssel mit besonderer Verwendung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwenden-mehrerer-metadatendomanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verwenden mehrerer Metadatendomänen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beziehungen-definieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beziehungen definieren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beziehungen definieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voneinander-abhangig-erlaubte-metadatenwerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voneinander abhängig erlaubte Metadatenwerte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bearbeitungseinstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bearbeitungseinstellungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bearbeitungseinstellungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erfassungsstufen-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erfassungsstufen verwenden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeitungsvorgange-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zeitungsvorgänge konfigurieren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regelsatze-aufeinander-aufbauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regelsätze aufeinander aufbauen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weitere Informationen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Regelsatz 3.x</h1>
+
+<h2 id="ubersicht">Übersicht</h2>
+<ul>
+<li><a href="#hinweis-zur-verwendung-von-xml-editoren">Hinweis zur Verwendung von XML-Editoren</a></li>
+<li><a href="#gliederungselemente-definieren">Gliederungselemente definieren</a><ul>
+<li><a href="#einteilungen-mit-besonderer-verwendung">Einteilungen mit besonderer Verwendung</a></li>
+</ul>
+</li>
+<li><a href="#mehrsprachige-regels%C3%A4tze">Mehrsprachige Regelsätze</a></li>
+<li><a href="#metadatenschl%C3%BCssel-definieren">Metadatenschlüssel definieren</a><ul>
+<li><a href="#definieren-des-wertebereichs-von-metadatenschl%C3%BCsseln">Definieren des Wertebereichs von Metadatenschlüsseln</a></li>
+<li><a href="#voreingestellte-werte-f%C3%BCr-metadatenschl%C3%BCssel">Voreingestellte Werte für Metadatenschlüssel</a></li>
+<li><a href="#gruppierte-metadatenschl%C3%BCssel">Gruppierte Metadatenschlüssel</a></li>
+<li><a href="#schl%C3%BCssel-mit-besonderer-verwendung">Schlüssel mit besonderer Verwendung</a></li>
+<li><a href="#verwenden-mehrerer-metadatendom%C3%A4nen">Verwenden mehrerer Metadatendomänen</a></li>
+</ul>
+</li>
+<li><a href="#beziehungen-definieren">Beziehungen definieren</a><ul>
+<li><a href="#voneinander-abh%C3%A4ngig-erlaubte-metadatenwerte">Voneinander abhängig erlaubte Metadatenwerte</a></li>
+</ul>
+</li>
+<li><a href="#bearbeitungseinstellungen">Bearbeitungseinstellungen</a><ul>
+<li><a href="#erfassungsstufen-verwenden">Erfassungsstufen verwenden</a></li>
+</ul>
+</li>
+<li><a href="#zeitungsvorg%C3%A4nge-konfigurieren">Zeitungsvorgänge konfigurieren</a></li>
+<li><a href="#regels%C3%A4tze-aufeinander-aufbauen">Regelsätze aufeinander aufbauen</a></li>
+<li><a href="weitere-informationen">Weitere Informationen</a></li>
+</ul>
+<h2 id="hinweis-zur-verwendung-von-xml-editoren">Hinweis zur Verwendung von XML-Editoren</h2>
+<p>Es gibt viele XML-Editoren, die das Bearbeiten komplexer XML-Datei vereinfachen, wenn sie Informationen zu ihrer zulässigen Struktur haben. Diese Informationen stehen in Form einer XSD-Datei zur Verfügung. Wenn Sie diese Funktion Ihres XML-Editors verwenden möchten, kopieren Sie die Datei <a href="../blob/main/Kitodo/rulesets/ruleset.xsd">ruleset.xsd</a> in dasselbe Verzeichnis und fügen Sie die beiden Attribute</p>
+<pre><code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://names.kitodo.org/ruleset/v2 ruleset.xsd"
+</code></pre>
+<p>in Ihre XML-Datei ein. Beispiel:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://names.kitodo.org/ruleset/v2 ruleset.xsd&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;division&quot;&gt;
+            &lt;label&gt;Division&lt;/label&gt;
+        &lt;/division&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<h2 id="gliederungselemente-definieren">Gliederungselemente definieren</h2>
+<p>Ein wesentlicher Funktionsbestandteil von Production ist die Strukturierung und Beschreibung der eingefügten Mediendateien. Die Strukturierung erfolgt mit einem Gliederungseditor (ähnlich wie Sie es von Microsoft Word kennen). Die Gliederung besteht aus verschachtelten hierarchischen Ebenen. Das heißt, jede Gliederung hat immer genau ein oberstes Element, unter dem sich beliebig viele untergeordnete Elemente befinden können. Unter jedem der untergeordnete Elemente können wieder untergeordnete Elemente sein, und so weiter.</p>
+<p>Beispiel: Das oberste Element ist eine Schallplatte (als Ganzes einschließlich der Hülle). Darunter könnte sich die Vorderseite der Hülle, die eigentliche Schellackplatte, ein Einlegeblatt und die Rückseite der Hülle befinden. Die Schellackplatte könnte wiederum in zwei Seiten unterteilt sein, möglicherweise in mehrere Titel pro Seite usw.</p>
+<p>Diese zur Darstellung verwendeten Gliederungselemente werden „Division“ (dt. „Einteilung“) genannt. Der Begriff „Division“ wurde vom METS-Standard übernommen, dem Format, in dem die Ausgabedatei geschrieben wird.</p>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: In Production 2 wurden die Divisionen als DocStrctType bezeichnet.</p>
+<p>Welche Unterteilungen existieren, ist in einer XML-Datei definiert, dem sogenannten Regelsatz. Um mit dem Production Metadaten-Editor arbeiten zu können, benötigen wir mindestens eine Regelsatzdatei mit mindestens einer definierten Division.</p>
+<p>Der kleinste denkbare Regelsatz sieht folgendermaßen aus:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;section&quot;&gt;
+            &lt;label&gt;Section&lt;/label&gt;
+        &lt;/division&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>Er besteht aus einem Bereich <code>&lt;declaration&gt;</code>, in dem Divisionen (und nachfolgend auch Metadatenschlüssel) definiert werden können. Hier wird eine Unterteilung definiert. Es hat eine interne Referenzkennung (<code>id=</code>) und eine Bezeichnung („<code>label</code>“). Die Bezeichnung legt fest, wie die Unterteilung im Metadateneditor genannt wird.</p>
+<p>Mit obigem Regelsatz können Sie Gliederungen erstellen, die folgendermaßen aussehen:</p>
+<ul>
+<li>Section</li>
+<li>Section<ul>
+<li>Section</li>
+<li>Section</li>
+</ul>
+</li>
+<li>Section<ul>
+<li>Section</li>
+</ul>
+</li>
+<li>Section</li>
+</ul>
+<p>Production bietet die Möglichkeit, die Metadatendatei beim Exportieren über XSLT zu konvertieren. Sie können dies jedoch erheblich vereinfachen, wenn Sie die Namen, die Sie für den Export verwenden möchten, bereits für die internen Referenzkennungen (<code>id=</code>) der Strukturelemente verwenden. Wenn Sie Exportdateien erstellen möchten, die mit dem DFG-Viewer kompatibel sind, verwenden Sie die <a href="https://dfg-viewer.de/strukturdatenset/">Referenzkennungen aus dem DFG Viewer-Strukturdatensatz</a>. (Spalte „XML“).</p>
+<h3 id="einteilungen-mit-besonderer-verwendung">Einteilungen mit besonderer Verwendung</h3>
+<p>Einteilungen können in der Anwendung eine speziellen Verwendung (engl. „use“) haben. Diese wird meist mit dem Attribut <code>use="…"</code> in der Definition vermerkt. Derzeit gibt es folgende Schlüsselwörter:</p>
+<ul>
+<li><code>processTitle="…"</code> Eine Einteilung gilt als mögliche Wurzel der logischen Beschreibung, wenn sie ein Attribut „processTitle“ hat. Der Wert des Attributs besteht aus festem Text in einfachen Anführungszeichen (<code>'</code>) und Metadatenschlüsseln, deren Werte eingefügt werden sollen, getrennt durch Pluszeichen (<code>+</code>). Es kann auch leer sein, wenn der Vorgangstitel manuell eingetragen werden soll.<br />
+Für Zeitungsvorgänge gilt hier noch die Besonderheit, dass die Bildungsanweisung für den Vorgangstitel für Jahre und Ausgaben auch mit einem Pluszeichen (<code>+</code>) beginnen darf, in diesem Fall wird der Vorgangstitel dann in Ergänzung zur Überordnung vervollständigt. Außerdem stehen die Angaben zur jeweils ersten der in dem Vorgang enthaltenen Ausgaben in den Variablen <code>#DAY</code> (Tag, 2-stellig), <code>#Issue</code> (Name der Ausgabe), <code>#MONTH</code> (Monat, 2-stellig) und <code>#YEAR</code> (Jahr, 4-stellig) zur Verfügung. Zusätzlich können für aphoristischere Vorgangstitel auch Abkürzungen des Namens der Ausgabe auf 1−4 Buchstaben, wahlweise in Groß- oder Kleinbuchstaben, mit den Variablen <code>#I</code>, <code>#IS</code>, <code>#ISS</code>, <code>#ISSU</code>, <code>#i</code>, <code>#is</code>, <code>#iss</code> und <code>#issu</code> genutzt werden; eine 2-stellige Jahreszahl ist mit der Variable <code>#YR</code> verfügbar.<processtitle>ZDB+'_'+#YEAR+#MONTH+#DAY</processtitle></li>
+<li><code>use="createChildrenFromParent"</code> Diese Einteilung ist eine übergeordnete Einheit, zu der direkt untergeordnete Vorgänge angelegt werden können. Sinnvoll ist dies bei einem hierarchisch übergeordneten Typus, wie zB einer fortlaufenden Publikation (fortlaufendes, mehrbändiges Werk).</li>
+<li><code>use="createChildrenWithCalendar"</code> Diese Einteilung ist eine übergeordnete Einheit, zu der untergeordnete Vorgänge mit einer Kalenderstruktur angelegt werden können. Dieses Attribut kann nur für eine Einteilung festgelegt werden, die eine Unterteilung nach Datum (<code>&lt;subdivisionByDate&gt;</code>) hat.</li>
+<li><code>withWorkflow="false"</code> Ein Werk hat in der Regel einen Workflow, dieser kann aber für eine übergeordnete Einheit, beispielsweise eine Serie, abgeschaltet werden.</li>
+</ul>
+<h2 id="mehrsprachige-regelsatze">Mehrsprachige Regelsätze</h2>
+<p>Production ist eine Unternehmenssoftware, die für die internationale Zusammenarbeit über das Internet geeignet ist. Sie unterstützt volle Mehrsprachigkeit. Die Standardsprache ist Englisch. Um die Mehrsprachigkeit im Regelsatz darzustellen, kann jedes Label in mehreren Sprachen wiederholt werden. Die Sprache wird mit dem Code aus ISO-659-1 als lang= angegeben. Beispiel: </p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;caption&quot;&gt;
+            &lt;label&gt;Caption&lt;/label&gt;
+            &lt;label lang=&quot;fr&quot;&gt;intitulé&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Übeschrift&lt;/label&gt;
+        &lt;/division&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>Alternativ können Sie die Standardsprache im Wurzelelement der XML-Datei definieren:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset lang=&quot;fr&quot; xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;caption&quot;&gt;
+            &lt;label&gt;intitulé&lt;/label&gt;
+            &lt;label lang=&quot;en&quot;&gt;Caption&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Überschrift&lt;/label&gt;
+        &lt;/division&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: Die Beziehungen zwischen Strukturelementen und möglichen Metadatenschlüsseln werden in Produktion 3 in einem separaten Abschnitt des Regelsatzes behandelt.</p>
+<h2 id="metadatenschlussel-definieren">Metadatenschlüssel definieren</h2>
+<p>Die Divisionen können durch Metadaten beschrieben werden. Metadaten bestehen immer aus Einträgen, die aus einem Schlüssel und den zugehörigen Werten bestehen. Schlüssel sind z.B. Titel und Verlag. Um Metadaten erfassen zu können, müssen Sie Schlüssel definieren. Die Deklaration von Metadatenschlüsseln sieht anfangs wie die von Divisionen aus, mit dem Unterschied, dass das XML-Element als <code>key</code> bezeichnet wird:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;book&quot;&gt;
+            &lt;label&gt;Book&lt;/label&gt;
+            &lt;label lang=&quot;fr&quot;&gt;livre&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Buch&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;key id=&quot;title&quot;&gt;
+            &lt;label&gt;Title&lt;/label&gt;
+            &lt;label lang=&quot;fr&quot;&gt;titre&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Titel&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;publisher&quot;&gt;
+            &lt;label&gt;Publisher&lt;/label&gt;
+            &lt;label lang=&quot;fr&quot;&gt;maison d’édition&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Verlag&lt;/label&gt;
+        &lt;/key&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: In Production 2 wurden die Schlüssel als MetadataType bezeichnet.</p>
+<h3 id="definieren-des-wertebereichs-von-metadatenschlusseln">Definieren des Wertebereichs von Metadatenschlüsseln</h3>
+<p>Die zulässigen Werte für Metadatenschlüssel, können auf verschiedene Arten festgelegt werden. Je nach Wertebereich können verschiedene Eingabemöglichkeiten angeboten werden, z.B. einen Kalender für Termine.</p>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: In Production 2 wurden die Wertebereiche in den Dateien digitalCollections.xml, metadataDisplayRules.xml, processProperties.xml und projects.xml definiert, wobei unterschiedliche Funktionalitäten zur Verfügung standen, und die XML-Syntax in jeder Datei war anders. Die Funktionalität wurde in Production 3 im Regelsatz zusammengefasst und vereinheitlicht.</p>
+<p>① Das <code>codomain</code>-Tag kann verwendet werden, um einen der programmierten Wertebereiche auszuwählen: Wahrheitswert (<code>boolean</code>), Datum (<code>date</code>), Ganzzahl (<code>integer</code>) und URI (<code>anyURI</code>).</p>
+<p>Ein Wahrheitswert ist ein Metadateneintrag, der geschrieben wird, wenn er wahr ist, andernfalls nicht. Für einen Metadatenschlüssel vom Typ Wahrheitswert muss der Wert mittels einer option angegeben werden. Ein Metadateneintrag für einen Wahrheitswert wird im Metadateneditor als ein An-/Aus-Schalter dargestellt. Wird der Schalter eingeschaltet, wird der Wert der option in die Metadaten geschrieben, wird er ausgeschaltet, wird kein Wert geschrieben.</p>
+<p>Datum bedeutet ein lokales Datum nach dem Gregorianischen Kalender. Ganzzahlen sind besonders geeignet für Zählungen. URI ist der Oberbegriff für Internetadressen (URLs), URNs und vergleichbare Bezeichner.</p>
+<pre><code class="language-xml">    &lt;key id=&quot;NotePreImport&quot;&gt;
+        &lt;label&gt;Note for users&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Hinweis für Nutzer&lt;/label&gt;
+        &lt;codomain type=&quot;boolean&quot;/&gt;
+        &lt;option value=&quot;Hinweis für Nutzer: Hiermit erhalten Sie noch ...&quot;&gt;
+            &lt;label&gt;Insert information text&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Hinweistext einfügen&lt;/label&gt;
+        &lt;/option&gt;
+    &lt;/key&gt;
+
+    &lt;key id=&quot;DatePublished&quot;&gt;
+        &lt;label&gt;Date published&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Veröffentlicht am&lt;/label&gt;
+        &lt;codomain type=&quot;date&quot;/&gt;
+    &lt;/key&gt;
+
+    &lt;key id=&quot;year&quot;&gt;
+        &lt;label&gt;Year of publication&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Erscheinungsjahr&lt;/label&gt;
+        &lt;codomain type=&quot;integer&quot;/&gt;
+    &lt;/key&gt;
+
+    &lt;key id=&quot;link&quot;&gt;
+        &lt;label&gt;Link&lt;/label&gt;
+        &lt;codomain type=&quot;anyURI&quot;/&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>② Über Optionen können Sie eine Auswahlliste mit mehreren Werten zur Auswahl erstellen:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;script&quot;&gt;
+        &lt;label&gt;Script&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Schrift&lt;/label&gt;
+        &lt;option value=&quot;Latn&quot;&gt;
+            &lt;label&gt;Latin&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Antiqua&lt;/label&gt;
+        &lt;/option&gt;
+        &lt;option value=&quot;Latf&quot;&gt;
+            &lt;label&gt;Latin, Fraktur variant&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Fraktur&lt;/label&gt;
+        &lt;/option&gt;
+        &lt;option value=&quot;Zyyy&quot;&gt;
+            &lt;label&gt;Undetermined (no OCR)&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Nicht festgelegt (keine OCR)&lt;/label&gt;
+        &lt;/option&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>③ Sie können ein Muster (einen sogenannten regulären Ausdruck) definieren, dem die Werte entsprechen müssen:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;issn&quot;&gt;
+        &lt;label&gt;ISSN&lt;/label&gt;
+        &lt;pattern&gt;\d{4}-\d{3}[0-9X]&lt;/pattern&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>Sie können diese Möglichkeiten auch kombinieren. Beispielsweise kann ein Muster verwendet werden, um eine Ganzzahl auf einen positiven Wert zu begrenzen:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;issue&quot;&gt;
+        &lt;label&gt;Issue&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Ausgabe&lt;/label&gt;
+        &lt;codomain type=&quot;integer&quot;/&gt;
+        &lt;pattern&gt;[1-9][0-9]*&lt;/pattern&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>④ Sie können auch einen bekannten Namespace als Zielmenge angeben, z. B. die von der LOC veröffentlichte Sprachenliste:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;language&quot;&gt;
+        &lt;label&gt;Language&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Sprache&lt;/label&gt;
+        &lt;codomain namespace=&quot;http://id.loc.gov/vocabulary/iso639-2/&quot;/&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>Wenn der Namensraum endlich ist, können Sie auch die Liste der erlaubten Optionen definieren. Da diese Liste ziemlich lang sein kann und in allen Regelsätzen dieselbe ist, kann sie, im Regelsatzverzeichnis in einer separaten Datei definiert werden. Der Name der Datei muss dem letzten Segment des Namespace-URI entsprechen, im Beispiel <code>iso639-2.xml</code>. Die einzelnen Optionen können in der Datei definiert werden:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;namespace xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;
+           about=&quot;http://id.loc.gov/vocabulary/iso639-2/&quot;&gt;
+    &lt;option value=&quot;http://id.loc.gov/vocabulary/iso639-2/aar&quot;&gt;
+        &lt;label&gt;Afar&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Afar&lt;/label&gt;
+        &lt;label lang=&quot;fr&quot;&gt;afar&lt;/label&gt;
+    &lt;/option&gt;
+    &lt;option value=&quot;http://id.loc.gov/vocabulary/iso639-2/abk&quot;&gt;
+        &lt;label&gt;Abkhazian&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Abchasisch&lt;/label&gt;
+        &lt;label lang=&quot;fr&quot;&gt;abkhaze&lt;/label&gt;
+    &lt;/option&gt;
+    &lt;!-- ... --&gt;
+&lt;/namespace&gt;
+</code></pre>
+<h3 id="voreingestellte-werte-fur-metadatenschlussel">Voreingestellte Werte für Metadatenschlüssel</h3>
+<p>Mit dem <code>preset</code>-Element können Sie Werte für einen Metadatenschlüssel angeben, die zu Beginn vorgewählt sind.</p>
+<pre><code class="language-xml">    &lt;key id=&quot;singleDigCollection&quot;&gt;
+        &lt;label&gt;Digital collection&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Digitale Kollektion&lt;/label&gt;
+        &lt;option value=&quot;Collection 1&quot;/&gt;
+        &lt;option value=&quot;Collection 2&quot;/&gt;
+        &lt;option value=&quot;Collection 3&quot;/&gt;
+        &lt;preset&gt;Collection 1&lt;/preset&gt;
+        &lt;preset&gt;Collection 3&lt;/preset&gt;
+    &lt;/key&gt;
+</code></pre>
+<h3 id="gruppierte-metadatenschlussel">Gruppierte Metadatenschlüssel</h3>
+<p>Sie können gruppierte Schlüssel erstellen, die wiederum Schlüssel enthalten. Auf diese Weise können zum Beispiel Personen dargestellt werden:</p>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: In Produktion 3 gibt es keinen speziellen Metadatentyp mehr für Personen. Personen müssen wie gezeigt referenziert werden.</p>
+<pre><code class="language-xml">    &lt;key id=&quot;person&quot;&gt;
+        &lt;label&gt;Person&lt;/label&gt;
+        &lt;key id=&quot;role&quot;&gt;
+            &lt;label&gt;Role&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Rolle&lt;/label&gt;
+            &lt;option value=&quot;Author&quot;&gt;
+                &lt;label&gt;Author&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Autor&lt;/label&gt;
+            &lt;/option&gt;
+            &lt;!-- ... more roles / weitere Rollen --&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;authorityValue&quot;&gt;
+            &lt;label&gt;URI&lt;/label&gt;
+            &lt;codomain namespace=&quot;http://d-nb.info/gnd/&quot;/&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;lastName&quot;&gt;
+            &lt;label&gt;Surname&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Nachname&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;firstName&quot;&gt;
+            &lt;label&gt;Given name&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Vorname&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;displayName&quot;&gt;
+            &lt;label&gt;Display name&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Ansetzungsform&lt;/label&gt;
+        &lt;/key&gt;
+    &lt;/key&gt;
+</code></pre>
+<h3 id="schlussel-mit-besonderer-verwendung">Schlüssel mit besonderer Verwendung</h3>
+<p>Schlüssel können in der Anwendung eine speziellen Verwendung (engl. „use“) haben. Diese wird mit dem Attribut <code>use="…"</code> in der Definition vermerkt. Derzeit gibt es folgende Schlüsselwörter:</p>
+<ul>
+<li><code>use="authorLastName"</code> Der Wert wird als Nachname des Autors verwendet, um den Autortitelschlüssel zu bilden.</li>
+<li><code>use="childCount"</code> setzt die (1-basierte) untergeordnete Nummer, wenn untergeordnete Dokumente erstellt werden.</li>
+<li><code>use="dataSource"</code> Interne Kennung der Datenquelle, um später die importierten Metadateneinträge aus der Datenquelle aktualisieren zu können.</li>
+<li><code>use="displaySummary"</code> wird beim Anlegen eines neuen Prozesses als Zusammenfassung auf der Registerkarte Title Record Link angezeigt.</li>
+<li><code>use="higherlevelIdentifier"</code> muss beim Holen eines Datensatzes aus einer Datenquelle vorhanden sein, um auch einen übergeordneten Datensatz zu holen.</li>
+<li><code>use="mediaPartial"</code> Kennzeichnet die Division als Medienteil (Media Partial), um diese als Audio- und/oder Video-Sprungmarke zu verwenden. Weitere Informationen dazu sind unter dem Punkt <a href="https://github.com/kitodo/kitodo-production/wiki/Verwendung-von-Audio-oder-Video#nutzung-der-medienteile-media-partials">Nutzung der Medienteile</a> der Dokumentation <a href="https://github.com/kitodo/kitodo-production/wiki/Verwendung-von-Audio-oder-Video">Verwendung von Audio oder Video</a> zu finden.</li>
+<li><code>use="processTitle"</code> In dieses Feld wird der generierte Autor-Titel-Schlüssel geschrieben.</li>
+<li><code>use="recordIdentifier"</code> Identifier des aus einer externen Datenquelle geholten Datensatzes, damit die importierten Metadateneinträge aus der Datenquelle später aktualisiert werden können.</li>
+<li><code>use="title"</code> Dieses Feld wird als Titel zur Bildung des Autor-Titel-Schlüssels verwendet.</li>
+</ul>
+<h3 id="verwenden-mehrerer-metadatendomanen">Verwenden mehrerer Metadatendomänen</h3>
+<p>Metadaten können im METS-Dateiformat in verschiedenen Domänen gespeichert werden, die eine grobe semantische Vorklassifizierung ermöglichen. Es gibt folgende Bereiche:</p>
+<ul>
+<li><code>description</code>: für Metadaten, die die digitale Kopie selbst beschreiben (der Normalfall) </li>
+<li><code>digitalProvenance</code>: für Metadaten, die Informationen über die Weiterentwicklung der digitalen Kopie im Laufe der Zeit geben. Dies ist zum Beispiel nützlich, wenn Medien aus technischen Gründen in ein neues Format umgewandelt werden müssen und Konvertierungsverluste auftreten können.</li>
+<li><code>rights</code>: für Metadaten, die Informationen über Rechte enthalten</li>
+<li><code>source</code>: für Metadaten, die das digitalisierte Original beschreiben</li>
+<li><code>technical</code>: für Metadaten, die für den Digitalisierungsprozess benötigt werden </li>
+<li><code>mets:div</code>: um Metadaten als XML-Attribute in der Division in der METS-Datei zu speichern</li>
+</ul>
+<p>ℹ️ Hinweis für Umsteiger von Production 2: <code>description</code> entspricht sinngemäß den Werkstückeigenschaften (projects.xml: from="werk"), <code>source</code> den Vorlageeigenschaften (from="template"), <code>technical</code> den Vorgangseigenschaften (from="prozess"), <code>rights</code> dem “METS Rechteinhaber” und <code>digitalProvenance</code> der “METS Digiprov” aus der Projektkonfiguration (wobei letztere semantisch falsch benutzt ist, siehe oben). Die <code>&lt;mets:div&gt;</code>-Attribute <code>LABEL</code> und <code>ORDERLABEL</code> waren an die DocStrctTypen “TitleDocMain” und “TitleDocMainShort” gekoppelt (diese Kopplung besteht in Production 3 nicht mehr), das Attribut <code>CONTENTIDS</code> (Projektkonfiguration: METS PURL, METS ContentIDs) wird in Production 3 wie ein Metadatenschlüssel (Typ: <code>anyURI</code>) verwendet und kann jetzt individuell vergeben werden.</p>
+<p>Metadaten der Domäne <code>description</code> werden im XML-Element <code>&lt;dmdSec&gt;</code> gespeichert, Metadaten der Domänen <code>digitalProvenance</code>, <code>rights</code>, <code>source</code> und <code>technical</code> in den entsprechenden Unterelementen des XML-Elements <code>&lt;amdSec&gt;</code>.</p>
+<pre><code class="language-xml">    &lt;key id=&quot;title&quot; domain=&quot;description&quot;&gt;
+        &lt;label&gt;Main title&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Haupttitel&lt;/label&gt;
+    &lt;/key&gt;
+
+    &lt;key id=&quot;OcrMode&quot; domain=&quot;technical&quot;&gt;
+        &lt;label&gt;OCR&lt;/label&gt;
+        &lt;option value=&quot;&quot;&gt;&lt;label&gt;off&lt;/label&gt;&lt;label lang=&quot;de&quot;&gt;aus&lt;/label&gt;&lt;/option&gt;
+        &lt;option value=&quot;Antiqua&quot;/&gt;
+        &lt;option value=&quot;Fraktur&quot;/&gt;
+        &lt;preset&gt;Antiqua&lt;/preset&gt;
+    &lt;/key&gt;
+
+    &lt;key id=&quot;LABEL&quot; domain=&quot;mets:div&quot;&gt;
+        &lt;label&gt;Label&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Bezeichnung&lt;/label&gt;
+    &lt;/key&gt;
+</code></pre>
+<h2 id="beziehungen-definieren">Beziehungen definieren</h2>
+<p>Bisher können Sie mit dem Regelsatz Strukturelemente beliebig mischen und mit Metadaten beliebig beschreiben. Dies kann bei ausreichender Sachkenntnis des mit der Beschreibung beauftragten Kollegen ausreichend sein.</p>
+<p>Um Qualitätsstandards technisch durchzusetzen, können Sie jedoch Regeln definieren, wie Gliederungselemente kombiniert werden können und mit welchen Metadaten sie beschrieben werden können oder müssen.</p>
+<p>Dies geschieht im zweiten Hauptabschnitt der XML-Datei, <code>&lt;correlation&gt;</code>.</p>
+<p>Als Beispiel verwenden wir den folgenden Regelsatz mit einigen üblichen Gliederungselementen: </p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;article&quot;&gt;
+            &lt;label&gt;Article&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Artikel&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;chapter&quot;&gt;
+            &lt;label&gt;Chapter&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Kapitel&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;contents&quot;&gt;
+            &lt;label&gt;Table of contents&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Inhaltsverzeichnis&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;cover_back&quot;&gt;
+            &lt;label&gt;Back cover&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Rückdeckel&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;cover_front&quot;&gt;
+            &lt;label&gt;Front cover&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Vorderdeckel&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;engraved_titlepage&quot;&gt;
+            &lt;label&gt;Engraved titlepage&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Kupfertitel&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;illustration&quot;&gt;
+            &lt;label&gt;Illustration&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;monograph&quot;&gt;
+            &lt;label&gt;Monograph&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Monographie&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;preface&quot;&gt;
+            &lt;label&gt;Preface&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Vorwort&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;photograph&quot;&gt;
+            &lt;label&gt;Photo&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Foto&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;section&quot;&gt;
+            &lt;label&gt;Section&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Abschnitt&lt;/label&gt;
+        &lt;/division&gt;
+        &lt;division id=&quot;table&quot;&gt;
+            &lt;label&gt;Table&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Tabelle&lt;/label&gt;
+        &lt;/division&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>In Abschnitt <code>&lt;correlation&gt;</code> definieren wir nun, welche Gliederungselemente unter welchen Gliederungselementen erscheinen dürfen. Wir legen fest, dass nur die aufgeführten Gliederungselemente und Schlüssel erlaubt sind.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;!-- ... siehe oben ... --&gt;
+    &lt;/declaration&gt;
+    &lt;correlation&gt;
+        &lt;restriction division=&quot;article&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;chapter&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;contents&quot; unspecified=&quot;forbidden&quot;/&gt;
+
+        &lt;restriction division=&quot;cover_back&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;cover_front&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;engraved_titlepage&quot; unspecified=&quot;forbidden&quot;/&gt;
+        &lt;restriction division=&quot;illustration&quot; unspecified=&quot;forbidden&quot;/&gt;
+
+        &lt;restriction division=&quot;monograph&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;article&quot;/&gt;
+            &lt;permit division=&quot;chapter&quot;/&gt;
+            &lt;permit division=&quot;contents&quot;/&gt;
+            &lt;permit division=&quot;cover_back&quot;/&gt;
+            &lt;permit division=&quot;cover_front&quot;/&gt;
+            &lt;permit division=&quot;engraved_titlepage&quot;/&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;preface&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;section&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;preface&quot; unspecified=&quot;forbidden&quot;/&gt;
+        &lt;restriction division=&quot;photograph&quot; unspecified=&quot;forbidden&quot;/&gt;
+
+        &lt;restriction division=&quot;section&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;article&quot;/&gt;
+            &lt;permit division=&quot;chapter&quot;/&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;preface&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;table&quot; unspecified=&quot;forbidden&quot;/&gt;
+    &lt;/correlation&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>Im Folgenden definieren wir einige Metadatenschlüssel in unserem Regelsatz:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;abstract&quot;&gt;
+        &lt;label&gt;Abstract&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;blurb&quot;&gt;
+        &lt;label&gt;Blurb&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Klappentext&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;edition&quot;&gt;
+        &lt;label&gt;Edition&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Auflagebezeichnung&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;isbn&quot;&gt;
+        &lt;label&gt;ISBN&lt;/label&gt;
+        &lt;pattern&gt;(?:\d{3}[\- ]?)?\d[\- ]?(?:\d{3}[\- ]?\d{5}|\d{4}[\- ]?\d{4})[\- ]?[\dX]&lt;/pattern&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;LABEL&quot; domain=&quot;mets:div&quot;&gt;
+        &lt;label&gt;Label&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Bezeichnung&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;place&quot;&gt;
+        &lt;label&gt;Place published&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Erscheinungsort&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;publisher&quot;&gt;
+        &lt;label&gt;Publisher&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Verlag&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;title&quot;&gt;
+        &lt;label&gt;Main title&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Haupttitel&lt;/label&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;year&quot;&gt;
+        &lt;label&gt;Year published&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Erscheinungsjahr&lt;/label&gt;
+        &lt;codomain type=&quot;integer&quot;/&gt;
+        &lt;pattern&gt;[12][0-9]{3}&lt;/pattern&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>Die wollen wir jetzt an bestimmten Divisionen zulassen:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;!-- ... --&gt;
+    &lt;/declaration&gt;
+    &lt;correlation&gt;
+        &lt;restriction division=&quot;article&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+            &lt;permit key=&quot;abstract&quot;/&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+            &lt;permit key=&quot;title&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;chapter&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;contents&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;cover_back&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit key=&quot;blurb&quot;/&gt;
+            &lt;permit key=&quot;isbn&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;cover_front&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit key=&quot;title&quot;/&gt;
+            &lt;permit key=&quot;publisher&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;engraved_titlepage&quot; unspecified=&quot;forbidden&quot;/&gt;
+
+        &lt;restriction division=&quot;illustration&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;monograph&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;article&quot;/&gt;
+            &lt;permit division=&quot;chapter&quot;/&gt;
+            &lt;permit division=&quot;contents&quot;/&gt;
+            &lt;permit division=&quot;cover_back&quot;/&gt;
+            &lt;permit division=&quot;cover_front&quot;/&gt;
+            &lt;permit division=&quot;engraved_titlepage&quot;/&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;preface&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;section&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+            &lt;permit key=&quot;year&quot;/&gt;
+            &lt;permit key=&quot;title&quot;/&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+            &lt;permit key=&quot;edition&quot;/&gt;
+            &lt;permit key=&quot;place&quot;/&gt;
+            &lt;permit key=&quot;publisher&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;preface&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;photograph&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;section&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit division=&quot;article&quot;/&gt;
+            &lt;permit division=&quot;chapter&quot;/&gt;
+            &lt;permit division=&quot;illustration&quot;/&gt;
+            &lt;permit division=&quot;preface&quot;/&gt;
+            &lt;permit division=&quot;photograph&quot;/&gt;
+            &lt;permit division=&quot;table&quot;/&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+
+        &lt;restriction division=&quot;table&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;/restriction&gt;
+    &lt;/correlation&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<p>Sie können auch angeben, wie oft ein Metadatenschlüssel zugewiesen werden darf. Dies kann sowohl die Präsenz erzwingen (<code>minOccurs="1"</code>) als auch die Wiederholbarkeit vermeiden (<code>maxOccurs="1"</code>). Bei Listenauswahltypen führt eine Bestimmung von höchstens einem Vorkommen zu einer einzelnen Auswahl, während ansonsten eine Mehrfachauswahl angeboten wird. Beispiel:</p>
+<pre><code class="language-xml">    &lt;restriction division=&quot;monograph&quot; unspecified=&quot;forbidden&quot;&gt;
+        &lt;permit division=&quot;article&quot;/&gt;
+        &lt;permit division=&quot;chapter&quot;/&gt;
+        &lt;permit division=&quot;contents&quot;/&gt;
+        &lt;permit division=&quot;cover_back&quot;/&gt;
+        &lt;permit division=&quot;cover_front&quot;/&gt;
+        &lt;permit division=&quot;engraved_titlepage&quot;/&gt;
+        &lt;permit division=&quot;illustration&quot;/&gt;
+        &lt;permit division=&quot;preface&quot;/&gt;
+        &lt;permit division=&quot;photograph&quot;/&gt;
+        &lt;permit division=&quot;section&quot;/&gt;
+        &lt;permit division=&quot;table&quot;/&gt;
+        &lt;permit key=&quot;year&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;title&quot; minOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;LABEL&quot; maxOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;edition&quot;/&gt;
+        &lt;permit key=&quot;place&quot;/&gt;
+        &lt;permit key=&quot;publisher&quot;/&gt;
+    &lt;/restriction&gt;
+</code></pre>
+<p>Wie Sie vielleicht bemerkt haben, haben wir uns noch nicht mit Personen befasst. Hier ist die Sache aufgrund der Verschachtelung etwas komplizierter. Definieren wir jedoch zunächst einen Metadatenschlüssel für Personen:</p>
+<pre><code class="language-xml">    &lt;key id=&quot;person&quot;&gt;
+        &lt;label&gt;Person&lt;/label&gt;
+        &lt;key id=&quot;authorityValue&quot;&gt;
+            &lt;label&gt;URI&lt;/label&gt;
+            &lt;codomain namespace=&quot;http://d-nb.info/gnd/&quot;/&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;date&quot;&gt;
+            &lt;label&gt;Display name&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Lebensdaten&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;displayForm&quot;&gt;
+            &lt;label&gt;Display form&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Anzeigeform&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;family&quot;&gt;
+            &lt;label&gt;Surname&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Nachname&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;given&quot;&gt;
+            &lt;label&gt;Given name&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Vorname&lt;/label&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;role&quot;&gt;
+            &lt;label&gt;Role&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Rolle&lt;/label&gt;
+            &lt;codomain namespace=&quot;http://id.loc.gov/vocabulary/relators/&quot;/&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;termsOfAddress&quot;&gt;
+            &lt;label&gt;Display name&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Ansetzungsform&lt;/label&gt;
+        &lt;/key&gt;
+    &lt;/key&gt;
+</code></pre>
+<p>Zunächst möchten wir mit einer Regel die Reihenfolge festlegen, in der die Unterschlüssel angezeigt werden, und deren Anzahl definieren. Dazu definieren wir eine Regel für den Schlüssel:</p>
+<pre><code class="language-xml">    &lt;restriction key=&quot;person&quot;&gt;
+        &lt;permit key=&quot;role&quot; minOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;authorityValue&quot; maxOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;family&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;given&quot;/&gt;
+        &lt;permit key=&quot;termsOfAddress&quot;/&gt;
+        &lt;permit key=&quot;displayForm&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;/&gt;
+        &lt;permit key=&quot;date&quot; maxOccurs=&quot;1&quot;/&gt;
+    &lt;/restriction&gt;
+</code></pre>
+<p>Wir können nun die Person wie zuvor zu den Gliederungselementen als Feld zulassen. Wir möchten jedoch die Menge möglicher Rollen einschränken:</p>
+<pre><code class="language-xml">    &lt;restriction division=&quot;monograph&quot; unspecified=&quot;forbidden&quot;&gt;
+        &lt;permit division=&quot;article&quot;/&gt;
+        &lt;permit division=&quot;chapter&quot;/&gt;
+        &lt;permit division=&quot;contents&quot;/&gt;
+        &lt;permit division=&quot;cover_back&quot;/&gt;
+        &lt;permit division=&quot;cover_front&quot;/&gt;
+        &lt;permit division=&quot;engraved_titlepage&quot;/&gt;
+        &lt;permit division=&quot;illustration&quot;/&gt;
+        &lt;permit division=&quot;preface&quot;/&gt;
+        &lt;permit division=&quot;photograph&quot;/&gt;
+        &lt;permit division=&quot;section&quot;/&gt;
+        &lt;permit division=&quot;table&quot;/&gt;
+        &lt;permit key=&quot;person&quot;&gt;
+            &lt;permit key=&quot;role&quot; unspecified=&quot;forbidden&quot;&gt;
+                &lt;!-- Autor --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/aut&quot;/&gt;
+                &lt;!-- Herausgeber --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/edt&quot;/&gt;
+            &lt;/permit&gt;
+        &lt;/permit&gt;
+        &lt;permit key=&quot;year&quot;/&gt;
+        &lt;permit key=&quot;title&quot;/&gt;
+        &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;permit key=&quot;edition&quot;/&gt;
+        &lt;permit key=&quot;place&quot;/&gt;
+        &lt;permit key=&quot;publisher&quot;/&gt;
+    &lt;/restriction&gt;
+
+    &lt;restriction division=&quot;preface&quot; unspecified=&quot;forbidden&quot;&gt;
+        &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;permit key=&quot;person&quot;&gt;
+            &lt;permit key=&quot;role&quot; unspecified=&quot;forbidden&quot;&gt;
+                &lt;!-- Verfasser eines Vorworts --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/wpr&quot;/&gt;
+                &lt;!-- Gefeierte Person --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/hnr&quot;/&gt;
+            &lt;/permit&gt;
+        &lt;/permit&gt;
+    &lt;/restriction&gt;
+
+    &lt;restriction division=&quot;photograph&quot; unspecified=&quot;forbidden&quot;&gt;
+        &lt;permit key=&quot;LABEL&quot;/&gt;
+        &lt;permit key=&quot;person&quot;&gt;
+            &lt;permit key=&quot;role&quot; unspecified=&quot;forbidden&quot;&gt;
+                &lt;!-- Fotograf --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/pht&quot;/&gt;
+                &lt;!-- Beteiligte Person (Client) --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/cli&quot;/&gt;
+                &lt;!-- Nicht beteiligte Person (Associated name) --&gt;
+                &lt;permit value=&quot;http://id.loc.gov/vocabulary/relators/asn&quot;/&gt;
+            &lt;/permit&gt;
+        &lt;/permit&gt;
+    &lt;/restriction&gt;
+</code></pre>
+<p>Durch Weglassen des Attributs <code>unspecified="forbidden"</code> am XML-Element <code>&lt;permit key="person"&gt;</code> bleiben die anderen Unterschlüssel der Person erhalten, ohne dass sie jedes Mal mittels <code>&lt;permit key="authorityValue"/&gt; &lt;permit key="family"/&gt; &lt;permit key="given"/&gt; &lt;permit key="termsOfAddress"/&gt; &lt;permit key="displayForm"/&gt; &lt;permit key="date"/&gt;</code> aufgeführt werden müssen. Die <code>minOccurs</code>- und <code>maxOccurs</code>-Angaben werden aus der <code>&lt;restriction key="person"&gt;</code> geerbt.</p>
+<h3 id="voneinander-abhangig-erlaubte-metadatenwerte">Voneinander abhängig erlaubte Metadatenwerte</h3>
+<p>Mit dieser Funktion können in einem Metadatenfeld nur Werte ausgewählt werden, die von einem anderen Feld vorgegeben werden. Im Beispiel werden Flurstücke und Adressen mit Straßen und Hausnummern deklariert. (Der gruppierte Schlüssel “Adresse” soll außerdem wiederholbar sein.) Nach Auswahl des Flurstücks sollen nur Straßen gewählt werden können, die es auf dem Flurstück tatsächlich gibt, und nach Auswahl einer Straße sollen nur Hausnummern gewählt werden können, die es an dieser Straße auf dem Flurstück tatsächlich gibt.</p>
+<pre><code class="language-xml">&lt;declaration&gt;
+    &lt;key id=&quot;area&quot;&gt;
+        &lt;label&gt;Area code&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Flurstücknummer&lt;/label&gt;
+        &lt;option value=&quot;1234-2a&quot;/&gt;
+        &lt;option value=&quot;1234-2b&quot;/&gt;
+        &lt;!-- ... --&gt;
+    &lt;/key&gt;
+    &lt;key id=&quot;address&quot;&gt;
+        &lt;label&gt;Address&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Adresse&lt;/label&gt;
+        &lt;key id=&quot;street&quot;&gt;
+            &lt;label&gt;Street&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Straße&lt;/label&gt;
+            &lt;option value=&quot;Buschweg&quot;/&gt;
+            &lt;option value=&quot;Pastor-Luis-Straße&quot;/&gt;
+            &lt;option value=&quot;Rosenstraße&quot;/&gt;
+            &lt;option value=&quot;Vereinsstraße&quot;/&gt;
+            &lt;!-- ... --&gt;
+        &lt;/key&gt;
+        &lt;key id=&quot;house&quot;&gt;
+            &lt;label&gt;House no.&lt;/label&gt;
+            &lt;label lang=&quot;de&quot;&gt;Hausnummer&lt;/label&gt;
+            &lt;option value=&quot;1&quot;/&gt;
+            &lt;option value=&quot;1a&quot;/&gt;
+            &lt;option value=&quot;1b&quot;/&gt;
+            &lt;option value=&quot;2&quot;/&gt;
+            &lt;option value=&quot;2 Rgb.&quot;&gt;
+                &lt;label&gt;2, rear building&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;2, Rückgebäude&lt;/label&gt;
+            &lt;/option&gt;
+            &lt;option value=&quot;2a&quot;/&gt;
+            &lt;option value=&quot;3&quot;/&gt;
+            &lt;!-- ... --&gt;
+        &lt;/key&gt;
+    &lt;/key&gt;
+&lt;/declaration&gt;
+&lt;correlation&gt;
+    &lt;restriction key=&quot;address&quot;&gt;
+        &lt;permit key=&quot;street&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;condition key=&quot;../area&quot; equals=&quot;1234-2b&quot;&gt;
+                &lt;permit value=&quot;Rosenstraße&quot;/&gt;
+                &lt;permit value=&quot;Vereinsstraße&quot;/&gt;
+            &lt;/condition&gt;
+        &lt;/permit&gt;
+        &lt;permit key=&quot;house&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; unspecified=&quot;forbidden&quot;&gt;
+            &lt;condition key=&quot;../area&quot; equals=&quot;1234-2b&quot;&gt;
+                &lt;condition key=&quot;street&quot; equals=&quot;Rosenstraße&quot;&gt;
+                    &lt;permit value=&quot;3&quot;/&gt;
+                    &lt;permit value=&quot;5&quot;/&gt;
+                    &lt;permit value=&quot;7&quot;/&gt;
+                &lt;/condition&gt;
+                &lt;condition key=&quot;street&quot; equals=&quot;Vereinsstraße&quot;&gt;
+                    &lt;permit value=&quot;2&quot;/&gt;
+                    &lt;permit value=&quot;2 Rgb.&quot;/&gt;
+                    &lt;permit value=&quot;4&quot;/&gt;
+                    &lt;permit value=&quot;4a&quot;/&gt;
+                &lt;/condition&gt;
+             &lt;/condition&gt;
+        &lt;/permit&gt;
+    &lt;/restriction&gt;
+&lt;/correlation&gt;
+</code></pre>
+<p><code>&lt;condition key="…"&gt;</code> verweist auf einen Eintrag auf der selben Ebene, im Falle gruppierter Schlüssel innerhalb desselben Elternteils. Ein vorangestelltes <code>../</code> verweist auf die nächsthöhere Ebene, so vorhanden (wiederholbar).</p>
+<h2 id="bearbeitungseinstellungen">Bearbeitungseinstellungen</h2>
+<p>Zu guter Letzt können auch Bearbeitungseinstellungen für einzelne Metadatenschlüssel im Regelsatz definiert werden. Es gibt fünf davon:
+* <code>alwaysShowing</code>: Der Metadatenschlüssel wird immer angezeigt, auch wenn er leer ist. Normalerweise werden Metadatenschlüssel nur angezeigt, wenn sie einen Wert haben oder der Bearbeiter sie manuell hinzugefügt hat. Bei sehr häufigen Metadatenfeldern können Sie das manuelle Hinzufügen sparen, indem Sie den Schlüssel auf alwaysShowing setzen. 
+* <code>editable</code>: Der Metadatenschlüssel kann so eingestellt werden, dass er nicht bearbeitet werden kann. Er wird dann angezeigt, ist aber für Änderungen gesperrt. Dies ist beispielsweise für Werte geeignet, die nach dem Import nicht geändert werden sollen.
+* <code>excluded</code>: Der Metadatenschlüssel wird nicht angezeigt, auch wenn er einen Wert hat. Dadurch können Metadateneinträge vor dem Bearbeiter ausgeblendet werden.
+* <code>filterable</code>: Diese Einstellung funktioniert nur im Zusammenhang mit Metadatenschlüsseln, die mehrere Optionen haben und über eine Einfach- oder Mehrfachauswahl ausgewählt werden können. Wenn die Filterung eingeschaltet ist, dann wird über der Auswahl ein Filter angezeigt, um die auszuwählenden Einträge zu filtern. Die Filterung vergleicht dazu das jeweilige Label der Option mit dem eingegebenen Filtertext und zeigt danach nur noch die Optionen an, welche mit dem Filtertext beginnen. Groß- und Kleinschreibung spielt dabei keine Rolle. Standardmäßig ist diese Option deaktiviert und muss explizit aktiviert werden.
+* <code>multiline</code>: Dadurch wird das Eingabefeld vergrößert. Für einige Metadateneinträge ist viel Text erforderlich, beispielsweise Abstracts. Bei Auswahlfeldern wird anstelle einer Dropdown-Auswahl eine Listenauswahl angezeigt.</p>
+<p>Die Bearbeitungseinstellungen werden in einem dritten Hauptteil des Regelsatzes, <code>&lt;editing&gt;</code>, definiert:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;!-- ... --&gt;
+    &lt;/declaration&gt;
+
+    &lt;correlation&gt;
+        &lt;!-- ... --&gt;
+    &lt;/correlation&gt;
+
+    &lt;editing&gt;
+        &lt;setting key=&quot;title&quot; alwaysShowing=&quot;true&quot;/&gt;
+        &lt;setting key=&quot;origCatalogId&quot; editable=&quot;false&quot;/&gt;
+        &lt;setting key=&quot;origImportXmlData&quot; excluded=&quot;true&quot;/&gt;
+        &lt;setting key=&quot;abstract&quot; multiline=&quot;true&quot;/&gt;
+        &lt;setting key=&quot;digitalCollection&quot; filterable=&quot;true&quot;/&gt;
+    &lt;/editing&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<h3 id="erfassungsstufen-verwenden">Erfassungsstufen verwenden</h3>
+<p>Durch Angabe von Erfassungsphasen können Metadatenschlüssel zu unterschiedlichen Zeitpunkten im Workflow unterschiedlich behandelt werden. Beim Erstellen von Vorgängen können zum Beispiel Felder ausgeblendet werden, die importiert wurden und später bearbeitet werden sollen. Dazu können beim Anlegen Einträge erstellt werden, die später nur lesbar sind.</p>
+<pre><code class="language-xml">    &lt;editing&gt;
+        &lt;setting key=&quot;OcrMode&quot; excluded=&quot;true&quot;/&gt;
+        &lt;setting key=&quot;DigitizationDevice&quot; editable=&quot;false&quot; filterable=&quot;true&quot; /&gt;
+        &lt;setting key=&quot;Billing&quot; excluded=&quot;true&quot;/&gt;
+
+        &lt;!-- ergänzend / abweichend beim Anlegen von Vorgängen --&gt;
+        &lt;acquisitionStage name=&quot;create&quot;&gt;
+            &lt;setting key=&quot;OcrMode&quot; excluded=&quot;false&quot;/&gt;
+            &lt;setting key=&quot;DigitizationDevice&quot; editable=&quot;true&quot; /&gt;
+        &lt;/acquisitionStage&gt;
+
+        &lt;!-- ergänzend / abweichend im Metadateneditor --&gt;
+        &lt;acquisitionStage name=&quot;edit&quot;&gt;
+            &lt;setting key=&quot;DigitizationDevice&quot; excluded=&quot;true&quot;/&gt;
+        &lt;/acquisitionStage&gt;
+    &lt;/editing&gt;
+</code></pre>
+<h2 id="zeitungsvorgange-konfigurieren">Zeitungsvorgänge konfigurieren</h2>
+<p>Zeitungsvorgänge können vereinfacht und klar konfiguriert werden. Zu diesem Zweck werden die innerhalb des Zeitungsvorgangs für die Gliederung nach Kalenderdaten zu verwendenden Divisionen innerhalb der Division deklariert.</p>
+<pre><code class="language-xml">    &lt;division id=&quot;Newspaper&quot;&gt;
+        &lt;label&gt;Newspaper&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Zeitung&lt;/label&gt;
+        &lt;subdivisionByDate&gt;
+            &lt;division id=&quot;NewspaperYear&quot; dates=&quot;LABEL&quot; scheme=&quot;yyyy&quot;&gt;
+                &lt;label&gt;Newspaper year&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Zeitungsjahrgang&lt;/label&gt;
+            &lt;/division&gt;
+            &lt;division id=&quot;NewspaperMonth&quot; dates=&quot;ORDERLABEL&quot; scheme=&quot;M&quot;/&gt;
+                &lt;label&gt;Newspaper month&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Monat (Zeitung)&lt;/label&gt;
+            &lt;/division&gt;
+            &lt;division id=&quot;NewspaperDay&quot; dates=&quot;ORDERLABEL&quot; scheme=&quot;d&quot;/&gt;
+                &lt;label&gt;Newspaper day&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Kalendertag (Zeitung)&lt;/label&gt;
+            &lt;/division&gt;
+        &lt;/subdivisionByDate&gt;
+    &lt;/division&gt;
+</code></pre>
+<p><code>dates</code> (dt. “datiert”) gibt an, unter welchem Schlüssel das Datum gespeichert wird, <code>scheme</code> sein Format.</p>
+<p>⚠️ Anders als bei den <code>&lt;key&gt;</code>-Definitionen, die eine Schachtelung erlauben, sind die <code>&lt;division&gt;</code>-Definitionen eine einfache Liste. Die innerhalb von <code>&lt;subdivisionByDate&gt;</code> deklarierten <code>&lt;division&gt;</code>s fügen sich in die Menge der übrigen <code>&lt;division&gt;</code>s ein. Achten Sie darauf, dass es hier nicht zu Doppelungen kommt. Insbesondere wenn Sie mehrere Divisionen für Zeitungsvorgänge definieren, dürfen auch die darunter definierten Divisionen für die Datumselemente nur ein Mal definiert werden. Beispiel:</p>
+<pre><code class="language-xml">    &lt;division id=&quot;Newspaper&quot;&gt; …
+        &lt;subdivisionByDate&gt;
+            &lt;division id=&quot;NewspaperYear&quot; …&gt; … &lt;/division&gt;
+            &lt;division id=&quot;NewspaperMonth&quot; …&gt; … &lt;/division&gt;
+            &lt;division id=&quot;NewspaperDay&quot; …&gt; … &lt;/division&gt;
+        &lt;/subdivisionByDate&gt;
+    &lt;/division&gt;
+
+    &lt;division id=&quot;Newspaper2&quot;&gt; …
+        &lt;subdivisionByDate&gt;
+            &lt;division id=&quot;NewspaperYear2&quot; …&gt; … &lt;/division&gt;
+            &lt;division id=&quot;NewspaperMonth2&quot; …&gt; … &lt;/division&gt;
+            &lt;division id=&quot;NewspaperDay2&quot; …&gt; … &lt;/division&gt;
+        &lt;/subdivisionByDate&gt;
+    &lt;/division&gt;
+</code></pre>
+<p>Darstellung periodisch veröffentlichter Veröffentlichungen nach Geschäftsjahren (Doppeljahre), hier mit Geschäftsjahr beginnend am 1. August:</p>
+<pre><code class="language-xml">    &lt;division id=&quot;Playbill&quot;&gt;
+        &lt;label&gt;Playbill&lt;/label&gt;
+        &lt;label lang=&quot;de&quot;&gt;Theaterprogramm&lt;/label&gt;
+        &lt;subdivisionByDate yearBegin=&quot;--08-01&quot;&gt;
+            &lt;division id=&quot;PlaybillYear&quot; dates=&quot;ORDERLABEL&quot; scheme=&quot;yyyy/yyyy&quot;/&gt;
+                &lt;label&gt;Playbill year&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Theaterprogrammjahrgang&lt;/label&gt;
+            &lt;/division&gt;
+            &lt;division id=&quot;PlaybillMonth&quot; dates=&quot;ORDERLABEL&quot; scheme=&quot;yyyy-MM&quot;/&gt;
+                &lt;label&gt;Playbill month&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Monat (Theaterprogramm)&lt;/label&gt;
+            &lt;/division&gt;
+            &lt;division id=&quot;PlaybillDay&quot; dates=&quot;ORDERLABEL&quot; scheme=&quot;yyyy-MM-dd&quot;/&gt;
+                &lt;label&gt;Playbill day&lt;/label&gt;
+                &lt;label lang=&quot;de&quot;&gt;Kalendertag (Theaterprogramm)&lt;/label&gt;
+            &lt;/division&gt;
+        &lt;/subdivisionByDate&gt;
+    &lt;/division&gt;
+</code></pre>
+<h2 id="regelsatze-aufeinander-aufbauen">Regelsätze aufeinander aufbauen</h2>
+<p>Regelsätze können einen anderen Regelsatz inkludieren. So können gemeinsame Elemente in einem gemeinsamen Regelsatz verwaltet werden, für einen speziellen Zweck aber einzelne Elemente ergänzt oder umdefiniert werden. Diese werden mit dem <code>&lt;include&gt;</code>-Element in den Regelsatz geladen. Die in dem Regelsatz definierten Elemente prioritär vor den geladenen. Sie ergänzen oder ersetzen diese.</p>
+<pre><code class="language-xml">&lt;!-- basis.xml --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;declaration&gt;
+        &lt;division id=&quot;division&quot;&gt; &lt;label&gt;Division&lt;/label&gt; &lt;/division&gt;
+        &lt;key id=&quot;singleDigCollection&quot;&gt;
+            &lt;option value=&quot;Kollektion1&quot;/&gt;
+            &lt;option value=&quot;Kollektion2&quot;/&gt;
+            &lt;option value=&quot;Kollektion3&quot;/&gt;
+            &lt;option value=&quot;Kollektion4&quot;/&gt;
+        &lt;/key&gt;
+    &lt;/declaration&gt;
+&lt;/ruleset&gt;
+
+&lt;!-- projekt_a.xml --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
+    &lt;include&gt;basis.xml&lt;/include&gt;
+    &lt;correlation&gt;
+        &lt;restriction division=&quot;division&quot;&gt;
+            &lt;permit key=&quot;singleDigCollection&quot; unspecified=&quot;forbidden&quot;&gt;
+                &lt;permit value=&quot;Kollektion2&quot;/&gt;
+                &lt;permit value=&quot;Kollektion3&quot;/&gt;
+            &lt;/permit&gt;
+        &lt;/restriction&gt;
+    &lt;/correlation&gt;
+&lt;/ruleset&gt;
+</code></pre>
+<h2 id="weitere-informationen">Weitere Informationen</h2>
+<p>Einen guten ersten Überblick über den neuen Regelsatz von Kitodo.Production 3.x erhalten Sie auch auf dem Youtube-Kanal des Kitodo-Vereins: https://youtu.be/NCg6PeFti8I?t=2395</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

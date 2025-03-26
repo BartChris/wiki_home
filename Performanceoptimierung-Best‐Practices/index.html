@@ -1,0 +1,599 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Performance-Optimierungen für Kitodo (Best Practices) - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#performance-optimierungen-fur-kitodo-best-practices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Performance-Optimierungen für Kitodo (Best Practices)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#optimierungen-von-hardware-und-systemunterbau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimierungen von Hardware und Systemunterbau
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimierungen von Hardware und Systemunterbau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-phys-oder-virtuell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware (phys. oder virtuell)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware (phys. oder virtuell)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundsatzliches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grundsätzliches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindestanforderungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindestanforderungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anforderungen-an-systeme-mit-groerem-volumenworkflowaufkommen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anforderungen an Systeme mit größerem Volumen/Workflowaufkommen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#betriebssystem-allgemein" class="md-nav__link">
+    <span class="md-ellipsis">
+      Betriebssystem (allgemein)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      JAVA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tomcat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-wenn-auf-gleicher-vm-aio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elasticsearch (wenn auf gleicher VM / AIO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datenbank" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datenbank
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anwendungsbezogene-optimierungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anwendungsbezogene Optimierungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anwendungsbezogene Optimierungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taskmanager-keepthreads-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      TaskManager keepThreads Einstellungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script-Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflowschritte-granularer-abbilden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflowschritte granularer Abbilden ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutzung-der-stapelverarbeitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nutzung der Stapelverarbeitung
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praxiserfahrungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praxiserfahrungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Praxiserfahrungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hla" class="md-nav__link">
+    <span class="md-ellipsis">
+      HLA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="performance-optimierungen-fur-kitodo-best-practices">Performance-Optimierungen für Kitodo (Best Practices)</h1>
+<p>Der Artikel fußt auf dem Barcamp-Thema und entstand im Rahmen des Kitodo-Praxistreffens November 2024 in Marburg.</p>
+<p>Initiator war das HLA, da es in der Vergangenheit erhebliche Probleme mit unzureichender Leistung und Anwendungsabbrüchen bei der Nutzung von Kitodo hatte.</p>
+<p>Insbesondere bei der Ausführung von verschiedenen, komplexen Workflows trat vermehrt das Phänomen auf, dass selbst mit 48 GiB RAM die Maschine in die Sättigung fuhr bzw. zum stehen kam.</p>
+<p>Während des Barcamps konnten wir zwei Bereiche lokalisieren, in denen man weitere Optimierungen hinsichtlich Leistung und damit auch Stabilität durchführen kann.</p>
+<p>Die hier aufgezeigten Best-Practices sind lediglich Vorschläge, die größtenteils auf Erfahrungen basieren, sollten aber in eigenen Tests möglichst verifizert werden.</p>
+<h2 id="optimierungen-von-hardware-und-systemunterbau">Optimierungen von Hardware und Systemunterbau</h2>
+<h3 id="hardware-phys-oder-virtuell">Hardware (phys. oder virtuell)</h3>
+<h4 id="grundsatzliches">Grundsätzliches</h4>
+<p>Im allgemeinen gilt für Kitodo als Tomcat-Applikation: Eher mehr RAM als CPU-Kerne einzusetzen. Tomcat skaliert oft nicht gut über mehrere Kerne, sondern eher über mehr RAM.</p>
+<p>Die nachfolgenden Anforderungen beziehen sich in erster Linie auf ein "All-In-One"-System (AIO) zu einfacheren Betrachtung</p>
+<p>Eine Empfehlung zur Skalierung anhand von Nutzendenzahlen könnte man anhand folgender Faustformel berücksichtigen:</p>
+<ul>
+<li>4 GiB RAM als Basis</li>
+<li>plus 0.5 GiB pro Nutzende</li>
+</ul>
+<p>Ein weiterer wichtiger Faktor ist natürlich die Anzahl von Workflows, Workflowschritten etc. die hier aber Eingangs nur schwer beziffert werden können. Daher werden am Ende des Dokuments weitere Beispielszenarien angefügt.</p>
+<h4 id="mindestanforderungen">Mindestanforderungen</h4>
+<p>Generell sollte ein solches System nicht mit weniger als 4 GiB RAM pro "Rolle" ausgestattet werden, also berücksichtigen wir hierbei</p>
+<ul>
+<li>Tomcat/Kitodo</li>
+<li>Suchindex</li>
+<li>Datenbank</li>
+<li>Betriebssystem</li>
+</ul>
+<p>dann ergeben sich für ein "vernünftiges Mittelmaß":</p>
+<ul>
+<li>CPU: 2 Kerne</li>
+<li>RAM: 16 GiB</li>
+<li>SWAP: min. 1GiB</li>
+<li>HDD: min. 50 GiB</li>
+</ul>
+<h4 id="anforderungen-an-systeme-mit-groerem-volumenworkflowaufkommen">Anforderungen an Systeme mit größerem Volumen/Workflowaufkommen</h4>
+<p>Für eine Konfiguration mit 4 parallelen Tasks und ca. 5 Nutzenden</p>
+<ul>
+<li>CPU: 4 Kerne</li>
+<li>RAM: 32GiB</li>
+<li>SWAP: 5GiB</li>
+<li>HDD:</li>
+<li>50 GiB für /root</li>
+<li>50 GiB für Datenbankpartition</li>
+<li>evtl. 20 GiB für Logging</li>
+</ul>
+<p>Bei Erhöhung eines Wertes für Tasks, CPU oder RAM (plus SWAP) empfiehlt es sich, die anderen Werte entsprechend anzupassen. </p>
+<p>Denn zum Beispiel eine Erhöhung der CPU und der parallelen Tasks sorgt auch für einen erhöhten RAM-Verbrauch. 
+(siehe dazu auch: <code>TaskManager keepThreads</code> Einstellungen)</p>
+<h3 id="betriebssystem-allgemein">Betriebssystem (allgemein)</h3>
+<ul>
+<li>geringen Wert für <code>vm.swappiness</code> einstellen z.B. <code>1</code></li>
+<li>SSD-Storage für Betriebssystem verwenden (xx GiB)</li>
+<li>Das System möglichst schlau partitionieren, d.h. eine Trennung von root-Partition / und /tmp, /log etc. kann Sinn machen.</li>
+</ul>
+<h3 id="java">JAVA</h3>
+<ul>
+<li>Im allgemeinen sollte der "<code>-Xmx</code>" Wert nicht zu hoch angesetzt werden und sich lieber von unten angenähert werden. Denn erst wenn dieser Wert erreicht ist, beginnt Java mit der Garbage Collection.</li>
+</ul>
+<p><strong>Achtung! Speziell zum Thema GarbageCollection:</strong></p>
+<p>Hier hat sich der Einsatz des G1C1-GarbageCollectors als förderlich erwiesen. Dieser scheint seinen Job um einiges effizienter zu erledigen als andere GCs. Konfig-Optionen dazu s.u. in der systemd-Datei</p>
+<h3 id="tomcat">Tomcat</h3>
+<p>Es empfiehlt sich die standardmäßig mitgelieferte tomcat9 Systemd-Service-Date` durch eine eigene zu überschreiben, um in dieser Anpassungen vornehmen zu könne, welche über Updates hinweg erhalten bleiben.</p>
+<p>Am einfachsten ist es hierbei, die mitgelieferte systemd-Datei als Vorlage zu verwenden.</p>
+<p>Diese befindet sich unter <code>/lib/systemd/system/tomcat9.service</code></p>
+<p>Im folgenden werden nur die Performancebezogenen Abweichungen erwähnt:</p>
+<pre><code>[Service]
+
+# Configuration
+...
+
+Environment=&quot;CATALINA_OPTS=-Xms4g -Xmx16g -Xss1m -server -XX:MaxMetaspaceSize=256m -XX:PermSize=512m -XX:+UseStringDeduplication -XX:+ExitOnOutOfMemoryError -XX:+UseG1GC -XX:MaxGCPauseMillis=1000 -XX:ParallelGCThreads=4&quot;
+
+Environment=&quot;JAVA_OPTS=-Djava.awt.headless=true -Xms64M -Xmx5g -Dfile.encoding=UTF-8&quot;
+
+...
+</code></pre>
+<h3 id="elasticsearch-wenn-auf-gleicher-vm-aio">Elasticsearch (wenn auf gleicher VM / AIO)</h3>
+<p>Beschränken der RAM-Zuweisung an Elasticsearch:</p>
+<ul>
+<li>Erstellen einer neuen Datei unterhalb von <code>/etc/elasticsearch/jvm.options.d/</code> z.B. mit dem Namen "ram.options"</li>
+<li>Füllen der Datei mit dem folgendem Inhalt, um Elasticsearch auf 8GiB RAM zu beschränken:</li>
+</ul>
+<pre><code>-Xms8g
+-Xmx8g
+</code></pre>
+<p>Hintergrund: Elasticsearch benutzt standardmäßig die Hälfte des RAMs. 
+Bei einer größeren High-Available Clusterlösung von Elasticsearch wird dies vermutlich auch sinnvoll sein, im Kitodo-Kontext kann dies aber limitiert werden.</p>
+<h3 id="datenbank">Datenbank</h3>
+<ul>
+<li>Es SOLLTE eine von Kitodo unterstützte Datenbanksoftware z.B. MariaDB verwendet werden. (Nachfolgende Empfehlungen beziehen sich hauptsächlich auf diese)</li>
+<li>Es sollte InnoDB verwendet werden. (Dies sollte bei Neuinstallation bereits Standard sein)</li>
+<li>Erstellen von Indizes auf entsprechende Tabellen / Spalten / Werte. ACHTUNG: Dies sollte NUR für ausgewählte Felder umgesetzt werden, da dies ansonsten sehr schnell viel zu groß werden kann!</li>
+<li>Um entsprechende Abfragen herauszufinden kann der "slow query log" verwendet werden.</li>
+<li>Der sogenannte MySQLTuner könnte hierbei behilflich sein: https://github.com/major/MySQLTuner-perl</li>
+</ul>
+<h2 id="anwendungsbezogene-optimierungen">Anwendungsbezogene Optimierungen</h2>
+<h3 id="taskmanager-keepthreads-einstellungen">TaskManager keepThreads Einstellungen</h3>
+<p>In den <code>kitodo_config.properties</code> gibt es einen Abschnitt über den "Task manager".
+In diesem befinden sich unter anderem die folgenden 4 Einstellungsmöglichkeiten:</p>
+<ul>
+<li><code>taskManager.keepThreads.failed.count=1</code></li>
+<li><code>taskManager.keepThreads.failed.minutes=5</code></li>
+<li><code>taskManager.keepThreads.successful.count=1</code></li>
+<li><code>taskManager.keepThreads.successful.minutes=2</code></li>
+</ul>
+<p>Je niedriger man diese Werte setzt, desto schneller werden erfolgreich / fehlgeschlagene Aufgaben (threads) wieder freigegeben und können dann durch den Garbage Collector aufgeräumt werden.</p>
+<p>Dies sorgt aber auch dafür, dass die Aufgaben schnell wieder aus der Taskmanager Übersicht verschwinden, also man ggf nicht direkt sieht, ob eine Aufgabe erfolgreich war oder fehlgeschlagen ist. </p>
+<p>Man sollte diese Werte so wählen, dass es für den eigenen Einsatzzweck passt.</p>
+<h3 id="script-tasks">Script-Tasks</h3>
+<ul>
+<li>Die Ausführungszeit von Scripten über Kitodo sollte möglichst kurz gehalten werden.</li>
+<li>Bei langlaufenden Scripten sollten diese nur über Kitodo inital gestartet, dann aber nicht weiter ausgeführt werden. Hierbei empfiehlt es sich eine Art von Queue zu verwenden bzw. mit Hilfe von ActiveMQ die Aufgaben im Nachgang über das Script schließen zu lassen.</li>
+<li><strong>Achtung: Das Logging kann u.U. das System ausbremsen, wenn man alle Scripte in die <code>kitodo.log</code> schreiben lässt</strong>. Der gleichzeitige Zugriff kann bei hoher Schreibfrequenz zu einer Blockade führen! Eine Lösung kann sein, die Scripte jeweils eigene Logs schreiben zu lassen.</li>
+</ul>
+<h3 id="workflowschritte-granularer-abbilden">Workflowschritte granularer Abbilden ?</h3>
+<h3 id="nutzung-der-stapelverarbeitung">Nutzung der Stapelverarbeitung</h3>
+<h2 id="praxiserfahrungen">Praxiserfahrungen</h2>
+<h3 id="hla">HLA</h3>
+<ul>
+<li>x tausend Vorgänge</li>
+<li>y Nutzende</li>
+<li>z Digitalisate</li>
+</ul>
+<p>laut o.g. Optimierungen im Bereich Hardware und vor allem GarbageCollection Erfolge erzielt.</p>
+<p>TODO: Workflowoptimierungen und Stapelverarbeitung implementieren!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

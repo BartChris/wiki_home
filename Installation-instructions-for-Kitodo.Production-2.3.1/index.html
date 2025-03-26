@@ -1,0 +1,929 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Installation instructions for Kitodo.Production 2.3.1 - Kitodo Production Documentation!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-set-up-a-server" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation!" class="md-header__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation instructions for Kitodo.Production 2.3.1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation!" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation!
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-first-unpack-the-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 First unpack the packages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 First unpack the packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-settings-for-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Settings for MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-settings-for-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 Settings for LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-settings-for-lib-nss" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 Settings for lib NSS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>Kitodo is software. You need a computer to run it. Because Kitodo deeply interferes with the operating system and bends many things, even during operation, it is recommended to dedicate an entire server to Kitodo. This is also because Kitodo requires quite a lot of system resources.</p>
+<p>This guide describes how to install Kitodo on an Ubuntu Linux system. You can deviate from these suggestions in any direction.</p>
+<h1 id="1-set-up-a-server">1 Set up a server</h1>
+<p>We assume that you have already prepared an empty Ubuntu Linux server. If not, do so now. Take the latest long-term support version (typically marked with the letters LTS), because your digitization projects will surely take a while.</p>
+<p>For most of the following steps you need elevated (administrator) privileges. You can run the <code>sudo su</code> command to get them. Enter your password. You can also execute the individual commands with <code>sudo</code>, but you will notice this is a fizzy job.</p>
+<h2 id="11-first-unpack-the-packages">1.1  First unpack the packages</h2>
+<p>You need to install many additional packages. Do this:</p>
+<pre><code>apt-get update
+apt-get install mysql-server tomcat8 slapd ldap-utils samba apache2 libapache2-mod-jk libnss-ldap
+</code></pre>
+<p>Some of the packages require further settings and the setup will ask for these during the installation. Answer the questions wisely, it is very difficult to repeat this step if things go wrong. You need the following settings:</p>
+<h3 id="111-settings-for-mysql">1.1.1   Settings for MySQL</h3>
+<p>For MySQL you only need an administrator password.</p>
+<h3 id="112-settings-for-ldap">1.1.2   Settings for LDAP</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No configuration</td>
+<td>Boolean</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>String</td>
+<td>Here we need the so-called fully qualified domain name (FQDN). To do this, enter the <code>hostname -f</code> command. In your mind, replace each period with a <code>,</code> and prefix each segment with <code>dc=</code>.<br/>Example:<br/>The command reports:<br/><code>kitprod.subnet.myorganization.org</code><br/>The FQDN is: <br/><code>dc=kitprod,dc=subnet,dc=myorganization,dc=org</code><br/>We refer to this string as <code>#FQDN#</code> below.</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>String</td>
+<td>Here you can enter something about how the server calls itself to the outside. (This is essentially meaningless.) For example: My organization Kitodo Production LDAP Server</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Password</td>
+<td>You enter an administrator password for the LDAP server. You will need to store this password later in plain text in a configuration file, so do not choose a valuable password. If in doubt, use <code>kitodo</code>.</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>Select</td>
+<td>MDB</td>
+</tr>
+<tr>
+<td>Purge database</td>
+<td>Boolean</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Move old database</td>
+<td>Boolean</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Allow LDAP v.2</td>
+<td>Boolean</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113-settings-for-lib-nss">1.1.3   Settings for lib NSS</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB root login</td>
+<td>Boolean</td>
+<td>False</td>
+</tr>
+<tr>
+<td>PAM password</td>
+<td>Select</td>
+<td>MD5</td>
+</tr>
+<tr>
+<td>Move to debconf</td>
+<td>Boolean</td>
+<td>True</td>
+</tr>
+<tr>
+<td>LDAP server</td>
+<td>String</td>
+<td><code>ldapi:///</code></td>
+</tr>
+<tr>
+<td>Base DN</td>
+<td>String</td>
+<td><code>ou=users,#FQDN#</code> (as explained above in the LDAP settings)<br/>Example:<br/><code>ou=users,dc=kitprod,dc=subnet,dc=myorganization,dc=org</code></td>
+</tr>
+<tr>
+<td>Override</td>
+<td>Boolean</td>
+<td>True</td>
+</tr>
+<tr>
+<td>LDAP version</td>
+<td>Select</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DB login</td>
+<td>Boolean</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-set-up-a-hard-drive-for-the-data">2 Set up a hard drive for the data</h1>
+<p>Digitization produces many data. We recommend that you save this data on a separate hard drive. The hard disk can also be in a network. Configure the hard disk in file <code>/etc/fstab</code> and make sure that you mounted it in the operating system. With a physical hard drive, you should now consider whether you want to install logical volume management (LVM). Then later it will be easier to enlarge the hard disk if you run out of space. With a virtual server, it is better to manage the size via the virtualization solution.</p>
+<p>In this documentation, we assume that you have provided the hard drive for the data under path <code>/mnt/data</code>.</p>
+<h1 id="3-download-the-software">3 Download the software</h1>
+<p>Kitodo is an open source software. You can get it free of charge from the Internet and use it free of license fees. It is necessary to stick to the license conditions.</p>
+<p>You can find the latest release of Kitodo on the Github homepage. To download it, use the following command:</p>
+<pre><code>wget -O kitodo-production.war https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-2.3.1/kitodo-production-2.3.1.war
+</code></pre>
+<p>If you want to use the Active MQ interface of Kitodo, you also need the ActiveMQ software. You can download it in the same way:</p>
+<pre><code>wget -O apache-activemq-5.15.11-bin.tar.gz http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.11/apache-activemq-5.15.11-bin.tar.gz&amp;action=download
+</code></pre>
+<h1 id="4-build-the-database">4 Build the database</h1>
+<p>Kitodo stores some processing data in a database. But that is relatively small, that means neither pictures nor the descriptive data (“metadata”) is stored there. This means that it is not worth running the database on a separate system. Before you can let the application run, you have to set up this database. It works like this:</p>
+<p>Make sure the MySQL server is running. You get the information whether it is already running with the command: <code>service mysql status</code> If not, start it with the command: <code>service mysql start</code></p>
+<h2 id="41-create-the-database">4.1  Create the database</h2>
+<p>Log on to the MySQL server with the command: <code>mysql -u root -p</code> It will ask you for the password. Name the password that you have previously defined for MySQL Administration. Issue the following commands to create a database, create a user, and allow it to write on the database:</p>
+<pre><code>CREATE DATABASE kitodo;
+CREATE USER 'kitodo'@'localhost' IDENTIFIED BY 'kitodo';
+GRANT ALL ON kitodo.* TO 'kitodo'@'localhost';
+FLUSH PRIVILEGES;
+</code></pre>
+<p>You exit MySQL dialog mode with: <code>exit;</code></p>
+<p>If you understand a little bit of what you did there, you saw that we use <code>kitodo</code> as a password. The web application is preconfigured in this way. You can also choose a different password here. In this case, you will also have to adapt the <code>hibernate.cfg.xml</code> file in the <code>/var/lib/tomcat8/webapps/kitodo-production/WEB-INF/classes</code> folder later. The password must be entered in plain text in this file, so it is little security gain to change this.</p>
+<h2 id="42-move-in-the-kitodoproduction-database">4.2  Move in the Kitodo.Production database</h2>
+<p>The Kitodo.Production database content can now move into the database. It is in the file that we have already downloaded. The move-in takes place with the following commands:</p>
+<pre><code>unzip -p kitodo-production.war database-setup/schema.sql | mysql -D kitodo -u kitodo -p
+unzip -p kitodo-production.war database-setup/default.sql | mysql -D kitodo -u kitodo -p
+</code></pre>
+<p>If the question is about the password, this is <code>kitodo</code>, except you changed it. If this results in an error, then the unzip program is not yet installed on the computer. In this case, issue this command to install it: <code>apt-get install unzip</code></p>
+<h2 id="43-edit-all-users-so-that-their-names-are-only-lowercase">4.3  Edit all users so that their names are only lowercase</h2>
+<p>We have found that problems arise in Samba drive share access when usernames in Kitodo contain uppercase letters. Kitodo exemplary users in the database have a capital letter in the middle (aka. camel case) and that causes problems. That is why you should make it lowercase and this is how it works: You log in to MySQL again with the <code>mysql -D kitodo -u kitodo -p</code> command. If the question is about the password, that is <code>kitodo</code>. Then issue the following command to find out the character set name:</p>
+<pre><code>SELECT character_set_name FROM information_schema.COLUMNS WHERE table_schema = "kitodo"
+AND table_name = "benutzer" AND column_name = "login";
+</code></pre>
+<p>Then issue this command and use in place of <code>#…#</code> what came out of the previous command:</p>
+<pre><code>UPDATE benutzer SET login = LOWER(login) WHERE LOWER(login) != login COLLATE #…#;
+</code></pre>
+<h2 id="44-remove-spaces-in-the-project-names">4.4  Remove spaces in the project names</h2>
+<p>Another problem with the database is spaces in the names of projects, which can also lead to incomprehensible crashes and should be remoevd. It works like this:</p>
+<pre><code>UPDATE projekte SET titel = REPLACE(titel, ' ', '_');
+</code></pre>
+<p>You get out of there with: <code>exit;</code> The database is now ready.</p>
+<h1 id="5-set-up-ldap">5 Set up LDAP</h1>
+<p>The LDAP server has to run for the next step: This works just like MySQL (or any services). You get the information whether it is already on duty with the command: service slapd status If not, run it with the command: <code>service slapd start</code></p>
+<h2 id="51-teach-ldap-samba">5.1  Teach LDAP Samba</h2>
+<p>It works like this:</p>
+<pre><code>zcat /usr/share/doc/samba/examples/LDAP/samba.ldif.gz | ldapadd -Q -Y EXTERNAL -H ldapi:///
+</code></pre>
+<h2 id="52-the-search-for-the-root-distinguished-name-rdn">5.2  The search for the root distinguished name (RDN)</h2>
+<p>The LDAP installation produced something called root distinguished name (or RDN, for short). We need it many times below and have to find it out. We can get it from the output of the command: <code>slapcat</code>. That gives us the entire LDAP address book. An empty line separates the individual entries, you can see that. We need the entry in which the line is: <code>objectClass: top</code>. And there what is in the <code>dn:</code> field. That is the magical value, which we will refer to as <code>#RDN#</code> below.</p>
+<h2 id="53-we-create-an-organizational-unit-for-the-users">5.3  We create an organizational unit for the users</h2>
+<p>The concept of LDAP, as used in Kitodo, assumes that our organization consists of <em>organizational units</em>, and one of them is the <em>users</em> of your Kitodo.Production server. You can think of an organizational unit as a subfolder in which the users are then placed.</p>
+<p>The easiest way is to create a small text file, e.g. <code>users.ldif</code> with the following content:</p>
+<pre><code>dn: ou=users,#RDN#
+objectClass: organizationalUnit
+ou: users
+</code></pre>
+<p>The RDN that we have determined above is to be used here. We then place the file in LDAP with the following command. The root DN is also used here. *** stands for the LDAP administrator password, which you specified above:</p>
+<pre><code>ldapadd -x -D cn=admin,#RDN# -w *** &lt; users.ldif
+</code></pre>
+<h2 id="54-we-determine-the-users-user-group-number">5.4  We determine the users’ user group number</h2>
+<p>The different users in Linux are assigned to different groups. One of these groups identifies all human users and is called <code>users</code>. The user groups are represented by numbers and we now have to find out the number of the user group for users. You can do this with the command:</p>
+<pre><code>grep '^users:' /etc/group | cut -d: -f3
+</code></pre>
+<p>We refer to this number as <code>#usergroupnumber#</code> below.</p>
+<h2 id="55-we-determine-the-next-free-user-number">5.5  We determine the next free user number</h2>
+<p>Linux is designed from the ground up so that multiple users can work on the same computer (even simultaneously). That’s why you have to log in at the beginning before you can do anything on the computer. The various users are identified by numbers inside the Linux operating system. Numbers below 1000 stand for "system users" (e.g. printers, or the email system) and numbers from 1000 upwards for the human users of the system. We now have to find out which user has the largest user number. The next free user number is logically one larger.</p>
+<p>Basic Linux user management is very simple, the existing users are simply in file <code>/etc/passwd</code>. The file is a table, with the columns separated by colons. The login name is in the first column, there is usually only an <code>x</code> in the second column, and the user number is in the third column. We are looking for the largest user number and add one to it, so we have the <code>#nextfreeusernumber#</code>, which we will also need in the next step.</p>
+<h2 id="56-create-the-nextfreeunixid-user-in-ldap">5.6  Create the NextFreeUnixId user in LDAP</h2>
+<p>The <code>NextFreeUnixId</code> is an LDAP entry for the currently next free user number (which we have just found out). We have to install it there now. For this we create a file again, for example <code>nextFreeUnixId.ldif</code> with the following content:</p>
+<pre><code>dn: cn=NextFreeUnixId,#RDN#
+objectClass: inetOrgPerson
+sn: NextFreeUnixId
+objectClass: posixAccount
+cn: NextFreeUnixId
+uid: nextfreeunixid
+uidNumber: #nextfreeusernumber#
+gidNumber: #usergroupnumber#
+homeDirectory: /dev/null
+</code></pre>
+<p>The corresponding values that we have previously determined must be entered in the #…# areas. We also put this file in LDAP, as before:</p>
+<pre><code>ldapadd -x -D cn=admin,#RDN# -w *** &lt; nextFreeUnixId.ldif
+</code></pre>
+<h1 id="6-install-the-web-application">6 Install the web application</h1>
+<h2 id="61-adjust-tomcats-default-settings">6.1  Adjust Tomcat's default settings</h2>
+<p>The standard settings of Tomcat are in file <code>/etc/default/tomcat8</code> and we have to edit them. You can do that with an editor of your choice. You should create the situation that <code>JAVA_OPTS</code> contains the following:</p>
+<pre><code>"-Djava.awt.headless=true -Xmx4G -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC"
+</code></pre>
+<p>That means the server cannot open windows, give more memory to it, more memory to load the program, too, and better garbage collection. The user experience will benefit significantly from this.</p>
+<h2 id="62-first-start-the-web-application">6.2  First start the web application</h2>
+<p>The Tomcat server has to run for the next step: (You already know that:) You get the information whether it is already running with the command: <code>service tomcat8 status</code> If not, start it with the command: <code>service tomcat8 start</code></p>
+<p>We now copy the WAR file into the Tomcat application directory, so the web application is started:</p>
+<pre><code>cp kitodo-production.war /var/lib/tomcat8/webapps/
+</code></pre>
+<h1 id="7-set-up-the-folders-files-and-access-rights">7 Set up the folders, files and access rights</h1>
+<h2 id="71-create-the-folders">7.1  Create the folders</h2>
+<p>The program needs many folders for everything. We are going to create them now:</p>
+<pre><code>mkdir -p /usr/local/kitodo
+mkdir -p /etc/kitodo/config
+mkdir /etc/kitodo/messages
+mkdir /mnt/data/metadata
+mkdir /usr/local/kitodo/webdav
+mkdir /usr/local/kitodo/xslt
+mkdir /usr/local/kitodo/success
+mkdir /usr/local/kitodo/error
+mkdir -p /mnt/data/var/hotfolder
+</code></pre>
+<h2 id="72-move-copy-files">7.2  Move / copy files</h2>
+<p>Kitodo needs many files that were unpacked when the web application was first started and are now lying around in the application directory. We will now move and copy them to the right places:</p>
+<pre><code>cd /var/lib/tomcat8/webapps/
+mv WEB-INF/classes/goobi_digitalCollections.xml /etc/kitodo/config
+mv WEB-INF/classes/goobi_metadataDisplayRules.xml /etc/kitodo/config
+mv WEB-INF/classes/goobi_opac.xml /etc/kitodo/config
+mv WEB-INF/classes/goobi_processProperties.xml /etc/kitodo/config
+mv WEB-INF/classes/goobi_projects.xml /etc/kitodo/config
+mv WEB-INF/classes/goobi_webapi.xml /etc/kitodo/config
+mv WEB-INF/classes/kitodo_mods_opac.xml /etc/kitodo/config
+mv WEB-INF/classes/modules.xml /etc/kitodo/config
+mv rulesets /etc/kitodo
+mv scripts /usr/local/kitodo
+mv WEB-INF/classes/*.xsl /etc/kitodo/xslt
+cp WEB-INF/classes/messages/messages_*.properties /etc/kitodo/messages
+</code></pre>
+<h2 id="73-set-permissions">7.3  Set permissions</h2>
+<p>The Tomcat must be able to read in many directories and also be able to write in some and run some scripts. For WebDAV, Apache must be able to write in the webdav directory:</p>
+<pre><code>chown tomcat8 /etc/kitodo/config /etc/kitodo/messages /etc/kitodo/rulesets
+chown tomcat8 /usr/local/kitodo/scripts /etc/kitodo/xslt /usr/local/kitodo/success
+chown tomcat8 /usr/local/kitodo/error /mnt/data/metadata /mnt/data/var/hotfolder
+chown www-data /usr/local/kitodo/webdav
+chmod u+x /usr/local/kitodo/scripts/*.sh
+chmod u+rx /etc/kitodo/config /etc/kitodo/messages /etc/kitodo/rulesets
+chmod u+rx /usr/local/kitodo/scripts /etc/kitodo/xslt /usr/local/kitodo/success
+chmod u+rx /usr/local/kitodo/error
+chmod u+rwx /mnt/data/metadata /mnt/data/var/zedExporter/new /mnt/data/var/hotfolder
+</code></pre>
+<p>Two scripts have to be edited to execute some commands with <code>sudo</code>, see the following examples. Add the block of commands below the comment to automatically configures WebDAV access for new users. You can do this with an editor of your choice:</p>
+<p>script_createDirUserHome.sh</p>
+<pre><code class="language-sh">User=&quot;$1&quot;
+Home=&quot;$2&quot;
+
+sudo /bin/mkdir &quot;$Home&quot;
+sudo /bin/chmod g+w &quot;$Home&quot;
+sudo /bin/chown $User &quot;$Home&quot;
+sudo /bin/chgrp tomcat &quot;$Home&quot;
+
+# Write conf file for WebDAV access
+THIS=$(readlink -f &quot;$0&quot;)
+SCRIPTPATH=$(dirname &quot;$THIS&quot;)
+REPLACE='s/XXXUSERXXX/'&quot;$1&quot;'/g'
+sed &quot;$REPLACE&quot; $SCRIPTPATH/davuser.conf.tmpl &gt; /tmp/webdav-&quot;$1&quot;.conf
+sudo /bin/mv /tmp/webdav-&quot;$1&quot;.conf /etc/apache2/conf-enabled/
+sudo /usr/sbin/service apache2 graceful
+</code></pre>
+<p>script_createSymLink.sh</p>
+<pre><code class="language-sh">Source=&quot;$1&quot;
+Target=&quot;$2&quot;
+User=&quot;$3&quot;
+
+/bin/ln -vs &quot;$Source&quot; &quot;$Target&quot;
+sudo /bin/chown -vR &quot;$User&quot; &quot;$Source&quot;
+</code></pre>
+<p>For WebDAV we need a user group in which both Tomcat and Apache are members:</p>
+<pre><code>groupadd webdav
+usermod -a -G webdav tomcat8
+usermod -a -G webdav www-data
+</code></pre>
+<p>In folder <code>/usr/local/kitodo/scripts</code> we have to create the following file:</p>
+<p>davuser.conf.tmpl</p>
+<pre><code>&lt;IfModule mod_dav_fs.c&gt;
+   DavLockDB /usr/local/kitodo/webdav/DavLockDB
+&lt;/IfModule&gt;
+
+&lt;IfModule mod_dav.c&gt;
+   LimitXMLRequestBody 10240
+   LimitRequestBody 0
+
+   BrowserMatch &quot;Microsoft Data Access Internet Publishing Provider&quot; redirect-carefully
+   BrowserMatch &quot;^Microsoft-WebDAV-MiniRedir&quot; redirect-carefully
+
+   Alias /webdav/XXXUSERXXX &quot;/home/XXXUSERXXX&quot;
+
+   &lt;Directory /home/XXXUSERXXX&gt;
+      Dav on
+
+      AddDefaultCharset utf-8
+      Options Indexes FollowSymLinks
+
+      AuthType Basic
+      AuthName &quot;XXXUSERXXX WebDAV realm&quot;
+
+      AuthBasicProvider ldap
+      AuthLDAPUrl &quot;ldap://localhost/ou=users,#RDN#&quot;
+      BrowserMatch &quot;Microsoft Data Access Internet Publishing Provider&quot; redirect-carefully
+      BrowserMatch &quot;^Microsoft-WebDAV-MiniRedir&quot; redirect-carefully
+
+      &lt;LimitExcept OPTIONS&gt;
+         Require user XXXUSERXXX
+      &lt;/LimitExcept&gt;
+
+      Order allow,deny
+      Allow from all
+
+   &lt;/Directory&gt;
+&lt;/IfModule&gt;
+</code></pre>
+<p>With the command <code>sudoedit /etc/sudoers.d/kitodo</code> we create a file with the following content:</p>
+<pre><code>User_Alias TOMCAT_USER = tomcat8
+
+Cmnd_Alias CHOWN_METADATA = /bin/chown * /mnt/data/metadata/*
+Cmnd_Alias CHGRP_USERS = /bin/chgrp webdav /home/*
+Cmnd_Alias CHMOD_USERS = /bin/chmod g+w /home/*
+Cmnd_Alias CHOWN_USERS = /bin/chown * /home/*
+Cmnd_Alias MKDIR_USERS = /bin/mkdir /home/*
+Cmnd_Alias MV_WEBDAV = /bin/mv /tmp/* /etc/apache2/conf-enabled/
+Cmnd_Alias RESTART_APACHE = /usr/sbin/service apache2 graceful
+
+TOMCAT_USER ALL=NOPASSWD: CHOWN_METADATA, CHGRP_USERS, CHMOD_USERS, CHOWN_USERS, MKDIR_USERS, MV_WEBDAV, RESTART_APACHE
+</code></pre>
+<h1 id="8-set-up-the-active-message-queue">8 Set up the active message queue</h1>
+<p>If you want to use the Active MQ API you need the active message queue. The package is <a href="https://bugs.launchpad.net/ubuntu/+source/activemq/+bug/1361831">so inherently broken on Ubuntu</a> that we install it separately. We have already downloaded the program above.</p>
+<h2 id="81-create-a-user-account-for-the-server">8.1  Create a user account for the server</h2>
+<p>Under Linux it is recommended to let the various servers run in the system with their own user IDs. We are now creating a user for the Active MQ server:</p>
+<pre><code>groupadd -r activemq
+useradd -g activemq -d /usr/local/activemq activemq
+</code></pre>
+<h2 id="82-unpack-the-server">8.2  Unpack the server</h2>
+<p>We create a folder for the server home and unpack the downloaded server there:</p>
+<pre><code>mkdir /usr/local/activemq
+tar -zxf apache-activemq-5.15.11-bin.tar.gz -C /usr/local/activemq --strip-components=1 apache-activemq-5.15.11
+</code></pre>
+<h2 id="83-make-shutdown-possible">8.3  Make shutdown possible</h2>
+<p>In order to shut down the Active MQ server, it must be able to speak to itself. We allow this in the configuration file <code>/usr/local/activemq/conf/activemq.xml</code> by setting the <code>&lt;managementContext createConnector="false"&gt;</code> to <code>true</code>.</p>
+<h2 id="84-record-policy-entries">8.4  Record policy entries</h2>
+<p>In section <code>&lt;policyEntries&gt;</code> of the same file, we add the following:</p>
+<pre><code class="language-xml">&lt;policyEntry topic=&quot;KitodoProduction.ResultMessages.Topic&quot;&gt;
+    &lt;subscriptionRecoveryPolicy&gt;
+        &lt;timedSubscriptionRecoveryPolicy recoverDuration=&quot;‭604800000‬&quot; /&gt;‬
+    &lt;/subscriptionRecoveryPolicy&gt;
+&lt;/policyEntry&gt;
+</code></pre>
+<p>The number is the duration of a week in milliseconds, it is the time how long log messages are kept around on the Active MQ server before they are forgotten.</p>
+<h2 id="85-get-the-permissions-right">8.5  Get the permissions right</h2>
+<p>Everything in the Active MQ directory must belong to the Active MQ user for this to work. Issue the following command:</p>
+<pre><code>chown -R activemq:activemq /usr/local/activemq
+</code></pre>
+<h2 id="86-register-server-as-service">8.6  Register server as service</h2>
+<p>So that the operating system treats the server as a service, create a file <code>/etc/systemd/system/activemq.service</code> with the following content:</p>
+<pre><code class="language-ini">[Unit]
+Description=Active MQ Server
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/usr/local/activemq/bin
+ExecStart=/usr/local/activemq/bin/activemq start
+ExecStop=/usr/local/activemq/bin/activemq stop
+Restart=on-abort
+User=activemq
+Group=activemq
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Load the file into the operating system with the <code>systemctl --system daemon-reload</code> command. Issue command <code>systemctl enable activemq</code> so that the server is sent to work each time the system is started.</p>
+<h1 id="9-configure-the-web-application">9 Configure the web application</h1>
+<h2 id="91-adjust-the-configuration-settings-of-the-web-application">9.1  Adjust the configuration settings of the web application</h2>
+<p>The configuration file of the web application is <code>/var/lib/tomcat8/webapps/WEB-INF/classes/goobi_config.properties</code>. A whole set of values must be adjusted here:</p>
+<pre><code class="language-properties">KonfigurationVerzeichnis=/etc/kitodo/config/
+RegelsaetzeVerzeichnis=/etc/kitodo/rulesets/
+xsltFolder=/etc/kitodo/xslt/
+MetadatenVerzeichnis=/mnt/data/metadata/
+dir_Users=/home/
+tempfolder=/tmp/
+localMessages=/etc/kitodo/messages/
+debugFolder=/var/log/tomcat8/
+pluginFolder=/var/lib/tomcat8/webapps/kitodo-production/plugins/
+swapPath=/tmp/
+script_createDirUserHome=/usr/local/kitodo/scripts/script_createDirUserHome.sh
+script_createDirMeta=/usr/local/kitodo/scripts/script_createDirMeta.sh
+script_createSymLink=/usr/local/kitodo/scripts/script_createSymLink.sh
+script_deleteSymLink=/usr/local/kitodo/scripts/script_deleteSymLink.sh
+ldap_nextFreeUnixId=cn\=NextFreeUnixId,#RDN#
+ldap_adminLogin=cn\=Admin,#RDN#
+ldap_adminPassword=***
+ldap_readonly=false
+activeMQ.hostURL=failover:(tcp://localhost:61616?closeAsync=false)
+activeMQ.results.topic=KitodoProduction.ResultMessages.Topic
+activeMQ.results.timeToLive=‭604800000‬‬
+activeMQ.createNewProcess.queue=KitodoProduction.CreateNewProcesses.Queue
+activeMQ.finaliseStep.queue=KitodoProduction.FinaliseStep.Queue
+</code></pre>
+<h2 id="92-adjust-the-logging-configuration">9.2  Adjust the logging configuration</h2>
+<p>The configuration file for logging is <code>/var/lib/tomcat8/webapps/WEB-INF/classes /log4j.properties</code>. Change the path to the log file (<code>log4j.appender.rolling.File</code>) to: <code>/var/log/tomcat8/kitodo.log</code></p>
+<h2 id="93-set-additional-languages">9.3  Set additional languages</h2>
+<p>The web application is delivered in English and German. If you speak another language and you want the web application in your other language, translate the file <code>messages_en.properties</code> from folder <code>/var/lib/tomcat8/webapps/WEB-INF/classes /messages</code>. Enter the file name <code>messeges_</code> with the ISO 2-letter language identifier. Now put your language file in folder <code>/var/lib/tomcat8/webapps/WEB-INF/classes/messages</code> <strong>and</strong> in folder <code>/etc/kitodo/messages/</code>. Yes, this is strange, it takes in both folders, otherwise it won’t work. Then you need to edit the file to configure for faces, <code>/var/lib/tomcat8/webapps/WEB-INF/faces-config.xml</code>: In section <code>&lt;locale-config&gt;</code> add the following with 2-letter language identifier for your language:</p>
+<pre><code>&lt;supported-locale&gt;la&lt;/supported-locale&gt;
+</code></pre>
+<h2 id="94-set-up-log-rotation">9.4  Set up log rotation</h2>
+<p>For that the hard disk does not fill up, the log has to be turned over every now and then. This is done by the operating system, if file <code>/etc/logrotate.d/kitodo</code> exists with this content:</p>
+<pre><code>/var/log/tomcat8/kitodo.log {
+    copytruncate
+    daily
+    rotate 7
+    ifempty
+    compress
+    compresscmd /usr/bin/gzip
+    uncompresscmd /usr/bin/gunzip
+    missingok
+    nomail
+ }
+</code></pre>
+<h1 id="10-set-up-samba">10    Set up Samba</h1>
+<h2 id="101-adapt-the-configuration-file">10.1 Adapt the configuration file</h2>
+<p>The configuration file for this is <code>/etc/samba/smb.conf</code>. Here, we need to use <code>#RDN#</code> again. You already know that. Set the following (commend-out the rest):</p>
+<pre><code class="language-ini">[global]
+workgroup = KITODO
+unix extensions = no
+wide links = yes
+load printers = no
+security = user
+invalid users = root
+encrypt passwords = yes
+passdb backend = ldapsam:ldap://127.0.0.1
+ldap suffix = #RDN#
+ldap user suffix = ou=users
+ldap group suffix = ou=groups
+ldap admin dn = cn=admin,#RDN#
+ldap ssl = no
+ldap passwd sync = yes
+ldap delete dn = no
+
+[homes]
+comment = Home Directories
+path = /home/%U
+read only = no
+browseable = no
+valid users = %S
+guest ok = no
+inherit permissions = yes
+</code></pre>
+<h2 id="102-set-the-password">10.2 Set the password</h2>
+<p>So that Samba can address LDAP, with this command you set the LDAP password in Samba:</p>
+<pre><code>smbpasswd -w ***
+</code></pre>
+<p>*** is the password for LDAP, as you chose at the beginning.</p>
+<h1 id="11-set-up-an-apache">11    Set up an Apache</h1>
+<h2 id="111-allow-the-connector-for-ajp">11.1 Allow the connector for AJP</h2>
+<p>AJP is for the Apache speaks to the Jakarta module, with Tomcat as the server behind Jakarta module. To allow the AJP connector, you have to edit file: <code>/etc/tomcat8/server.xml</code>. <code>&lt;Connector port="8009"</code> is in the file and this is commented out. Remove the comment mark to turn it on.</p>
+<h2 id="112-add-jakarta-mount-and-location">11.2 Add Jakarta mount and location</h2>
+<p>In <code>/etc/apache2/sites-available/000-default.conf</code>, in section <code>&lt;VirtualHost&gt;</code>, add the following for Kidodo.Production. And the same in <code>/etc/apache2/sites-available/default-ssl.conf</code>:</p>
+<pre><code>JkMount /kitodo-production ajp13_worker
+JkMount /kitodo-production/* ajp13_worker
+&lt;Location /kitodo-production&gt;
+    Order allow,deny
+    Allow from all
+&lt;/Location&gt;
+</code></pre>
+<p>You must allow encrypted pages (SSL) with command: <code>a2ensite default-ssl</code></p>
+<h2 id="113-switch-on-modules">11.3 Switch on modules</h2>
+<p>Then we need a few modules to turn it on:</p>
+<pre><code>a2enmod ssl
+a2enmod dav
+a2enmod dav_fs
+a2enmod ldap
+a2enmod authnz_ldap
+</code></pre>
+<h1 id="12-configuration-in-the-browser-surface">12    Configuration in the browser surface</h1>
+<p>Then we have to go a few more steps in the web application in the web browser.</p>
+<h2 id="121-let-the-services-start-again">12.1 Let the services start again</h2>
+<p>But for that we have to get that working. This means that we have now restarted the various services, we have configured so that everything fits:</p>
+<pre><code>service slapd restart
+service activemq restart
+service tomcat8 restart
+service apache2 restart
+systemctl restart smbd.service nmbd.service
+</code></pre>
+<h2 id="122-find-localsid">12.2 Find localsid</h2>
+<p>We need Localsid right away. Find with command: <code>net getlocalsid</code></p>
+<h2 id="123-visit-kitodoproduction">12.3 Visit Kitodo.Production</h2>
+<p>Open web browser window, and then visit address from:
+<code>http://server-name/kitodo-production/</code></p>
+<p>Log in with user <code>admin</code> and password <code>kitodo</code>.</p>
+<h2 id="124-set-the-ldap-group">12.4 Set the LDAP group</h2>
+<p>Click on LDAP groups in the menu and for table entry on edit (note with pen, far right). Then set the following values. Here you have to add some values (marked <code>#…#</code>). For <code>sambaAcctFlags</code>, that are nine spaces in the clammy, <code>sambaPassword History</code> is 72 <code>0</code>s, and sambaLogonHours is 40 <code>F</code>s.</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Your organization name</td>
+</tr>
+<tr>
+<td>User DN</td>
+<td><code>sn={login},ou=users,#RDN#</code></td>
+</tr>
+<tr>
+<td>gidNumber</td>
+<td><code>#usergroupnumber#</code></td>
+</tr>
+<tr>
+<td>objectClasses</td>
+<td><code>inetOrgPerson,posixAccount,shadowAccount,sambaSamAccount</code></td>
+</tr>
+<tr>
+<td>sambaSID</td>
+<td><code>#localsid#-{uidnumber*2+1000}</code></td>
+</tr>
+<tr>
+<td>sn</td>
+<td><code>{login}</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>{login}</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td>LDAP group</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td><code>{full user name}</code></td>
+</tr>
+<tr>
+<td>gecos</td>
+<td><code>{login}</code></td>
+</tr>
+<tr>
+<td>loginShell</td>
+<td><code>/bin/false</code></td>
+</tr>
+<tr>
+<td>sambaAcctFlags</td>
+<td><code>[UX         ]</code></td>
+</tr>
+<tr>
+<td>sambaLogonScript</td>
+<td><code>_{login}.bat</code></td>
+</tr>
+<tr>
+<td>sambaPrimaryGroupSID</td>
+<td><code>#localsid#-100</code></td>
+</tr>
+<tr>
+<td>sambaPwdMustChange</td>
+<td><code>2147483647</code></td>
+</tr>
+<tr>
+<td>sambaPasswordHistory</td>
+<td><code>000000000000000000000000000000000000000000000000000000000000000000000000</code></td>
+</tr>
+<tr>
+<td>sambaLogonHours</td>
+<td><code>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</code></td>
+</tr>
+<tr>
+<td>sambaKickoffTime</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p>When that is done, click on "save" below.</p>
+<h2 id="125-turn-on-ldap">12.5 Turn on LDAP</h2>
+<p>Important, <strong>leave the web browser window open.</strong> Now with an editor, change file <code>/var/lib/tomcat8/webapps/WEB-INF/classes/goobi_config.properties</code>. Set <code>ldap_use=true</code> and save. Now LDAP is used. <strong>Still leave the web browser window open.</strong></p>
+<h2 id="126-create-ldap-users">12.6 Create LDAP users</h2>
+<p>Now click on <em>Users</em> in the menu, and on <em>Admin, test</em> on edit (the note symbol). Here, next to the LDAP group is a small piece of paper with a key symbol. Click this to add the user to LDAP. Admin can now log in again and <strong>you can close the web browser window</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
