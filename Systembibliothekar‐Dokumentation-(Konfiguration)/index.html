@@ -16,7 +16,7 @@
     
     
       
-        <title>Übersicht Inhalt Sidebar - Kitodo Production Documentation</title>
+        <title>Systembibliothekar‐Dokumentation (Konfiguration) - Kitodo Production Documentation</title>
       
     
     
@@ -57,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ubersicht-konfiguration-einer-instanz" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Übersicht Inhalt Sidebar
+              Systembibliothekar‐Dokumentation (Konfiguration)
             
           </span>
         </div>
@@ -215,6 +220,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht-konfiguration-einer-instanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht - Konfiguration einer Instanz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-administrative-aufgaben-konfiguration-und-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Administrative Aufgaben, Konfiguration und Eigenschaften
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Administrative Aufgaben, Konfiguration und Eigenschaften">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#berechtigungen-und-rollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Berechtigungen und Rollen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfigurationsdateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfigurationsdateien
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weitere Informationen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -229,47 +293,75 @@
 
 
 
-  <h1>Übersicht Inhalt Sidebar</h1>
+<p>--WORK IN PROGRESS --</p>
+<p>Weitere Informationen für <a href="https://github.com/kitodo/kitodo-production/wiki/Anwenderdokumentation-(Benutzung)">Anwender</a> oder <a href="">Entwickler</a></p>
+<h2 id="ubersicht-konfiguration-einer-instanz">Übersicht - Konfiguration einer Instanz</h2>
+<ul>
+<li>Workflow *Definition Rechter Tab fehlt (Berechtigungen, Schrittkonfiguration. Kitodo 1.1)</li>
+<li>Importkonfiguration (https://github.com/kitodo/kitodo-production/wiki/Projektauswahl-und-Katalogsuche -- Parameter jensets der Screenshots), Massenimport </li>
+<li>Schnittstellen/Import XSL -- Minimal Anleitung (PICA to Kitodo, Zusammenspiel mit Minimal-Regelsatz)</li>
+<li>
+<p>Regelsatz --Minimaler Regelsatz, Kurzanleitung, Funktion; Erläuterung Wurzelelement (Benennung?), doctype
+-- Strukturelemente
+-- use-Attribute
+-- Metadaten</p>
+</li>
+<li>
+<p>Produktionsvorlage
+-- Workflow
+-- Regelsatz
+-- docket.xsl (Doku Matthias erweitern,  wie kommt man an Metadataen)</p>
+</li>
+<li>Projekt (METS-Parameter-Dokumentation, Image-Konfiguration)</li>
+<li>Benutzer</li>
+<li>Rollen/Berechtigunngen (Neue Berechtigungen? Release Notes? Dokumentation aller Berechtigungen, Erläuterung; Abgrenzung von Workflow-Rechten für Aufgaben)</li>
+<li>
+<p>Export xsl (Benennung, Minimal-Konfiguration?, Beispielinstallation)
+-- Fixes Export</p>
+</li>
+<li>
+<p><strong>Administrative Aufgaben in Kitodo.Production 3.x</strong>: In diesem Abschnitt werden die wichtigsten administrativen Aufgaben beschrieben.</p>
+</li>
+</ul>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Batches_3x">Batches</a></p>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Benutzergruppen_3x">Benutzergruppen</a></p>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Berechtigungsstufen_3x">Berechtigungsstufen</a></p>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Benutzer_3x">Benutzer</a></p>
+<h1 id="4-administrative-aufgaben-konfiguration-und-eigenschaften">4. Administrative Aufgaben, Konfiguration und Eigenschaften</h1>
+<p>In diesem Abschnitt werden Informationen zu administrativen Aufgaben verzeichnet. Dies betrifft Funktionen, die über die reinen Anwenderfunktionen wie das Anlegen der Vorgänge und das Bearbeiten der Metadaten hinausgehen, jedoch nicht unbedingt von der IT betreut werden müssen. Es kann sogar von Vorteil sein, wenn eine Person aus dem Anwenderbereich einige dieser Aufgaben übernimmt. Dazu zählen zum Beispiel die Nutzeradministration und das Ausführen einiger Scripte. Die Aufgabenzuweisung obliegt natürlich jeder Einrichtung. Hier werden auch Hinweise aufgeführt, die durch die praktische Arbeit mit Kitodo.Production entstanden sind.</p>
+<!--
+[Bearbeitung Aufgabe](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Aufgabe_3x)
 
-<p><a href="https://github.com/kitodo/kitodo-production/wiki">Home</a></p>
-<!-- [Anwenderdokumentation Kitodo.Production 1.11](https://github.com/kitodo/kitodo-production/wiki/Anwenderdokumentation-Kitodo.Production-1.11) --->
-<!-- Veraltete Informationen -->
+[Bearbeitung Benutzer](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Benutzer_3x)
 
-<p><a href="https://github.com/kitodo/kitodo-production/wiki/Anwenderdokumentation-Kitodo.Production-3.X">Anwenderdokumentation Kitodo.Production 3</a></p>
-<!-- [Anwender-Dokumentation (Benutzung)] -->
-<!-- [Systembibliothekar-Dokumentation (Konfiguration)] -->
+[Bearbeitung Benutzergruppen](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Benutzergruppen_3x)
 
-<p><a href="https://github.com/kitodo/kitodo-production/wiki/Community-Board-(Kitodo.Production)">Community Board (Kitodo.Production)</a></p>
-<!-- [Dokumentationen der Anwenderbibliotheken](https://github.com/kitodo/kitodo-production/wiki/Dokumentationen-der-Anwenderbibliotheken) -->
-<!-- Überarbeitung notwendig -->
+[Bearbeitung Produktionsvorlage](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Produktionsvorlage_3x)
 
-<!-- [Informationen zu Kitodo.Production 3.x](https://github.com/kitodo/kitodo-production/wiki/Informationen-zu-Kitodo.Production-3.x) -->
+[Bearbeitung Projekte](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Projekte_3x)
 
-<!-- [Installationsanleitung](https://github.com/kitodo/kitodo-production/wiki/Installationsanleitung) -->
-<!-- Aktualisierung hier oder im Code? -->
-<!-- Gegebenenfalls nur Links zu den Code-Zeilen dokumentieren? -->
+[Benutzerkonfiguration](https://github.com/kitodo/kitodo-production/wiki/Benutzerkonfiguration_3x)
 
-<!-- [Hinweise für Aktualisierungen und Migration 3.x](https://github.com/kitodo/kitodo-production/wiki/Aktualisierungshinweise) -->
-<!-- Überarbeitung notwendig -->
+[KitodoScript](https://github.com/kitodo/kitodo-production/wiki/KitodoScript_3x)
 
-<!-- [Anwendungsfälle und weitere Themen](https://github.com/kitodo/kitodo-production/wiki/Anwendungsfälle-und-weitere-Themen) -->
-<!-- Veraltete Informationen -->
+[Scriptschritte](https://github.com/kitodo/kitodo-production/wiki/Metadaten-Skripte)-->
 
-<!-- [Entwicklungswünsche](https://github.com/kitodo/kitodo-production/wiki/Entwicklungswünsche) -->
-<!-- Alle Seiten löschen -->
-<!-- Das soll zukünftig in Diskussion beschrieben werden -->
-
-<p><a href="https://github.com/kitodo/kitodo-production/wiki/Hinweise-f%C3%BCr-Entwickler">Hinweise für Entwickler</a></p>
-<!-- Überarbeitung notwendig ; Abstimmung mit den Entwicklern notwendig ; Coding Guidelines sind hilfreich -->
-
-<!-- [effective webwork Dokumentation](https://github.com/kitodo/kitodo-production/wiki/effective-webwork-Dokumentation) -->
-<!-- Veraltete Informationen -->
-
-<!-- [Zeutschel Dokumentation](https://github.com/kitodo/kitodo-production/wiki/Zeutschel-Dokumentation) -->
-<!-- Veraltete Informationen -->
-
-<!-- [FAQs](https://github.com/kitodo/kitodo-production/wiki/FAQs) -->
-<!-- Veraltete Informationen -->
+<h2 id="berechtigungen-und-rollen">Berechtigungen und Rollen</h2>
+<ul>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Berechtigungen">Berechtigungen</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Rechte-(Berechtigungen)-und-Rollen">Rechte (Berechtigungen) und Rollen</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/SLUB-Dresden-Rollen">SLUB Dresden Rollen</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/SUB-Hamburg-Rollen">SUB Hamburg Rollen</a></li>
+</ul>
+<h2 id="konfigurationsdateien">Konfigurationsdateien</h2>
+<ul>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Regelsatz-3.x">Regelsatz 3.x</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Konfiguration-Laufzettel-in-Kitodo.Production-3">Konfiguration Laufzettel in Kitodo.Production 3</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Workflow-Editor">Workflow-Editor</a></li>
+</ul>
+<h2 id="weitere-informationen">Weitere Informationen</h2>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Metadaten-Skripte">Metadaten Skripte</a></p>
+<p><a href="https://github.com/kitodo/kitodo-production/wiki/Vorgänge-löschen">Vorgänge löschen</a></p>
 
 
 
