@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -106,11 +106,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -142,6 +144,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -236,13 +239,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-administrative-aufgaben-konfiguration-und-eigenschaften" class="md-nav__link">
+  <a href="#1-administrative-aufgaben-in-kitodoproduction-3x" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Administrative Aufgaben, Konfiguration und Eigenschaften
+      1. Administrative Aufgaben in Kitodo.Production 3.x
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Administrative Aufgaben, Konfiguration und Eigenschaften">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-administrative-aufgaben-konfiguration-und-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Administrative Aufgaben, Konfiguration und Eigenschaften
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Administrative Aufgaben, Konfiguration und Eigenschaften">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -294,40 +306,58 @@
 
 
 <p>--WORK IN PROGRESS --</p>
-<p>Weitere Informationen für <a href="https://github.com/kitodo/kitodo-production/wiki/Anwenderdokumentation-(Benutzung)">Anwender</a> oder <a href="">Entwickler</a></p>
+<p>Weitere Informationen für <a href="https://github.com/kitodo/kitodo-production/wiki/Anwenderdokumentation-(Benutzung)">Anwender</a> oder <a href="https://github.com/kitodo/kitodo-production/wiki/Hinweise-f%C3%BCr-Entwickler">Entwickler</a></p>
 <h2 id="ubersicht-konfiguration-einer-instanz">Übersicht - Konfiguration einer Instanz</h2>
 <ul>
-<li>Workflow *Definition Rechter Tab fehlt (Berechtigungen, Schrittkonfiguration. Kitodo 1.1)</li>
-<li>Importkonfiguration (https://github.com/kitodo/kitodo-production/wiki/Projektauswahl-und-Katalogsuche -- Parameter jensets der Screenshots), Massenimport </li>
-<li>Schnittstellen/Import XSL -- Minimal Anleitung (PICA to Kitodo, Zusammenspiel mit Minimal-Regelsatz)</li>
-<li>
-<p>Regelsatz --Minimaler Regelsatz, Kurzanleitung, Funktion; Erläuterung Wurzelelement (Benennung?), doctype
--- Strukturelemente
+<li>Workflow *Definition Rechter Tab fehlt (Berechtigungen, Schrittkonfiguration. Kitodo 1.1)
+(https://github.com/kitodo/kitodo-production/wiki/Workflow-Editor)</li>
+</ul>
+<!-- Christoph -->
+<ul>
+<li>Importkonfiguration (https://github.com/kitodo/kitodo-production/wiki/Projektauswahl-und-Katalogsuche -- Parameter jensets der Screenshots), Massenimport (https://github.com/kitodo/kitodo-production/wiki/Massenimport)</li>
+</ul>
+<!-- Anja -->
+<ul>
+<li>Schnittstellen/Import XSL -- Minimal Anleitung (PICA to Kitodo, Zusammenspiel mit Minimal-Regelsatz)
+(https://github.com/kitodo/kitodo-production/wiki/effective-webwork-Dokumentation)
+(https://github.com/kitodo/kitodo-production/wiki/SLUB-Dresden---Katalogimport)</li>
+<li>Regelsatz --Minimaler Regelsatz, Kurzanleitung, Funktion; Erläuterung Wurzelelement (Benennung?), doctype
+(https://github.com/kitodo/kitodo-production/wiki/Regelsatz-3.x)</li>
+</ul>
+<!-- Anja -->
+<p>-- Strukturelemente
 -- use-Attribute
 -- Metadaten</p>
-</li>
-<li>
-<p>Produktionsvorlage
+<ul>
+<li>Produktionsvorlage
 -- Workflow
 -- Regelsatz
--- docket.xsl (Doku Matthias erweitern,  wie kommt man an Metadataen)</p>
-</li>
-<li>Projekt (METS-Parameter-Dokumentation, Image-Konfiguration)</li>
-<li>Benutzer</li>
-<li>Rollen/Berechtigunngen (Neue Berechtigungen? Release Notes? Dokumentation aller Berechtigungen, Erläuterung; Abgrenzung von Workflow-Rechten für Aufgaben)</li>
-<li>
-<p>Export xsl (Benennung, Minimal-Konfiguration?, Beispielinstallation)
--- Fixes Export</p>
-</li>
-<li>
-<p><strong>Administrative Aufgaben in Kitodo.Production 3.x</strong>: In diesem Abschnitt werden die wichtigsten administrativen Aufgaben beschrieben.</p>
-</li>
+-- docket.xsl (Doku Matthias erweitern,  wie kommt man an Metadataen)
+(https://github.com/kitodo/kitodo-production/wiki/Konfiguration-Laufzettel-in-Kitodo.Production-3)</li>
+<li>Projekt (METS-Parameter-Dokumentation, Image-Konfiguration)
+(alte Version: https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Projekte)</li>
 </ul>
+<!-- André -->
+<ul>
+<li>Benutzer
+(alte Version: https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Benutzer)</li>
+</ul>
+<!-- Matthias -->
+<ul>
+<li>Rollen/Berechtigungen (Neue Berechtigungen? Release Notes? Dokumentation aller Berechtigungen, Erläuterung; Abgrenzung von Workflow-Rechten für Aufgaben) (https://github.com/kitodo/kitodo-production/wiki/Berechtigungen, https://github.com/kitodo/kitodo-production/wiki/Rechte-(Berechtigungen)-und-Rollen)</li>
+</ul>
+<!-- Kerstin -->
+<ul>
+<li>Export xsl (Benennung, Minimal-Konfiguration?, Beispielinstallation)
+-- Fixes Export</li>
+</ul>
+<h1 id="1-administrative-aufgaben-in-kitodoproduction-3x">1. <strong>Administrative Aufgaben in Kitodo.Production 3.x</strong></h1>
+<p>In diesem Abschnitt werden die wichtigsten administrativen Aufgaben beschrieben.</p>
 <p><a href="https://github.com/kitodo/kitodo-production/wiki/Batches_3x">Batches</a></p>
 <p><a href="https://github.com/kitodo/kitodo-production/wiki/Benutzergruppen_3x">Benutzergruppen</a></p>
 <p><a href="https://github.com/kitodo/kitodo-production/wiki/Berechtigungsstufen_3x">Berechtigungsstufen</a></p>
 <p><a href="https://github.com/kitodo/kitodo-production/wiki/Benutzer_3x">Benutzer</a></p>
-<h1 id="4-administrative-aufgaben-konfiguration-und-eigenschaften">4. Administrative Aufgaben, Konfiguration und Eigenschaften</h1>
+<h1 id="2-administrative-aufgaben-konfiguration-und-eigenschaften">2. Administrative Aufgaben, Konfiguration und Eigenschaften</h1>
 <p>In diesem Abschnitt werden Informationen zu administrativen Aufgaben verzeichnet. Dies betrifft Funktionen, die über die reinen Anwenderfunktionen wie das Anlegen der Vorgänge und das Bearbeiten der Metadaten hinausgehen, jedoch nicht unbedingt von der IT betreut werden müssen. Es kann sogar von Vorteil sein, wenn eine Person aus dem Anwenderbereich einige dieser Aufgaben übernimmt. Dazu zählen zum Beispiel die Nutzeradministration und das Ausführen einiger Scripte. Die Aufgabenzuweisung obliegt natürlich jeder Einrichtung. Hier werden auch Hinweise aufgeführt, die durch die praktische Arbeit mit Kitodo.Production entstanden sind.</p>
 <!--
 [Bearbeitung Aufgabe](https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Aufgabe_3x)
