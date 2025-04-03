@@ -225,6 +225,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -240,6 +266,7 @@
 
 
 <h1 id="flowchart">Flowchart</h1>
+<h2 id="version-1">Version 1</h2>
 <pre><code class="language-mermaid">flowchart TD
     1[Workflow]
     1  --&gt; 2[Produktionsvorlage]
@@ -259,6 +286,34 @@
     14[METS Parameter] --&gt;15[Unterordner und METS-Dateigruppen]
     14[METS Parameter] --&gt;16[Ordnerverwendung]
     14[METS Parameter] --&gt;17[Vorschau]
+</code></pre>
+<h2 id="version-2">Version 2</h2>
+<pre><code class="language-mermaid">flowchart TD
+
+    21{{Docket XSL}} --&gt; 22{{Laufzettel}}
+    22[Laufzettel] --------&gt; 20[Produktionsvorlage]
+    23{{Ruleset XML}} --&gt; 24[Regelsatz]
+    25{{Export XSL}} --&gt; 24[Regelsatz]
+    24[Regelsatz] --------&gt; 20[Produktionsvorlage]
+
+    51{{Import XSL}} --&gt; 52[Abbildungsdatei]
+    52[Abbildungsdatei] --&gt; 53[Importkonfiguration]
+    53[Importkonfiguration] --&gt; 50((Projekte))
+    54[Technische Daten] ---&gt; 50((Projekte))
+    55[Unterordner und METS-Dateigruppen] --&gt;56[METS Parameter]
+    57[Ordnerverwendung] --&gt; 56[METS Parameter]
+    58[Vorschau] --&gt; 56[METS Parameter]
+    56[METS Parameter] --&gt; 50((Projekte))
+    50((Projekte)) --&gt; 20[Produktionsvorlage]
+    50((Projekte)) --------&gt; 10((Benutzer))
+
+    12[Rollen] -------&gt; 10((Benutzer))
+    11[Berechtigungen] --&gt; 12[Rollen]
+    12[Rollen] --&gt; 27[Aufgaben]
+    27[Aufgaben] --&gt; 26[Workflow]
+
+    26[Workflow] ---&gt; 20[Produktionsvorlage]
+
 </code></pre>
 <h1 id="mindmap">Mindmap</h1>
 <pre><code class="language-mermaid">mindmap
