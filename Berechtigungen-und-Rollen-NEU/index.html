@@ -235,8 +235,8 @@
   <h1>Berechtigungen und Rollen NEU</h1>
 
 <p>In Kitodo.Production werden <strong>Berechtigungen</strong> für die Nutzung der Software in <strong>Rollen</strong> zusammengefasst. Bei der Konzeption von Rollen durch das Zuordnen von konkreten Berechtigungen für einzelne Arbeitsschritte sollte der Leitgedanke weniger eine konkrete Person mit allen Aufgabenfacetten in der eigenen Einrichtung sein, sondern das Zerlegen des gesamten Digitalisierungsprozesses in die wesentlichen sich klar unterscheidenden Aufgabenbereiche. In der Beispielkonfiguration, die man bei Erstinstallation in Kitodo.Production vorfindet, finden sich neben einer Rolle <strong>Administration</strong> mit uneingeschränkten Berechtigungen die 4 Rollen <strong>Benutzerverwaltung</strong>, <strong>Scannen</strong>, <strong>Metadatenbearbeitung</strong> und <strong>Vorgangsverwaltung</strong> mit jeweils einer Auswahl der dafür notwendigen Berechtigungen. Beim sich anschließenden Anlegen von konkreten Benutzer:innen für die Arbeit mit Kitodo.Production werden sich oft Kombinationen von Rollen ergeben - wie z.B. eine Kombination von Benutzerverwaltung, Vorgangsverwaltung und Metadatenbearbeitung für eine Projektleitung, während z.B. eine studentische Hilfskraft nur mit der Metadatenbearbeitung beauftragt wird. </p>
-<p>In der <strong>Konfigurationsmaske für die Rollen</strong> findet sich eine Unterscheidung von <strong>Globalen Berechtigungen</strong> und <strong>Mandantberechtigungen</strong>, da Kitodo.Production als mandantenfähige Software konzipiert wurde. Man kann also z.B. als Dienstleister für mehrere Einrichtungen in einer Installation mehrere <strong>Mandanten</strong>) konfigurieren mit komplett unterschiedlichen Rollen, Workflows und Importkonfigurationen. Es muss für diese Zielvorstellung also mindestens einen Benutzer mit der Rolle Administration geben, der über globale Rechte rund um die Anlage von Mandanten verfügt. <em>Vergleichbares gilt für die Berechtigungen rund um einen zentralen LDAP-Server, LDAP-Gruppen, den sog. Taskmanager, das Anstoßen einer Neuindexierung oder der Migration von Vorgängen aus Kitodo.Production 2. Für weitere administrative Aufgaben sind Berechtigungen vorgesehen, die einen Überblick über die gesamte Installation erlauben (wie z.B. "Alle Benutzer anzeigen"), aber für die konkrete Arbeit mit einem einzelnen Mandanten keine Auswirkungen haben.</em> So konzentriert sich dieser Teil der Dokumentation auf die Konfiguration für einen einzelnen Mandanten. </p>
-<p>In der folgenden Tabelle werden alle in Kitodo.Production 3 aktuell verfügbaren Berechtigungen aufgelistet und erläutert. In der letzten Spalte wird gekennzeichnet, ob sie in den 4 Rollen der Beispielkonfiguration - <strong>Benutzerverwaltung, Scannen, Metadatenbearbeitung und Vorgangsverwaltung</strong> - zugeordnet wurden. </p>
+<p>In der <strong>Konfigurationsmaske für die Rollen</strong> findet sich eine Unterscheidung von <strong>Globalen Berechtigungen</strong> und <strong>Mandantberechtigungen</strong>, da Kitodo.Production als mandantenfähige Software konzipiert wurde. Man kann also z.B. als Dienstleister für mehrere Einrichtungen in einer Installation mehrere <strong>Mandanten</strong>) konfigurieren mit komplett unterschiedlichen Rollen, Workflows und Importkonfigurationen. Es muss für diese Zielvorstellung also mindestens einen Benutzer mit der Rolle Administration geben, der über globale Rechte rund um die Anlage von Mandanten verfügt. Vergleichbares gilt für die Berechtigungen rund um einen zentralen LDAP-Server, LDAP-Gruppen, den sog. Taskmanager, das Anstoßen einer Neuindexierung oder der Migration von Vorgängen aus Kitodo.Production 2. Für weitere administrative Aufgaben sind Berechtigungen vorgesehen, die einen Überblick über die gesamte Installation erlauben (wie z.B. "Alle Benutzer anzeigen"). Dieser Teil der Dokumentation konzentriert sich aber auf die Konfiguration eines Rollenkonzeptes für einen einzelnen Mandanten. 
+In der folgenden Tabelle werden alle in Kitodo.Production 3 aktuell verfügbaren Berechtigungen aufgelistet und erläutert. In der letzten Spalte wird gekennzeichnet, ob sie in den 4 Rollen der Beispielkonfiguration - <strong>Benutzerverwaltung, Scannen, Metadatenbearbeitung und Vorgangsverwaltung</strong> - zugeordnet wurden. </p>
 <p>Für ein differenzierteres Rollenkonzept siehe auch <a href="https://github.com/kitodo/kitodo-production/wiki/SLUB-Dresden-Rollen">SLUB Dresden Rollen</a> - <em>Seite noch anpassen von den Links / halbwegs aktuell?</em></p>
 <!-- * [Rechte (Berechtigungen) und Rollen](https://github.com/kitodo/kitodo-production/wiki/Rechte-(Berechtigungen)-und-Rollen) -->
 
@@ -266,17 +266,17 @@
 </tr>
 <tr>
 <td><strong>Aufgabe anzeigen</strong></td>
-<td>???</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Aufgabe durchführen</strong></td>
-<td>???</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Aufgabe hinzufügen</strong></td>
-<td>???</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
@@ -286,27 +286,27 @@
 </tr>
 <tr>
 <td><strong>Aufgaben zurücksetzen</strong></td>
-<td>??</td>
+<td>Mit dieser Berechtigung kann der Status einer Aufgabe z.B. wieder auf offen gesetzt werden, wenn die Bearbeitung noch einer Kollegin / einem Kollegen zugewiesen ist (z.B. bei Krankheit/Urlaub)</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Aufgaben zuweisen</strong></td>
-<td>??</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Aufgaben überschreiben</strong></td>
-<td>???</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Aufgaben überwachen</strong></td>
-<td>???</td>
+<td>aktuell keine funktionale Bedeutung</td>
 <td>-</td>
 </tr>
 <tr>
 <td>Alle <strong>Batches</strong> anzeigen, Batch anzeigen, Batch bearbeiten, Batch hinzufügen, Batch löschen</td>
-<td>??? Mit der Konfiguration dieser Berechtigungen taucht neben der Vorgangsliste ein Tab <strong>Batches</strong> auf mit Selektionsmöglichkeit für Vorgänge und auszuwählenden Aktionen für die jeweilige Selektion (Gesamten Batch ins DMS exportieren, Vorgänge des/der ausgewählten Batches laden, Alle Vorgänge laden, Laufzettel drucken, Eigenschaft bearbeiten, Batch löschen -  <strong>Bedeutung in der Lebenspraxis von K3???</strong></td>
+<td>Mit der Konfiguration dieser Berechtigungen taucht neben der Vorgangsliste ein Tab <strong>Batches</strong> auf mit Selektionsmöglichkeit für Vorgänge und auszuwählenden Aktionen für die jeweilige Selektion (Gesamten Batch ins DMS exportieren, Vorgänge des/der ausgewählten Batches laden, Alle Vorgänge laden, Laufzettel drucken, Eigenschaft bearbeiten, Batch löschen - ggf. keine herausgehobene Alltagsbedeutung mehr im Alltag von Kitodo.Production 3)</td>
 <td></td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@
 </tr>
 <tr>
 <td>Alle <strong>Berechtigungen anzeigen, Berechtigung anzeigen, Berechtigung bearbeiten, Berechtigung hinzufügen, Berechtigung löschen</strong></td>
-<td>??? Ausschließlich Globale Berechtigungen - Verankerung im Code ??? /<strong> Bedeutung im Alltag?</strong></td>
+<td>Ausschließlich Globale Berechtigungen für sehr spezifische Bedingungen in der Systemverwaltung - keine Relevanz für Arbeit in einem Mandanten</td>
 <td>-</td>
 </tr>
 <tr>
@@ -325,8 +325,8 @@
 <td></td>
 </tr>
 <tr>
-<td>Images des Vorgangs anzeigen</td>
-<td>??? Auch ohne des Berechtigung werden die Bilder im Metadateneditor gezeigt.</td>
+<td><strong>Images des Vorgangs anzeigen</strong></td>
+<td>Bei Fehlen dieses und weiterer Rechte kann ggf. die Galerie im Metadateneditor eingeklappt sein.</td>
 <td>S, M</td>
 </tr>
 <tr>
@@ -357,11 +357,6 @@
 <tr>
 <td>Alle <strong>Laufzettel</strong> anzeigen, Laufzettel anzeigen, Laufzettel bearbeiten, Laufzettel hinzufügen, Laufzettel löschen</td>
 <td>Berechtigungen für die systembibliothekarische Konfiguration eines allgemeinen oder unterschiedlicher Laufzettel(s) mit ausgewählten Meta- und Vorgangsdaten für Vorgänge in <strong>Projekten</strong> -</td>
-<td></td>
-</tr>
-<tr>
-<td>Alle <strong>LDAP-Gruppen</strong> anzeigen, LDAP-Gruppe anzeigen, LDAP-Gruppe bearbeiten, LDAP-Gruppe hinzufügen, LDAP-Gruppe löschen</td>
-<td>Berechtigungen für die Systemadministration für die "LDAP-Gruppen" im Konfigurationstab im Menu "Benutzer"</td>
 <td></td>
 </tr>
 <tr>
