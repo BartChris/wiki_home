@@ -517,8 +517,8 @@ grant all on kitodo.* to 'kitodo'@'localhost';
 exit;
 </code></pre>
 <p>Anschließend laden Sie die Datenbankinhaltsvorlage herunter und laden sie in die Datenbank:</p>
-<pre><code class="language-sh">wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.2/kitodo_3-8-2.sql
-mariadb -u kitodo -pkitodo -D kitodo &lt; kitodo_3-8-2.sql
+<pre><code class="language-sh">wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.3/kitodo_3-8-3.sql
+mariadb -u kitodo -pkitodo -D kitodo &lt; kitodo_3-8-3.sql
 </code></pre>
 <h2 id="7-ldap-fur-samba-vorbereiten">7. LDAP für Samba vorbereiten</h2>
 <p>Laden Sie das Samba-Schema in LDAP:</p>
@@ -600,15 +600,15 @@ Ergänzen Sie die Zeile <code>passwd:</code> um das Argument <code>ldap</code>:<
 </code></pre>
 <h2 id="9-programmordner-und-dateien-erstellen">9. Programmordner und -dateien erstellen</h2>
 <p>Laden Sie die Software, die Module und die Konfigurationsdateien herunter, erstellen Sie einen Programmordner, entpacken Sie die Module und Konfigurationsdateien. Den metadata-Ordner legen Sie auf die Datenpartition. Vergeben Sie die notwendigen Berechtigungen:</p>
-<pre><code class="language-sh">wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.2/kitodo-3.8.2.war
-wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.2/kitodo_3-8-2_config_modules.zip
+<pre><code class="language-sh">wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.3/kitodo-3.8.3.war
+wget https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-3.8.3/kitodo_3-8-3_config_modules.zip
 
 sudo mkdir /usr/local/kitodo
-sudo unzip kitodo_3-8-2_config_modules.zip -x scripts/*.bat -d /usr/local/kitodo
+sudo unzip kitodo_3-8-3_config_modules.zip -x scripts/*.bat -d /usr/local/kitodo
 </code></pre>
 <p>Wenn Sie die Übersetzungstexte der grafischen Oberfläche lokal verändern wollen, führen Sie die beiden folgenden Kommandos aus. Dies hat den Nachteil, dass bei künftigen Updates neu hinzugekommene Beschriftungen nicht automatisch zur Verfügung stehen. Daher ist dieser Schritt optional. (Wichtig: Wenn Sie die Übersetzungstexte nicht anpassen wollen, darf auch der Ordner <code>/usr/local/kitodo/messages</code> nicht erstellt werden.)</p>
 <pre><code class="language-sh">sudo mkdir /usr/local/kitodo/messages
-sudo unzip -j kitodo-3.8.2.war 'WEB-INF/classes/messages/*' -d /usr/local/kitodo/messages
+sudo unzip -j kitodo-3.8.3.war 'WEB-INF/classes/messages/*' -d /usr/local/kitodo/messages
 </code></pre>
 <p>Anschließend geht es in jedem Fall so weiter:</p>
 <pre><code class="language-sh">cd /usr/local/kitodo
@@ -663,7 +663,7 @@ Ergänzen Sie die Zeile <code>JAVA_OPTS</code>, um dem Tomcat mehr Arbeitsspeich
 sudo service tomcat9 restart
 </code></pre>
 <p>Installieren Sie die Webanwendung:</p>
-<pre><code>sudo cp kitodo-3.8.2.war /var/lib/tomcat9/webapps/kitodo##3.8.2.war
+<pre><code>sudo cp kitodo-3.8.3.war /var/lib/tomcat9/webapps/kitodo##3.8.3.war
 </code></pre>
 <h2 id="12-logrotation-konfigurieren">12. Logrotation konfigurieren</h2>
 <p>Erstellen Sie die Datei <code>/etc/logrotate.d/kitodo</code> z.B. mit folgendem Inhalt:</p>
