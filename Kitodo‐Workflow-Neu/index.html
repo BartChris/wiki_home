@@ -240,6 +240,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#automatische-vs-manuelle-aufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatische vs. manuelle Aufgaben
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatische vs. manuelle Aufgaben">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exkurs-lesen-und-schreiben-von-bildern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exkurs: Lesen und Schreiben von Bildern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-einstellungen-fur-die-workflow-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weitere Einstellungen für die Workflow-Schritte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallele-workflow-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallele Workflow-Schritte
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -298,15 +340,15 @@ Manuelle Tasks/Workflow-Schritte erfordern eine Aktion des Benutzers, z.B. die S
 </tr>
 <tr>
 <td>Bilder lesen</td>
-<td>Row 4 C2</td>
+<td>Im Rahmen dieser Aufgabe werden Bilder automatisch per Symlink ins Home-Verzeichnis des aktuellen Benutzers verlinkt. Schreibzugriff nur für privilegierte Nutzer</td>
 </tr>
 <tr>
 <td>Bilder schreiben</td>
-<td>Row 5 C2</td>
+<td>Im Rahmen dieser Aufgabe werden Bilder automatisch per Symlink ins Home-Verzeichnis des aktuellen Benutzers verlinkt. Der Nutzer erhält Schreibzugriff</td>
 </tr>
 <tr>
 <td>Bilder generieren</td>
-<td>Row 6 C2</td>
+<td>Im Rahmen der Aufgabe werden Bildderivate generiert, entweder automatisch oder manuell auf Anfrage</td>
 </tr>
 <tr>
 <td>Bilder validieren</td>
@@ -330,7 +372,7 @@ Manuelle Tasks/Workflow-Schritte erfordern eine Aktion des Benutzers, z.B. die S
 </tr>
 <tr>
 <td>Stapelverarbeitung</td>
-<td>Unklar</td>
+<td>? - Unklar</td>
 </tr>
 <tr>
 <td>Parallele Aufgabe</td>
@@ -338,6 +380,31 @@ Manuelle Tasks/Workflow-Schritte erfordern eine Aktion des Benutzers, z.B. die S
 </tr>
 </tbody>
 </table>
+<h2 id="automatische-vs-manuelle-aufgaben">Automatische vs. manuelle Aufgaben</h2>
+<p>Alle Workflow-Schritte können als "automatisch" markiert werden, was bewirkt, dass die mit diesem Schritt verknüpften Funktionen bei Beginn der Aufgabe automatisch gestartet werden. Alle im "automatischen" Workflow-Schritt sind - bei entsprechenden Einstellungen oder im Fall des Scheiterns einer automatischen Aufgabe - allerdings auch manuell aufrufbar.</p>
+<p>Dies gilt zunächst für die im Workflow-Editor auswählbaren Aufgaben:
+* Bilder generieren
+* Export DMS
++ Bilder validieren</p>
+<p>Wird eine dieser Aufgaben in Kombination mit "Automatisch" ausgewählt, startet bei Beginn der Aufgabe ein automatischer Export der Daten oder eine automatische Generierung, oder eine automatische Validierung der Bilder.  </p>
+<p>Ist der Workflowschritt manuell, so kann die assoziierte Aufgabe manuell aus dem entsprechenden Task-Menü gestartet werden.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/68eaf720-8ee9-47e2-8a0b-3ba7d9fa7dbe" /></p>
+<p>Dasselbe gilt, wenn die automatische Prozessierung scheitert. Die automatische Aufgabe kann dann aus dem Task-Menü erneut manuell gestartet werden.</p>
+<h3 id="exkurs-lesen-und-schreiben-von-bildern">Exkurs: Lesen und Schreiben von Bildern</h3>
+<p>Die Einstellungen für das "Lesen" und "Schreiben" von Bildern als Attribut einer Workflow-Aufgabe, sind insbesondere für Installationen auf Basis von Samba-Shares (https://github.com/kitodo/kitodo-production/wiki/Installationsanleitung-f%C3%BCr-Kitodo.Production-3.X#7-ldap-f%C3%BCr-samba-vorbereiten) relevant.</p>
+<p>Wenn eine der beiden Eigenschaften gesetzt ist, wird bei Annahme der entsprechenden Aufgabe, automatisch ein Symlink vom Home-Verzeichnis des enstprechenden Benutzers auf das Kitodo-Bild-Verzeichnis gesetzt. Der Benutzer kann auf diesem Weg von seinem lokalen Windows-PC auf die Bild-Daten im Kitodo-Verzeichnis zugreifen. Je nach Einstellung (Bilder schreiben) wird der Nutzer als nur leseberechtigz oder schreibberechtigt eingestellt. </p>
+<p>Code-Referenz:</p>
+<p>https://github.com/kitodo/kitodo-production/blob/99d664e4b42d204b37176bb18d90f96e9d6f3427/Kitodo/src/main/java/org/kitodo/production/services/workflow/WorkflowControllerService.java#L722-L728</p>
+<p>Daneben gibt es sowohl aus der Vorgangs- als auch aus der Aufgabenliste die Möglichkeit, Bilder per Symlink in das eigene Home-Verzeichnis zu verlinken. Überprüft wird in diesem Fall die Berechtigung <code>editProcesImage</code> (Images des Vorgangs bearbeiten) siehe https://github.com/kitodo/kitodo-production/wiki/Berechtigungen-und-Rollen-NEU. Der Zugriff auf die Bilder ist dann immer schreibend, es sei denn die Bilder des Vorgangs werden schon im Rahmen einer anderen Aufgabe bearbeitet.</p>
+<p>Code-Referenz:</p>
+<p>https://github.com/kitodo/kitodo-production/blob/99d664e4b42d204b37176bb18d90f96e9d6f3427/Kitodo/src/main/java/org/kitodo/production/services/data/ProcessService.java#L1960-L1972</p>
+<h2 id="weitere-einstellungen-fur-die-workflow-schritte">Weitere Einstellungen für die Workflow-Schritte</h2>
+<p>Zwingend auszufüllen ist der Reiter Berechtigungen:</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/db41d11b-3a47-49b3-891c-214b60cee129" /></p>
+<p>Jedem Workflow-Schritt muss mindestens eine Rolle hinzugefügt werden. Verfügbar sind alle auf diesem Client definierte Rollen. Der jeweilige Workflowschritt ist in der Task-Liste nur für solche Rollen sichtbar, für welche die entsprechende Berechtigung gesetzt wurde.</p>
+<p>Beispiel:
+Wird dem Workflow-Schritt "Scannen" nur die Rolle "Scan-Operator" zugewiesen, so sind in der Liste aller aktiven Tasks, die  "Scannen"-Tasks nur für Nutzer mit der Rolle "Scan-Operator" sichtbar. Weiterhin kann bei einer gescheiterten automatischen Aufgabe, nur eine für diesen WorkflowSchritt berechtigte Rolle, die Funktion erneut ausführen.</p>
+<h2 id="parallele-workflow-schritte">Parallele Workflow-Schritte</h2>
 
 
 

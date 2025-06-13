@@ -270,7 +270,7 @@
 <pre><code class="language-mermaid">flowchart TD
     1[Workflow]
     1  --&gt; 2[Produktionsvorlage]
-    3{{Laufzettel}} --&gt; 2[Produktionsvorlage]
+    3{{Laufzettel}} -- Testtext --&gt; 2[Produktionsvorlage]
     5{{Regelsatz}} --&gt; 2[Produktionsvorlage]
     4((Projekte)) --&gt; 2[Produktionsvorlage]
     4((Projekte)) --&gt;6[Importkonfiguration] 
@@ -278,7 +278,7 @@
     7[Abbildungsdatei] --&gt;8{{Import XSL}}
     9[Aufgaben] --&gt; 1[Workflow]
     10[Rollen] --&gt; 9[Aufgaben]
-    11[Berechtigungen] --&gt; 10[Rollen]
+    11[Berechtigungen] &lt;--&gt; 10[Rollen]
     10[Rollen] --&gt; 12((Benutzer)) 
     12((Benutzer)) --&gt; 4((Projekte))
     4((Projekte)) --&gt;13[Technische Daten]
