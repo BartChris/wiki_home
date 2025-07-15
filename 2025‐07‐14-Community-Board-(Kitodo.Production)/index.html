@@ -16,7 +16,7 @@
     
     
       
-        <title>Einleitung - Kitodo Production Documentation</title>
+        <title>2025‐07‐14 Community Board (Kitodo.Production) - Kitodo Production Documentation</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#einleitung" class="md-skip">
+        <a href="#top-1-verschiedenes" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Einleitung
+              2025‐07‐14 Community Board (Kitodo.Production)
             
           </span>
         </div>
@@ -225,6 +225,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#massenimport-von-zeitungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Massenimport von Zeitungen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -239,95 +256,88 @@
 
 
 
-<h1 id="einleitung">Einleitung</h1>
-<p>Auf dieser Seite werden einige Rollen vorgestellt, die in der SLUB Dresden für die Nutzerverwaltung erstellt wurden. Die Konfiguration entspricht den Anforderungen in der SLUB Dresden und sollte vor der Anwendung in anderen Einrichtungen geprüft werden. </p>
-<p>Siehe auch: 
-* <a href="https://github.com/kitodo/kitodo-production/wiki/Berechtigungen">Berechtigungen</a>
-* <a href="https://github.com/kitodo/kitodo-production/wiki/Rechte-(Berechtigungen)-und-Rollen">Rechte (Berechtigungen) und Rollen</a></p>
-<h1 id="rollen">Rollen</h1>
-<h2 id="metadaten">Metadaten</h2>
-<p>Aufgaben: 
-* Bearbeitung der Paginierung, Strukturdaten und Metadaten im Metadateneditor über die Aufgabenliste. </p>
-<p>Mandantberechtigungen:
-* Alle Aufgaben anzeigen
-* Images des Vorgangs anzeigen
-* Images des Vorgangs bearbeiten
-* Metadaten des Vorgangs anzeigen
-* Metadaten des Vorgangs bearbeiten
-* Paginierung des Vorgangs anzeigen
-* Paginierung des Vorgangs bearbeiten
-* Spalten konfigurieren
-* Strukturdaten des Vorgangs anzeigen
-* Strukturdaten des Vorgangs bearbeiten</p>
-<h2 id="scanner">Scanner</h2>
-<p>Aufgaben: 
-* Verlinkung ins Homeverzeichnis und Verschieben der Bilddaten. </p>
-<p>Mandantberechtigungen:
-* Alle Aufgaben anzeigen
-* Images des Vorgangs bearbeiten
-* Spalten konfigurieren</p>
-<h2 id="prozessverwaltung">Prozessverwaltung</h2>
-<p>Aufgaben: 
-* Anlegen von Vorgängen. Bearbeitung abgeschlossener Vorgänge. ~~Administrativer Export oder Löschen von Vorgängen.~~ </p>
-<p>Mandantberechtigungen:
-* Alle Aufgaben anzeigen
-* Alle Projekte anzeigen
-* Alle Vorgänge anzeigen
-* Aufgabe bearbeiten
-* ~~Aufgabe löschen~~ (wurde nachträglich entfernt - Berechtigung wird nicht benötigt)
-* Laufzettel anzeigen
-* Spalten konfigurieren
-* Vorgang anzeigen
-* Vorgang bearbeiten
-* ~~Vorgang exportieren~~ (wurde nachträglich entfernt - siehe Rolle <em>Vorgang exportieren</em>)
-* Vorgang hinzufügen
-* ~~Vorgang löschen~~ (wurde nachträglich entfernt - siehe Rolle <em>Vorgang löschen</em>)</p>
-<h2 id="vorgang-anlegen">Vorgang anlegen</h2>
-<p>Aufgaben: 
-* Anlegen von Vorgängen. Erzeugung der Laufzettel. </p>
-<p>Mandantberechtigungen:
-* Alle Projekte anzeigen
-* Alle Vorgänge anzeigen
-* Laufzettel anzeigen
-* Spalten konfigurieren
-* Vorgang bearbeiten
-* Vorgang hinzufügen</p>
-<h2 id="vorgang-exportieren">Vorgang exportieren</h2>
-<p>Aufgaben: 
-* Exportieren von Vorgängen. <em>In Kombination mit anderen Berechtigungen (Vorgang anlegen, Prozessverwaltung) - wurde nachträglich aus der Rolle Prozessverwaltung extrahiert, um fehlerhafte Anwendung zu vermeiden.</em></p>
-<p>Mandantberechtigungen:
-* Vorgang exportieren</p>
-<h2 id="vorgang-loschen">Vorgang löschen</h2>
-<p>Aufgaben: 
-* Löschen von Vorgängen. <em>In Kombination mit anderen Berechtigungen (Vorgang anlegen, Prozessverwaltung) - wurde nachträglich aus der Rolle Prozessverwaltung extrahiert, um fehlerhafte Anwendung zu vermeiden.</em></p>
-<p>Mandantberechtigungen:
-* Vorgang löschen</p>
-<h2 id="vorgangsliste-anzeigen">Vorgangsliste anzeigen</h2>
-<p>Aufgaben: 
-* Anzeige der Vorgangsliste. <em>In Kombination mit anderen Rollen (Scannen, Metadaten)</em></p>
-<p>Mandantberechtigungen:
-* Alle Vorgänge anzeigen</p>
-<h2 id="bilddaten-entfernen">Bilddaten entfernen</h2>
-<p>Aufgaben: 
-* Löschen einzelner Mediendateien im Metadateneditor. <em>In Kombination mit anderen Rollen (Metadaten)</em></p>
-<p>Mandantberechtigungen:
-* Medien löschen</p>
-<h2 id="kitodoscript-ausfuhren">KitodoScript ausführen</h2>
-<p>Aufgaben: 
-* Anwendung der KitodoScripte. <em>In Kombination mit anderen Rollen (Metadaten)</em></p>
-<p>Mandantberechtigungen:
-* KitodoScript ausführen</p>
-<h2 id="import-dms-automatische-aufgabe">Import DMS (Automatische Aufgabe)</h2>
-<p>Aufgaben: 
-* Bei Bedarf manuelles Ausführen der Aufgabe. </p>
-<p>Mandantberechtigungen:
-* Alle Aufgaben anzeigen</p>
+<p>Teilnehmende: André Hohmann, Armin Möller, Matthias Kissler, Anja Piller, Nils Reichert, Kerstin Wendt, Lole Westedt</p>
+<h1 id="top-1-verschiedenes">TOP 1 Verschiedenes</h1>
+<ul>
+<li>Status hibernate: (s. auch Mail von Christoph an Matthias und Arved): </li>
+<li>Bugfixing muss noch geschehen, Wunsch nach baldigem Produktivgang bei Beschränkung auf zentrale Features</li>
+<li>Projektsuche exakt und rechtstrunkiert (kann über die Datenbank erfolgen)</li>
+<li>freie Suche über alle Felder nach Projekt genügt exakte Suche</li>
+<li>Vorgangs-/Prozesssuche soll freier gestaltet werden (Suche über den Index) (s. auch https://github.com/kitodo/kitodo-production/issues/6553)</li>
+<li>Tasksuche (Vorgänge, die sich in einem bestimmten Bearbeitungsschritt befinden) auch nur exakte Suche nach Aufgabenname über die Datenbank</li>
+<li>Wunsch nach baldigem Release Candidate, um die Vorgaben intern auf Anwendbarkeit testen zu können</li>
+<li>
+<p>Neuer Issue von Christoph: https://github.com/kitodo/kitodo-production/issues/6602</p>
+</li>
+<li>
+<p>Zählung Mediendateien</p>
+</li>
+<li>Siehe: <ul>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6595">Zählung von Mediendateien #6595</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6543">Keine Synchronsierung zwischen Datenbank und Suchindex #6543</a></li>
+</ul>
+</li>
+<li>Besteht akuter Handlungsbedarf in einer Einrichtung? Soll Lösung 1 in <a href="https://github.com/kitodo/kitodo-production/discussions/6543">#6595</a> umgesetzt werden? <ul>
+<li>Lösung 1 kann angewendet werden. </li>
+</ul>
+</li>
+<li>Wie beschrieben werden dadurch statistische Auswertungen verfälscht. Diese haben aber auch weiterführende Probleme bei Zahlen größer als 10.000, was mit ElasticSearch zusammenhängen könnte.</li>
+</ul>
+<h2 id="massenimport-von-zeitungen">Massenimport von Zeitungen</h2>
+<ul>
+<li>Wie bekomme ich am besten den Überblick zu den Möglichkeiten des Massenimports für Zeitungsausgaben - Entwicklung von ULB Halle angestoßen und in Stabi aktiv genutzt?? (Frage von Kerstin)</li>
+<li>ist über XML-Dateien möglich</li>
+<li>wurde durch Matthias Ronge entwickelt</li>
+<li>https://github.com/kitodo/kitodo-production/pull/5640 und https://github.com/kitodo/kitodo-production/pull/5639 enthalten diese Funktion</li>
+<li>Beispieldateien und -regelsätze liegen in der SBB vor </li>
+</ul>
+<h1 id="top-2-re-import-fur-die-massenbearbeitung-cont">TOP 2 Re-Import für die Massenbearbeitung (cont.)</h1>
+<ul>
+<li>Wünschenswert wäre eine praktische Anleitung für die Umsetzung im eigenen Haus</li>
+<li>[[Massenabgleich-Protokoll---Idee-fürs-Community-Board]]</li>
+<li>
+<p>Massenimport und -abgleich sollten im Hintergrund laufen können</p>
+</li>
+<li>
+<p>weitere Besprechung wegen Abwesenheit von Christoph vertagt</p>
+</li>
+</ul>
+<h1 id="top-3-aktuelle-neue-themen-vertagt">TOP 3 Aktuelle neue Themen (vertagt)</h1>
+<h2 id="sortierung-jahres-vorgange-in-vorgang-der-zeitung-label-orderlabel-debatte-weiter-verschoben">Sortierung Jahres-Vorgänge in Vorgang der Zeitung, LABEL-ORDERLABEL-Debatte - <em>weiter verschoben</em></h2>
+<ul>
+<li>https://github.com/kitodo/kitodo-production/pull/6421</li>
+<li>keine Neuigkeiten bezüglich Aktualisierung der Diskussionen (André Hohmann)</li>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6184">TYP, LABEL und ORDERLABEL in Überordnung speichern</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6277">Anwendung der METS-Attribute LABEL und ORDERLABEL in Kitodo</a></li>
+<li>Es wird weiter an einer Konsolidierung der Diskussionsstränge gearbeitet</li>
+</ul>
+<h2 id="ideensammlung-fur-api">Ideensammlung für API</h2>
+<ul>
+<li>Nur lesend in der ersten Stufe?</li>
+<li>Ideensammlung aus Marburg für nächste Sitzung</li>
+<li>Armin: Benötigt werden vor allem aktuelle Statusabfragen und entsprechendes abarbeiten</li>
+</ul>
+<h1 id="top-4-organisatorisches">TOP 4 Organisatorisches</h1>
+<ul>
+<li>nächstes Treffen CB: 22.08.</li>
+<li>aufzugreifende Themen: <a href="https://github.com/kitodo/kitodo-production/wiki/Systembibliothekar%E2%80%90Dokumentation-(Konfiguration)">Doku-Seite „Systembibliothekar“</a>, Themen fürs Community Board</li>
+</ul>
+<h2 id="mogliche-themen-communtiy-board">Mögliche Themen Communtiy Board</h2>
+<ul>
+<li>Perspektiven für Kitodo.Presentation</li>
+<li>Suchfunktionen mit Hibernate (RC abwarten)</li>
+<li>Unterschiedliche Zeitungs-Workflows</li>
+<li>Fehlende/defekte Funktionen aus Kitodo 2</li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -1,0 +1,496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Bilder validieren - Kitodo Production Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lza-validierungskonfigurationen-anlegen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation" class="md-header__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bilder validieren
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lza-validierungskonfigurationen-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      LZA Validierungskonfigurationen anlegen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LZA Validierungskonfigurationen anlegen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prufkriterien-fur-die-validierung-mit-jhove" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prüfkriterien für die Validierung mit JHove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinzufugen-eines-prufkriteriums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hinzufügen eines Prüfkriteriums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateinamen-prufen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen prüfen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lza-validierungskonfigurationen-zuordnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      LZA Validierungskonfigurationen zuordnen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validieren-der-bilder-in-einer-aufgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validieren der Bilder in einer Aufgabe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validieren der Bilder in einer Aufgabe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-konfigurationsparameter-imageprefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Der Konfigurationsparameter image.prefix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validieren-der-bilder-nach-dem-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validieren der Bilder nach dem Upload
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Bilder validieren</h1>
+
+<blockquote>
+<p>[!Note]
+Verfügbar ab Kitodo.Production 3.9.0</p>
+</blockquote>
+<p>Kitodo.Production kann sowohl Originaldateien als auch Derviate automatisiert auf bestimmte Merkmale hin überprüfen. Dies kann entweder als Teil einer Aufgabe des Typs "Bilder validieren" geschehen, oder nach dem Upload einer Datei im Metadateneditor. Um festzulegen, welche Dateien auf welche Merkmale geprüft werden sollen, müssen zunächst Validierungskonfigurationen angelegt und einem oder mehreren Ordnern zugewiesen werden. Mit einem Klick auf "Bilder validieren" werden alle Dateien aller Unterordner eines Vorgangs validiert. Im Anschluss erscheint ein Dialog über den Erfolg oder Misserfolg der Validierung. </p>
+<h2 id="lza-validierungskonfigurationen-anlegen">LZA Validierungskonfigurationen anlegen</h2>
+<p>Eine Validierungskonfiguration entscheidet darüber, welche Prüfkriterien auf eine Datei angewendet werden. Sie können eine Konfiguration im Bereich <code>Projekte</code> mit einem Klick auf <code>Neu</code> und <code>Neue LZA Validierungskonfiguration</code> hinzufügen. </p>
+<p><img alt="Screenshot From 2025-04-25 11-49-09" src="https://github.com/user-attachments/assets/a7870766-6743-4f9c-8f11-ca9d9fd4628c" /></p>
+<p><img alt="Screenshot From 2025-04-25 11-53-35" src="https://github.com/user-attachments/assets/297d9e01-d609-4bc8-b4f5-5d6b2bfd5427" /></p>
+<p>Ein eingeloggter Nutzer kann die Validierungskonfigurationen nur einsehen und bearbeiten, wenn er die passenden Berechtigungen besitzt:</p>
+<ul>
+<li><code>Alle LZA Validierungskonfigurationen anzeigen</code> - ob die Liste der Konfigurationen einsehbar ist</li>
+<li><code>LZA Validierungskonfiguration anzeigen</code> - ob die Details einer Konfiguration einsehbar sind</li>
+<li><code>LZA Validierungskonfiguration bearbeiten</code> - ob die Konfiguration geändert werden darf</li>
+<li><code>LZA Validierungskonfiguration hinzufügen</code> - ob neue Konfigurationen hinzugefügt werden dürfen</li>
+<li><code>LZA Validierungskonfiguration löschen</code> - ob eine Konfiguration entfernt werden darf</li>
+</ul>
+<p>Eine Validierungskonfiguration besteht aus den folgenden Informationen:</p>
+<ul>
+<li><code>Titel</code> - eine allgemeine Beschreibung der Konfiguration</li>
+<li><code>Dateityp</code> - der Dateityp bzw. das Dateiformat der Dateien, die geprüft werden sollen</li>
+<li>Ob das Abschließen einer Aufgabe verhindert werden soll, falls bei der Validierung ein Fehler auftritt</li>
+<li>Ob das Hochladen einer neuen Datei verhindert werden soll, falls bei der Validierung ein Fehler auftritt</li>
+<li>eine Liste von Prüfkriterien</li>
+</ul>
+<p><img alt="Screenshot From 2025-04-25 11-55-05" src="https://github.com/user-attachments/assets/85f3dca2-b6f2-49bd-9e84-0f509de643b3" /></p>
+<p>Die Liste der Prüfkriterien entscheidet, welche Dateimerkmale einen schwerwiegenden Fehler implizieren und welche Merkmale eine optionale Warnung auslösen sollen. Die genauen Prüfkriterien hängen vom Dateiformat ab. Je nach Format können verschiedene Kriterien geprüft werden. Aktuell werden die folgenden Dateitypen unterstützt:</p>
+<ul>
+<li><code>TIFF</code> - mithilfe von JHove</li>
+<li><code>JPEG</code> - mithilfe von JHove</li>
+<li><code>JPEG 2000</code> - mithilfe von JHove</li>
+<li><code>GIF</code> - mithilfe von JHove</li>
+<li><code>PDF</code> - mithilfe von JHove</li>
+</ul>
+<h3 id="prufkriterien-fur-die-validierung-mit-jhove">Prüfkriterien für die Validierung mit JHove</h3>
+<p>Die Software <a href="https://jhove.openpreservation.org/">JHove</a> ist in der Lage, verschiedene Dateitypen zu validieren und Dateimerkmale zu extrahieren. Die von JHove extrahierten Dateimerkmale können dann durch Hinzufügen passender Prüfkriterien kontrolliert werden.</p>
+<p>Für alle von JHove unterstützten Dateiformate stehen die folgenden Eigenschaften zur Verfügung:</p>
+<ul>
+<li><code>wellFormed</code> - ob eine Datei den syntaktischen Anforderungen an das Dateiformat entspricht (mögliche Werte sind <code>true</code>, <code>false</code> oder <code>undetermined</code>)</li>
+<li><code>valid</code> - ob eine Datei syntaktisch korrekt ist und zusätzliche semantische Anforderungen des Dateiformats erfüllt (mögliche Werte sind <code>true</code>, <code>false</code> oder <code>undetermined</code>)</li>
+</ul>
+<p>Des Weiteren können Dateityp-spezifische Merkmale geprüft werden. Dafür müssen Sie zunächst identifizieren, wie die Merkmale von JHove genannt werden. Installieren Sie JHove auf Ihrem PC, starten Sie die Anwendung <code>jhove-gui</code>, wählen Sie den passenden Dateityp im Menü aus (siehe <code>Configuration</code> - <code>Select Module</code>) und öffnen Sie dann eine Mediendatei. Es erscheinen die extrahierten Dateimerkmale vergleichbar zu folgendem Beispiel:</p>
+<p><img alt="jhove" src="https://github.com/user-attachments/assets/2b9cb5d2-40df-4cb8-9180-ab8237673bad" /></p>
+<p>Aufgrund der Komplexität der extrahierten Dateimerkmale und deren hierarchischer Struktur können leider nicht alle Merkmale in Kitodo.Production verwendet werden. Zur Vereinfachung werden die Merkmale allein anhand des tiefst liegenden Namens der Eigenschaft identifiziert. Das Merkmal <code>RepInfo.TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.ColorSpace</code> wird also nur anhand des Namens <code>ColorSpace</code> in Kitodo.Production identifiziert. Sollte eine Datei mehrere Merkmale des gleichen Namens in verschiedenen Hierarchieebenen enthalten, so ist der Wert des Merkmals unbestimmt und kann je nach Verarbeitungsreihenfolge den einen oder anderen Wert annehmen.</p>
+<p>Folgende Merkmale sind vermutlich häufig relevant:</p>
+<ul>
+<li><code>Version</code> - die Version der Tiff-Spezifikation mit Werten <code>4</code>, <code>5</code>, <code>6</code></li>
+<li><code>ColorSpace</code> - der Farbraum des Tiff-Bildes mit Werten wie <code>RGB</code>, <code>CMYK</code>, <code>YCbCr</code>, <code>transparency mask</code></li>
+<li><code>ImageWidth</code> - die Breite des Bildes</li>
+<li><code>ImageLength</code> - die Höhe des Bildes</li>
+</ul>
+<p>Einige Bildmerkmale der <a href="https://www.niso.org/publications/ansiniso-z3987-2006-r2017-data-dictionary-technical-metadata-digital-still-images">NISO-Spezifikation</a> sind im Datenformat "Rational" abgespeichert. Das heißt, eine rationale Zahl wird als Bruch mit Zähler und Nenner gespeichert, z.B. <code>30000</code> (Zähler) / <code>100</code> (Nenner). Um die Prüfung dieser Merkmale zu vereinfachen, werden die Werte auch als ganze Zahl und Gleitkommazahl zur Verfügung gestellt, falls diese berechenbar sind (Nenner != 0). Die passenden Bildmerkmale sind mit dem Suffix <code>_long</code> (ganze Zahl) und <code>_double</code> (Gleitkommazahl) versehen. Die Eigenschaft <code>XSamlingFrequency</code> wird also auch als <code>XSamlingFrequency_long</code> und <code>XSamlingFrequency_double</code> bereitgestellt.</p>
+<p>Einige Bildmerkmale der <a href="https://www.niso.org/publications/ansiniso-z3987-2006-r2017-data-dictionary-technical-metadata-digital-still-images">NISO-Spezifikation</a> sind als Liste bzw. Array abgespeichert. Vergleichswerte für Listen können im Schema <code>[Wert1, Wert2, Wert3]</code> angegeben werden. Für das Bildmerkmal <code>BitsPerSample</code> könnte z.B. <code>[16, 16, 16, 16]</code> angegeben werden, um zu prüfen, dass das Bild in 4-Channeln zu je 16bit kodiert ist.</p>
+<h3 id="hinzufugen-eines-prufkriteriums">Hinzufügen eines Prüfkriteriums</h3>
+<p>Basierend auf den von JHove extrahierten Dateimerkmalen können verschiedenste Prüfkriterien definiert werden. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/53add285-47a2-49bb-adde-bf9c15802632" /></p>
+<p>Bestimmen Sie dazu die folgenden Angaben:</p>
+<ul>
+<li><code>Eigenschaft</code> - der Name des Dateimerkmals, z.B. <code>valid</code>, <code>ColorSpace</code> (Groß- und Kleinschreibung wird ignoriert)</li>
+<li><code>Vergleichsoperation</code> - die angewendete Prüfoperation, z.B.</li>
+<li><code>ist exakt</code> - prüft, ob das extrahierte Merkmal exakt dem angegebenen Wert entspricht</li>
+<li><code>eines von</code> - prüft, ob das extrahierte Merkmal einem der angegebenen Werten entspricht</li>
+<li><code>keines von</code> - prüft, dass das extrahierte Merkmal keines der angegebenen Werten entspricht</li>
+<li><code>größer als</code> - prüft, ob das extrahierte Merkmal eine Zahl und größer als die angebene Zahl ist (oder gleich, <code>&gt;=</code>)</li>
+<li><code>kleiner als</code> - prüft, ob das extrahierte Merkmal eine Zahl und kleiner als die angebene Zahl ist (oder gleich, <code>&lt;=</code>)</li>
+<li><code>im Interval von</code> - prüft, ob das extrahierte Merkmal eine Zahl ist und im Intervall der zwei angegebenen Zahlen liegt (inklusive der Grenzen)</li>
+<li><code>passt zu</code> - prüft, ob das extrahierte Merkmale zu dem angegebenen regulären Ausdruck passt (siehe <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html">Dokumentation</a>, ohne Berücksichtigung von Groß- und Kleinschreibung)</li>
+<li><code>Vergleichswerte</code> - die Werte, die zur Prüfung herangezogen werden</li>
+<li><code>Schweregrad</code> - der Schweregrad, falls das Prüfkriterium nicht erfüllt ist</li>
+<li><code>Fehler</code> - das Nichteinhalten des Prüfkriteriums zählt als Fehler und unterbricht je nach Einstellung das Abschließen einer Aufgabe oder das Hochladen einer Datei</li>
+<li><code>Warnung</code> - das Nichteinhalten des Prüfkriteriums hat keine weiteren Auswirkungen, aber wird dem Nutzer angezeigt</li>
+</ul>
+<h3 id="dateinamen-prufen">Dateinamen prüfen</h3>
+<p>Zur Prüfung des Dateinamens wird zusätzlich zu den extrahierten Eigenschaften auch der Dateiname der Datei inklusive Dateiendung (z.B. <code>00000001.tif</code>) unter der Eigenschaft <code>filename</code> bereitgestellt. Mithilfe der Vergleichsoperation <code>passt zu</code> können Sie damit prüfen, dass der Dateiname einem bestimmten Muster folgt (ohne Berücksichtigung der Groß- und Kleinschreibung). </p>
+<p>Das Muster muss als regulärer Ausdruck angegeben werden (siehe <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html">Dokumentation</a>). Typische Muster für Dateinamen könnten z.B. sein:</p>
+<ul>
+<li><code>^\d{8}\.tif$</code> - 8-stellige Zahl mit Tif-Dateiendung (die Reihenfolge wird nicht geprüft)</li>
+<li><code>^.*\.tif$</code> - eine beliebiger Dateiname mit Tif-Dateiendung</li>
+<li><code>^image-\d+\.jpg$</code> - erlaubt die Dateien <code>image-1.jpg</code>, <code>image-2.jpg</code>, ... <code>image-101.jpg</code>, usw.</li>
+</ul>
+<h2 id="lza-validierungskonfigurationen-zuordnen">LZA Validierungskonfigurationen zuordnen</h2>
+<p>Eine Validierungskonfiguration kann einem oder mehreren Ordnern eines Projekts zugeordnet werden. Sie können die Zuordnung auf der Seite <code>Projekt bearbeiten</code> im Tab <code>METS Parameter</code> im Dialog <code>Unterordner bearbeiten</code> vornehmen.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/e321d05f-6a39-47ba-ad2a-c8f6033e0a4e" /></p>
+<p>Folgende Optionen stehen zur Verfügung:</p>
+<ul>
+<li><code>Inhalt validieren</code> - ob die Validierung grundsätzlich stattfindet</li>
+<li><code>LZA Validierungskonfiguration</code> - die Konfiguration, die angewendet werden soll</li>
+</ul>
+<p>Es werden nur Validierungskonfigurationen aufgelistet, die dem Dateityp des Unterordners entsprechen. Ist die Option <code>Inhalt validieren</code> aktiv, aber keine Konfiguration ausgewählt, findet keine inhaltsbezogene Validierung statt. Aus historischen Gründen steuert diese Option jedoch auch, ob eine Prüfung der Dateinamen stattfindet, falls in der Kitodo-Konfiguration (<code>image.prefix</code>) das Muster für 8-stellige fortlaufende Zahlen (<code>\\d{8}</code>) festgelegt ist. </p>
+<h2 id="validieren-der-bilder-in-einer-aufgabe">Validieren der Bilder in einer Aufgabe</h2>
+<p>Die Bilder eines Vorgangs können in einer Aufgabe validiert werden, wenn für die Aufgabe im Workflow die Eigenschaft <code>Validate Images</code> hinterlegt ist.</p>
+<p><img alt="Screenshot From 2025-04-25 11-57-51" src="https://github.com/user-attachments/assets/010cbb2a-e6ea-4cfb-bebc-cd309d5c6d5c" /></p>
+<p>Beim Bearbeiten der Aufgabe erscheint dann die Option <code>Bilder validieren</code>.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/660eabc9-8ece-491b-96aa-9cc9170cedc7" /></p>
+<p>Nach der Validierung aller Dateien aller Unterordner erscheint ein Bericht mit dem Ergebnis der Validierung.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/73317300-7743-4030-91a7-acf7a4445712" /></p>
+<p>Es werden nur Fehler oder Warnungen aufgelistet. Dateien, die alle Prüfkriterien erfüllen, werden nicht angezeigt. Um die Anzeige nicht zu überfordern, werden außerdem nur maximal 5 Dateien pro Ordner und maximal 3 Ordner mit Fehlern aufgelistet.</p>
+<p>Ist für eine Aufgabe die Eigenschaft <code>Validate on Exit</code> im Workflow aktiv, findet die Validierung auch beim Abschließen der Aufgabe statt, wenn in der Validierungskonfiguration zusätzlich die passende Option <code>Abschließen verhindern</code> ausgewählt ist. Beim fehlerhaften Abschließen einer Aufgabe wird jedoch kein Bericht angezeigt. Es erscheint lediglich die Fehlermeldung zum zuerst gefundenen Problem.</p>
+<h3 id="der-konfigurationsparameter-imageprefix">Der Konfigurationsparameter <code>image.prefix</code></h3>
+<p>Ist für eine Aufgabe die Eigenschaft <code>Validate on Exit</code> im Workflow aktiv, aber keine Validierungskonfiguration hinterlegt oder die Option <code>Abschließen verhindern</code> deaktiviert, werden trotzdem die Dateinamen geprüft, falls in der Kitodo-Konfiguration das Muster (<code>image.prefix</code>) für 8-stellige fortlaufende Zahlen (<code>\\d{8}</code>) festgelegt ist.</p>
+<p>Ist ein anderes Muster als das Muster für 8-stellige fortlaufende Zahlen (<code>\\d{8}</code>) hinterlegt, findet keine Prüfung auf Basis des Konfigurationsparameter <code>image.prefix</code> statt. </p>
+<h2 id="validieren-der-bilder-nach-dem-upload">Validieren der Bilder nach dem Upload</h2>
+<p>Ist für den Unterordner, der die Originaldateien enthält, die Option <code>Inhalt validieren</code> und eine Validierungskonfiguration hinterlegt, findet beim Upload neuer Dateien im Metadateneditor eine Validierung statt. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/0c461886-37a8-433a-b37d-4f6194016df0" /></p>
+<p>Nachdem die Medien hochgeladen wurden, erscheint das Ergebnis der Validierung in einem Dialog, sollten Fehler oder Warnungen aufgetreten sein. Sind alle hochgeladenen Dateien valide, erscheint kein Dialog.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/b2c398c5-bf1f-4e9f-9507-59224bb087b3" /></p>
+<p>Ist in der Validierungskonfiguration hinterlegt, dass das Hochladen einer Datei abgebrochen werden soll, falls ein Validierungsfehler auftritt, wird die fehlerhafte Datei automatisch gelöscht und nicht zum Vorgang bzw. zum Metadateneditor hinzugefügt.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
