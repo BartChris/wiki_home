@@ -240,12 +240,14 @@
 
 
 <h1 id="einleitung">Einleitung</h1>
-<p>In Kitodo.Production werden <a href="https://github.com/kitodo/kitodo-production/wiki/Projekt">Projekte</a> technisch durch mehrere Einstellungen definiert, die entsprechend der Menü-Reiter zur Konfiguration in den folgenden Abschnitten erläutert werden.
-* <em>Details</em>
-* <em>Technische Daten</em>
-* <em>METS Parameter</em>
-* <em>Produktionsvorlagen</em>
-* <em>Importkonfiguration</em></p>
+<p>In Kitodo.Production werden <a href="https://github.com/kitodo/kitodo-production/wiki/Projekt">Projekte</a> technisch durch mehrere Einstellungen definiert, die entsprechend der Menü-Reiter zur Konfiguration in den folgenden Abschnitten erläutert werden.</p>
+<ul>
+<li><a href="#Details">Details</a></li>
+<li><a href="#Technische-Daten">Technische Daten</a></li>
+<li><a href="#METS-Parameter">METS Parameter</a></li>
+<li><a href="#Produktionsvorlagen">Produktionsvorlagen</a></li>
+<li><a href="#Importkonfiguration">Importkonfiguration</a></li>
+</ul>
 <p>Es stehen generell drei Schaltflächen zur Verfügung, um die Bearbeitung eines Projekts zu steuern.<br />
 * <em>Gesperrt/Entsperrt</em>
   * Das Projekt ist zunächst für die Bearbeitung gesperrt, um versehentliche Änderungen zu vermeiden. Die Felder und Schaltflächen der jeweiligen Menü-Reiter sind ausgegraut. 
@@ -331,7 +333,7 @@ Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendu
 * einem Prefix, wie zum Beispiel: <code>https://katalog.slub-dresden.de/ppn/</code>
 * einer Variablen aus dem Regelsatz, wie zum Beispiel dem Identifikator, der das digitale Objekt in dem jeweiligen Katalog eindeutig bestimmt.
   * der Identifikator (zum Beispiel: <code>$(meta.CatalogIDDigital)</code>) wird für jeden Vorgang aus den Metadaten ermittelt und an das Präfix angefügt</p>
-<p>Der Inhalt des Feldes wird in das METS-Feld <code>&lt;dv:reference&gt;</code> eingetragen. 
+<p>Der Inhalt des Feldes wird in das METS-Element <code>&lt;dv:reference&gt;</code> eingetragen. 
 Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
 <p>Interner Pfad: 
 <code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='presentation']</code></p>
@@ -341,7 +343,7 @@ Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendu
 * einem Prefix, wie zum Beispiel: <code>https://digital.slub-dresden.de/id</code>
 * einer Variablen aus dem Regelsatz, wie zum Beispiel dem Identifikator, der das digitale Objekt in dem jeweiligen System eindeutig bestimmt.
   * der Identifikator (zum Beispiel: <code>$(meta.CatalogIDDigital)</code>) wird für jeden Vorgang aus den Metadaten ermittelt und an das Präfix angefügt</p>
-<p>Der Inhalt des Elements wird in das METS-Feld <dv:presentation> eingetragen. Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
+<p>Der Inhalt des Elements wird in das METS-Element <code>&lt;dv:presentation&gt;</code> eingetragen. Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
 <p>Interner Pfad: 
 <code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='reference']</code></p>
 <h3 id="mets-pointer-pfad">METS Pointer Pfad</h3>
@@ -387,7 +389,7 @@ Für die Derivate, deren Speicherorte in die METS-Datei eingetragen werden, kann
 * Derivate Metadateneditor
   * <code>images/derivatives/preview</code>
   * <code>images/derivatives/media_view</code>
-* Derivate METS-Datei nach 
+* Derivate METS-Datei nach Export
   * <code>images/jpegs/*.tif.original.jpg</code>
   * <code>images/jpegs/*.tif.thumbnail.jpg</code>
   * <code>ocr/(processtitle)_alto/*.xml</code></p>
