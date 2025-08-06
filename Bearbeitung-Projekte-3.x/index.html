@@ -326,7 +326,7 @@ Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendu
 <p>Der Inhalt des Feldes wird in das METS-Element <code>&lt;dv:ownerContact&gt;</code> eingetragen. 
 Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
 <p>Interner Pfad: 
-<code>mets:amdSec/mets:rightsMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='ownerSiteURL']</code></p>
+<code>mets:amdSec/mets:rightsMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='ownerContact']</code></p>
 <h3 id="mets-digiprov-referenz">METS Digiprov Referenz</h3>
 <p>In dieses Feld wird die Adresse eingetragen, die zum bibliographischen Nachweis des digitalen Objekts führt. Dies ist zum Beispiel der Katalog der jeweiligen Institution oder ein Verbundkatalog.</p>
 <p>Die Adresse wird aus zwei Elementen erstellt: 
@@ -336,7 +336,7 @@ Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendu
 <p>Der Inhalt des Feldes wird in das METS-Element <code>&lt;dv:reference&gt;</code> eingetragen. 
 Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
 <p>Interner Pfad: 
-<code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='presentation']</code></p>
+<code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='reference']</code></p>
 <h3 id="mets-digiprov-prasentation">METS Digiprov Präsentation</h3>
 <p>In dieses Feld wird die Adresse eingetragen, die zu dem digitalen Objekt führt. Dies ist zum Beispiel die lokale Präsentation der Institution.</p>
 <p>Die Adresse wird aus zwei Elementen erstellt: 
@@ -345,7 +345,7 @@ Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendu
   * der Identifikator (zum Beispiel: <code>$(meta.CatalogIDDigital)</code>) wird für jeden Vorgang aus den Metadaten ermittelt und an das Präfix angefügt</p>
 <p>Der Inhalt des Elements wird in das METS-Element <code>&lt;dv:presentation&gt;</code> eingetragen. Vergleiche<a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf"> METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>.</p>
 <p>Interner Pfad: 
-<code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='reference']</code></p>
+<code>mets:amdSec/mets:digiprovMD/mets:mdWrap/mets:xmlData/kitodo:kitodo/kitodo:metadata[@name='presentation']</code></p>
 <h3 id="mets-pointer-pfad">METS Pointer Pfad</h3>
 <p>In dieses Feld wird die Regel eingetragen, mit dem der Speicherort der Metadaten-Datei der übergeordneten Vorgänge gebildet wird.
 Dieser Speicherort wird während des Exports in den METS-Dateien der untergeordneten Vorgänge in das Attribut <code>xlink:href</code> des Elements <code>&lt;mets:mptr LOCTYPE="URL"&gt;</code> in dem METS-Abschnitt <code>&lt;mets:structMap TYPE="LOGICAL"&gt;</code> eingetragen. </p>
@@ -446,7 +446,7 @@ Voreingestellt sind die Werte: </p>
 <p><em>METS-Pfad</em></p>
 <p>In diesem Feld wird der METS-Pfad konfiguriert, der in der METS-Datei eingetragen wird. </p>
 <p>Der METS-Pfad definiert die Adresse, unter der die öffentlich zugänglichen Derivate (zum Beispiel nach <a href="https://dfg-viewer.de/fileadmin/groups/dfgviewer/METS-Anwendungsprofil_2.3.1.pdf">METS-Anwendungsprofil für digitalisierte Medien Version 2.3.1</a>) verfügbar sind. 
-Es können Variablen wie in dem Feld METS Pointer Pfad angewendet werden. </p>
+Es können Variablen wie in dem Feld <a href="#METS-Pointer-Pfad">METS Pointer Pfad</a> angewendet werden. </p>
 <p><em>Inhalt validieren</em></p>
 <p>Zu diesem Element liegen keine Informationen vor.</p>
 <p><em>Beim DMS-Export kopieren</em></p>
