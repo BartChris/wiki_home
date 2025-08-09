@@ -266,6 +266,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#prufung-auf-luckenlose-fortlaufende-dateinamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prüfung auf lückenlose, fortlaufende Dateinamen
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -286,21 +295,6 @@
       Validieren der Bilder in einer Aufgabe
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Validieren der Bilder in einer Aufgabe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#der-konfigurationsparameter-imageprefix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Der Konfigurationsparameter image.prefix
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -412,6 +406,10 @@ Verfügbar ab Kitodo.Production 3.9.0</p>
 <li><code>^.*\.tif$</code> - eine beliebiger Dateiname mit Tif-Dateiendung</li>
 <li><code>^image-\d+\.jpg$</code> - erlaubt die Dateien <code>image-1.jpg</code>, <code>image-2.jpg</code>, ... <code>image-101.jpg</code>, usw.</li>
 </ul>
+<h3 id="prufung-auf-luckenlose-fortlaufende-dateinamen">Prüfung auf lückenlose, fortlaufende Dateinamen</h3>
+<p>Kitodo.Production ist in der Lage, für das Standard-Dateimuster "achtstellige Zahlen" (also <code>00000001.tif</code>, <code>00000002.tif</code>, usw.), die Dateien im Quellordner (TIF-Dateien) auf eine lückenlose, fortlaufende Reihenfolge zu prüfen. Für alle anderen Muster ist dies derzeit nicht möglich.</p>
+<p>Die Prüfung für fortlaufende, lückenlose Dateinamen ist aktuell gesondert zur LZA-Validierung umgesetzt und ist nicht mit den Einstellungen zur LZA-Validierung verknüpft. Etwaige Validierungsprobleme werden auch nicht im Validierungsbericht angezeigt, sondern als einfache Fehlermeldungen. Es findet auch keine Prüfung beim Hochladen einer Datei im Metadateneditor statt.</p>
+<p>Um die Prüfung zu aktivieren, muss für eine Aufgabe die Eigenschaft <code>Image Write</code> und <code>Validate on Exit</code> im Workflow aktiv, und in der Kitodo-Konfiguration <code>kitodo_config.properties</code> das Muster für achtstellige fortlaufende Zahlen <code>\\d{8}</code> im Parameter <code>image.prefix</code> festgelegt sein. Beim Abschließen der Aufgabe durch Klick auf <code>Bearbeitung dieser Aufgabe abschließen</code> werden die Dateien im Quellordner (TIF-Dateien) auf eine fortlaufende, lückenlose Reihenfolge geprüft. Falls Probleme auftreten, erscheint eine Fehlermeldung, und die Aufgabe wird nicht abgeschlossen.</p>
 <h2 id="lza-validierungskonfigurationen-zuordnen">LZA Validierungskonfigurationen zuordnen</h2>
 <p>Eine Validierungskonfiguration kann einem oder mehreren Ordnern eines Projekts zugeordnet werden. Sie können die Zuordnung auf der Seite <code>Projekt bearbeiten</code> im Tab <code>METS Parameter</code> im Dialog <code>Unterordner bearbeiten</code> vornehmen.</p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/e321d05f-6a39-47ba-ad2a-c8f6033e0a4e" /></p>
@@ -428,11 +426,12 @@ Verfügbar ab Kitodo.Production 3.9.0</p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/660eabc9-8ece-491b-96aa-9cc9170cedc7" /></p>
 <p>Nach der Validierung aller Dateien aller Unterordner erscheint ein Bericht mit dem Ergebnis der Validierung.</p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/73317300-7743-4030-91a7-acf7a4445712" /></p>
-<p>Es werden nur Fehler oder Warnungen aufgelistet. Dateien, die alle Prüfkriterien erfüllen, werden nicht angezeigt. Um die Anzeige nicht zu überfordern, werden außerdem nur maximal 5 Dateien pro Ordner und maximal 3 Ordner mit Fehlern aufgelistet.</p>
+<p>Es werden nur Fehler oder Warnungen aufgelistet. Dateien, die alle Prüfkriterien erfüllen, werden nicht angezeigt. Um die Anzeige nicht zu überfordern, werden außerdem standardmäßig maximal 5 Dateien pro Ordner und 3 Ordner mit Fehlern oder Warnungen aufgelistet. Diese Einschränkung kann in der Konfigurationsdatei <code>kitodo_config.properties</code> je nach Belieben abgeändert werden:</p>
+<ul>
+<li><code>LongTermPreservationValidation.maxReportedFilesPerFolder=5</code> - die maximale Anzahl an angezeigten Dateien pro Ordner</li>
+<li><code>LongTermPreservationValidation.maxReportedFolders=3</code> - die maximale Anzahl an angezeigten Ordnern mit mindestens einer Datei mit Warnungen oder Fehlern</li>
+</ul>
 <p>Ist für eine Aufgabe die Eigenschaft <code>Validate on Exit</code> im Workflow aktiv, findet die Validierung auch beim Abschließen der Aufgabe statt, wenn in der Validierungskonfiguration zusätzlich die passende Option <code>Abschließen verhindern</code> ausgewählt ist. Beim fehlerhaften Abschließen einer Aufgabe wird jedoch kein Bericht angezeigt. Es erscheint lediglich die Fehlermeldung zum zuerst gefundenen Problem.</p>
-<h3 id="der-konfigurationsparameter-imageprefix">Der Konfigurationsparameter <code>image.prefix</code></h3>
-<p>Ist für eine Aufgabe die Eigenschaft <code>Validate on Exit</code> im Workflow aktiv, aber keine Validierungskonfiguration hinterlegt oder die Option <code>Abschließen verhindern</code> deaktiviert, werden trotzdem die Dateinamen geprüft, falls in der Kitodo-Konfiguration das Muster (<code>image.prefix</code>) für 8-stellige fortlaufende Zahlen (<code>\\d{8}</code>) festgelegt ist.</p>
-<p>Ist ein anderes Muster als das Muster für 8-stellige fortlaufende Zahlen (<code>\\d{8}</code>) hinterlegt, findet keine Prüfung auf Basis des Konfigurationsparameter <code>image.prefix</code> statt. </p>
 <h2 id="validieren-der-bilder-nach-dem-upload">Validieren der Bilder nach dem Upload</h2>
 <p>Ist für den Unterordner, der die Originaldateien enthält, die Option <code>Inhalt validieren</code> und eine Validierungskonfiguration hinterlegt, findet beim Upload neuer Dateien im Metadateneditor eine Validierung statt. </p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/0c461886-37a8-433a-b37d-4f6194016df0" /></p>

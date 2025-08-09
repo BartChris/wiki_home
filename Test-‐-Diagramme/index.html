@@ -287,65 +287,57 @@
 <h2 id="version-1">Version 1</h2>
 <pre><code class="language-mermaid">flowchart TD
 
-    7000[Produktionsvorlage]
-    8000((Projekte))
-    9000((Benutzer))
+    Berechtigungen --&gt; Rollen
+    Rollen --&gt; Benutzer((Benutzer))
+    Rollen --&gt; Aufgaben
+    Aufgaben --&gt; Workflow
+    Workflow --&gt; Produktionsvorlage
 
-    10[Berechtigungen] --&gt; 11
-    11[Rollen] --&gt; 9000
-    11[Rollen] --&gt; 12
-    12[Aufgaben] --&gt; 13
-    13[Workflow] --&gt; 7000
+    DocketXSL{{Docket XSL}} ---&gt; Laufzettel
+    Laufzettel --&gt; Produktionsvorlage
+    RulesetXML{{Ruleset XML}} ---&gt; Regelsatz
+    ExportXSL{{Export XSL}} ---&gt; Regelsatz
+    Regelsatz --&gt; Produktionsvorlage
+    Produktionsvorlage &lt;--&gt; Projekte((Projekte))
 
-    30{{Docket XSL}} ---&gt; 31
-    31[Laufzettel] --&gt; 7000
-    20{{Ruleset XML}} ---&gt; 25
-    21{{Export XSL}} ---&gt; 25
-    25[Regelsatz] --&gt; 7000
-    7000 &lt;--&gt; 8000
-
-    510{{Import XSL}} ---&gt; 520
-    520[Abbildungsdatei] --&gt; 530
-    530[Importkonfiguration] --&gt; 8000
-    303[Unterordner und METS-Dateigruppen] --&gt; 400
-    301[Vorschau] --&gt; 400
-    302[Ordnerverwendung] --&gt; 400
-    400[METS Parameter] --&gt; 8000
-    54[Technische Daten] --&gt; 8000
-    59[Details] --&gt; 8000
-    8000 --&gt; 9000
+    ImportXSL{{Import XSL}} ---&gt; Abbildungsdatei
+    Abbildungsdatei --&gt; Importkonfiguration
+    Importkonfiguration --&gt; Projekte
+    UnterordnerundMETS-Dateigruppen[Unterordner und METS-Dateigruppen] --&gt; METSParameter
+    Vorschau --&gt; METSParameter
+    Ordnerverwendung --&gt; METSParameter
+    METSParameter[METS Parameter] --&gt; Projekte
+    TechnischeDaten[Technische Daten] --&gt; Projekte
+    Details --&gt; Projekte
+    Projekte --&gt; Benutzer
 
 </code></pre>
 <h2 id="version-2">Version 2</h2>
 <pre><code class="language-mermaid">flowchart LR
 
-    7000[Produktionsvorlage]
-    8000((Projekte))
-    9000((Benutzer))
+    Berechtigungen --&gt; Rollen
+    Rollen --&gt; Benutzer((Benutzer))
+    Rollen --&gt; Aufgaben
+    Aufgaben --&gt; Workflow
+    Workflow --&gt; Produktionsvorlage
 
-    10[Berechtigungen] --&gt; 11
-    11[Rollen] --&gt; 9000
-    11[Rollen] --&gt; 12
-    12[Aufgaben] --&gt; 13
-    13[Workflow] --&gt; 7000
+    DocketXSL{{Docket XSL}} ---&gt; Laufzettel
+    Laufzettel --&gt; Produktionsvorlage
+    RulesetXML{{Ruleset XML}} ---&gt; Regelsatz
+    ExportXSL{{Export XSL}} ---&gt; Regelsatz
+    Regelsatz --&gt; Produktionsvorlage
+    Produktionsvorlage &lt;--&gt; Projekte((Projekte))
 
-    30{{Docket XSL}} ---&gt; 31
-    31[Laufzettel] --&gt; 7000
-    20{{Ruleset XML}} ---&gt; 25
-    21{{Export XSL}} ---&gt; 25
-    25[Regelsatz] --&gt; 7000
-    7000 &lt;--&gt; 8000
-
-    510{{Import XSL}} ---&gt; 520
-    520[Abbildungsdatei] --&gt; 530
-    530[Importkonfiguration] --&gt; 8000
-    303[Unterordner und METS-Dateigruppen] --&gt; 400
-    301[Vorschau] --&gt; 400
-    302[Ordnerverwendung] --&gt; 400
-    400[METS Parameter] --&gt; 8000
-    54[Technische Daten] --&gt; 8000
-    59[Details] --&gt; 8000
-    8000 --&gt; 9000
+    ImportXSL{{Import XSL}} ---&gt; Abbildungsdatei
+    Abbildungsdatei --&gt; Importkonfiguration
+    Importkonfiguration --&gt; Projekte
+    UnterordnerundMETS-Dateigruppen[Unterordner und METS-Dateigruppen] --&gt; METSParameter
+    Vorschau --&gt; METSParameter
+    Ordnerverwendung --&gt; METSParameter
+    METSParameter[METS Parameter] --&gt; Projekte
+    TechnischeDaten[Technische Daten] --&gt; Projekte
+    Details --&gt; Projekte
+    Projekte --&gt; Benutzer
 
 </code></pre>
 <h2 id="version-3">Version 3</h2>
