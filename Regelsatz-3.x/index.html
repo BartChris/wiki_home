@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -705,16 +705,18 @@ Für Zeitungsvorgänge gilt hier noch die Besonderheit, dass die Bildungsanweisu
 <h3 id="schlussel-mit-besonderer-verwendung">Schlüssel mit besonderer Verwendung</h3>
 <p>Schlüssel können in der Anwendung eine speziellen Verwendung (engl. „use“) haben. Diese wird mit dem Attribut <code>use="…"</code> in der Definition vermerkt. Derzeit gibt es folgende Schlüsselwörter:</p>
 <ul>
-<li><code>use="authorLastName"</code> Der Wert wird als Nachname des Autors verwendet, um den Autortitelschlüssel zu bilden.</li>
-<li><code>use="childCount"</code> setzt die (1-basierte) untergeordnete Nummer, wenn untergeordnete Dokumente erstellt werden.</li>
-<li><code>use="dataSource"</code> Interne Kennung der Datenquelle, um später die importierten Metadateneinträge aus der Datenquelle aktualisieren zu können.</li>
-<li><code>use="displaySummary"</code> wird beim Anlegen eines neuen Prozesses als Zusammenfassung auf der Registerkarte Title Record Link angezeigt.</li>
-<li><code>use="higherlevelIdentifier"</code> muss beim Holen eines Datensatzes aus einer Datenquelle vorhanden sein, um auch einen übergeordneten Datensatz zu holen.</li>
+<li><code>use="authorLastName"</code> Der Nachname des Autors. Dieser wird in der Anwendung verwendet, um den Autor-Titel-Schlüssel zu generieren.</li>
+<li><code>use="childCount"</code> Die Nummer des untergeordneten Prozesses, wenn ein untergeordneter Prozess aus einem übergeordneten Prozess mithilfe der Plus-Schaltfläche erstellt wird. Dadurch wird der Wert bei der Prozesserstellung festgelegt. Der Wert entspricht der aktuellen Anzahl der untergeordneten Prozesse des übergeordneten Prozesses plus eins, d. h. es wird eine einsbasierte Zählung erstellt.</li>
+<li><code>use="dataSource"</code> Der Name der Datenquelle, aus der der Datensatz importiert wurde. Dieser wird für einen späteren Vergleich der Datensätze gespeichert.</li>
+<li><code>use="displaySummary"</code> Zeigen Sie beim Erstellen eines neuen Prozesses Metadaten als Zusammenfassung auf der Registerkarte „Titeldatensatzverknüpfung“ an.</li>
+<li><code>use="higherlevelIdentifier"</code> Der Schlüssel eines übergeordneten Datensatzes in einer hierarchischen Datenstruktur aus 1:n-Beziehungen, die von unten nach oben gespeichert werden.</li>
 <li><code>use="mediaPartial"</code> Kennzeichnet die Division als Medienteil (Media Partial), um diese als Audio- und/oder Video-Sprungmarke zu verwenden. Weitere Informationen dazu sind unter dem Punkt <a href="https://github.com/kitodo/kitodo-production/wiki/Verwendung-von-Audio-oder-Video#nutzung-der-medienteile-media-partials">Nutzung der Medienteile</a> der Dokumentation <a href="https://github.com/kitodo/kitodo-production/wiki/Verwendung-von-Audio-oder-Video">Verwendung von Audio oder Video</a> zu finden.</li>
-<li><code>use="processTitle"</code> In dieses Feld wird der generierte Autor-Titel-Schlüssel geschrieben.</li>
-<li><code>use="recordIdentifier"</code> Identifier des aus einer externen Datenquelle geholten Datensatzes, damit die importierten Metadateneinträge aus der Datenquelle später aktualisiert werden können.</li>
-<li><code>use="structureTreeTitle"</code> Das Feld wird im Strukturbaum des Metadateneditor als Anzeigetext für die Strukturelemente verwendet, falls vom Nutzer die Anzeigeoption "Titel" ausgewählt wurde.</li>
-<li><code>use="title"</code> Dieses Feld wird als Titel zur Bildung des Autor-Titel-Schlüssels verwendet.</li>
+<li><code>use="processTitle"</code> Enthält den bei der Vorgangserstellung generierten Vorgangstitel.</li>
+<li><code>use="recordIdentifier"</code> Schlüssel des Datensatzes in der Quelle, damit die importierten Metadateneinträge aus der Datenquelle später aktualisiert werden können.</li>
+<li><code>use="structureTreeTitle"</code> Metadatum, das im Strukturbaum des Metadateneditors als Knotenbeschriftung verwendet wird.</li>
+<li><code>use="title"</code> Wird zur Bildung des Autor-Titel-Schlüssels oder des Titelschlüssels verwendet.</li>
+<li><code>use="docType"</code> Verwendung von Dokumenttyp-Metadaten zur Dokumentklassifizierung während des Prozessimports.</li>
+<li><code>use="groupDisplayLabel"</code> Metadaten, die als Bezeichnung für Metadatengruppen verwendet werden, die in verschiedenen UI-Komponenten angezeigt werden sollen.</li>
 </ul>
 <h3 id="verwenden-mehrerer-metadatendomanen">Verwenden mehrerer Metadatendomänen</h3>
 <p>Metadaten können im METS-Dateiformat in verschiedenen Domänen gespeichert werden, die eine grobe semantische Vorklassifizierung ermöglichen. Es gibt folgende Bereiche:</p>
@@ -1367,10 +1369,10 @@ Für Zeitungsvorgänge gilt hier noch die Besonderheit, dass die Bildungsanweisu
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
