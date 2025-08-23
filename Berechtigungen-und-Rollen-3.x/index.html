@@ -12,11 +12,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Berechtigungen und Rollen NEU - Kitodo Production Documentation</title>
+        <title>Berechtigungen und Rollen 3.x - Kitodo Production Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Berechtigungen und Rollen NEU
+              Berechtigungen und Rollen 3.x
             
           </span>
         </div>
@@ -232,12 +232,12 @@
 
 
 
-  <h1>Berechtigungen und Rollen NEU</h1>
+  <h1>Berechtigungen und Rollen 3.x</h1>
 
-<p>In Kitodo.Production werden <strong>Berechtigungen</strong> für die Nutzung der Software in <strong>Rollen</strong> zusammengefasst. Bei der Konzeption von Rollen durch das Zuordnen von konkreten Berechtigungen für einzelne Arbeitsschritte sollte der Leitgedanke weniger eine konkrete Person mit allen Aufgabenfacetten in der eigenen Einrichtung sein, sondern das Zerlegen des gesamten Digitalisierungsprozesses in die wesentlichen sich klar unterscheidenden Aufgabenbereiche. In der Beispielkonfiguration, die man bei Erstinstallation in Kitodo.Production vorfindet, finden sich neben einer Rolle <strong>Administration</strong> mit uneingeschränkten Berechtigungen die 4 Rollen <strong>Benutzerverwaltung</strong>, <strong>Scannen</strong>, <strong>Metadatenbearbeitung</strong> und <strong>Vorgangsverwaltung</strong> mit jeweils einer Auswahl der dafür notwendigen Berechtigungen. Beim sich anschließenden Anlegen von konkreten Benutzer:innen für die Arbeit mit Kitodo.Production werden sich oft Kombinationen von Rollen ergeben - wie z.B. eine Kombination von Benutzerverwaltung, Vorgangsverwaltung und Metadatenbearbeitung für eine Projektleitung, während z.B. eine studentische Hilfskraft nur mit der Metadatenbearbeitung beauftragt wird. </p>
+<p>In Kitodo.Production werden <strong>Berechtigungen</strong> für die Nutzung der Software in <strong>Rollen</strong> zusammengefasst. Bei der Konzeption von Rollen durch das Zuordnen von konkreten Berechtigungen für einzelne Arbeitsschritte sollte der Leitgedanke weniger eine konkrete Person mit allen Aufgabenfacetten in der eigenen Einrichtung sein, sondern das Zerlegen des gesamten Digitalisierungsprozesses in die wesentlichen sich klar unterscheidenden Aufgabenbereiche. In der Beispielkonfiguration, die man bei Erstinstallation in Kitodo.Production vorfindet, finden sich neben einer Rolle <strong>Administration</strong> mit uneingeschränkten Berechtigungen die 4 Rollen <strong>Benutzerverwaltung</strong> (B), <strong>Scannen</strong> (S), <strong>Metadatenbearbeitung</strong> (M) und <strong>Vorgangsverwaltung</strong> (V) mit jeweils einer Auswahl der dafür notwendigen Berechtigungen. Beim sich anschließenden Anlegen von konkreten Benutzer:innen für die Arbeit mit Kitodo.Production werden sich oft Kombinationen von Rollen ergeben - wie z.B. eine Kombination von Benutzerverwaltung, Vorgangsverwaltung und Metadatenbearbeitung für eine Projektleitung, während z.B. eine studentische Hilfskraft nur mit der Metadatenbearbeitung beauftragt wird. </p>
 <p>In der <strong>Konfigurationsmaske für die Rollen</strong> findet sich eine Unterscheidung von <strong>Globalen Berechtigungen</strong> und <strong>Mandantberechtigungen</strong>, da Kitodo.Production als mandantenfähige Software konzipiert wurde. Man kann also z.B. als Dienstleister für mehrere Einrichtungen in einer Installation mehrere <strong>Mandanten</strong>) konfigurieren mit komplett unterschiedlichen Rollen, Workflows und Importkonfigurationen. Es muss für diese Zielvorstellung also mindestens einen Benutzer mit der Rolle Administration geben, der über globale Rechte rund um die Anlage von Mandanten verfügt. Vergleichbares gilt für die Berechtigungen rund um einen zentralen LDAP-Server, LDAP-Gruppen, den sog. Taskmanager, das Anstoßen einer Neuindexierung oder der Migration von Vorgängen aus Kitodo.Production 2. Für weitere administrative Aufgaben sind Berechtigungen vorgesehen, die einen Überblick über die gesamte Installation erlauben (wie z.B. "Alle Benutzer anzeigen"). Dieser Teil der Dokumentation konzentriert sich aber auf die Konfiguration eines Rollenkonzeptes für einen einzelnen Mandanten. 
-In der folgenden Tabelle werden alle in Kitodo.Production 3 aktuell verfügbaren Berechtigungen aufgelistet und erläutert. In der letzten Spalte wird gekennzeichnet, ob sie in den 4 Rollen der Beispielkonfiguration - <strong>Benutzerverwaltung, Scannen, Metadatenbearbeitung und Vorgangsverwaltung</strong> - zugeordnet wurden. </p>
-<p>Für ein differenzierteres Rollenkonzept siehe auch <a href="https://github.com/kitodo/kitodo-production/wiki/SLUB-Dresden-Rollen">SLUB Dresden Rollen</a> - <em>Seite noch anpassen von den Links / halbwegs aktuell?</em></p>
+In der folgenden Tabelle werden alle in Kitodo.Production 3 aktuell verfügbaren Berechtigungen aufgelistet und erläutert. In der letzten Spalte wird gekennzeichnet, ob sie in den 4 Rollen der Beispielkonfiguration - <strong>Benutzerverwaltung (B), Scannen (S), Metadatenbearbeitung (M) und Vorgangsverwaltung (V)</strong> - zugeordnet wurden. </p>
+<p>Für ein differenzierteres Rollenkonzept siehe auch <a href="https://github.com/kitodo/kitodo-production/wiki/SLUB-Dresden-Rollen">SLUB Dresden Rollen</a>.</p>
 <!-- * [Rechte (Berechtigungen) und Rollen](https://github.com/kitodo/kitodo-production/wiki/Rechte-(Berechtigungen)-und-Rollen) -->
 
 <table>
