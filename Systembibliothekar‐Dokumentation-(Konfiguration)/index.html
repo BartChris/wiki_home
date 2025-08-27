@@ -274,16 +274,16 @@
 <p>In folgender Flowchart werden die Zusammenhänge und Abhängigkeiten der Konfiguration-Elemente dargestellt.  </p>
 <pre><code class="language-mermaid">flowchart LR
 
-    Berechtigungen --&gt; Rollen
+    Berechtigungen(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Berechtigungen-und-Rollen-3.x'&gt;Berechtigungen&lt;/a&gt;) --&gt; Rollen(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Berechtigungen-und-Rollen-3.x'&gt;Rollen&lt;/a&gt;)
     Rollen --&gt; Benutzer((Benutzer))
     Rollen --&gt; Aufgaben
-    Aufgaben --&gt; Workflow
+    Aufgaben --&gt; Workflow(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Kitodo%E2%80%90Workflow-3.x'&gt;Workflow&lt;/a&gt;)
     Workflow --&gt; Produktionsvorlage
 
     DocketXSL{{Docket XSL}} ---&gt; Laufzettel
     Laufzettel --&gt; Produktionsvorlage
     RulesetXML{{Ruleset XML}} ---&gt; Regelsatz
-    ExportXSL{{Export XSL}} ---&gt; Regelsatz
+    ExportXSL{{Export XSL}} ---&gt; Regelsatz(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Regelsatz-3.x'&gt;Regelsatz&lt;/a&gt;)
     Regelsatz --&gt; Produktionsvorlage
     Produktionsvorlage &lt;--&gt; Projekte((Projekte))
 
@@ -295,8 +295,8 @@
     Ordnerverwendung --&gt; METSParameter
     METSParameter[METS Parameter] --&gt; Projekte
     TechnischeDaten[Technische Daten] --&gt; Projekte
-    Details --&gt; Projekte
-    Projekte --&gt; Benutzer
+    Details --&gt; Projekte(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Bearbeitung-Projekte-3.x'&gt;Projekte&lt;/a&gt;)
+    Projekte --&gt; Benutzer(&lt;a href='https://github.com/kitodo/kitodo-production/wiki/Benutzer-3.x'&gt;Benutzer&lt;/a&gt;)
 
 </code></pre>
 <h1 id="offene-themen">Offene Themen</h1>
