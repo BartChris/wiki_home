@@ -262,7 +262,7 @@
 <li>
 <p><strong>LABEL / ORDERLABEL - Besetzen der Felder beim Export</strong></p>
 </li>
-<li>Christoph hat einen guten Vorschlag eingebracht und testweise in einem abgesetzten Branch umgesetzt: https://github.com/kitodo/kitodo-production/discussions/6277#discussioncomment-14543626</li>
+<li>Christoph hat einen guten Vorschlag eingebracht und testweise in einem abgesetzten Branch umgesetzt: https://github.com/kitodo/kitodo-production/discussions/6277#discussioncomment-14543626; komprimierte technische Kommentierung im PR (https://github.com/kitodo/kitodo-production/pull/6705)</li>
 <li>LABEL wird beim Export nach den indiviuellen Vorgaben des Hause im export.xsl generiert- und im Anschluss in meta.xml ergänzt, so dass beim Export der Überordnung die gewünschten Werte für LABEL bei der Überordnung verzeichnet werden können. Das setzt voraus, dass beim Export die Prozesse nicht parallelisiert werden (Wert für "Autorun" in der kitodo_config.properties) und der Elternvorgang erst am Ende dran kommt.</li>
 <li>Das Besetzen der Felder beim Export fängt die Lücke ab, dass LABEL/ORDERLABEL beim manuellen Anlegen von untergeordneten Vorgängen (zum Beispiel Zeitschriften-Bände) maschinell erstellt werden und in den exportierten METS-Dateien des zugehörigen übergeordneten Vorgangs eingetragen werden können. und bei den Strukturelementen nicht gesetzt werden. </li>
 <li>Bestehende Anwendungen <ul>
