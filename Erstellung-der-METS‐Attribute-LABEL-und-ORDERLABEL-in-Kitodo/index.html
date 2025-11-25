@@ -19,7 +19,7 @@
     
     
       
-        <title>2025‐11‐24 Community Board (Kitodo.Production) - Kitodo Production Documentation</title>
+        <title>Erstellung der METS-Attribute LABEL und ORDERLABEL in Kitodo.Production - Kitodo Production Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#top-1-verschiedenes" class="md-skip">
+        <a href="#erstellung-der-mets-attribute-label-und-orderlabel-in-kitodoproduction" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2025‐11‐24 Community Board (Kitodo.Production)
+              Erstellung der METS-Attribute LABEL und ORDERLABEL in Kitodo.Production
             
           </span>
         </div>
@@ -247,70 +247,16 @@
 
 
 
-<p>Teilnehmende: </p>
-<h1 id="top-1-verschiedenes">TOP 1 Verschiedenes</h1>
+<h1 id="erstellung-der-mets-attribute-label-und-orderlabel-in-kitodoproduction">Erstellung der METS-Attribute <code>LABEL</code> und <code>ORDERLABEL</code> in Kitodo.Production</h1>
+<p>In Kitodo.Production 3 werden bis zu den Versionen 3.8.X die METS-Attribute <code>LABEL</code> und <code>ORDERLABEL</code> der untergeordneten Vorgänge nicht in den exportierten METS-Dateien der übergeordneten Vorgänge eingetragen. Dies wurde behoben, indem im Import-XSLT die Attribut erzeugt wurden, oder indem Skripte in die Workflows integriert wurden. </p>
+<p>Mit Kitodo.Production Version 3.9 werden die Attribute <code>LABEL</code> und <code>ORDERLABEL</code> in <code>&lt;mets:structMap TYPE="LOGICAL"&gt;</code> der internen meta.xml während des Exports eingetragen, wenn sie von den bisherigen Inhalten abweichen. 
+Dies führt dazu, dass auch in den übergeordneten Vorgängen die Attribute LABEL und ORDERLABEL der untergeordneten eingetragen werden.
+Die Logik des Export XSLT zur Erzeugung der METS-Attribute <code>LABEL</code> und <code>ORDERLABEL</code> wird somit in allen Fällen angewendet und muss nur an einer Stelle gepflegt werden.</p>
+<h1 id="weitere-informationen">Weitere Informationen</h1>
 <ul>
-<li>kurzer Rückblick <strong>Community-Treffen</strong> am 3.11.</li>
-<li>
-<p>Vorbereitungstreffen mit Matthias Ronge am 30.10. mit folgenden Verabredungen für <strong>Verfeinerungen zu hibernate-Implementierung</strong> in Version 3.9:</p>
-<ul>
-<li>freie Suche nach oben links als Default und Antwort auf freie Suche wird korrigiert - "process" definitiv falsch</li>
-<li>In der freien Suche wird das Ignorieren von 1/2 stellen wieder reingenommen =&gt;mehr Sicherheit bei Prozesstiteln</li>
-<li>exakte Suche nach Prozesstiteln in die DB verlagern</li>
-<li>Einstellung über Filter abgeschlossene/nicht abgeschlossene Vorgänge mit in die Indexsuche mitnehmen (Grenze von 10.000 Treffern besser abfangen)</li>
-<li>Indexierung der Metadatenfelder =&gt; nur bei Leerzeichen wird getrennt / anders als bei Prozesstitel</li>
-<li>Für die Umsetzung siehe auch issue von Christoph <a href="https://github.com/kitodo/kitodo-production/issues/6743">Kitodo Search improvement (post Hibernate Search) #6743</a> - <strong>baldige Umsetzung realistisch??</strong></li>
-</ul>
-</li>
-<li>
-<p>Rückblick Praxistreffen - jenseits vom Dokumentationsthema</p>
-</li>
-<li>Initiative zur Anmeldung von neuen GND-Einträgen von Kitodo aus - Einordnung der Relevanz / des Aufwandes</li>
-<li>
-<p>Wünsch Dir was-Treffen</p>
-</li>
-<li>
-<p><strong>Erstellung von CSV-Dateien</strong> zusätzlich zu / anstatt  von EXCEL- und PDF-Dateien: </p>
-<ul>
-<li>CSV-Dateien werden schneller erstellt =&gt; Feature mit den CSV-Dateien kommt wahrscheinlich bis zur Version 3.9</li>
-<li>Wegfall des PDF-Features wird vom Community Board einhellig befürwortet =&gt; <strong>issue schreiben??</strong></li>
-<li>Beibehalten des Features für EXCEL-Files wird von SBB befürwortet</li>
-</ul>
-</li>
-<li>
-<p><strong>LABEL / ORDERLABEL - Besetzen der Felder beim Export - Status??</strong> Dokumentation??</p>
-</li>
-<li>Dokumentation: [[Erstellung der METS‐Attribute LABEL und ORDERLABEL in Kitodo]]</li>
-<li>Christoph hat einen guten Vorschlag eingebracht und testweise in einem abgesetzten Branch umgesetzt: https://github.com/kitodo/kitodo-production/discussions/6277#discussioncomment-14543626; komprimierte technische Kommentierung im PR (https://github.com/kitodo/kitodo-production/pull/6705)</li>
-<li>LABEL wird beim Export nach den indiviuellen Vorgaben des Hause im export.xsl generiert- und im Anschluss in meta.xml ergänzt, so dass beim Export der Überordnung die gewünschten Werte für LABEL bei der Überordnung verzeichnet werden können. Das setzt voraus, dass beim Export die Prozesse nicht parallelisiert werden (Wert für "Autorun" in der kitodo_config.properties) und der Elternvorgang erst am Ende dran kommt.</li>
-<li>Das Besetzen der Felder beim Export fängt die Lücke ab, dass LABEL/ORDERLABEL beim manuellen Anlegen von untergeordneten Vorgängen (zum Beispiel Zeitschriften-Bände) maschinell erstellt werden und in den exportierten METS-Dateien des zugehörigen übergeordneten Vorgangs eingetragen werden können und bei den Strukturelementen nicht gesetzt werden. </li>
-<li>Bestehende Anwendungen <ul>
-<li>Innerhalb eines Vorgangs wird die Erstellung der LABEL/ORDERLABEL bereits erfolgreich angewendet <a href="https://github.com/kitodo/kitodo-production/issues/5016">Automatically set outline headings  #5016</a>, <a href="https://github.com/kitodo/kitodo-production/issues/4205">Capture of METS-attributes LABEL and ORDERLABEL #4205
-</a></li>
-<li>Für Vorgänge, deren Metadaten aus Katalogen importiert werden, kann LABEL/ORDERLAEL ebenfalls mit XSLT (allerdings Import-XLT-Datei) erstellt werden. </li>
-</ul>
-</li>
-</ul>
-<h1 id="top-2-priorisierung-unserer-aktivitaten">Top 2 Priorisierung unserer Aktivitäten</h1>
-<ul>
-<li>Sichtung der Verabredungen vom Praxistreffen für Dokumentation / Unterstützung von neuen Kitodo-Mitgliedern</li>
-<li>Matthias richtet GitHub Diskussionsliste "Verbesserungsliste" ein</li>
-<li>Niels richtet Matrix-Räume ein für EntwicklerInnen, SystembibliothekarInnen und AnwenderInnen</li>
-<li>"Dokumentsissuekategorie" in GitHub einrichten ??</li>
-<li>Export der Wikis auf flache Struktur (in Zusammenarbeit mit Christoph)</li>
-<li>Koordination der Überarbeitung für AnwenderInnen ab nächstem Jahr (CB??)</li>
-<li>Matthias Ronge initiiert ein "Wünsch-Dir-was-Treffen"</li>
-<li>Daniel Opitz untersucht Konfiguration einer Art Benachrichtigungsdienstes für Wiki-Seiten</li>
-<li>Anja kümmert sich um "Getting Started"-Seite für neue AnwenderInnen / Interessenten</li>
-<li><a href="https://github.com/kitodo/kitodo-production/wiki/Systembibliothekar%E2%80%90Dokumentation-(Konfiguration)">Doku-Seite „Systembibliothekar“</a></li>
-<li>Re-Import für die Massenbearbeitung</li>
-<li>Ideensammlung für API (Status s. <a href="https://github.com/kitodo/kitodo-production/wiki/2025%E2%80%9007%E2%80%9014-Community-Board-(Kitodo.Production)#ideensammlung-f%C3%BCr-api">Protokoll vom 14.7.</a>)</li>
-<li>halbautomatische Unterstützung der Strukturierung im ME für spezifische Anwendungsfälle mit Werkzeugen des ML/KI - next steps??</li>
-</ul>
-<h1 id="top-3-organisatorisches">TOP 3 Organisatorisches</h1>
-<ul>
-<li>nächstes Treffen CB:    (Moderation: Armin; Protokoll: ??)</li>
-<li>aufzugreifende Themen: </li>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6277">Anwendung der METS-Attribute <code>LABEL</code> und <code>ORDERLABEL</code> in Kitodo</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/discussions/6184">TYP, LABEL und ORDERLABEL in Überordnung speichern</a></li>
+<li><a href="https://github.com/kitodo/kitodo-production/pull/6705">[3.9] Add logic for enriching LABELs on export</a></li>
 </ul>
 
 
@@ -318,9 +264,6 @@
 
 
 
-
-  
-  
 
 
 
