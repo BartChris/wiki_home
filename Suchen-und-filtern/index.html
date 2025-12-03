@@ -19,7 +19,7 @@
     
     
       
-        <title>🚧 Seite in Bearbeitung 🚧 - Kitodo Production Documentation</title>
+        <title>Suchen und filtern - Kitodo Production Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#seite-in-bearbeitung" class="md-skip">
+        <a href="#inhaltsverzeichnis" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🚧 Seite in Bearbeitung 🚧
+              Suchen und filtern
             
           </span>
         </div>
@@ -229,8 +229,264 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inhaltsverzeichnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inhaltsverzeichnis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eine-kurze-einfuhrung-zur-funktionsweise-der-suche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eine kurze Einführung zur Funktionsweise der Suche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eine kurze Einführung zur Funktionsweise der Suche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suchbegriffe-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suchbegriffe (Token)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussfolgerungen-und-abhangigkeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlussfolgerungen und Abhängigkeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorgange-suchen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorgänge suchen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vorgänge suchen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtersuche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtersuche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtersuche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suche-mit-suchkriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche mit Suchkriterien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suche mit Suchkriterien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-mehreren-suchbedingungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach mehreren Suchbedingungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht-der-suchkriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht der Suchkriterien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übersicht der Suchkriterien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorgangs-id-suchen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorgangs-ID suchen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-vorgangen-zur-id-eines-ubergeordneten-vorgangs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Vorgängen zur ID eines übergeordneten Vorgangs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-dem-vorgangstitel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach dem Vorgangstitel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-projekten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Projekten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-projektstichwort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Projektstichwort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-metadaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Metadaten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-vorgangen-in-einem-bestimmten-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Vorgängen in einem bestimmten Batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-nach-vorgangen-mit-bestimmten-aufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche nach Vorgängen mit bestimmten Aufgaben
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suche-uber-das-allgemeine-suchfeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suche über das allgemeine Suchfeld
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-suche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL-Suche
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgaben-suchen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgaben suchen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -247,17 +503,44 @@
 
 
 
-<h1 id="seite-in-bearbeitung">🚧 Seite in Bearbeitung 🚧</h1>
+<h3 id="inhaltsverzeichnis">Inhaltsverzeichnis</h3>
+<ul>
+<li><a href="#eine-kurze-einf%C3%BChrung-zur-funktionsweise-der-suche">Eine kurze Einführung zur Funktionsweise der Suche</a>  </li>
+<li><a href="#suchbegriffe-token">Suchbegriffe (Token)</a></li>
+<li><a href="#schlussfolgerungen-und-abh%C3%A4ngigkeiten">Schlussfolgerungen und Abhängigkeiten</a></li>
+<li><a href="#vorg%C3%A4nge-suchen">Vorgänge suchen</a></li>
+<li><a href="#filtersuche">Filtersuche</a><ul>
+<li><a href="#suche-mit-suchkriterien">Suche mit Suchkriterien</a></li>
+<li><a href="#suche-nach-mehreren-suchbedingungen">Suche nach mehreren Suchbedingungen</a></li>
+<li><a href="#%C3%BCbersicht-der-suchkriterien">Übersicht der Suchkriterien</a></li>
+<li><a href="#vorgangs-id-suchen">Vorgangs-ID suchen</a></li>
+<li><a href="#suche-nach-vorg%C3%A4ngen-zur-id-eines-%C3%BCbergeordneten-vorgangs">Suche nach Vorgängen zur ID eines übergeordneten Vorgangs</a></li>
+<li><a href="#suche-nach-dem-vorgangstitel">Suche nach dem Vorgangstitel</a></li>
+<li><a href="#suche-nach-projekten">Suche nach Projekten</a></li>
+<li><a href="#suche-nach-projektstichwort">Suche nach Projektstichwort</a></li>
+<li><a href="#suche-nach-metadaten">Suche nach Metadaten</a></li>
+<li><a href="#suche-nach-vorg%C3%A4ngen-in-einem-bestimmten-batch">Suche nach Vorgängen in einem bestimmten Batch</a></li>
+<li><a href="#suche-nach-vorg%C3%A4ngen-mit-bestimmten-aufgaben">Suche nach Vorgängen mit bestimmten Aufgaben</a></li>
+</ul>
+</li>
+<li><a href="#suche-%C3%BCber-das-allgemeine-suchfeld">Suche über das allgemeine Suchfeld</a></li>
+<li><a href="#url-suche">URL-Suche</a></li>
+<li><a href="#aufgaben-suchen">Aufgaben suchen</a></li>
+</ul>
 <hr />
-<p>Die Suche nach Prozessen und Aufgaben in der Produktion wurde ab Version 3.9 grundlegend überarbeitet. So finden Sie Prozesse und Aufgaben in den aktuellen Versionen:</p>
+<p>Die Suche nach Vorgängen und Aufgaben wurde in Production ab Version 3.9 grundlegend überarbeitet. So finden Sie Vorgänge und Aufgaben in den aktuellen Versionen:</p>
 <h1 id="eine-kurze-einfuhrung-zur-funktionsweise-der-suche">Eine kurze Einführung zur Funktionsweise der Suche</h1>
-<p>Die Suche wird vom Filterdienst durchgeführt. Für die Vorgangssuche wird eine Suchmaschine verwendet. Diese muss mit den Metadaten der Prozesse gefüttert werden, um zu funktionieren. Dieser Vorgang wird als Indexierung bezeichnet. Die Aufgabe der Suchmaschine ist einfach: Sie verwaltet einen Index, vergleichbar mit dem Nachschlagewerk am Ende eines gut geschriebenen Buches, das für jedes Schlüsselwort die entsprechenden Seitenzahlen auflistet. Ähnlich funktioniert der Index einer Suchmaschine: Er listet für jeden möglichen Suchbegriff (Token) die relevanten Vorgänge auf. Wenn das Wort <em>jeweiligen</em> in den Vorgängen 23 und 42 vorkommt, liefert der Index bei der Suche nach <code>jeweiligen</code> die Vorgänge 23 und 42 zurück. Der Index kennt weder Mandanten, Projekte noch abgeschlossene Vorgänge. Er übergibt seine Ergebnisse an eine Datenbankabfrage, die dazu dient, die Suchergebnisse zu verfeinern und weitere Bedingungen anzuwenden, beispielsweise die Ergebnisse auf Projekte zu beschränken, denen der aktuelle Benutzende zugeordnet ist.</p>
+<p>Die Suche wird vom Filterdienst durchgeführt. Für die Vorgangssuche wird eine Suchmaschine verwendet. Diese muss mit den Metadaten der Vorgänge befüllt werden, um zu funktionieren. Dieser Vorgang wird als Indexierung bezeichnet. Die Vorgänge werden beim Speichern indexiert. Spätere Änderungen an ihren Eigenschaften, wie beispielsweise das Umbenennen eines Projekts, werden nicht automatisch im Index reflektiert. In solchen Fällen müssen Sie die Indexierung manuell über die Systemseite durchführen.</p>
+<p>Die Aufgabe der Suchmaschine ist einfach: Sie verwaltet einen Index, vergleichbar mit dem Nachschlagewerk am Ende eines gut geschriebenen Buches, das für jedes Schlüsselwort die relevanten Seitenzahlen auflistet. Ähnlich funktioniert der Index einer Suchmaschine: Er listet für jeden möglichen Suchbegriff (Token) die relevanten Vorgänge auf. Wenn das Wort <em>jeweiligen</em> in den Vorgängen 23 und 42 vorkommt, liefert der Index bei der Suche nach <code>jeweiligen</code> die Vorgänge 23 und 42 zurück. Der Index kennt weder Mandanten, Projekte noch abgeschlossene Vorgänge. Er übergibt seine Ergebnisse an eine Datenbankabfrage, die dazu dient, die Suchergebnisse zu verfeinern und weitere Bedingungen anzuwenden, beispielsweise die Ergebnisse auf Projekte zu beschränken, denen der aktuelle Benutzende zugeordnet ist.</p>
 <h2 id="suchbegriffe-token">Suchbegriffe (Token)</h2>
-<p><strong>Standardstichworte</strong> umfassen die ID (die auch ohne Präfix <code>id:</code> gesucht werden kann), Kommentare und Metadaten. Letztere müssen jeweils mindestens drei Zeichen lang sein.<br />
-<strong>Titelstichworte</strong> sind etwas Besonderes, da der Vorgangstitel wichtig ist. Token sind Gruppen aufeinanderfolgender Buchstaben oder Zahlen ohne Längenbegrenzung, wobei jeder Anfang ein Token ist. Dies ermöglicht automatisch eine rechtsbündige Suche, ohne angehängtes <code>*</code>.<br />
-<strong>Projektstichworte</strong> umfassen die Projektnamensworte, die mindestens drei Zeichen lang sind.<br />
-<strong>Batchstichworte</strong> umfassen die Batchnummer und die Worte des Batchnamens (falls vorhanden), die mindestens drei Zeichen lang sind.<br />
-<strong>Aufgabenstichworte</strong> umfassen die Aufgabentitelworte, die mindestens drei Zeichen lang sind.</p>
+<p>Die folgenden Token werden indexiert:</p>
+<ul>
+<li><strong>Standardstichworte</strong> umfassen die ID (die auch ohne Präfix <code>id:</code> gesucht werden kann), Kommentare und Metadaten. Letztere müssen jeweils mindestens drei Zeichen lang sein.</li>
+<li><strong>Titelstichworte</strong> sind etwas Besonderes, da der Vorgangstitel wichtig ist. Token sind Gruppen aufeinanderfolgender Buchstaben oder Zahlen ohne Längenbegrenzung, wobei jeder Anfang ein Token ist. Dies ermöglicht automatisch eine rechtsbündige Suche, ohne angehängtes <code>*</code>.</li>
+<li><strong>Projektstichworte</strong> umfassen die Projektnamensworte, die mindestens drei Zeichen lang sind.</li>
+<li><strong>Batchstichworte</strong> umfassen die Batchnummer und die Worte des Batchnamens (falls vorhanden), die mindestens drei Zeichen lang sind.</li>
+<li><strong>Aufgabenstichworte</strong> umfassen die Aufgabentitelworte, die mindestens drei Zeichen lang sind.</li>
+</ul>
 <h2 id="schlussfolgerungen-und-abhangigkeiten">Schlussfolgerungen und Abhängigkeiten</h2>
 <p>Um Beliebigkeit zu vermeiden, d. h. Indexeinträge, die ohnehin alle oder fast alle Vorgänge auflisten, werden Indexbegriffe mit weniger als drei Zeichen wie <em>in</em>, <em>ja</em>, <em>du</em>, <em>WC</em> oder <em>wo</em> ausgeschlossen. Das bedeutet, dass die Suche nach „in“ immer 0 Treffer liefert (mit Ausnahme von Treffern aus Titeln, für die besondere gelten, mehr dazu unten). Dies ist eine individuelle Designentscheidung, die bei Bedarf umprogrammiert werden könnte.</p>
 <p>Der Index in seiner Grundform kann weder nach ähnlichen Begriffen noch nach verkürzten Suchergebnissen suchen. Letzteres würde verlangen, für jeden möglichen Schnipsel einen Indexeintrag zu erstellen, was den Index unnötig aufbläht und die Indexerstellungszeit erheblich verlängert. Aus diesem Grund verzichten wir darauf. (Wie zuvor gelten für Titel besondere Bedingungen, siehe dort.) Sonderzeichen werden entfernt, sodass die Suche nach <code>jeweilige*</code> nur <em>jeweilige</em> findet, nicht aber <em>jeweiligen</em> oder <em>jeweiliger</em>.</p>
@@ -267,9 +550,10 @@
 <h2 id="filtersuche">Filtersuche</h2>
 <p>Sie verwenden hauptsächlich das Filterfeld auf der Vorgangsseite, um die Vorgangsliste mit Suchbegriffen zu filtern. Geben Sie dazu Ihre Suchbegriffe in das Filterfeld ein und drücken Sie die Eingabetaste.</p>
 <h3 id="suche-mit-suchkriterien">Suche mit Suchkriterien</h3>
-<p>Mit den Suchkriterien können Sie Ihre Suchergebnisse nach bestimmten Kriterien filtern. Geben Sie dazu ein Schlüsselwort, gefolgt von einem Doppelpunkt und dem gewünschten Suchbegriff, Zahlenwert oder Bereich ein. Setzen Sie die Suchbegriffe in Anführungszeichen, um eine korrekte Darstellung zu gewährleisten. Enthält ein Suchbegriff das Zeichen senkrechter Strich (<code>|</code>) , setzen Sie ihn in runde Klammern (<code>()</code>).</p>
+<p>Mit den Suchkriterien können Sie Ihre Suchergebnisse nach bestimmten Kriterien filtern. Geben Sie dazu ein Schlüsselwort, gefolgt von einem Doppelpunkt und dem gewünschten Suchbegriff, Zahlenwert oder Bereich ein. Setzen Sie die Suchbegriffe in Anführungszeichen (<code>""</code>), um eine korrekte Darstellung zu gewährleisten. Enthält ein Suchbegriff das Zeichen senkrechter Strich (<code>|</code>) , setzen Sie ihn in runde Klammern (<code>()</code>).</p>
 <h4 id="suche-nach-mehreren-suchbedingungen">Suche nach mehreren Suchbedingungen</h4>
 <p>Mehrere Suchbedingungen werden gemeinsam angewendet, das heißt, alle Bedingungen gelten für das Ergebnis (sogenannte UND-Suche). Werden dieselben Bedingungen mehrfach gefragt, werden sie als Alternativen behandelt (sogenannte ODER-Suche). Dies geschieht automatisch innerhalb des Suchfelds.</p>
+<p>Es ist auch möglich, Vorgänge mit bestimmten Inhalten des Vorgangstitels aus der Treffermenge auszuschließen. Bei Zeitschriften können so anhand der Bandangabe bestimmte Bände ausgeschlossen werden. Zum Beispiel werden bei der Suche <code>"elternprozessid:1234"</code> 185 alle Bände einer Zeitschrift der 1850er Jahre aufgelistet. Wenn jedoch der Band 1855 nicht in der Trefferliste angezeigt werden soll, kann dies mit <code>"-prozess:1855"</code> umgesetzt werden. Letztendlich kann ein Suchbefehl so formuliert sein: <code>"elternprozessid:1234" "-prozess:1855"</code></p>
 <h3 id="ubersicht-der-suchkriterien">Übersicht der Suchkriterien</h3>
 <table>
 <thead>
@@ -326,11 +610,6 @@
 <td>Automatische Aufgabe</td>
 </tr>
 <tr>
-<td><code>schrittinarbeit:</code></td>
-<td><code>stepinwork:</code></td>
-<td>Aufgabe in Bearbeitung</td>
-</tr>
-<tr>
 <td><code>schrittgesperrt:</code></td>
 <td><code>steplocked:</code></td>
 <td>gesperrte Aufgabe</td>
@@ -339,6 +618,11 @@
 <td><code>schrittoffen:</code></td>
 <td><code>stepopen:</code></td>
 <td>offene Aufgabe</td>
+</tr>
+<tr>
+<td><code>schrittinarbeit:</code></td>
+<td><code>stepinwork:</code></td>
+<td>Aufgabe in Bearbeitung</td>
 </tr>
 <tr>
 <td><code>schrittabgeschlossen:</code></td>
@@ -358,16 +642,248 @@
 </tbody>
 </table>
 <h4 id="vorgangs-id-suchen">Vorgangs-ID suchen</h4>
-<p>Um die Vorgangs-ID zu suchen, verwenden Sie das Schlüsselwort <code>id:</code>. Dadurch wird nach der Vorgangs-ID gesucht. (Es werden keine anderen ID-Nummern durchsucht.) Die Zahl muss immer eine positive ganze Zahl sein; die Suche nach Text ist hier nicht zulässig. Sie können einen Zahlenbereich angeben, indem Sie Punkte zwischen die Zahlen setzen, z. B. <code>"id:1..99"</code>.</p>
+<p>Um Vorgänge anhand ihrer ID zu suchen, verwenden Sie das Schlüsselwort <code>id:</code>. Dadurch wird nach der Vorgangs-ID gesucht. (Es werden keine anderen ID-Nummern durchsucht.) Die Zahl muss immer eine positive ganze Zahl sein; die Suche nach Text ist hier nicht zulässig. Sie können einen Zahlenbereich angeben, indem Sie einen Bindestrich (<code>-</code>) zwischen die Zahlen setzen, z. B. <code>"id:1-99"</code>.</p>
 <p>Normalerweise werden mehrere Einträge ODER-verknüpft. So funktioniert beispielsweise <code>"id:1" "id:2" "id:8"</code>. Für längere Listen können Sie jedoch auch <code>"id:1 2 8"</code> eingeben. Dieses spezielle Verhalten der Funktion ist nur für die Suche mit <code>id:</code> verfügbar, nicht für andere Suchoptionen.</p>
 <h4 id="suche-nach-vorgangen-zur-id-eines-ubergeordneten-vorgangs">Suche nach Vorgängen zur ID eines übergeordneten Vorgangs</h4>
-<p>Ebenso können Sie nach Vorgängen mit einer bestimmten übergeordneten Vorgangs-ID suchen. Auch hier gilt: Dies findet nur über die Datenbank-ID des übergeordneten Vorgangs, keine anderen IDs. Sie können gleichermaßen mit den Schlüsselwörtern <code>elternprozessid:</code> oder <code>parentprocessid:</code> suchen.</p>
+<p>Ebenso können Sie nach Vorgängen mit einer bestimmten übergeordneten Vorgangs-ID suchen. Auch hier gilt: Dies findet nur Vorgänge mit der Datenbank-ID des übergeordneten Vorgangs, es werden keine anderen IDs durchsucht. Sie können gleichermaßen mit den Schlüsselwörtern <code>elternprozessid:</code> oder <code>parentprocessid:</code> suchen.</p>
+<h4 id="suche-nach-dem-vorgangstitel">Suche nach dem Vorgangstitel</h4>
+<p>Der Vorgangstitel wird umfassender tokenisiert als die anderen Suchbegriffe, da er für die Suche wesentlich ist. Dadurch ergeben sich mehr Suchmöglichkeiten. Der Vorgangstitel wird an Sonderzeichen aufgeteilt, und jeder Block anschließend zeichenweise aufwachsend indexiert. Die folgende Tabelle zeigt beispielhaft die Suchbegriffe, die für den Vorgangstitel <em>LoreIpsu_1234567X_18820512Mo</em> generiert werden:</p>
+<table>
+<thead>
+<tr>
+<th>loreipsu</th>
+<th>1234567x</th>
+<th>18820512mo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>loreips</td>
+<td>1234567</td>
+<td>18820512m</td>
+</tr>
+<tr>
+<td>loreip</td>
+<td>123456</td>
+<td>18820512</td>
+</tr>
+<tr>
+<td>lorei</td>
+<td>12345</td>
+<td>1882051</td>
+</tr>
+<tr>
+<td>lore</td>
+<td>1234</td>
+<td>188205</td>
+</tr>
+<tr>
+<td>lor</td>
+<td>123</td>
+<td>18820</td>
+</tr>
+<tr>
+<td>lo</td>
+<td>12</td>
+<td>1882</td>
+</tr>
+<tr>
+<td>l</td>
+<td>1</td>
+<td>188</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>18</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Dieser Vorgangstitel wird mit 25 verschiedenen Suchbegriffen indexiert, was verdeutlicht, warum die Suche dabei schnell gegen Beliebigkeit geht. Vergleichen wir dies mit dem Vorgangstitel <em>LoreIpsu_1234567X_1882-05-12_Mo</em>, wird ein Unterschied deutlich:</p>
+<table>
+<thead>
+<tr>
+<th>loreipsu</th>
+<th>1234567x</th>
+<th>1882</th>
+<th>05</th>
+<th>12</th>
+<th>mo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>loreips</td>
+<td>1234567</td>
+<td>188</td>
+<td>0</td>
+<td>1</td>
+<td>m</td>
+</tr>
+<tr>
+<td>loreip</td>
+<td>123456</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lorei</td>
+<td>12345</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lore</td>
+<td>1234</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lor</td>
+<td>123</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lo</td>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>l</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Aus der Arbeitsweise des Index wird deutlich, wie die Suchergebnisse zusammengestellt werden. Wenn Sie im ersten Beispiel nach <code>"prozess:18820512"</code> suchen, erhalten Sie den Treffer vom 12. Mai 1882. Wenn Sie im zweiten Beispiel nach <code>"prozess:1882-05-12"</code> suchen, erhalten Sie alle Treffer aus dem <em>Monat</em> 1882, da intern nach <code>"prozess:1882" ᴜɴᴅ "prozess:05" ᴜɴᴅ "prozess:12"</code> gesucht wird, und <em>12</em> auch Teil der rückwärts reduzierten Formen von <em>1234567x</em> ist.</p>
+<h4 id="suche-nach-projekten">Suche nach Projekten</h4>
+<p>Die Projektsuche erfolgt in der Datenbank und erfordert den exakten Projekttitel. Die Filterbox bietet Hilfestellung zur automatischen Vervollständigung. Sie können gleichermaßen mit den Schlüsselwörtern <code>projekt:</code> oder <code>project:</code> suchen. Ebenso kann nach der Projekt-ID gesucht werden. Sie können auch einen Zahlenbereich angeben, indem Sie einen Bindestrich (<code>-</code>) zwischen die Zahlen setzen, z. B. <code>"projekt:39-42"</code>.</p>
+<h4 id="suche-nach-projektstichwort">Suche nach Projektstichwort</h4>
+<p>Die Projektstichwort-Suche nutzt den Index. Sie können jedes Projektstichwort mit mindestens drei Zeichen verwenden. Sie können gleichermaßen mit den Schlüsselwörtern <code>projekt_trunkiert:</code> oder <code>project_loose:</code> suchen. Ebenso kann nach der Projekt-ID gesucht werden. Sie können auch einen Zahlenbereich angeben, indem Sie einen Bindestrich (<code>-</code>) zwischen die Zahlen setzen, z. B. <code>"projekt:39-42"</code>.</p>
+<h4 id="suche-nach-metadaten">Suche nach Metadaten</h4>
+<p>Die Metadatensuche ist die Kernfunktion des Suchindex und dessen eigentlicher Zweck. Metadaten werden nicht in der Datenbank gespeichert und sind daher nicht über die Datenbank durchsuchbar. Aus diesem Grund benötigen wir den Index für die Metadatensuche. Sie können beliebige Metadaten als Suchbegriffe eingeben. Die Suche ist auf Wörter mit mindestens drei Zeichen beschränkt. Es gibt keine abgeschnittenen Suchbegriffe, und der Index findet nur exakt die gesuchte Schreibweise. Groß- und Kleinschreibung wird nicht beachtet. Sie können auch weiterhin mit den Schlüsselwörtern <code>eigenschaft:</code> oder <code>property:</code> suchen, was optional ist.</p>
+<p>Bei der feldbezogenen Suche können Sie sowohl in Metadatenfeldern als auch in Schlüsselwörtern suchen. Dies funktioniert mit der Metadaten-Schlüssel-ID des Regelsatzes (<code>"titledocmain:Dampfkessel"</code>) oder seinen Übersetzungen (<code>"Haupttitel:Dampfkessel"</code>). Groß- und Kleinschreibung wird nicht beachtet, weder für die Schlüssel noch für die Werte.</p>
+<p>Die Metadaten werden beim Speichern indexiert. Daher müssen bei spätere Änderungen an den Regelsatzbenennungen die Vorgänge neu indexiert werden, damit die Suche die geänderten Benennungen erkennt.</p>
+<h4 id="suche-nach-vorgangen-in-einem-bestimmten-batch">Suche nach Vorgängen in einem bestimmten Batch</h4>
+<p>Sie können nach Vorgängen suchen, die zu einem Batch gehören, entweder anhand der Batchnummer oder eines Batchnamensstichwortes (mindestens drei Zeichen). Sie können gleichermaßen mit den Schlüsselwörtern <code>gruppe:</code> oder <code>batch:</code> suchen.  Sie können auch einen Zahlenbereich angeben, indem Sie einen Bindestrich (<code>-</code>) zwischen die Zahlen setzen, z. B. <code>"gruppe:16244-16265"</code>.</p>
+<h2 id="suche-nach-vorgangen-mit-bestimmten-aufgaben">Suche nach Vorgängen mit bestimmten Aufgaben</h2>
+<p>Sie können nach Vorgängen mit bestimmten Aufgaben suchen. So können Sie beispielsweise mit <code>"schritt:OCR"</code> oder <code>"step:OCR"</code> nach allen Vorgängen suchen, die eine Aufgabe <em>OCR</em> haben. Mit <code>"-schritt:OCR"</code> oder <code>"-step:OCR"</code> können Sie nach allen Vorgängen suchen, die keine Aufgabe <em>OCR</em> haben. Die Aufgabensuche erfolgt in der Datenbank. Geben Sie dazu den Aufgabennamen exakt ein.</p>
+<p>Mit <code>"schrittautomatisch:Export"</code> oder <code>"stepautomatic:Export"</code> können sie alle Vorgänge finden, in denen eine Aufgabe <em>Export</em> automatisch durchgeführt wird, mit <code>"-schrittautomatisch:Export"</code> oder <code>"-stepautomatic:Export"</code> alle Vorgänge, in denen sie von Hand durchzuführen ist.</p>
+<p>Mit <code>"schrittgesperrt:"</code> (<code>"steplocked:"</code>), <code>"schrittinarbeit:"</code> (<code>"stepinwork:"</code>), <code>"schrittoffen:"</code> (<code>"stepopen:"</code>) und <code>"schrittabgeschlossen:"</code> bzw. <code>"abgeschlossenerschritttitel:"</code> (<code>"stepdone:"</code> / <code>"stepdonetitle:"</code>) können sie nach Vorgängen suchen, in denen eine bestimmte Aufgabe gesperrt, offen, in Bearbeitung oder abgeschlossen ist.</p>
+<p>Mit <code>abgeschlossenerschrittbenutzer:</code> (<code>stepdoneuser:</code>) können sie nach Vorgängen suchen, in denen ein bestimmter Bearbeitender eine bestimmte Aufgabe abgeschlossen hat.</p>
+<p>Bei all den genannten Suchkriterien kann auch mit der Aufgaben-ID (bei Letztem mit der Benutzer-ID) gesucht werden. Sie können auch einen Zahlenbereich angeben, indem Sie einen Bindestrich (<code>-</code>) zwischen die Zahlen setzen, z. B. <code>"schritt:12300-23400"</code>.</p>
 <h2 id="suche-uber-das-allgemeine-suchfeld">Suche über das allgemeine Suchfeld</h2>
 <p>Das allgemeine Suchfeld ist ein blaues Eingabefeld oben links auf der Seite. Sie können es verwenden, um nach Vorgängen zu suchen. Die Navigation führt Sie zur Vorgangsliste und Ihre Suchbegriffe werden in das Filterfeld eingetragen. Beide Felder haben die gleiche Funktion.</p>
 <h2 id="url-suche">URL-Suche</h2>
 <p>Sie können die Suche über den URL-Parameter <code>&amp;input=</code> direkt in der Adressleiste Ihres Browsers starten. Dies ist besonders für technisch versierte Benutzer hilfreich. Die Navigation führt Sie zur Vorgangsliste und Ihre Suchbegriffe werden in das Filterfeld eingetragen. (Sie müssen angemeldet sein.)</p>
 <h1 id="aufgaben-suchen">Aufgaben suchen</h1>
-<h1 id="weiterfuhrende-informationen">Weiterführende Informationen</h1>
+<p>Auf der Aufgabenseite können Sie ebenfalls suchen; die Suchbedingungen gelten entsprechend:</p>
+<table>
+<thead>
+<tr>
+<th>Schlüsselwort deutsch</th>
+<th>englisch</th>
+<th>Suche nach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id:</code></td>
+<td><code>id:</code></td>
+<td>Aufgaben zu einem Vorgang mit der gegebenen ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>elternprozessid:</code></td>
+<td><code>parentprocessid:</code></td>
+<td>Aufgaben zu einem Vorgang mit einem übergeordneten Vorgang mit der gegebenen ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>prozess:</code></td>
+<td><code>process:</code></td>
+<td>Aufgaben zu einem Vorgang mit dem gegebenen Vorgangstitel</td>
+</tr>
+<tr>
+<td><code>projekt:</code></td>
+<td><code>project:</code></td>
+<td>Aufgaben zu einem Projekt, exakte Namenssuche, ID oder ID-Bereich</td>
+</tr>
+<tr>
+<td><code>projekt_trunkiert:</code></td>
+<td><code>project_loose:</code></td>
+<td>Aufgaben zu einem Projekt, Stichwortsuche, ID oder ID-Bereich</td>
+</tr>
+<tr>
+<td><code>eigenschaft:</code></td>
+<td><code>property:</code></td>
+<td>Aufgaben zu einem Vorgang mit bestimmten Metadaten</td>
+</tr>
+<tr>
+<td><code>gruppe:</code></td>
+<td><code>batch:</code></td>
+<td>Aufgaben zu einem Vorgang in einem bestimmten Batch</td>
+</tr>
+<tr>
+<td><code>schritt:</code></td>
+<td><code>step:</code></td>
+<td>Aufgaben mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>schrittautomatisch:</code></td>
+<td><code>stepautomatic:</code></td>
+<td>Automatische Aufgaben mit einem bestimmten Name, einer ID oder eines ID-Bereichsn</td>
+</tr>
+<tr>
+<td><code>schrittgesperrt:</code></td>
+<td><code>steplocked:</code></td>
+<td>gesperrte Aufgaben mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>schrittoffen:</code></td>
+<td><code>stepopen:</code></td>
+<td>offene Aufgaben mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>schrittinarbeit:</code></td>
+<td><code>stepinwork:</code></td>
+<td>Aufgaben in Bearbeitung mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>schrittabgeschlossen:</code></td>
+<td><code>stepdone:</code></td>
+<td>abgeschlossene Aufgaben mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>abgeschlossenerschritttitel:</code></td>
+<td><code>stepdonetitle:</code></td>
+<td>abgeschlossene Aufgaben mit einem bestimmten Namen, einer ID oder eines ID-Bereichs</td>
+</tr>
+<tr>
+<td><code>abgeschlossenerschrittbenutzer:</code></td>
+<td><code>stepdoneuser:</code></td>
+<td>abgeschlossene Aufgaben, die von einem bestimmten Benutzer abgeschlossen wurden (Name, ID oder ID-Bereich)</td>
+</tr>
+</tbody>
+</table>
 
 
 
