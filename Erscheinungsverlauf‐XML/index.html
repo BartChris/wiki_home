@@ -1,0 +1,660 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Erscheinungsverlauf‐XML - Kitodo Production Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#struktur" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation" class="md-header__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Erscheinungsverlauf‐XML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;course&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;description&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;processes&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;process&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;title&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-appeared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;appeared&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element &lt;metadata&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>Die Verwendung des visuellen Editors zum Bearbeiten von Zeitungsausgaben bietet Vor- und Nachteile. Sind Ausgabenlisten bereits vorhanden, kann es hilfreich sein, diese als Datei hochzuladen. Die Datei muss UTF-8-kodiert sein.</p>
+<p>ⓘ <em>Das Laden eines Erscheinungsverlaufes</em> mit Metadaten <em>funktioniert in den Versionen vor 3.8.2 nicht.</em></p>
+<h1 id="struktur">Struktur</h1>
+<h2 id="element-course">Element <code>&lt;course&gt;</code></h2>
+<p><strong>XML-Wurzelelement.</strong><br />
+<strong>Kindelemente:</strong> <code>&lt;description&gt;</code> (0−1×), <code>&lt;processes&gt;</code> (1×)<br />
+<strong>Attribute:</strong> <code>yearBegin</code> (optional), <code>yearTerm</code> (optional)</p>
+<p><code>&lt;course&gt;</code> ist das Wurzelelement der XML-Datei. Es kann zwei Kindelemente enthalten, <code>&lt;description&gt;</code> (optional, wird nur ausgegeben, nicht importiert) und die Liste der anzulegenden Vorgänge in <code>&lt;processes&gt;</code> (verpflichtend).</p>
+<ul>
+<li>
+<p>Das Attribut <code>yearBegin</code> ist optional. Es kann verwendet werden, um einen Jahresbeginn anzugeben, der vom 1. Januar abweicht, beispielsweise für Schuljahre, Geschäftsjahre oder Spielzeiten. Es muss im Format <code>--MM-dd</code> vorliegen.</p>
+</li>
+<li>
+<p>Das Attribut <code>yearTerm</code> ist optional. Es kann verwendet werden, um den Jahrestyp anzugeben, der mit einem anderen Datum als dem 1. Januar beginnt. Mögliche Werte sind beispielsweise „Geschäftsjahr“, „Saison“ oder „Schuljahr“.</p>
+</li>
+</ul>
+<h2 id="element-description">Element <code>&lt;description&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;course&gt;</code><br />
+<strong>Unter-Elemente:</strong> keine<br />
+<strong>Attribute:</strong> keine</p>
+<p><code>&lt;description&gt;</code> enthält beim Export eine verbale, für Menschen lesbare Beschreibung des Erscheinungsverlaufs in deutscher Sprache, die ausschließlich generiert wird. Beim Import hat der Wert keine Auswirkung. Er wird weder importiert noch irgendwo gespeichert.</p>
+<h2 id="element-processes">Element <code>&lt;processes&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;course&gt;</code><br />
+<strong>Unter-Elemente:</strong> <code>&lt;process&gt;</code> (0−n×)<br />
+<strong>Attribute:</strong> keine</p>
+<p>Das <code>&lt;processes&gt;</code>-Element enthält die Liste der in Production zu generierenden Prozesse. Es kann <code>&lt;process&gt;</code>-Elemente in beliebiger Anzahl enthalten.</p>
+<h2 id="element-process">Element <code>&lt;process&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;processes&gt;</code><br />
+<strong>Unter-Elemente:</strong> <code>&lt;title&gt;</code> (0−n×)<br />
+<strong>Attribute:</strong> keine</p>
+<p>Jedes <code>&lt;process&gt;</code>-Element repräsentiert einen in Production zu generierenden Prozess. Es kann <code>&lt;title&gt;</code>-Elemente (in beliebiger Anzahl) enthalten.</p>
+<h2 id="element-title">Element <code>&lt;title&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;process&gt;</code><br />
+<strong>Unter-Elemente:</strong> <code>&lt;appeared&gt;</code> (0−n×)<br />
+<strong>Attribute:</strong> <code>index</code> (optional)</p>
+<p>Jedes <code>&lt;title&gt;</code>-Element repräsentiert einen Zeitabschnitt, zu dem die erschienenen Ausgaben gehören. Es besitzt das optionale Attribut <code>index="…"</code> und kann <code>&lt;appeared&gt;</code>-Elemente (in beliebiger Anzahl) enthalten.</p>
+<ul>
+<li>Das Attribut <code>index</code> ist optional. Es kann bei Bedarf verwendet werden, um verschiedene Blöcke zu unterscheiden, und kann weggelassen werden, wenn nur ein Block verwendet wird.</li>
+</ul>
+<p><em>Anmerkung: Ursprünglich sollte das Element Namensänderungen von Titeln abbilden. Dies wurde später verworfen, aber aus historischen Gründen trägt das XML-Element weiterhin den Namen „title“. Das ursprüngliche Design ist unter <a href="../issues/51#issuecomment-38035674">#51</a> zu finden.</em></p>
+<h2 id="element-appeared">Element <code>&lt;appeared&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;title&gt;</code><br />
+<strong>Unter-Elemente:</strong> <code>&lt;metadata&gt;</code> (0−n×)<br />
+<strong>Attribute:</strong> <code>issue</code> (verpflichtend), <code>date</code> (verpflichtend), <code>after</code> (optional)</p>
+<p>Jedes <code>&lt;appeared&gt;</code>-Element repräsentiert eine physisch erschienene Ausgabe. Es besitzt die Attribute <code>issue</code> (erforderlich, kann leer sein) und <code>date</code> (erforderlich) und kann <code>&lt;metadata&gt;</code>-Unterelemente enthalten.</p>
+<ul>
+<li>
+<p>Das Attribut <code>issue</code> enthält den Namen der Ausgabe. Zeitungen, insbesondere größere, können mehrere Ausgaben haben, die sich beispielsweise in der Erscheinungszeit (Morgenausgabe, Abendausgabe usw.) oder der geografischen Verbreitung (Stuttgarter Ausgabe, Hamburger Ausgabe usw.) unterscheiden.</p>
+</li>
+<li>
+<p>Das Attribut <code>date</code> gibt das Erscheinungsdatum der physisch erschienenen Ausgabe an. Es muss im Format <code>yyyy-MM-dd</code> vorliegen.</p>
+</li>
+<li>
+<p>Normalerweise werden die Ausgaben beim Parsen der XML-Datei in der Reihenfolge ihres ersten Erscheinens erstellt. Wenn Sie jedoch eine andere Reihenfolge erzwingen möchten, können Sie diese mit dem Attribut <code>after</code> erzwingen. Es enthält die Namen der Ausgaben, die vor dieser Ausgabe angeordnet werden sollen. Mehrere Ausgaben werden durch Leerzeichen getrennt. Ausgabenamen, die Leerzeichen enthalten, müssen in doppelte Anführungszeichen gesetzt werden, die durch zwei aufeinander folgende Apostrophe ersetzt werden (<code>''</code>, 2× U+0027).  Noch nicht erwähnte Ausgaben werden davor erstellt, können aber leer sein.</p>
+</li>
+</ul>
+<h2 id="element-metadata">Element <code>&lt;metadata&gt;</code></h2>
+<p><strong>Innerhalb von:</strong> <code>&lt;appeared&gt;</code><br />
+<strong>Unter-Elemente:</strong> keine<br />
+<strong>Attribute:</strong> <code>metadataType</code> (verpflichtend), <code>value</code> (verpflichtend), <code>increment</code> (optional)</p>
+<p><code>&lt;metadata&gt;</code> deklariert einen automatisch zählenden Metadatenwert, der dem Vorgang zugewiesen wird, in dem er verwendet wird. Der Zähler beginnt zu zählen, bis er durch einen anderen Zähler ersetzt wird. Ein Zählerwert von <code>""</code> deaktiviert den Zähler.</p>
+<ul>
+<li>
+<p>Das Attribut <code>metadataType</code> enthält den Namen des Metadatentyps, in den dieser Zähler geschrieben wird.</p>
+</li>
+<li>
+<p>Das Attribut <code>value</code> enthält den Startwert des Zählers. Es verwendet dieselbe Syntax wie die Funktion <a href="Paginieren#paginierung-f%C3%BCr-fortgeschrittene">Paginierung für Fortgeschrittene</a>.</p>
+</li>
+<li>
+<p>Das Attribut <code>increment</code> gibt an, wann der Zähler erhöht werden soll. Mögliche Werte sind:</p>
+</li>
+</ul>
+<p><code>issues</code>: Der Zähler wird für jede einzelne Ausgabe erhöht.<br />
+<code>days</code>: Der Zähler wird täglich erhöht.<br />
+<code>weeks</code>: Der Zähler wird einmal pro Woche erhöht. Die Woche beginnt hier montags. Beachten Sie, dass Wochengrenzen nicht unbedingt mit Monats- oder Jahresgrenzen übereinstimmen.<br />
+<code>months</code>: Der Zähler wird monatlich erhöht.<br />
+<code>quartes</code>: Der Zähler wird vierteljährlich erhöht.<br />
+<code>years</code>: Der Zähler wird jährlich erhöht.</p>
+<h1 id="beispiel-einer-ladbaren-coursexml-datei">Beispiel einer ladbaren course.xml-Datei</h1>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;course&gt;
+  &lt;processes&gt;
+    &lt;process&gt;
+      &lt;title&gt;
+        &lt;appeared issue=&quot;Spätausgabe&quot; date=&quot;1960-05-01&quot;&gt;
+          &lt;metadata metadataType=&quot;Publisher&quot; value=&quot;Max Muster&quot;/&gt;
+          &lt;metadata metadataType=&quot;IssueNo&quot; value=&quot;1&quot; increment=&quot;issues&quot;/&gt;
+        &lt;!-- Enthaltene Metadaten:
+               Publisher: Max Muster
+               IssueNo: 1                                                   --&gt;
+        &lt;/appeared&gt;
+      &lt;/title&gt;
+    &lt;/process&gt;
+    &lt;process&gt;
+      &lt;title&gt;
+        &lt;appeared issue=&quot;Frühausgabe&quot; date=&quot;1960-05-03&quot; before=&quot;Spätausgabe&quot;/&gt;
+        &lt;!--                                            ^^^^^^^^^^^^^^^^^^^^
+             Obwohl die Frühausgabe erst später im Ablauf des XML erscheint,
+             wird sie im Verlauf des Erscheinungsblocks vor der Spätausgabe
+             angeordnet.                                                    --&gt;
+        &lt;!-- Enthaltene Metadaten:
+               Publisher: Max Muster
+               IssueNo: 2                                                   --&gt;
+      &lt;/title&gt;
+    &lt;/process&gt;
+    &lt;process&gt;
+      &lt;title&gt;
+        &lt;appeared issue=&quot;Spätausgabe&quot; date=&quot;1960-05-03&quot;&gt;
+          &lt;metadata metadataType=&quot;TitleAdd&quot; value=&quot;Leben `im` Blickpunkt&quot;/&gt;
+          &lt;!--                                           ^^^^
+               Um zu verhindern, dass der Zähler „im“ als nicht standardmäßige
+               Darstellung von 999 als kleingeschriebene römische Zahl
+               interpretiert, wurden Rückstriche darum gesetzt. Weitere Details
+               finden Sie in der Syntaxbeschreibung für Zähler.             --&gt;
+        &lt;!-- Enthaltene Metadaten:
+               Publisher: Max Muster
+               IssueNo: 3
+               TitleAdd: Leben im Blickpunkt                                --&gt;
+        &lt;/appeared&gt;
+      &lt;/title&gt;
+    &lt;/process&gt;
+    &lt;process&gt;
+      &lt;title index=&quot;2&quot;&gt;
+        &lt;!-- ^^^^^^^^^
+             Diese Ausgabe wird einem neuen Block im Kalendereditor
+             zugeordnet.                                                    --&gt;
+        &lt;appeared issue=&quot;Frühausgabe&quot; date=&quot;1960-05-04&quot;&gt;
+          &lt;metadata metadataType=&quot;TitleAdd&quot; value=&quot;&quot;/&gt;&lt;!-- ab hier gelöscht --&gt;
+          &lt;metadata metadataType=&quot;Publisher&quot; value=&quot;Hans Muster&quot;/&gt;
+        &lt;!-- Enthaltene Metadaten:
+               Publisher: Hans Muster
+               IssueNo: 4                                                   --&gt;
+        &lt;/appeared&gt;
+      &lt;/title&gt;
+    &lt;/process&gt;
+    &lt;process&gt;
+      &lt;title index=&quot;2&quot;&gt;
+        &lt;!-- ^^^^^^^^^
+             Diese Ausgabe wird ebenso dem zweiten Block im Kalendereditor
+             zugeordnet.                                                    --&gt;
+        &lt;appeared issue=&quot;Spätausgabe&quot; date=&quot;1960-05-04&quot;/&gt;
+        &lt;!-- Enthaltene Metadaten:
+               Publisher: Hans Muster
+               IssueNo: 5                                                   --&gt;
+      &lt;/title&gt;
+    &lt;/process&gt;
+  &lt;/processes&gt;
+&lt;/course&gt;
+</code></pre>
+<h1 id="erscheinungsverlauf-nach-dateien">Erscheinungsverlauf nach Dateien</h1>
+<p>Soll der Erscheinungsverlauf, anstatt diesen manuell zu erfassen, aus aussagekräftigen Dateinamen extrahiert werden, in denen die einzelnen Zeitungsausgaben codiert sind, so kann eine XML-Datei einfach nach den auf einem Computer vorhandenen Imagedateien erzeugt und zur weiteren Bearbeitung in Kitodo.Production importiert werden. Die Imagedateien selbst werden bei diesem Vorgehen nicht berührt. Sie müssen auch nicht auf dem Rechner verfügbar sein, auf dem Kitodo.Production ausgeführt wird. Prinzipiell sind zwei unterschiedliche Geschäftsgänge denkbar:</p>
+<h2 id="digitalisierung-vom-original">Digitalisierung vom Original</h2>
+<p>Die Dateien der vom Original erzeugten Images wurden während der Digitalisierung mit aussagekräftigen Dateinamen versehen.</p>
+<p>Beispiel (hier sind codiert: Jahr, Monat, Tag):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Dateiname</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1982_05_10_0001.tif</td>
+<td>Ausgabe vom 10. Mai 1982</td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_10_0002.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_10_0003.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">⁞</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_10_00046.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_11_0001.tif</td>
+<td>Ausgabe vom 11. Mai 1982</td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_11_0002.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">1982_05_11_0003.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">⁞</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Der Erscheinungsverlauf im XML-Format lässt sich beispielsweise sehr einfach mit folgendem Perl-Script generieren:</p>
+<pre><code class="language-pl">#!/usr/bin/perl
+print &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&quot;;
+print &quot;&lt;course&gt;&lt;processes&gt;\n&quot;;
+while(`ls`=~/(\d{4})_(\d{2})_(\d{2})_0001\.tif/g){
+  print &quot;&lt;process&gt;&lt;title&gt;&lt;appeared issue=\&quot;\&quot; date=\&quot;$1-$2-$3\&quot;/&gt;&lt;/title&gt;&lt;/process&gt;\n&quot;;
+}
+print &quot;&lt;/processes&gt;&lt;/course&gt;\n&quot;;
+</code></pre>
+<p>ⓘ <em>Es wird ein Erscheinungsverlauf mit der Granularität „Ausgaben“ erzeugt. Die verwendete Granularität kann in Kitodo.Production geändert werden.</em></p>
+<h2 id="digitalisierung-vom-mikrofilm">Digitalisierung vom Mikrofilm</h2>
+<p>Die Dateien der vom Mikrofilm erzeugten Images wurden während der Digitalisierung mit fortlaufender Nummerierung im Dateinamen versehen. Die jeweils ersten Seiten einer Ausgabe wurden durch einen Bearbeiter mit korrekten Dateinamen versehen.</p>
+<p>Beispiel:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Dateiname</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">00016758_1982-05-10.tif</td>
+<td>Ausgabe vom 10. Mai 1982</td>
+</tr>
+<tr>
+<td style="text-align: center;">00016759.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">00016760.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">⁞</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">16803.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">00016804_1982-05-11.tif</td>
+<td>Ausgabe vom 11. Mai 1982</td>
+</tr>
+<tr>
+<td style="text-align: center;">00016805.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">00016806.tif</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">⁞</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Der Erscheinungsverlauf im XML-Format lässt sich in diesem Fall mit folgendem Perl-Script generieren:</p>
+<pre><code class="language-pl">#!/usr/bin/perl
+print &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&quot;;
+print &quot;&lt;course&gt;&lt;processes&gt;\n&quot;;
+while(`ls`=~/\d+?_(\d{4}-\d{2}-\d{2})\.tif/g){
+  print &quot;&lt;process&gt;&lt;title&gt;&lt;appeared issue=\&quot;\&quot; date=\&quot;$1\&quot;/&gt;&lt;/title&gt;&lt;/process&gt;\n&quot;;
+}
+print &quot;&lt;/processes&gt;&lt;/course&gt;\n&quot;;
+</code></pre>
+<p>ⓘ <em>Es wird ein Erscheinungsverlauf mit der Granularität „Ausgaben“ erzeugt. Die verwendete Granularität kann in Kitodo.Production geändert werden.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
