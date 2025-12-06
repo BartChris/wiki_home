@@ -357,12 +357,12 @@
 <p><strong>Innerhalb von:</strong> <code>&lt;course&gt;</code><br />
 <strong>Unter-Elemente:</strong> <code>&lt;process&gt;</code> (0−n×)<br />
 <strong>Attribute:</strong> keine</p>
-<p>Das <code>&lt;processes&gt;</code>-Element enthält die Liste der in Production zu generierenden Prozesse. Es kann <code>&lt;process&gt;</code>-Elemente in beliebiger Anzahl enthalten.</p>
+<p>Das <code>&lt;processes&gt;</code>-Element enthält die Liste der in Production zu generierenden Vorgänge. Das bedeutet, die Granularität der zu generierenden Vorgänge ist im XML explizit gemacht, und nicht in Form einer Eigenschaft angegeben. Sie kann jedoch später in Production geändert werden. Das <code>&lt;processes&gt;</code>-Element kann <code>&lt;process&gt;</code>-Elemente in beliebiger Anzahl enthalten.</p>
 <h2 id="element-process">Element <code>&lt;process&gt;</code></h2>
 <p><strong>Innerhalb von:</strong> <code>&lt;processes&gt;</code><br />
 <strong>Unter-Elemente:</strong> <code>&lt;title&gt;</code> (0−n×)<br />
 <strong>Attribute:</strong> keine</p>
-<p>Jedes <code>&lt;process&gt;</code>-Element repräsentiert einen in Production zu generierenden Prozess. Es kann <code>&lt;title&gt;</code>-Elemente (in beliebiger Anzahl) enthalten.</p>
+<p>Jedes <code>&lt;process&gt;</code>-Element repräsentiert einen in Production zu generierenden Vorgang. Es kann <code>&lt;title&gt;</code>-Elemente (in beliebiger Anzahl) enthalten.</p>
 <h2 id="element-title">Element <code>&lt;title&gt;</code></h2>
 <p><strong>Innerhalb von:</strong> <code>&lt;process&gt;</code><br />
 <strong>Unter-Elemente:</strong> <code>&lt;appeared&gt;</code> (0−n×)<br />
@@ -392,16 +392,17 @@
 <p><strong>Innerhalb von:</strong> <code>&lt;appeared&gt;</code><br />
 <strong>Unter-Elemente:</strong> keine<br />
 <strong>Attribute:</strong> <code>metadataType</code> (verpflichtend), <code>value</code> (verpflichtend), <code>increment</code> (optional)</p>
-<p><code>&lt;metadata&gt;</code> deklariert einen automatisch zählenden Metadatenwert, der dem Vorgang zugewiesen wird, in dem er verwendet wird. Der Zähler beginnt zu zählen, bis er durch einen anderen Zähler ersetzt wird. Ein Zählerwert von <code>""</code> deaktiviert den Zähler.</p>
+<p><code>&lt;metadata&gt;</code> legt eine Vergaberegel für Metadaten fest, die der Ausgabe, in der die Regel deklariert wird, und allen folgenden Ausgaben zugewiesen werden. Es handelt sich um einen Zähler, der optional verschiedene Zählungen umsetzen kann, wenn <code>increment</code> angegeben wurde. Die Vergabe des Metadateneintrags erfolgt, bis die Regel durch eine andere Regel mit dem selben <code>metadataType</code> ersetzt wird. Ein leerer Wert (<code>value=""</code>) deaktiviert die Vergabe ab dort. Mehrere Metadateneinträge mit dem selben <code>metadataType</code> (etwa mehrere Kollektionen) sind aktuell nicht möglich.</p>
 <ul>
 <li>
-<p>Das Attribut <code>metadataType</code> enthält den Namen des Metadatentyps, in den dieser Zähler geschrieben wird.</p>
+<p>Das Attribut <code>metadataType</code> enthält die Schlüssel-ID des Metadaten-Eintrags, in den dieser Zähler geschrieben wird. Die Schlüssel-ID sollte im verwendeten Regelsatz deklariert (<code>&lt;key id="..."&gt;</code>) und, falls Einschränkungen definiert worden sind, auf Ausgabenebene erlaubt (<code>&lt;permit key="..."/&gt;</code>) sein.</p>
 </li>
 <li>
-<p>Das Attribut <code>value</code> enthält den Startwert des Zählers. Es verwendet dieselbe Syntax wie die Funktion <a href="Paginieren#paginierung-f%C3%BCr-fortgeschrittene">Paginierung für Fortgeschrittene</a>.</p>
+<p>Das Attribut <code>value</code> enthält den Metadatenwert bzw. den Startwert des Zählers. Es verwendet dieselbe Syntax wie die Funktion <a href="Paginieren#paginierung-f%C3%BCr-fortgeschrittene">Paginierung für Fortgeschrittene</a>.</p>
 </li>
 <li>
-<p>Das Attribut <code>increment</code> gibt an, wann der Zähler erhöht werden soll. Mögliche Werte sind:</p>
+<p>Das optionale Attribut <code>increment</code> gibt an, wann der Zähler erhöht werden soll. Für statische Metadaten lassen Sie es weg.<br />
+Mögliche Werte sind:</p>
 </li>
 </ul>
 <p><code>issues</code>: Der Zähler wird für jede einzelne Ausgabe erhöht.<br />
@@ -417,11 +418,11 @@
     &lt;process&gt;
       &lt;title&gt;
         &lt;appeared issue=&quot;Spätausgabe&quot; date=&quot;1960-05-01&quot;&gt;
-          &lt;metadata metadataType=&quot;Publisher&quot; value=&quot;Max Muster&quot;/&gt;
-          &lt;metadata metadataType=&quot;IssueNo&quot; value=&quot;1&quot; increment=&quot;issues&quot;/&gt;
+          &lt;metadata metadataType=&quot;EditorInChief&quot; value=&quot;Max Muster&quot;/&gt;
+          &lt;metadata metadataType=&quot;IssueNo&quot; value=&quot;Ausgabe 1&quot; increment=&quot;issues&quot;/&gt;
         &lt;!-- Enthaltene Metadaten:
-               Publisher: Max Muster
-               IssueNo: 1                                                   --&gt;
+               EditorInChief: Max Muster
+               IssueNo: Ausgabe 1                                           --&gt;
         &lt;/appeared&gt;
       &lt;/title&gt;
     &lt;/process&gt;
@@ -433,8 +434,8 @@
              wird sie im Verlauf des Erscheinungsblocks vor der Spätausgabe
              angeordnet.                                                    --&gt;
         &lt;!-- Enthaltene Metadaten:
-               Publisher: Max Muster
-               IssueNo: 2                                                   --&gt;
+               EditorInChief: Max Muster
+               IssueNo: Ausgabe 2                                           --&gt;
       &lt;/title&gt;
     &lt;/process&gt;
     &lt;process&gt;
@@ -447,8 +448,8 @@
                interpretiert, wurden Rückstriche darum gesetzt. Weitere Details
                finden Sie in der Syntaxbeschreibung für Zähler.             --&gt;
         &lt;!-- Enthaltene Metadaten:
-               Publisher: Max Muster
-               IssueNo: 3
+               EditorInChief: Max Muster
+               IssueNo: Ausgabe 3
                TitleAdd: Leben im Blickpunkt                                --&gt;
         &lt;/appeared&gt;
       &lt;/title&gt;
@@ -460,10 +461,11 @@
              zugeordnet.                                                    --&gt;
         &lt;appeared issue=&quot;Frühausgabe&quot; date=&quot;1960-05-04&quot;&gt;
           &lt;metadata metadataType=&quot;TitleAdd&quot; value=&quot;&quot;/&gt;&lt;!-- ab hier gelöscht --&gt;
-          &lt;metadata metadataType=&quot;Publisher&quot; value=&quot;Hans Muster&quot;/&gt;
+          &lt;metadata metadataType=&quot;EditorInChief&quot;
+                    value=&quot;Hans Dampf&quot;/&gt;&lt;!-- ab hier neuer Chefredakteur --&gt;
         &lt;!-- Enthaltene Metadaten:
-               Publisher: Hans Muster
-               IssueNo: 4                                                   --&gt;
+               EditorInChief: Hans Dampf
+               IssueNo: Ausgabe 4                                           --&gt;
         &lt;/appeared&gt;
       &lt;/title&gt;
     &lt;/process&gt;
@@ -474,8 +476,8 @@
              zugeordnet.                                                    --&gt;
         &lt;appeared issue=&quot;Spätausgabe&quot; date=&quot;1960-05-04&quot;/&gt;
         &lt;!-- Enthaltene Metadaten:
-               Publisher: Hans Muster
-               IssueNo: 5                                                   --&gt;
+               EditorInChief: Hans Dampf
+               IssueNo: Ausgabe 5                                           --&gt;
       &lt;/title&gt;
     &lt;/process&gt;
   &lt;/processes&gt;
@@ -548,45 +550,45 @@ print &quot;&lt;/processes&gt;&lt;/course&gt;\n&quot;;
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Dateiname</th>
+<th>Dateiname</th>
 <th>Erläuterung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">00016758_1982-05-10.tif</td>
+<td>00016758_1982-05-10.tif</td>
 <td>Ausgabe vom 10. Mai 1982</td>
 </tr>
 <tr>
-<td style="text-align: center;">00016759.tif</td>
+<td>00016759.tif</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">00016760.tif</td>
+<td>00016760.tif</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">⁞</td>
+<td>     ⁞</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">16803.tif</td>
+<td>00016803.tif</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">00016804_1982-05-11.tif</td>
+<td>00016804_1982-05-11.tif</td>
 <td>Ausgabe vom 11. Mai 1982</td>
 </tr>
 <tr>
-<td style="text-align: center;">00016805.tif</td>
+<td>00016805.tif</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">00016806.tif</td>
+<td>00016806.tif</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: center;">⁞</td>
+<td>     ⁞</td>
 <td></td>
 </tr>
 </tbody>
