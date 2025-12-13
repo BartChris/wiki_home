@@ -270,6 +270,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#seitenauswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenauswahl
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -325,6 +336,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#paginierung-fur-fortgeschrittene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paginierung für Fortgeschrittene
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -355,26 +377,36 @@
 </ul>
 <h3 id="allgemeine-funktionen">Allgemeine Funktionen</h3>
 <p>Die Paginierung wird ansonsten mit den gleichen Elementen und Werten durchgeführt wie in <a href="https://github.com/kitodo/kitodo-production/wiki/Paginieren">Kitodo.Production 2.x</a>. </p>
-<p>Paginierung
+<p><strong>Paginierung</strong>
 * <em>arabisch</em>
 * <em>römisch</em>
 * <em>unnummeriert</em>
 * <em>Freitext</em>
-* <em><a href="https://github.com/kitodo/kitodo-production/wiki/Paginieren#paginierung-f%C3%BCr-fortgeschrittene">Für Fortgeschrittene</a></em></p>
-<p>Paginierungsstartwert
+* <em>alphabetisch</em> [ab Version 4.0]
+* <em>Für Fortgeschrittene</em></p>
+<p><strong>Paginierungsstartwert</strong>
 * <em>Wenn eine Seitenzählung erst mit 5 beginnt, kann hier 5 eingetragen werden</em></p>
-<p>Paginierungsumfang
+<p><strong>Paginierungsumfang</strong>
 * <em>Nur die markierten Seiten</em>: Zuweisung der ausgewählten Zählung auf bestimmte Images
 * <em>Ab der ersten markierten Seite</em>: Zuweisung der ausgewählten Zählung auf alle Images ab einem bestimmten Image</p>
-<p>Zählung
+<p><strong>Zählung</strong>
 * <em>Seitenzählung</em>
 * <em>Spaltenzählung</em>
 * <em>Blattzählung</em>
 * <em>Blattzählung recto-verso</em>
+* <em>Blattzählung verso-recto</em> [ab Version 4.0]
 * <em>Seitenzählung recto-verso</em>
 * <em>Seitenzählung Doppelseiten</em></p>
-<p>Fingierte Paginierung
+<p><strong>Fingierte Paginierung</strong>
 * <em>die ausgewählte Zählung wird in eckigen Klammern dargestellt</em></p>
+<h3 id="seitenauswahl">Seitenauswahl</h3>
+<p>Wenn der <em>Paginierungsumfang</em> auf den Wert <em>"Nur die markierten Seiten"</em> gestellt wurde, werden nur die markierten Seiten paginiert.
+Die Seiten können dafür über verschiedene Wege ausgewählt werden. Einzelne Seiten können durch einen Linksklick im Strukturbaum und der Galerie ausgewählt werden.
+Durch folgende Kombinationen können mehrere Seiten ausgewählt werden:
+- <code>Strg + Linksklick</code> im Strukturbaum oder Galerie fügt die angeklickte Seite zur bestehenden Auswahl hinzu (oder entfernt diese, wenn diese bereits ausgewählt war)
+- <code>Umschalttaste + Linksklick</code> im Strukturbaum oder Galerie wählt alle Seiten zwischen der als erstes und als zweites angeklickten Seite aus, inklusive der beiden angeklickten Seiten (Beim zweiten Klick muss die Umschalttaste/Shift gedrückt gehalten werden).
+- Über das Kontextmenü im Strukturbaum können mit der Option <em>"Zugewiesene Medien auswählen"</em> alle Seite des entsprechenden Strukturelements ausgewählt werden [Ab Version 4.0]
+- Im Paginierungsbereich können die gewünschten Seiten durch markieren der entsprechenden Checkboxen in der Liste aller Seiten ausgewählt werden (Nur Versionen 3.x)</p>
 <h2 id="beispiele">Beispiele</h2>
 <h3 id="bereich-strukturbaum">Bereich Strukturbaum</h3>
 <p><strong>Einfache Paginierung</strong></p>
@@ -385,6 +417,8 @@
 <p><strong>Einfache Paginierung</strong></p>
 <p><img alt="PaginierungGalerieEinfach" src="https://user-images.githubusercontent.com/66619864/170952837-9f75b89e-d78c-4c4f-9943-7efaa21f7992.gif" /></p>
 <h3 id="bereich-paginierung">Bereich Paginierung</h3>
+<p>ℹ️ <em>Die hier gezeigte Seitenauswahl im Paginierungsbereich ist nur in den Versionen 3.x verfügbar.<br />
+Ab Version 4.0 sollten die Seiten über den Strukturbaum oder die Galerie ausgewählt werden. Die Box zur Seitenauswahl im Paginierungsbereich wird mit Version 4.0 entfernt, da Strukturbaum und Galerie erweitert werden und die selben Möglichkeiten bieten.</em></p>
 <p><strong>Paginierung mit Unterbrechungen in der Zählung</strong></p>
 <p>In diesem Beispiel wird die Paginierung von vereinzelten ungezählten Seiten unterbrochen.</p>
 <p><img alt="Paginierung_Unterbrechung" src="https://user-images.githubusercontent.com/66619864/169508205-36348b51-e6bb-4af9-84c4-980dd14aace2.gif" /></p>
@@ -393,6 +427,128 @@
 <p><img alt="Paginierung_Mehrfachauswahl" src="https://user-images.githubusercontent.com/66619864/169549850-92b0cf9b-8412-42d4-9ba4-ccdcc7d50703.gif" /></p>
 <p><strong>Paginierung mit arabischer und römischer Seitenzählung</strong></p>
 <p><img alt="Paginierung-Arabisch-Römisch" src="https://user-images.githubusercontent.com/66619864/169521229-50717932-ea7c-46fc-a55d-a8be7a2eef12.gif" /></p>
+<h2 id="paginierung-fur-fortgeschrittene">Paginierung für Fortgeschrittene</h2>
+<p>Kompliziertere Paginierungen lassen sich mit der Menüfunktion <em>Für Fortgeschrittene</em> erstellen. In einfachen Fällen verhält sich die Paginierung intuitiv, erkennt Wörter, Ziffern, groß- und kleingeschriebene römische Zahlen sowie Doppelseitenpaginierung in beiden Richtungen automatisch.</p>
+<table>
+<thead>
+<tr>
+<th>Beispiel</th>
+<th>Eingabe</th>
+<th>Erwartbare Paginierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ziffer in Klammern</td>
+<td><code>(4)</code></td>
+<td>(4), (5), (6), …</td>
+</tr>
+<tr>
+<td>Wort und Ziffer</td>
+<td><code>Seite 1</code></td>
+<td>Seite 1, Seite 2, Seite 3, …</td>
+</tr>
+<tr>
+<td>Fiktive kleine römische Zahlen</td>
+<td><code>[iii]</code></td>
+<td>[iii], [iv], [v], …</td>
+</tr>
+<tr>
+<td>Spaltenzählung, teils fikitiv</td>
+<td><code>[4] [5] 6</code></td>
+<td>[4] [5] 6, [7] [8] 9, [10] [11] 12, …</td>
+</tr>
+<tr>
+<td>Doppelseitenpaginierung rechts-nach-links</td>
+<td><code>3 2</code></td>
+<td>3 2, 5 4, 7 6, …</td>
+</tr>
+<tr>
+<td>Zahlen überspringen</td>
+<td><code>3 6</code></td>
+<td>3 6, 9 12, 15 18, …</td>
+</tr>
+<tr>
+<td>Gemischte Zahlentypen</td>
+<td><code>[ii] 3</code></td>
+<td>[ii] 3, [iv] 5, [vi] 7, …</td>
+</tr>
+</tbody>
+</table>
+<p>Die Schrittweite des Zählers lässt sich auch explizit durch anhängen einer hochgestellten Ziffer bestimmen. Diese lassen sich durch Buttons oder, je nach Betriebssystem und Tastatureinstellungen durch Tastenkombinationen eingeben:</p>
+<table>
+<thead>
+<tr>
+<th>Zeichen</th>
+<th>Schrittweite</th>
+<th>Button</th>
+<th>QWERTZ, Windows</th>
+<th>Neo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>°</code></td>
+<td>0</td>
+<td><kbd>+0</kbd></td>
+<td><kbd>⇧</kbd> + <kbd>^</kbd></td>
+<td><kbd>⇧</kbd> + <kbd>1</kbd></td>
+</tr>
+<tr>
+<td><code>½</code></td>
+<td>+½</td>
+<td><kbd>+½</kbd></td>
+<td><kbd>Alt</kbd> + (<kbd>1</kbd>, <kbd>7</kbd>, <kbd>1</kbd>)*</td>
+<td><kbd>Mod3</kbd> + <kbd>Tab</kbd>, <kbd>1</kbd>, <kbd>2</kbd></td>
+</tr>
+<tr>
+<td><code>¹</code></td>
+<td>+1</td>
+<td><kbd>+1</kbd></td>
+<td><kbd>Alt</kbd> + (<kbd>0</kbd>, <kbd>1</kbd>, <kbd>8</kbd>, <kbd>5</kbd>)*</td>
+<td><kbd>^</kbd>, <kbd>1</kbd></td>
+</tr>
+<tr>
+<td><code>²</code></td>
+<td>+2</td>
+<td><kbd>+2</kbd></td>
+<td><kbd>AltGr</kbd> + <kbd>2</kbd></td>
+<td><kbd>^</kbd>, <kbd>2</kbd></td>
+</tr>
+<tr>
+<td><code>³</code></td>
+<td>+3</td>
+<td><kbd>+3</kbd></td>
+<td><kbd>AltGr</kbd> + <kbd>3</kbd></td>
+<td><kbd>^</kbd>, <kbd>3</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>*) <kbd>Alt</kbd> gedrückt halten, die Ziffernfolge <em>auf dem Nummernblock</em> eingeben, <kbd>Alt</kbd> loslassen</p>
+<p>Das Zeichen <code>½</code> führt zur halben Schrittweite, das heißt zur doppelten Zählung (für Blattzählung).<br />
+Die Eingabe <code>3½</code> erzeugt die Zählung 3, 3, 4, 4, ….<br />
+Mit dem umgekehrten Fragezeichen (<code>¿</code>) wird das jeweils nachfolgende Zeichen nur auf der zwischengeschobenen Seite ausgegeben.<br />
+Mit dem umgekehrten Rufzeichen (<code>¡</code>) wird das jeweils nachfolgende Zeichen nur auf der eigentlichen Seite ausgegeben.<br />
+Die Eingabe <code>1°¡r¿v½</code> erzeugt die Paginierung 1r, 1v, 2r, 2v, …. (Nach der 1 wird der Zähler noch nicht hochgezählt (sonst bekämen wir 1r, 2v, 4r, 5v, …), am Ende der Sequenz um ½.)<br />
+Um mit einem halben Zählerstand zu beginnen, kann das <code>½</code> auch an den Anfang gestellt werden.<br />
+Die Eingabe <code>½2°¡r¿v½</code> erzeugt die Paginierung 2v, 3r, 3v, ….<br />
+Auch folgendes wäre möglich: <code>1° (¡`Vorder`¿`Rück`seite)½</code> erzeugt 1 (Vorderseite), 1 (Rückseite), 2 (Vorderseite), 2 (Rückseite), …</p>
+<p>Von <em>Accent Graves</em>/<em>Gravis</em> umschlossener Text (z.B. <code>`mil.`</code>, die römische Zahl MIL ≙ 1049) wird als Text verstanden. Dies kann eingesetzt werden, um die Unterseitenzählung enthaltener Werke zu generieren.</p>
+<p><strong>Beispiel:</strong> In einer Publikumszeitschrift ist auf Seite [26] ein elfseitiger Werbeträger eingeklebt (die Rückseite des Werbeträgers ist vollflächig verklebt). Erreicht werden soll folgende Paginierung:</p>
+<ul>
+<li>…</li>
+<li>25</li>
+<li>([26] - [1])</li>
+<li>([26] - 2 3)</li>
+<li>([26] - 4 5)</li>
+<li>([26] - 6 7)</li>
+<li>([26] - 8 9)</li>
+<li>([26] - 10 11)</li>
+<li>27</li>
+</ul>
+<p>Während die Zeile <code>([26] - [1])</code> am einfachsten durch Freitexteingabe erstellt wird, wäre es schön, die folgenden Zeilen automatisch erzeugen zu lassen. Dies kann durch Eingabe des folgenden Textes in das Feld erreicht werden: <code>([`26` - 2 3)</code>. </p>
+<p>Von <em>Acute Accents</em>/<em>Akuten</em> umschlossener Text (z.B. <code>´a´</code>) wird als alphabetische Nummerierung verstanden und erzeugt eine Paginierung nach dem Muster <code>a, b, c, d, …</code>. (Nach <code>z</code> folgen <code>aa, ab, ac, …, zz, aaa, aab, …</code>) [Ab Version 4.0]</p>
+<p>Die Paginierung für Fortgeschrittene kann über den Konfigurationsparameter <code>advancedPaginationEnabled=false</code> ausgeschaltet werden, falls dieses erforderlich ist.</p>
 
 
 
