@@ -330,7 +330,101 @@ beinhaltet Informationen darüber, welche Felder (Titel, Autor, Signatur, ...) b
                 &lt;!-- Titel für Konvolut --&gt;
                 &lt;item from="vorlage" isdoctype="bundle" required="true" ughbinding="true" docstruct="topstruct" metadata="TitleDocMain"&gt;Titel Konvolut&lt;/item&gt;
 
-                &lt;/item&gt;
+                &lt;!-- Urheber --&gt;
+                &lt;item from="vorlage" isdoctype="monograph|multivolume|periodical|manuscript" ughbinding="true" docstruct="topstruct" metadata="ListOfCreators"&gt; Autoren &lt;/item&gt;
+                &lt;!-- Identifikator --&gt;
+                &lt;item from="werk" isnotdoctype="periodical|newspaper" ughbinding="true" metadata="TSL_ATS" docstruct="topstruct"&gt;ATS&lt;/item&gt;
+                &lt;item from="werk" isdoctype="periodical|newspaper" ughbinding="true" metadata="TSL_ATS" docstruct="topstruct"&gt;TSL&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="topstruct" metadata="CatalogIDSource"&gt; PPN analog c-Satz &lt;/item&gt;
+                &lt;item from="werk" isdoctype="multivolume" required="true" ughbinding="true" docstruct="topstruct" metadata="CatalogIDDigital"&gt; PPN digital c-Satz&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="monograph|manuscript" ughbinding="true" docstruct="topstruct" metadata="CatalogIDSource"&gt; PPN analog a-Satz &lt;/item&gt;
+                &lt;item from="werk" isdoctype="monograph|manuscript" required="true" ughbinding="true" docstruct="topstruct" metadata="CatalogIDDigital"&gt; PPN digital a-Satz&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical|newspaper" required="true" ughbinding="true" docstruct="topstruct" metadata="CatalogIDSource"&gt; PPN analog b-Satz &lt;/item&gt;
+                &lt;item from="werk" isdoctype="periodical|newspaper" required="true" ughbinding="true" docstruct="topstruct" metadata="CatalogIDDigital"&gt; PPN digital b-Satz&lt;/item&gt;
+                &lt;item from="werk" isdoctype="periodical|newspaper" ughbinding="true" docstruct="topstruct" metadata="ISSN"&gt; ISSN &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical" ughbinding="true" docstruct="firstchild" metadata="CatalogIDSource"&gt; PPN analog Band &lt;/item&gt;
+                &lt;item from="werk" required="true" isdoctype="periodical" ughbinding="true" docstruct="firstchild" metadata="CatalogIDDigital"&gt; PPN digital Band &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="bundle" required="true" ughbinding="true" docstruct="topstruct" metadata="CatalogIDDigital"&gt;Identifikator Konvolut&lt;/item&gt;
+                &lt;item from="werk" isdoctype="bundle" required="true" ughbinding="true" docstruct="firstchild" metadata="CatalogIDDigital"&gt;Identifikator Mappe&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="newspaper" ughbinding="true" docstruct="topstruct" metadata="CatalogIDPeriodicalDB"&gt;ZDB-ID&lt;/item&gt;
+
+                &lt;!--Informationen für Bände --&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="TitleDocMain"&gt; Titel (Band)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="TitleDocMainShort"&gt; Titel (Band) (Sortierung)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical" ughbinding="true" docstruct="firstchild" metadata="TitleDocMain"&gt; Titel (Band)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical" ughbinding="true" docstruct="firstchild" metadata="TitleDocMainShort"&gt; Titel (Band) (Sortierung)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="ListOfCreators"&gt; Autoren (Band)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="bundle" ughbinding="true" docstruct="firstchild" metadata="TitleDocMain"&gt;Titel (Mappe)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="bundle" required="true" ughbinding="true" docstruct="firstchild" metadata="CurrentNo"&gt;Mappennummer&lt;/item&gt;
+                &lt;item from="vorlage" isnotdoctype="monograph|manuscript|newspaper" ughbinding="true" docstruct="firstchild" metadata="CurrentNo"&gt; Bandnummer &lt;/item&gt;
+                &lt;item from="vorlage" isnotdoctype="monograph|manuscript|bundle|newspaper" required="true" ughbinding="true" docstruct="firstchild" metadata="CurrentNoSorting"&gt; Nummer (Sortierung) &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume|periodical"&gt; Nummer (Benennung) &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="CatalogIDSource"&gt; PPN analog f-Satz &lt;/item&gt;
+                &lt;item from="werk" required="true" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="CatalogIDDigital"&gt; PPN digital f-Satz &lt;/item&gt;
+
+                &lt;!-- Sprache für Zeitungen --&gt;
+                &lt;item from="werk" isdoctype="newspaper" ughbinding="true" docstruct="topstruct" metadata="DocLanguage"&gt;Sprache&lt;/item&gt;
+
+                &lt;!-- Erscheinungsjahr, Erscheinungsort und Verlag --&gt;
+                &lt;item from="vorlage" isdoctype="monograph|multivolume|periodical|newspaper|manuscript" ughbinding="true" docstruct="topstruct" metadata="PlaceOfPublication"&gt; Erscheinungsort &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="monograph|manuscript" ughbinding="true" docstruct="topstruct" metadata="PublicationYear"&gt; Erscheinungsjahr &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical|newspaper|multivolume" ughbinding="true" docstruct="firstchild" metadata="PublicationYear"&gt; Erscheinungsjahr &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="multivolume|periodical" ughbinding="true" docstruct="firstchild" metadata="PublisherName"&gt; Verlag &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="monograph|manuscript|newspaper" ughbinding="true" docstruct="topstruct" metadata="PublisherName"&gt; Verlag &lt;/item&gt;
+
+                &lt;!-- Signatur --&gt;
+                &lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="shelfmarksource"&gt; Signatur &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="monograph|manuscript" ughbinding="true" docstruct="topstruct" metadata="shelfmarksource"&gt; Signatur &lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="periodical" ughbinding="true" docstruct="firstchild" metadata="shelfmarksource"&gt; Signatur &lt;/item&gt;
+
+                &lt;!-- Informationen für Konvolut --&gt;
+                &lt;item from="vorlage" isdoctype="bundle" ughbinding="true" docstruct="firstchild" metadata="shelfmarksource"&gt;Signatur&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="bundle" ughbinding="true" docstruct="topstruct" metadata="slub_ownerOrig"&gt;Besitzende Institution (Vorlage)&lt;/item&gt;
+                &lt;item from="vorlage" isdoctype="bundle" ughbinding="true" docstruct="topstruct" metadata="slub_ownerDigi"&gt;Besitzende Institution (Digitalisat)&lt;/item&gt;
+                &lt;item from="werk" isdoctype="bundle" ughbinding="true" docstruct="firstchild" metadata="slub_ownerOrig"&gt;Besitzende Institution (Vorlage)&lt;/item&gt;
+                &lt;item from="werk" isdoctype="bundle" ughbinding="true" docstruct="firstchild" metadata="slub_ownerDigi"&gt;Besitzende Institution (Digitalisat)&lt;/item&gt;
+
+                &lt;!-- Vorgangstitel --&gt;
+                &lt;processtitle isdoctype="multivolume"&gt;ATS+TSL+'_'+PPN digital f-Satz+'_'+Nummer (Benennung)&lt;/processtitle&gt;
+                &lt;processtitle isdoctype="monograph|manuscript"&gt;ATS+TSL+'_'+PPN digital a-Satz&lt;/processtitle&gt;
+                &lt;processtitle isdoctype="periodical"&gt;TSL+'_'+PPN digital Band+'_'+Nummer (Benennung)&lt;/processtitle&gt;
+                &lt;processtitle isdoctype="bundle"&gt;ATS+TSL+'_'+Identifikator Mappe+'_'+Mappennummer&lt;/processtitle&gt;
+                &lt;processtitle isdoctype="newspaper"&gt;TSL+'_'+PPN digital b-Satz+'-'+#YEAR+#MONTH+#DAY+'_'+#issu&lt;/processtitle&gt;
+                &lt;hide/&gt;
+            &lt;/itemlist&gt;
+            &lt;opac use="true"&gt;
+                &lt;catalogue&gt;SWB&lt;/catalogue&gt;
+            &lt;/opac&gt;
+            &lt;templates use="true"/&gt;
+            &lt;defaultdoctype&gt;monograph&lt;/defaultdoctype&gt;
+            &lt;metadatageneration use="true"/&gt;
+        &lt;/createNewProcess&gt;
+    &lt;/project&gt;
+&lt;/goobiProjects&gt;
+</code></pre>
+<p><strong>Dies sind BEISPIELE!</strong>, um zu demonstrieren, wie diese Datei aussehen kann. Sie kann natürlich auch an die lokalen Bedürfnisse angepasst werden.</p>
+<h2 id="erklarung-zu-den-item-tags">Erklärung zu den item Tags</h2>
+<pre><code>...
+&lt;item from="werk" isnotdoctype="periodical|newspaper" ughbinding="true" metadata="TSL_ATS" docstruct="topstruct"&gt;ATS&lt;/item&gt;
+...
+&lt;item from="vorlage" isdoctype="multivolume" ughbinding="true" docstruct="firstchild" metadata="shelfmarksource"&gt;Signatur&lt;/item&gt;
+</code></pre>
+<ul>
+<li><strong>from</strong>: legt den Ursprung fest. Mögliche Werte sind <em>werk</em> für <a href="https://github.com/kitodo/kitodo-production/wiki/Vorgangsdetails---Werkst%C3%BCckeigenschaft">Werkstückseigenschaften</a> oder <em>vorlage</em> als <a href="https://github.com/kitodo/kitodo-production/wiki/Vorgangsdetails---Physische-Vorlagen">Vorlageneigenschaft</a>. </li>
+<li><strong>isdoctype / isnotdocptype</strong>: damit kann die Anzeige eines Metadatum für bestimmte Dokumenttypen konfiguriert werden. Zum Beispiel: isdoctype="multivolume" → gilt nur für mehrbändige Werke.</li>
+<li><strong>ughbindung</strong>: legt fest, ob der Wert in der Datenbank als Werkstück- oder Vorlageneigenschaft gespeichert wird.</li>
+<li><strong>metadata</strong>: bestimmt das Metadatum aus den <a href="https://github.com/kitodo/kitodo-production/wiki/Regelsatz-XML-Datei">Regelsatz</a>.</li>
+<li><strong>required</strong>: definiert das Feld als Pflichtfeld, das ausgefüllt sein muss, um den Datensatz speichern zu können.</li>
+<li><strong>docstruct</strong>: über die möglichen Werte <em>topstruct</em> und <em>firstchild</em>, wird bestimmt, ob der Wert in das Topelement (Zum Beispiel <em>Zeitschrift</em>) oder erste Kindelement (Zum Beispiel <em>Zeitschriften-Band</em>) der Struktur gespeichert wird</li>
+<li><strong>Wert des item Tags</strong>: dient als Anzeigename in der Eingabemaske beim <a href="https://github.com/kitodo/kitodo-production/wiki/Neuen-Vorgang-anlegen">Anlegen der Vorgänge</a>. In diesem Beispiel: Signatur.</li>
+</ul>
+<p>Weitere Hinweise:</p>
+<p>Soll aus mehreren Werten ausgewählt werden können, so müssen jeweils <em>select</em> Tags innerhalb des <em>item</em> Tags erstellt werden. Neben den Wert des <em>select</em> Tags, der als gespeicherte / genutzter Wert agiert, definiert das <em>label Attribut</em> den Anzeigewert:</p>
+<pre><code>&lt;item from="werk" isdoctype="monograph|manuscript|newspaper" required="true" ughbinding="true" docstruct="topstruct" metadata="slub_script"&gt;Schrifttyp
+    &lt;select label="Antiqua"&gt;Antiqua&lt;/select&gt;
+    &lt;select label="Fraktur"&gt;Fraktur&lt;/select&gt;
+    &lt;select label="keine OCR"&gt;keine_OCR&lt;/select&gt;
+&lt;/item&gt;
 </code></pre>
 
 
