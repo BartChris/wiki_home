@@ -482,6 +482,7 @@
 <li><a href="#13-visuelle-konfiguration">Visuelle Konfiguration</a>  </li>
 </ol>
 <h2 id="1-vorbereitende-schritte">1. Vorbereitende Schritte</h2>
+<p>Die folgenden Schritte setzen teilweise eine Debian-ähnliche Linux-Distribution voraus, also beispielsweise ein aktuelles Debian GNU Linux oder Ubuntu. Tomcat 9 ist nur bei älteren Distributionen dabei, beispielsweise bei Debian bullseye (oldoldstable).</p>
 <h3 id="1a-host-konfiguration-uberprufen">1a) Host-Konfiguration überprüfen</h3>
 <p>Prüfen Sie vor der Installation mit dem Kommando</p>
 <pre><code>sudo hostname -f
@@ -495,8 +496,9 @@
 <h2 id="2-softwarepakete-installieren">2. Softwarepakete installieren</h2>
 <p>Installieren Sie mit der Paketverwaltung Tomcat 9, MariaDB, ImageMagick, LDAP incl. Utils, Samba, den Apache Webserver und den Jakarta Connector. Für die Installation benötigen wir außerdem HTTPS-Unterstützung für Apt, Unzip und das Tool dos2unix. Während der Installation werden Sie nach dem Passwort für den LDAP-Server gefragt. Das Passwort wird von Production unverschlüsselt in der Datenbank gespeichert. Wählen Sie kein wertvolles Passwort.</p>
 <pre><code class="language-sh">sudo apt-get update
-sudo apt-get install tomcat9 mariadb-server imagemagick slapd ldap-utils samba apt-transport-https unzip dos2unix
+sudo apt-get install tomcat9 mariadb-server imagemagick slapd ldap-utils samba unzip dos2unix
 </code></pre>
+<p>Sehr alte Linux-Distributionen (z. B. vor Debian bullseye) benötigten zusätzlich das Paket <code>apt-transport-https</code>.</p>
 <h2 id="3-root-distinguished-name-ermitteln">3. Root Distinguished Name ermitteln</h2>
 <p>Mit dem Kommando</p>
 <pre><code>sudo slapcat
@@ -543,7 +545,7 @@ sudo apt-get install tomcat9 mariadb-server imagemagick slapd ldap-utils samba a
 sudo apt-get install libnss-ldap
 </code></pre>
 <h2 id="5-elasticsearch-installieren">5. ElasticSearch installieren</h2>
-<p>Beachten Sie, dass Sie ElasticSearch Version 7 installieren müssen. </p>
+<p>Beachten Sie, dass Sie ElasticSearch Version 7 oder OpenSearch (s. u.) installieren müssen. </p>
 <pre><code class="language-sh">export JAVA_HOME=/usr/lib/jvm/default-java
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 sudo add-apt-repository &quot;deb https://artifacts.elastic.co/packages/7.x/apt stable main&quot;
@@ -551,6 +553,13 @@ sudo apt-get update
 sudo apt-get install elasticsearch
 sudo systemctl enable elasticsearch
 sudo systemctl start elasticsearch
+</code></pre>
+<p>Seit Kitodo.Production Release 3.8.0 kann statt ElasticSearch auch OpenSearch verwendet werden (siehe auch <a href="https://docs.opensearch.org/latest/install-and-configure/install-opensearch/debian/">Installationsanleitung von OpenSearch</a>):</p>
+<pre><code class="language-sh">curl -fsSL https://artifacts.opensearch.org/publickeys/opensearch-release.pgp  | sudo gpg --dearmor -o /etc/apt/keyrings/opensearch.gpg
+echo &quot;deb [signed-by=/etc/apt/keyrings/opensearch.gpg] https://artifacts.opensearch.org/releases/bundle/opensearch/3.x/apt stable main&quot; | sudo tee /etc/apt/sources.list.d/opensearch-3.x.list
+sudo apt-get update
+export OPENSEARCH_INITIAL_ADMIN_PASSWORD=OpenSearch4Kitodo.Production
+sudo apt-get install opensearch
 </code></pre>
 <h2 id="6-datenbank-vorbereiten">6. Datenbank vorbereiten</h2>
 <p>Während die Digitalisierungsdaten in Dateien auf dem Datenbereitstellungspunkt gespeichert werden, werden die Prozessdaten (Projekte, Mitarbeiter, Fortschritt von Objekten im Workflow usw.) in einer Datenbank gespeichert. Sie müssen eine Datenbank auf dem MariaDB-Server erstellen und den Zugriff für Production konfigurieren.</p>
