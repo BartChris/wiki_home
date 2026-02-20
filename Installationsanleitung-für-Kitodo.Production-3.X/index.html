@@ -710,7 +710,11 @@ TOMCAT_USER ALL=NOPASSWD: CHOWN_METADATA, CHOWN_USERS, CHGRP_USERS
 Ergänzen Sie die Zeile <code>JAVA_OPTS</code>, um dem Tomcat mehr Arbeitsspeicher (4G, davon 256m für den Programmcode) zu geben:</p>
 <pre><code>JAVA_OPTS="-Djava.awt.headless=true -XX:+UseConcMarkSweepGC -Xmx4G -XX:MaxPermSize=256m"
 </code></pre>
-<p>Bearbeiten Sie die Datei <code>/lib/systemd/system/tomcat9.service</code>: Fügen Sie im Abschnitt <code>[Service]</code> die Zeile <code>ReadWritePaths=/usr/local/kitodo/</code> hinzu. (Die Zeile <code>ReadWritePaths=</code> darf wiederholt werden.) Ändern Sie den Wert von <code>NoNewPrivileges</code> auf <code>false</code>.</p>
+<p>Erstellen Sie die Datei <code>/etc/systemd/system/tomcat9.service.d/override.conf</code> mit folgendem Inhalt:</p>
+<pre><code class="language-ini">[Service]
+NoNewPrivileges=false
+ReadWritePaths=/usr/local/kitodo
+</code></pre>
 <p>Starten Sie danach den Tomcat neu:</p>
 <pre><code>sudo systemctl daemon-reload
 sudo service tomcat9 restart
@@ -731,6 +735,15 @@ sudo service tomcat9 restart
     missingok
     nomail
  }
+</code></pre>
+<p>In neueren Ubuntu-Versionen müssen Sie auch für <code>logrotate</code> untypische Verzeichnisse explizit schreibbar schalten. Bearbeiten oder erstellen Sie dazu die Datei <code>/etc/systemd/system/logrotate.service.d/override.conf</code>, beispielsweise wie folgt. Die Anweisung <code>ReadWritePaths=</code> darf wiederholt werden. Hier beispielsweise das Log von Kitodo.Production und Typo3. Wenn die Datei bereits vorhanden ist, müssen Sie sie sinnvoll anpassen.</p>
+<pre><code class="language-ini">[Service]
+ReadWritePaths=/usr/local/kitodo/logs
+ReadWritePaths=/var/www/typo3/var/log
+</code></pre>
+<p>Starten Sie danach den Dienst neu:</p>
+<pre><code>sudo systemctl daemon-reload
+sudo service logrotate restart
 </code></pre>
 <h2 id="13-visuelle-konfiguration">13. Visuelle Konfiguration</h2>
 <p>Sie erreichen die Webanwendung im WWW-Browser unter der Adresse: <code>http://</code><em>host</em><code>:8080/kitodo</code>. Melden Sie sich mit dem Benutzernamen <code>testadmin</code> und dem Passwort <code>test</code> an.</p>
