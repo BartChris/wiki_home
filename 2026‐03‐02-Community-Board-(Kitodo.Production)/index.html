@@ -19,7 +19,7 @@
     
     
       
-        <title>System Architecture - Kitodo Production Documentation</title>
+        <title>2026‐03‐02 Community Board (Kitodo.Production) - Kitodo Production Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-architecture" class="md-skip">
+        <a href="#top-1-auswertung-einschatzung-thomas-low" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              System Architecture
+              2026‐03‐02 Community Board (Kitodo.Production)
             
           </span>
         </div>
@@ -232,97 +232,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data types
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Type
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-transfer-object" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Transfer Object
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uml-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UML Diagram
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modification-of-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modification of data
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filemanagement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FileManagement
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -338,36 +247,104 @@
 
 
 
-<h1 id="system-architecture">System Architecture</h1>
-<p>This documentation is work in progress. Please consult the <a href="https://github.com/kitodo/kitodo-production/wiki/Developer_3.x-Javadoc">Javadoc</a> or <a href="https://maillist.slub-dresden.de/cgi-bin/mailman/listinfo/kitodo-developer">contact the developer team</a>.</p>
-<p>Below you will find some fragments regarding the system architecture of Kitodo.Production.</p>
-<h2 id="data-types">Data types</h2>
-<h3 id="entity">Entity</h3>
-<p>This data type is used for communication with database. There are defined two abstract classes: BaseBean and BaseIndexedBean BaseBean is extended by entities which are stored only in database and by abstract BaseIndexedBean. All beans classes which are stored both in database and index extend BaseIndexedBean class.</p>
-<p><img alt="entity" src="https://user-images.githubusercontent.com/66619864/187025956-3d725ad2-d8d6-41d7-a791-93759ff70d35.png" /></p>
-<h3 id="type">Type</h3>
-<p>This data type is used for communication with ElasticSearch index. All type classes extend BaseType class. Type classes produce JSON objects which are converted to HTTP entities and in that form send to the ES server.</p>
-<p><img alt="type" src="https://user-images.githubusercontent.com/66619864/187025975-ac9270c7-e207-4442-80f8-7893540246d1.png" /></p>
-<h3 id="data-transfer-object">Data Transfer Object</h3>
-<p>This data type is used for communication with frontend. All DTO classes extend BaseDTO class. Only indexed objects have DTO classes (indexed - beans which extend BaseIndexedBean). Data used for them is extracted from JSON objects returned as search results from ES index. All attributes are set up in data service classes (e.g. ProcessService).</p>
-<h3 id="uml-diagram">UML Diagram</h3>
-<p><img alt="uml_diagram" src="https://user-images.githubusercontent.com/66619864/187025991-1d30bc18-90e3-4d9d-bdee-3eddbb47350a.png" /></p>
-<h2 id="modification-of-data">Modification of data</h2>
-<p>Scenario: New column to database was inserted.</p>
-<ol>
-<li>Add new attribute to Entity class (XxxxBean) with get/set methods.</li>
-<li>Write flyway migration.</li>
-<li>Add new JSON key in createDocument method of XxxxType class.</li>
-<li>Adjust test for this method.</li>
-<li>Update mapping for ElasticSearch index.</li>
-<li>Add new attribute to DTO class (XxxxDTO) with get/set methods.</li>
-<li>Add usage of the setter in method convertJSONObjectToDTO of XxxxService class.</li>
-<li>Update frontend page with usage of the new attribute.</li>
-<li>Run application and recreate index (drop mapping, create new mapping, reindex data).</li>
-</ol>
-<h2 id="filemanagement">FileManagement</h2>
-<p>FileManagementInterface is used for file management. It contains two methods: retrieve it takes a file path and returns the file to which this path has pointed. save it takes a file and saves it to the given path and it returns a boolean if saving was successful or not.</p>
-<p><img alt="filemanagement" src="https://user-images.githubusercontent.com/66619864/187026098-0a75c08d-6b9a-40f7-b736-05dc4e6985ad.png" /></p>
+<p><strong>Teilnehmende</strong>: André Hohmann (P), Anja Piller, Armin Möller, Christoph Bartmann, Kerstin Wendt (M), Lole Westedt, Matthias Kissler, Nils Reichert, Thomas Low (Gast)</p>
+<h1 id="top-1-auswertung-einschatzung-thomas-low">TOP 1 Auswertung Einschätzung Thomas Low</h1>
+<p><strong>Vorstellung der Ergebnisse der Einschätzung von Thomas Low bezüglich der Umsetzung der Suche in Kitodo.Production durch Datenbanksuche oder Suchmaschine.</strong>
+* Es stehen drei Möglichkeiten zur Verfügung, um die Suche zu implementieren:
+  * Weg 1: Verbessern des aktuellen Stands durch Scroll-API
+  * Weg 2: Rückkehr zur Suche ausschließlich über den Suchindex (bzw. OpenSearch)
+ * Weg 3: Suche ausschließlich über die Datenbank
+* Einschätzung der bestehenden Suchfunktionen
+  * Für Oder-Verknüpfung existiert keine spezifische Syntax
+    * Dies ist jedoch nicht ausschlaggebend für Entscheidung einer der drei Wege
+    * Es müsste gut dokumentiert sein, dass es benötigt wird, um zu vermeiden, dass die Funktion „aus Versehen“ verloren geht
+  * Anforderungen sollten dauerhaft verfügbar und auffindbar sein
+    * Auf diese sollte man referenzieren können
+    * Es ist derzeit schwierig, die Anordnungen aus den Issues, PR, … abzuleiten
+    * Auch „einfache“ Anforderungen müssen verfügbar sein
+* Präferenz der Anwender eher zur exakten Suche anstatt zu Suchmaschinen-Feature
+  * Erweiterte Suchfunktionen werden bisher nicht angewendet
+  * Es muss berücksichtigt werden, ob auch in Zukunft keine Suchmaschinen-Feature benötigt werden
+  * Bewertung von Suchmaschinen-Funktionen für Kitodo.Production
+    * Skalierbarkeit für viele, lange Texte:
+      * In Kitodo.Production nicht notwendig
+    * Skalierbare Relevanzberechnung: 
+      * In Kitodo.Production nicht notwendig
+      * In Datenbanken nur rudimentär vorhanden
+    * Autovervollständigung
+      * In Kitodo.Production gegebenenfalls sinnvoll; 
+      * kann auch mit Datenbanksuche realisiert werden 
+    * Extraktion von relevanten Textstellen: 
+      * Eher Anwendung für OCR
+      * In Kitodo.Production nicht notwendig
+    * Gewichtung verschiedener Merkmale
+      * In Kitodo.Production nicht notwendig
+    * Unscharfe Suche
+      * In Kitodo.Production gegebenenfalls sinnvoll
+      * Zum Beispiel ein falscher/fehlender Buchstabe
+    * Vektor-(KI)-Suche
+      * In Kitodo.Production gegebenenfalls sinnvoll
+  * Weitere spezifische Suchen
+    * Exakte Suchen/Filter -&gt; Datenbanksuche möglich
+    * In Kitodo.Production entsprechen Kommentare am ehesten einem OCR-Text:
+      * Derzeit nur exakte Suche in Kommentaren möglich
+      * In MariaDB ist nur eine rudimentäre Volltextsuche möglich
+  * Einschätzung Community Board:
+    * Es wird überwiegend die Anwendung der exakten Suche benötigt
+  * Aspekt der Reihenfolge der Filter-Kriterien
+    * Die Einschränkungen (nur abgeschlossene Vorgänge) werden erst nach der Suche angewendet; daher ist die Suche nicht schneller, als nach allen Vorgängen
+  * Entkoppeln Berechnung und Anzeige von Treffern
+    * Wenn möglich, sollte in Kitodo.Production die Berechnung der Treffer von der Anzeige der Treffer entkoppelt werden
+      * Berechnung der Anzahl der Treffer
+      * Berechnung der Anzahl der Trefferseiten
+      * -&gt; Die Anzeige der ersten 100 Vorgänge wird sofort angezeigt
+ * Spezifische Themen/Fragen
+    * Aktualisierung der Trefferlisten
+      * In Elasticsearch ist es möglich, einen Snapshot zu erstellen, so dass die Trefferlisten gleich bleiben, auch wenn andere Personen Vorgänge modifizieren
+        * Das ist in Kitodo.Production nicht notwendig
+    * Frage Christoph
+      * Tokenisierung (Signaturen)
+        * Low: In Datenbanken wird es vermutlich nicht funktionieren
+        * Low: Alternative wäre doppelte Wildcard-Suche – vermutlich kein Unterschied der Performance von Datenbank und Elasticsearch
+      * Derzeit keine explizite <em>-Suche (Trunkierung) möglich – wird automatisch angewendet
+        * Ansonsten könnte man die </em>-Suche manuell durchführen, so dass jeder entscheiden kann, wie gesucht wird
+      * Anwendungsfall Signatur
+        * Leerzeichen soll nicht getrennt werden
+  * Fazit
+    * Die Anwendung der Datenbanksuche ist ein konsequenter Schritt; es wäre sinnvoll, die Datenbanksuche zumindest testweise zu implementieren
+      * Weg 1 ist nicht zu empfehlen
+        * Ohne Elasticsearch werden viele administrative Aufgaben entfallen
+        * Es müssten ansonsten zum Beispiel Versions-Updates durchgeführt werden, obwohl Elasticsearch nicht angewendet wird
+      * Weg 2:
+        * Man müsste auch für diesen Weg weitere Anforderungen erheben
+        * Vor Einführung der HibernateSearch war Elasticsearch nicht ideal eingebunden
+      * Weg 3:
+        * Nachteile
+          * Mit Hibernate können nicht alle Datenbanken unterstützt werden
+            * Lösungen müssten für einzelne Datenbanken programmiert und bei allen Tests berücksichtigt werden
+          * Gegebenenfalls 2-3 Sekunden Wartezeit
+    * Christoph: Auch auf Basis der Datenbank sind spätere Optimierungen nicht grundsätzlich ausgeschlossen:
+      * Zum Beispiel: Vorgangsstatus (aktiv/inaktiv) und weitere Informationen könnten mit in der der Volltextspalte indexiert werden um die Geschwindigkeit der Abfragen zu erhöhen</p>
+<p><strong>Einschätzungen</strong>
+  * Anja
+    * Können Verbesserungspotentiale im Rahmen einer Masterarbeit ermittelt werden?
+      * Kerstin: Eher darauf verzichten, weil weitere Anforderungen auch ausgewertet werden müssten – statt dessen eher eine Lösung implementieren und dann Lücken ermitteln
+  * Christoph
+    * Beide Lösungen wären möglich
+    * Nur kleinere Anpassungen notwendig wie Signatursuche (doppelte Wildcard)
+    * Es wäre besser, wenn die Wildcard explizit angewendet werden muss (Zum Beispiel mit *), um die Performance einschätzen zu können (bisher wird immer rechts trunkiert)
+  * Gesamt
+    * Das Community Board empfiehlt den Weg 3 für eine Test-Umsetzung
+    * Mögliche Nachteile werden in Kauf genommen
+    * Bisher ist in Kitodo.Production schon fast eine Datenbanksuche umgesetzt
+    * Die weitere Untersuchung sollte in der Technikrunde besprochen und geprüft werden
+      * Komplizierte Suchen
+      * Suchen auf großen Datenmengen
+    * Kerstin Wendt erstellt Terminumfrage für Techniker-Runde</p>
+<h1 id="top-2-nachstes-treffen">TOP 2 Nächstes Treffen</h1>
+<p>Nächstes CB 2026-04-14 10:00-11:30: 
+* Protokoll: Anja Piller 
+* Moderation und Protokollentwurf: André Hohmann</p>
 
 
 
