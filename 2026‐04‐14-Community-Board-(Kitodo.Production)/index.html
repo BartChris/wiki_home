@@ -253,12 +253,12 @@
 <li><a href="https://github.com/kitodo/kitodo-production/issues/6925">Actions from dropdown are executed for all processes instead of selected ones #6925</a></li>
 <li>Fachliche Abstimmung: Das CB unterstützt das Gleichziehen mit dem üblichen Vorgehen (=Auswahl der gewünschten Treffermengen) vor der Erzeugung von Excellisten</li>
 <li>Vereinfachung der Struktur von Zeitungsvorgängen möglich und sinnvoll? (https://github.com/kitodo/kitodo-production/issues/4362#issuecomment-4075640603)</li>
-<li>Der hier vorgeschlagene Verzicht auf die schon vor langer Zeit implementierten Möglichket - das Aggregieren von mehreren Ausgaben (Tag, Monat, Quartal...) in einem Vorgang  (siehe auch <a href="https://raw.githubusercontent.com/wiki/kitodo/kitodo-production/Zeutschel_Doku/TS-1090_TechnInfo_Zeitungsdigital.pdf">Zeutscheldokumentation der aktuellen Möglichkeiten</a>) ist für das CB naheliegend wegen der DDB-Vorgaben. André wird den Kontakt zu Matthias Ronge aufnehmen, um die vorgeschlagene Vereinfachung in ein passendes Issue zu bringen und ggf. noch Detailfragen klären.</li>
-<li>weiteres Problem: Monat / Tag wird nicht mit TYPE und ORDERLABEL in die logische structmap des Issues eingetragen. Grundproblem: Kitodo kann beim Export des Issues nicht auf gesicherte Informationen zu Monat und Tag zugreifen. Ziel: feste Strukturtypen samt ORDERLABEL für Monate und Tag in die mets-Datei des Issues schreiben - abgeleitet aus der Jahresdatei? </li>
-<li>Christoph wird ein weiteres Issue formulieren, dass Kitodo beim Export bei nicht weiter typisierten Strukturelementen niemals anreichert mit Pflichtfeldern/Presets aus Dropdown usw.</li>
+<li>Der hier vorgeschlagene Verzicht auf die schon vor langer Zeit implementierten Möglichket - das Aggregieren von mehreren Ausgaben (Tag, Monat, Quartal...) in einem Vorgang  (siehe auch <a href="https://raw.githubusercontent.com/wiki/kitodo/kitodo-production/Zeutschel_Doku/TS-1090_TechnInfo_Zeitungsdigital.pdf">Zeutscheldokumentation der aktuellen Möglichkeiten</a>) - ist für das CB naheliegend wegen der DDB-Vorgaben mit einem Vorgang pro Ausgabe. André wird den Kontakt zu Matthias Ronge aufnehmen, um die vorgeschlagene Vereinfachung in ein passendes Issue zu bringen und ggf. noch Detailfragen klären. Siehe hier <a href="https://github.com/kitodo/kitodo-production/issues/4362#issuecomment-4243358729">aktuellen Kommentar</a> von André.</li>
+<li>weiteres Problem: Monat / Tag wird nicht mit TYPE und ORDERLABEL in die logische structmap des Issues eingetragen. Grundproblem: Kitodo kann beim Export des Issues nicht auf gesicherte Informationen zu Monat und Tag zugreifen. Ziel: feste Strukturtypen samt ORDERLABEL für Monate und Tag in die mets-Datei des Issues schreiben - zukünftig abgeleitet aus der Jahresdatei? </li>
+<li>Christoph wird ein weiteres Issue formulieren, dass Kitodo beim Export bei nicht weiter typisierten Strukturelementen niemals anreichert mit processtiteln als Metadatum/Pflichtfeldern/Presets aus Dropdown usw. - siehe auch <a href="https://github.com/kitodo/kitodo-production/pull/6931">PR</a></li>
 <li>kurzer Bericht zum Austausch mit der UB Bielefeld, die in einem Testlauf mit Kinderbüchern ganz direkt ChatGPT beauftragen, Digitalisate für den Metadateneditor zu strukturieren</li>
-<li>über Skript aus Goobi werden 10 Bilder eines Vorgangs übergeben und mit passendem Prompt zum Strukturieren - Ergebnis: flache Hierarchie im METS-Format</li>
-<li>Christophs Einschätzung: geeignet für Vorstrukturierung - aber eher nicht für ernstzunehmenden Strukturbaum; Zwischenebene einziehen? unbedingt flankierend Strukturierung im Metadateneditor in der UI verbessern</li>
+<li>über Skript aus Goobi werden 10 Bilder eines Vorgangs übergeben mit passendem Prompt zum Strukturieren und anschließender Transformation in eine meta.xml - Ergebnis: flache Hierarchie im Strukturbaum</li>
+<li>Christophs Einschätzung: geeignet für Vorstrukturierung - aber eher nicht für ernstzunehmenden Strukturbaum; als Zwischenebene einziehen in Kitodo3? unbedingt flankierend Strukturierung im Metadateneditor in der UI verbessern</li>
 <li><a href="https://github.com/kitodo/kitodo-production/discussions/6963">Former post form values are now get values #6963</a> - Wollen/Können wir uns dazu äußern und eine Einschätzung formulieren, um die Entwickler/Administratoren zu unterstützen? </li>
 <li>CB begrüßt das Feature für komfortable temporäre Abstimmung  - Rückbau sollte unbedingt vermieden werden; Vorteile überwiegen!</li>
 <li>Beitrag auf der Mitgliederversammlung - final noch zu klären</li>
@@ -282,7 +282,7 @@
 <li>KatalogReImport in Masse</li>
 </ul>
 <h1 id="nachstes-treffen">Nächstes Treffen</h1>
-<p>Nächstes CB 2026-05-?? Kerstin macht Terminumfrage 
+<p>Nächstes CB 2026-05-13 14:30 - 16:00 
 * Protokoll: Anja 
 * Moderation und Protokollentwurf: Kerstin </p>
 
