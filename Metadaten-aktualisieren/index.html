@@ -1,0 +1,407 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Metadaten aktualisieren - Kitodo Production Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#funktionalitat-und-vorgehen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kitodo Production Documentation" class="md-header__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kitodo Production Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Metadaten aktualisieren
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kitodo Production Documentation" class="md-nav__button md-logo" aria-label="Kitodo Production Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kitodo Production Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funktionalitat-und-vorgehen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionalität und Vorgehen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen-fur-metadaten-aktualisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voraussetzungen für Metadaten-Aktualisierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importkonfigurationen-fur-bestehende-vorgange-erganzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importkonfigurationen für bestehende Vorgänge ergänzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importkonfigurationen für bestehende Vorgänge ergänzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importkonfiguration-fur-einzelne-vorgange-setzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importkonfiguration für einzelne Vorgänge setzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importkonfiguration-als-listenfunktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importkonfiguration als Listenfunktion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Metadaten aktualisieren</h1>
+
+<blockquote>
+<p>[!Note]
+Verfügbar ab Kitodo.Production <a href="https://github.com/kitodo/kitodo-production/releases/tag/kitodo-production-3.8.0">3.8.0</a></p>
+</blockquote>
+<h2 id="funktionalitat-und-vorgehen">Funktionalität und Vorgehen</h2>
+<p>Vorgangsmetadaten, die über eine Suchschnittstelle nach Kitodo.Production importiert wurden, können über eine Schaltfläche im Metadaten-Editor aktualisiert werden:</p>
+<p><img width="1491" alt="Bildschirmfoto 2024-09-24 um 15 57 31" src="https://github.com/user-attachments/assets/061e0f57-c7c1-4836-affc-899f59d95753"></p>
+<p>Dies löst einen Re-Import der Metadaten anhand des gleichen Identifiers über die gleiche Suchschnittstelle aus und vergleicht das Ergebnis der erneuten Suchabfrage mit den bereits in Kitodo hinterlegten Metadaten. Bei diesem Vergleich festgestellte Unterschiede werden dem Nutzenden in einem Popup-Dialog präsentiert:</p>
+<p><img width="1502" alt="Bildschirmfoto 2024-09-24 um 15 59 02" src="https://github.com/user-attachments/assets/b676f5ba-fb4f-4ac8-bb2e-78de95a3751b"></p>
+<p>Die erste Spalte enthält dabei zunächst das Label des Metadatums, bei dem Unterschiede festgestellt wurden. Die mittlere Spalte zeigt die Werte, die aktuell in dem Kitodo-Vorgang vorhanden sind. In der rechten Spalte werden die durch die erneute Suchabfrage an die Katalogschnittstelle erhaltenen Werte zum Vergleich aufgelistet. </p>
+<p>Der Nutzende hat nun die Möglichkeit, anhand der Pfeile zwischen der zweiten und dritten Spalte individuell für jedes Metadatum zu entscheiden, ob die in Kitodo bereits vorhandenen Werte beibehalten oder mit den vom Katalog erhaltenen Metadaten ersetzt oder ergänzt werden sollen. Die Werte, die zur Übernahme ausgewählt sind, werden zur besseren Erkennbarkeit in schwarzer Schrift dargestellt, während die zu verwerfenden Werte ausgegraut werden. Zusätzlich zeigt der Pfeil auf die Werte, die übernommen werden sollen. </p>
+<p>Durch Klicken auf den Pfeil kann zwischen diesen drei Optionen durchgeschaltet werden:</p>
+<p>https://github.com/user-attachments/assets/4766f168-ddd0-4484-b2d9-2420bada43ad</p>
+<h2 id="voraussetzungen-fur-metadaten-aktualisierung">Voraussetzungen für Metadaten-Aktualisierung</h2>
+<p>Um die Metadaten-Aktualisierung nutzen zu können, müssen die folgenden Bedingungen erfüllt sein:
+- der Nutzende muss über mindestens eine Rolle die Berechtigung "<strong>Metadaten aktualisieren</strong>" haben
+- dem Vorgang muss eine Importkonfiguration vom Typ <code>Katalogsuche</code> zugewiesen sein, die die Quelle für die ursprüngliche und erneute Katalogabfrage definiert; Informationen zu Importkonfigurationen finden Sie <a href="https://github.com/kitodo/kitodo-production/wiki/Projektauswahl-und-Katalogsuche#import-konfigurationen">hier</a>.
+- der Vorgang muss einen eindeutigen Identifier in einem Metadatum enthalten, das im aktuellen Regelsatz als <code>recordIdentifier</code> konfiguriert wurde; dieser Identifier wird benötigt, um den gleichen Datensatz in der Katalogschnittstelle identifizieren und erneut laden zu können. Weitere Informationen zu "Funktionalen Metadaten" wie <code>recordIdentifier</code> sind <a href="https://github.com/kitodo/kitodo-production/wiki/Regelsatz-3.x#schl%C3%BCssel-mit-besonderer-verwendung">hier</a> zu finden.</p>
+<p>Ist die erste Bedingung nicht erfüllt, wird der Knopf zum Aktualisieren der Metadaten nicht angezeigt. Falls die Berechtigung zum Aktualisieren der Metadaten vorhanden ist, eine der letzten beiden Bedingungen aber nicht erfüllt wurde, wird der Knopf angezeigt, bleibt jedoch inaktiv:</p>
+<p><img width="123" alt="Bildschirmfoto 2024-09-24 um 16 05 26" src="https://github.com/user-attachments/assets/fc3df8e6-5356-4f55-bf35-0ae5c54fbb4b"></p>
+<h2 id="importkonfigurationen-fur-bestehende-vorgange-erganzen">Importkonfigurationen für bestehende Vorgänge ergänzen</h2>
+<p>Vorgänge, die mit Kitodo.Production 3.8 oder später erstellt wurden, bekommen automatisch die Importkonfiguration zugewiesen, auf deren Grundlage sie erzeugt wurden. Für Bestandsvorgänge, die vor einem Update auf Kitodo.Production 3.8 entstanden sind, können Importkonfigurationen nachträglich entweder einzeln oder als Listenfunktion gesetzt werden.</p>
+<h3 id="importkonfiguration-fur-einzelne-vorgange-setzen">Importkonfiguration für einzelne Vorgänge setzen</h3>
+<p>Für einzelne Vorgänge kann die Importkonfiguration über die Bearbeitungsmaske des Vorgangs im Reiter "Vorgangsdetails" direkt gesetzt werden:</p>
+<p><img width="1495" height="530" alt="Bildschirmfoto 2026-04-29 um 09 44 15" src="https://github.com/user-attachments/assets/891ea5ee-e716-4e53-aa5c-d6cae8884a0a" /></p>
+<h3 id="importkonfiguration-als-listenfunktion">Importkonfiguration als Listenfunktion</h3>
+<p>Über das "Aktionen"-Menü in der Vorgangsliste kann mithilfe der Option "Importkonfiguration setzen" die Importkonfiguration für alle ausgewählten Vorgänge auf einmal gesetzt werden:</p>
+<p><img width="365" alt="Bildschirmfoto 2024-09-24 um 16 10 57" src="https://github.com/user-attachments/assets/6e4a07e6-7802-4f9f-9b50-152dd42e9b11"></p>
+<p>Beim Klick auf diese Option erscheint ein Popup-Dialog, der die Auswahl der zu setzenden Importkonfiguration ermöglicht:</p>
+<p><img width="473" alt="Bildschirmfoto 2024-09-24 um 16 11 25" src="https://github.com/user-attachments/assets/7e4cfe50-6f1e-4bc0-b5e4-1060bc2f6198"></p>
+<p><strong>Hinweis</strong>: Zur Verwendung der Listenfunktion wird die Berechtigung "<strong>Importkonfiguration setzen</strong>" benötigt.</p>
+<p><strong>Hinweis 2:</strong> Aufgrund von technischen Einschränkungen der in Kitodo.Production verwendeten Suchindex-Software ist die Ausführung von Listenfunktionen wie "Importkonfiguration setzen" derzeut auf maximal 10.000 Vorgänge gleichzeitig beschränkt (siehe https://github.com/kitodo/kitodo-production/issues/6466)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
