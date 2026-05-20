@@ -1234,7 +1234,8 @@ Für Zeitungsvorgänge gilt hier noch die Besonderheit, dass die Bildungsanweisu
 * <code>editable</code>: Der Metadatenschlüssel kann so eingestellt werden, dass er nicht bearbeitet werden kann. Er wird dann angezeigt, ist aber für Änderungen gesperrt. Dies ist beispielsweise für Werte geeignet, die nach dem Import nicht geändert werden sollen.
 * <code>excluded</code>: Der Metadatenschlüssel wird nicht angezeigt, auch wenn er einen Wert hat. Dadurch können Metadateneinträge vor dem Bearbeiter ausgeblendet werden.
 * <code>filterable</code>: Diese Einstellung funktioniert nur im Zusammenhang mit Metadatenschlüsseln, die mehrere Optionen haben und über eine Einfach- oder Mehrfachauswahl ausgewählt werden können. Wenn die Filterung eingeschaltet ist, dann wird über der Auswahl ein Filter angezeigt, um die auszuwählenden Einträge zu filtern. Die Filterung vergleicht dazu das jeweilige Label der Option mit dem eingegebenen Filtertext und zeigt danach nur noch die Optionen an, welche mit dem Filtertext beginnen. Groß- und Kleinschreibung spielt dabei keine Rolle. Standardmäßig ist diese Option deaktiviert und muss explizit aktiviert werden.
-* <code>multiline</code>: Dadurch wird das Eingabefeld vergrößert. Für einige Metadateneinträge ist viel Text erforderlich, beispielsweise Abstracts. Bei Auswahlfeldern wird anstelle einer Dropdown-Auswahl eine Listenauswahl angezeigt.</p>
+* <code>multiline</code>: Dadurch wird das Eingabefeld vergrößert. Für einige Metadateneinträge ist viel Text erforderlich, beispielsweise Abstracts. Bei Auswahlfeldern wird anstelle einer Dropdown-Auswahl eine Listenauswahl angezeigt.
+* <code>reimport</code>: Legt fest, ob der Metatadatenwert bei einem Metadatenreimport aktualisiert (<code>replace</code>), ein bestehender Wert beibehalten (<code>keep</code>) oder der neue Wert bei einem wiederholbaren Feld zusätzlich importiert (<code>add</code>) wird. Ohne Angabe werden bestehende Werte aktualisiert.</p>
 <p>Die Bearbeitungseinstellungen werden in einem dritten Hauptteil des Regelsatzes, <code>&lt;editing&gt;</code>, definiert:</p>
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
 &lt;ruleset xmlns=&quot;http://names.kitodo.org/ruleset/v2&quot;&gt;
@@ -1247,11 +1248,11 @@ Für Zeitungsvorgänge gilt hier noch die Besonderheit, dass die Bildungsanweisu
     &lt;/correlation&gt;
 
     &lt;editing&gt;
-        &lt;setting key=&quot;title&quot; alwaysShowing=&quot;true&quot;/&gt;
-        &lt;setting key=&quot;origCatalogId&quot; editable=&quot;false&quot;/&gt;
-        &lt;setting key=&quot;origImportXmlData&quot; excluded=&quot;true&quot;/&gt;
-        &lt;setting key=&quot;abstract&quot; multiline=&quot;true&quot;/&gt;
-        &lt;setting key=&quot;digitalCollection&quot; filterable=&quot;true&quot;/&gt;
+        &lt;setting key=&quot;title&quot; alwaysShowing=&quot;true&quot; reimport=&quot;replace&quot;/&gt;
+        &lt;setting key=&quot;origCatalogId&quot; editable=&quot;false&quot; reimport=&quot;keep&quot;/&gt;
+        &lt;setting key=&quot;origImportXmlData&quot; excluded=&quot;true&quot; reimport=&quot;keep&quot;/&gt;
+        &lt;setting key=&quot;abstract&quot; multiline=&quot;true&quot;/&gt; &lt;!-- wird o. A. bei einem Reimport ersetzt --&gt;
+        &lt;setting key=&quot;digitalCollection&quot; filterable=&quot;true&quot; reimport=&quot;add&quot;/&gt;
     &lt;/editing&gt;
 &lt;/ruleset&gt;
 </code></pre>
