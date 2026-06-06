@@ -286,6 +286,16 @@
 <p>After that the <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/examples/debugging.html">Maven Failsafe Plugin</a> listen at port <code>5005</code> for the connection to your debugger.</p>
 <p><code>[INFO] Listening for transport dt_socket at address: 5005</code></p>
 <p>Once your debugger is connected, the execution will continue. Please do not forget to set the breakpoint beforehand. :wink:</p>
+<h2 id="execution-single-selenium-based-tests">Execution single Selenium based tests</h2>
+<p>Precondition: Running Selenium based tests through maven (<code>mvn verify -Pselenium</code>) are working.</p>
+<p>Running a single Selenium based test class can be executed in this way</p>
+<pre><code>mvn verify -Pselenium -pl Kitodo -Dit.test=ListingQueryParameterST 
+</code></pre>
+<p>The command above will run the <code>ListingQueryParameterST</code> Selenium based test class as an integration test (<code>-Dit.test</code>) inside the <code>Kitodo</code> module (<code>-pl</code>) with an activated Selenium profile (<code>-Pselenium</code>) in the Maven <code>verify</code> phase.</p>
+<p>Running a single test from a whole Selenium based class is even possible</p>
+<pre><code>mvn verify -Pselenium -pl Kitodo -Dit.test=ListingQueryParameterST#listTasksFromUrlParametersTest
+</code></pre>
+<p>With the additional <code>#&lt;method name&gt;</code> - in this case <code>listTasksFromUrlParametersTest</code> you are only run this particular test.</p>
 
 
 
