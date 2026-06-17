@@ -260,6 +260,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#xml-validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML-Validierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#suchfelder" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -342,6 +353,10 @@
 - <code>Katalogsuche</code>: dies entspricht den bisherigen Katalogimporten, bei denen öffentlich zugängliche Suchschnittstellen zur Abfrage von Metadaten angesprochen werden; entspricht <code>&lt;catalog&gt;</code>-Einträgen in der <code>kitodo_opac.xml</code> <em>ohne</em> <code>&lt;fileUpload&gt;true&lt;/fileUpload&gt;</code>.
 - <code>Dateiupload</code>: hierbei handelt es sich um Katalogkonfigurationen, bei denen Metadaten nicht durch das Abfragen von Suchschnittstellen, sondern über vom lokalen Rechner hochgeladene XML-Dateien importiert werden. Dies entspricht <code>&lt;catalogue&gt;</code>-Einträgen in der <code>kitodo_opac.xml</code> <em>mit</em> <code>&lt;fileUpload&gt;true&lt;/fileUpload&gt;</code>
 - <code>Vorlagenvorgang</code>: Import-Konfigurationen von diesem Typ erlauben es dem Benutzer, einen bestehenden Vorgang als Vorlage zur Übernahme von Metadaten für das Anlegen neuer Vorgänge festzulegen</p>
+<h3 id="xml-validierung">XML-Validierung</h3>
+<p>Ab Kitodo.Production 4.0 werden die XML-Daten, die bei einer Katalogabfrage von der entsprechenden Suchschnittstelle zurückgeliefert werden, gegen ihre entsprechenden Schema-Definitionen validiert. Tritt bei der Validierung ein Fehler auf, wird der Metadatenimport abgebrochen und eine entsprechende Fehlermeldung angezeigt. </p>
+<p>Da Kitodo-Nutzende im Normalfall keine Kontrolle über die Beschaffenheit der importierten XML-Daten, besteht in der Regel keine Möglichkeit, die Ursache für potentielle Validierungsfehler im abgefragten Katalog oder einer anderen externen Quelle selbst zu beheben. Um eine Verwendung der Daten in einem solchen Fall nicht zu verhindern, besteht für solche Fälle die Möglichkeit, die XML-Validierung in der dazugehörigen Importkonfiguration zu deaktivieren. Dies wird über einen Schalter in der Bearbeitungsmaske von Importkonfigurationen kontrolliert:</p>
+<p><img width="1499" height="auto" alt="Bildschirmfoto 2026-06-16 um 10 34 12" src="https://github.com/user-attachments/assets/ddbfd976-d457-4366-9085-8cd12eada6d6" /></p>
 <h3 id="suchfelder">Suchfelder</h3>
 <p>Import-Konfigurationen vom Typ <code>Katalogsuche</code> benötigen Suchfelder, die bei der Anfrage an die Suchschnittstelle verwendet werden. Diese können über die Liste "Suchfelder" hinzugefügt werden.</p>
 <p><img width="1435" alt="Bildschirmfoto 2022-06-24 um 15 36 45" src="https://user-images.githubusercontent.com/19183925/175547280-e39b3fca-8936-41a6-9893-f13310f44d38.png"></p>
