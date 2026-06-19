@@ -708,7 +708,7 @@ TOMCAT_USER ALL=NOPASSWD: CHOWN_METADATA, CHOWN_USERS, CHGRP_USERS
 <h2 id="11-tomcat-konfigurieren">11. Tomcat konfigurieren</h2>
 <p>Passen Sie die Default-Einstellungen des Tomcat, <code>/etc/default/tomcat10</code> an:
 Ergänzen Sie die Zeile <code>JAVA_OPTS</code>, um dem Tomcat mehr Arbeitsspeicher (4G, davon 256m für den Programmcode) zu geben:</p>
-<pre><code>JAVA_OPTS="-Djava.awt.headless=true -XX:+UseConcMarkSweepGC -Xmx4G -XX:MaxPermSize=256m"
+<pre><code>JAVA_OPTS="-Djava.awt.headless=true -Xmx4G -XX:MaxMetaspaceSize=256m"
 </code></pre>
 <p>Erstellen Sie die Datei <code>/etc/systemd/system/tomcat10.service.d/override.conf</code> mit folgendem Inhalt:</p>
 <pre><code class="language-ini">[Service]
