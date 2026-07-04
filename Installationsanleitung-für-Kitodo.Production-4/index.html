@@ -545,10 +545,10 @@ sudo apt-get install tomcat10 mariadb-server imagemagick slapd ldap-utils samba 
 sudo apt-get install libnss-ldap
 </code></pre>
 <h2 id="5-elasticsearch-installieren">5. ElasticSearch installieren</h2>
-<p>Beachten Sie, dass Sie ElasticSearch Version 7 oder OpenSearch (s. u.) installieren müssen. </p>
+<p>Beachten Sie, dass Sie ElasticSearch Version 8 oder OpenSearch ab Version 2 (s. u.) installieren müssen. </p>
 <pre><code class="language-sh">export JAVA_HOME=/usr/lib/jvm/default-java
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-sudo add-apt-repository &quot;deb https://artifacts.elastic.co/packages/7.x/apt stable main&quot;
+sudo add-apt-repository &quot;deb https://artifacts.elastic.co/packages/8.x/apt stable main&quot;
 sudo apt-get update
 sudo apt-get install elasticsearch
 sudo systemctl enable elasticsearch
@@ -701,7 +701,7 @@ sudo /bin/chown -R $User &quot;$Source&quot;
 
 Cmnd_Alias CHOWN_METADATA = /bin/chown -R * /usr/local/kitodo/metadata/*
 Cmnd_Alias CHOWN_USERS = /bin/chown * /usr/local/kitodo/users/*
-Cmnd_Alias CHGRP_USERS = /bin/chgrp tomcat9 /usr/local/kitodo/users/*
+Cmnd_Alias CHGRP_USERS = /bin/chgrp tomcat /usr/local/kitodo/users/*
 
 TOMCAT_USER ALL=NOPASSWD: CHOWN_METADATA, CHOWN_USERS, CHGRP_USERS
 </code></pre>
@@ -720,7 +720,7 @@ ReadWritePaths=/usr/local/kitodo
 sudo service tomcat10 restart
 </code></pre>
 <p>Installieren Sie die Webanwendung:</p>
-<pre><code>sudo cp kitodo-4.0.0.war /var/lib/tomcat9/webapps/kitodo##4.0.0.war
+<pre><code>sudo cp kitodo-4.0.0.war /var/lib/tomcat10/webapps/kitodo##4.0.0.war
 </code></pre>
 <h2 id="12-logrotation-konfigurieren">12. Logrotation konfigurieren</h2>
 <p>Erstellen Sie die Datei <code>/etc/logrotate.d/kitodo</code> z.B. mit folgendem Inhalt:</p>
