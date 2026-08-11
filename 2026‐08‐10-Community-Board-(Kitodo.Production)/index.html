@@ -302,17 +302,26 @@
 <p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller , Armin Möller (M), Christoph Bartmann (P), Kerstin Wendt , Lole Westedt , Matthias Kissler, Nils Reichert</p>
 <h2 id="doku-vorschlag-daniel-opitz">Doku-Vorschlag Daniel Opitz</h2>
 <ul>
-<li>TN Opitz an Community Board vrsl. im September</li>
+<li>TN Opitz und Arved Solth an Community Board vrsl. im September um Vorschlag für eine HTML-Version der Github-Doku zu diskutieren. (Technische Machbarkeit und Governance)</li>
+<li>Angestrebt wird, die Dokumentation und Möglichkeiten ihrer verbesserten Präsenation (und Bearbeitung) im Rahmen eines Community-Treffens mit der gesamten Kitodo-Community zu diskutieren.</li>
 </ul>
 <h2 id="rest-api">Rest-Api</h2>
+<p>https://github.com/kitodo/kitodo-production/issues/6954
+- In Zusammenarbeit mit dem Release-Management und auf Basis der Vorschläge des StaBi Berlin wurde eine Priorisierung erarbeitet. Das Release-Management erarbeitet eine Vorschlag für den Entwicklungsauftrag.</p>
 <h2 id="verschiedenes">Verschiedenes</h2>
 <ul>
-<li>https://github.com/kitodo/kitodo-production/issues/7165 "Alle Treffer": Skripte werden nicht ausgeführt, sobald auch nur ein Treffer aus der Liste abgewählt wird</li>
-<li>Stand Tiffwriter.conf-Datei</li>
+<li>https://github.com/kitodo/kitodo-production/issues/7165 "Alle Treffer": Skripte werden nicht ausgeführt, sobald auch nur ein Treffer aus der Liste abgewählt wird
+-&gt; Dies ist ein Bug in der Implementierung, für den es einen ersten Pull Request gibt. (https://github.com/kitodo/kitodo-production/pull/7166)</li>
+<li>Stand Tiffwriter.conf-Datei
+-&gt; Bislang konnte keine nutzende Bibliothek für das tiffwriter.conf-Feature identifiziert werden. Das Community Board empfiehlt die Entfernung des Features.</li>
 <li>Anfragen an Community Board:</li>
-<li>Rename blacklist to denylist: https://github.com/kitodo/kitodo-production/pull/7149#issuecomment-5180212318</li>
-<li>Deactivating the option to set the ruleset of a process: https://github.com/kitodo/kitodo-production/issues/4941#issuecomment-5191869224</li>
+<li>Rename blacklist to denylist: https://github.com/kitodo/kitodo-production/pull/7149#issuecomment-5180212318 
+-&gt; Das Community Board unterstützt die Umbenennung.</li>
+<li>Deactivating the option to set the ruleset of a process: https://github.com/kitodo/kitodo-production/issues/4941#issuecomment-5191869224
+(Warnung notwendig, wenn sich die Einstellungen widersprechen. Soll aber weiter zugelassen werden)</li>
 </ul>
+<p>-&gt; Das Community-Board identifiziert Szenarien, in denen eine Änderung des Rulesets eines Vorgangs weiterhin notwendig ist. (U.a. bei der Migration von Altdaten). Dabei können im Ergebnis Eltern- und Kindvorgang auch ein unterschiedliches Ruleset referenzieren. 
+Das Board empfiehlt bei Änderung des Rulesets eines Kind- oder Elternvorgang die Vorgänge in der Hierarchie zu prüfen und bei abweichenden Ruleset-Einstellungen eine Warnung auszugeben. Eine Änderung des Rulesets sollte auch bei einer entsprechenden Warnung immer möglich sein. </p>
 <h2 id="nachstes-treffen">Nächstes Treffen</h2>
 <ul>
 <li>Moderation Christoph</li>
