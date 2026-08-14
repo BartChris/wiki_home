@@ -459,11 +459,11 @@
 <p>To implement another web service processor, you have to implement a class which extends ActiveMQProcessor and implements its abstract void process(MapMessage). Here is the right place to do whatever your processor is intended to do. There is a class MapMessageObjectReader which shall be used to type safe retrieve complex objects from MapMessages. You must add your new class to the “services” variable of ActiveMQDirector then.</p>
 <p>The Kitodo server administrator shall be in control which processors are being started, and which queue names they listen on. Implementation of this configurability is designed this way: The implementing class must pass its queue name to the constructor of the parent class. This is done by implementing the constructor like in the following skeleton. If the queue name is not configured, it will return null which will prevent the ActiveMQDirector from registering it to the server. Inside the class, the queue name is available in the global variable “queueName” which is set by the parent class. The implementation may use arbitrary “activeMQ.myService.*” entries in goobi_config.properties for configuration.</p>
 <h3 id="service-processor-skeleton-sample">Service processor skeleton sample</h3>
-<pre><code>package org.goobi.mq.processores;
+<pre><code>package org.kitodo.production.interfaces.activemq;
 
-import org.goobi.mq.*;
-import de.sub.goobi.config.ConfigCore;
-import de.sub.goobi.helper.enums.ReportLevel;
+import org.kitodo.production.interfaces.activemq.*;
+import org.kitodo.config.ConfigCore;
+import org.kitodo.production.enums.ReportLevel;
 
 public class MyServiceProcessor extends ActiveMQProcessor {
 
@@ -484,7 +484,7 @@ public class MyServiceProcessor extends ActiveMQProcessor {
 <p>Kitodo.Production is equipped with a web service interface to automatically create new processes based on a given template. This allows the digitization process to be initiated from outside the application, for example by assigning a new digital ID to a record in a library catalogue (or—at choice of the library—by duplicating a record and assigning a new digital ID to the duplicate) and then running a script.</p>
 <p>The web service infrastructure is providet by an Active MQ server (see http://activemq.apache.org/ for details) which needs to be downloaded and started. Without further configuration, it provides everything necessary on port 61616 of the machine in question.</p>
 <p>The “activeMQ.hostURL” must be set in goobi_config.properties to point to this server. The “activeMQ.createNewProcess.queue” must be set to point to a queue of your choice where Kitodo.Production shall pick up orders to create new processes.</p>
-<p>Orders must be javax.jms.MapMessage objects with the following key-value-pairs provided:</p>
+<p>Orders must be jakarta.jms.MapMessage objects with the following key-value-pairs provided:</p>
 <pre><code>String template
     name of the process template to use
 String opac
@@ -512,7 +512,7 @@ Map&lt;String, String&gt; userFields (optional)
 </ul>
 <h3 id="mainjava">Main.java</h3>
 <pre><code>import java.util.*;
-import javax.jms.*;
+import jakarta.jms.*;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 public class Main {
@@ -572,7 +572,7 @@ public class Main {
 <p>For simplified use of ActiveMQ, a Docker image and a Java client are available here. (see https://github.com/slub/kitodo-production-activemq)</p>
 <h3 id="finalizestep-queue">FinalizeStep Queue</h3>
 <p>The <code>activeMQ.finaliseStep.queue</code> parameter must be commented out in <code>kitodo_config.properties</code> or added with value <code>KitodoProduction.FinalizeStep.Queue</code>.</p>
-<p>Message must be javax.jms.MapMessage objects with the following key-value-pairs provided:</p>
+<p>Message must be jakarta.jms.MapMessage objects with the following key-value-pairs provided:</p>
 <pre><code>String id
     ID of the step to close (do not mix up with the process ID)
 Map&lt;String, String&gt; properties (optional)
@@ -582,7 +582,7 @@ String message
 </code></pre>
 <h3 id="taskaction-queue">TaskAction Queue</h3>
 <p>The <code>activeMQ.taskAction.queue</code> parameter must be commented out in <code>kitodo_config.properties</code> or added with value <code>KitodoProduction.TaskAction.Queue</code>.</p>
-<p>Message must be javax.jms.MapMessage objects with the following key-value-pairs provided:</p>
+<p>Message must be jakarta.jms.MapMessage objects with the following key-value-pairs provided:</p>
 <pre><code>Integer id
    Identifier of the task
 String message
