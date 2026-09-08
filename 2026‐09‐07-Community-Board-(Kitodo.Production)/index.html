@@ -19,7 +19,7 @@
     
     
       
-        <title>2026‐08‐10 Community Board (Kitodo.Production) - Kitodo Production Documentation</title>
+        <title>2026‐09‐07 Community Board (Kitodo.Production) - Kitodo Production Documentation</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2026‐08‐10 Community Board (Kitodo.Production)
+              2026‐09‐07 Community Board (Kitodo.Production)
             
           </span>
         </div>
@@ -248,10 +248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rest-api" class="md-nav__link">
+  <a href="#zukunft-der-entwickler-dokumentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rest-Api
+        Zukunft der "Entwickler"-Dokumentation
       
     </span>
   </a>
@@ -259,10 +259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verschiedenes" class="md-nav__link">
+  <a href="#mogliche-themen-furs-nachste-treffen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verschiedenes
+        mögliche Themen fürs nächste Treffen
       
     </span>
   </a>
@@ -270,10 +270,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nachstes-treffen" class="md-nav__link">
+  <a href="#nachstes-treffen-0510-1330-1500" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nächstes Treffen
+        Nächstes Treffen 05.10. 13.30 - 15.00
       
     </span>
   </a>
@@ -297,35 +297,36 @@
 
 
 
-  <h1>2026‐08‐10 Community Board (Kitodo.Production)</h1>
+  <h1>2026‐09‐07 Community Board (Kitodo.Production)</h1>
 
-<p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller , Armin Möller (M), Christoph Bartmann (P), Katharina Gart , Kerstin Wendt (E), Matthias Kissler</p>
+<p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller, Armin Möller, Christoph Bartmann (M), Katharina Gart , Kerstin Wendt (P), Matthias Kissler - Gast: Daniel Opitz</p>
 <h2 id="doku-vorschlag-daniel-opitz">Doku-Vorschlag Daniel Opitz</h2>
 <ul>
-<li>TN Opitz und Arved Solth an Community Board vrsl. im September um Vorschlag für eine HTML-Version der Github-Doku zu diskutieren. (Technische Machbarkeit und Governance)</li>
-<li>Angestrebt wird, die Dokumentation und Möglichkeiten ihrer verbesserten Präsenation (und Bearbeitung) im Rahmen eines Community-Treffens mit der gesamten Kitodo-Community zu diskutieren.</li>
+<li>GitHub kein guter Ort für die Präsentation der Anwenderdokumentation vor allem wegen der engen Grenzen für Strukturierung der Themen und wegen der fehlenden gezielten Durchsuchbarkeit</li>
+<li>Vorschlag: Weiterarbeit an den Einzelseiten in GitHub in Verbindung mit Nutzung des Tools <a href="https://zensical.org/">Zensical</a> als static site generator. Die Grundlage für die Struktur der Website ist dazu in einer Markdown-Datei zu konfigurieren und anzupassen (s. https://github.com/danielopitz/kitodocs/blob/main/_nav.md). Die Verlinkung innerhalb der Dokumentation bleibt konsistent und das Tool ist in der Lage nicht funktionierende Links aufzudecken. Das Bauen der Site ist im Umfeld von GitHub möglich nach Aufsetzen eines neuen Repos "Documentation". Das CB möchte diesen Weg gehen und Ergebnis beim Anwendertreffen vorstellen und Brauchbarkeit abfragen. </li>
+<li>Beim Praxistreffen wurde stark das Fehlen eines WYSIWYG Editors moniert. Eine einfache technische Lösung gibt es nicht, wenn man eine Verortung im GitHub beibehalten will. Einschätzung im CB: Oftmals spielen die lokalen Anwenderdokumentationen mit konkreten Vorgaben eine größere Rolle als diese Anwenderdokumentation. Eine Verbesserung des Qualitätslevels ist wahrscheinlich am ehesten über eine bessere Organisation zu erreichen: Konkrete Verantwortlichkeiten für Teilbereiche, Abgabe von Textdateien beim CB anbieten, Beteiligung an Diskussionen und Schreiben von Issues vermitteln. Infoseite dazu schreiben und über ein Community Treffen dazu ins Gespräch kommen. </li>
+<li>Einschätzung von Daniel zu offenen Punkten in der systembibl. Dokumentation: Probleme ergeben sich am ehesten bei sehr spezifischen Details. Er vermisst am meisten gute Beispielen für Regelsatz und xslt zum Export. Die vorhandenen Beispiele sind entweder zu einfach oder zu komplex. Relevantes Thema für CB / Vorstand: Wie erreichen wir eine "Plug and Play-Umgebung" mit Beispielregelsatz/Export.xsl für DDB-Akzeptanz?</li>
 </ul>
-<h2 id="rest-api">Rest-Api</h2>
-<p>https://github.com/kitodo/kitodo-production/issues/6954
-- In Zusammenarbeit mit dem Release-Management und auf Basis der Vorschläge des StaBi Berlin wurde eine Priorisierung erarbeitet. Das Release-Management erarbeitet eine Vorschlag für den Entwicklungsauftrag.</p>
-<h2 id="verschiedenes">Verschiedenes</h2>
+<h2 id="zukunft-der-entwickler-dokumentation">Zukunft der "Entwickler"-Dokumentation</h2>
 <ul>
-<li>https://github.com/kitodo/kitodo-production/issues/7165 "Alle Treffer": Skripte werden nicht ausgeführt, sobald auch nur ein Treffer aus der Liste abgewählt wird
--&gt; Dies ist ein Bug in der Implementierung, für den es einen ersten Pull Request gibt. (https://github.com/kitodo/kitodo-production/pull/7166)</li>
-<li>Stand Tiffwriter.conf-Datei
--&gt; Bislang konnte keine nutzende Bibliothek für das tiffwriter.conf-Feature identifiziert werden. Das Community Board empfiehlt die Entfernung des Features.</li>
-<li>Anfragen an Community Board:</li>
-<li>Rename blacklist to denylist: https://github.com/kitodo/kitodo-production/pull/7149#issuecomment-5180212318 
--&gt; Das Community Board unterstützt die Umbenennung.</li>
-<li>Deactivating the option to set the ruleset of a process: https://github.com/kitodo/kitodo-production/issues/4941#issuecomment-5191869224
-(Warnung notwendig, wenn sich die Einstellungen widersprechen. Soll aber weiter zugelassen werden)</li>
+<li>Nebenthema: Installationsdokumentation war nicht ausreichend brauchbar - von SBB wesentlich erweitert im Zuge der eigenen Installation von Kitodo 4</li>
+<li>Diskussion zu https://github.com/kitodo/kitodo-production/pull/7175</li>
+<li>alte Entwicklerdoku zu löschen in jedem Falle richtige Entscheidung!!</li>
+<li>Diskurs: nach Ansicht von Christoph Bartman sind Dokumentationsthemen wie Java-Version als Teil des Codes zu organisieren über PRs - weiterer Bedarf nicht zwingend für ihn erkennbar. Universelle Entscheidungen dann doch eher in den Bereich des Wikis <a href="https://github.com/kitodo/kitodo-production/wiki/Hinweise-f%C3%BCr-Entwickler">"Hinweise für Entwickler"</a> ?</li>
+<li>Aufnahme des Austausches mit Stefan Weil spätestens beim Praxistreffen</li>
 </ul>
-<p>-&gt; Das Community-Board identifiziert Szenarien, in denen eine Änderung des Rulesets eines Vorgangs weiterhin notwendig ist. (U.a. bei der Migration von Altdaten). Dabei können im Ergebnis Eltern- und Kindvorgang auch ein unterschiedliches Ruleset referenzieren. 
-Das Board empfiehlt bei Änderung des Rulesets eines Kind- oder Elternvorgang die Vorgänge in der Hierarchie zu prüfen und bei abweichenden Ruleset-Einstellungen eine Warnung auszugeben. Eine Änderung des Rulesets sollte auch bei einer entsprechenden Warnung immer möglich sein. </p>
-<h2 id="nachstes-treffen">Nächstes Treffen</h2>
+<h2 id="mogliche-themen-furs-nachste-treffen">mögliche Themen fürs nächste Treffen</h2>
 <ul>
-<li>Moderation Christoph</li>
-<li>Protokoll Kerstin</li>
+<li>Dokuthemen mit Arved - Matthias versucht Einladung</li>
+<li>Metadatenupdate</li>
+<li><a href="https://github.com/kitodo/kitodo-production/wiki/Themensammlung-Community-Board">Themensichtung allg.</a></li>
+<li>Zeitungsthemen  - CB versucht sich an einem Issue auf Basis eines zurückliegenden Diskurses in kleiner Runde</li>
+<li>Verfeinerung der Idee zu einem nächsten Community-Treffen: Dokumentation / Version 4 - Erfahrungen</li>
+</ul>
+<h2 id="nachstes-treffen-0510-1330-1500">Nächstes Treffen 05.10. 13.30 - 15.00</h2>
+<ul>
+<li>Moderation: Kerstin</li>
+<li>Protokoll: Matthias Kissler</li>
 </ul>
 
 
