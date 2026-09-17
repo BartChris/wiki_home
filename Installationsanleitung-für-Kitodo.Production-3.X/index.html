@@ -725,6 +725,7 @@ sudo service tomcat9 restart
 <h2 id="12-logrotation-konfigurieren">12. Logrotation konfigurieren</h2>
 <p>Erstellen Sie die Datei <code>/etc/logrotate.d/kitodo</code> z.B. mit folgendem Inhalt:</p>
 <pre><code class="language-logrotate">/usr/local/kitodo/logs/kitodo.log {
+    su tomcat tomcat
     copytruncate
     daily
     rotate 7
