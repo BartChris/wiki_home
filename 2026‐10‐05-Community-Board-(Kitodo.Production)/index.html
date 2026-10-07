@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#themen-fur-diese-sitzung" class="md-skip">
+        <a href="#themen-in-dieser-sitzung" class="md-skip">
           Skip to content
         </a>
       
@@ -237,10 +237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#themen-fur-diese-sitzung" class="md-nav__link">
+  <a href="#themen-in-dieser-sitzung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Themen für diese Sitzung
+        Themen in dieser Sitzung
       
     </span>
   </a>
@@ -248,10 +248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#weitere-mogliche-themen-fur-dieses-treffen" class="md-nav__link">
+  <a href="#mogliche-themen-fur-das-nachste-treffen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        weitere mögliche Themen für dieses Treffen
+        mögliche Themen für das nächste Treffen
       
     </span>
   </a>
@@ -288,32 +288,49 @@
 
   <h1>2026‐10‐05 Community Board (Kitodo.Production)</h1>
 
-<p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller, Armin Möller, Christoph Bartmann, Katharina Gart, Kerstin Wendt (M), Lole Westedt, Matthias Kissler (P), Nils Reichert - Gast: Arved Solth ab 14.30</p>
-<h2 id="themen-fur-diese-sitzung">Themen für diese Sitzung</h2>
+<p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller, Armin Möller (E), Christoph Bartmann, Katharina Gart (E), Kerstin Wendt (M/P), Lole Westedt (E), Matthias Kissler, Nils Reichert (E) - Gast: Arved Solth ab 14.30</p>
+<h2 id="themen-in-dieser-sitzung">Themen in dieser Sitzung</h2>
 <ul>
-<li>Masterarbeit initiieren - nach Barcampdiskurs in Köln: automatische Erschließung im Metadatenedior mit KI-Werkzeugen ausloten (Start mit erzeugtem Volltext oder Übergabe des Scans an multimodales KI-Modell? Evaluierung der Qualität bei verschiedenen Modellen usw.)</li>
-<li><a href="https://github.com/kitodo/kitodo-production/discussions/7250">Diskurs zu den Zeitungs-Ausgaben</a> bzw. <a href="https://github.com/kitodo/kitodo-production/pull/7249">Ticket mit den abgestimmten Anforderungen</a></li>
-<li>Diskurs zur Fortführung der sog. Properties s.a. <a href="https://github.com/kitodo/kitodo-production/pull/7258">Pull request</a> </li>
-<li>Dokuthemen mit Arved </li>
-<li>Allgemein: Weiterarbeit an den Einzelseiten in GitHub in Verbindung mit Nutzung des Tools <a href="https://zensical.org/">Zensical</a> als static site generator. Die Grundlage für die Struktur der Website ist dazu in einer Markdown-Datei zu konfigurieren und anzupassen (s. https://github.com/danielopitz/kitodocs/blob/main/_nav.md). Die Verlinkung innerhalb der Dokumentation bleibt konsistent und das Tool ist in der Lage nicht funktionierende Links aufzudecken. Das Bauen der Site ist im Umfeld von GitHub möglich nach Aufsetzen eines neuen Repos "Documentation". Das CB möchte diesen Weg gehen und Ergebnis beim Anwendertreffen vorstellen und Brauchbarkeit abfragen. </li>
-<li>Einschätzung von Daniel zu offenen Punkten in der systembibl. Dokumentation: Probleme ergeben sich am ehesten bei sehr spezifischen Details. Er vermisst am meisten gute Beispielen für Regelsatz und xslt zum Export. Die vorhandenen Beispiele sind entweder zu einfach oder zu komplex. Relevantes Thema für CB / Vorstand: Wie erreichen wir eine "Plug and Play-Umgebung" mit Beispielregelsatz/Export.xsl für DDB-Akzeptanz?</li>
+<li><strong>Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs</strong></li>
+<li>Christoph stellt sein vielversprechendes Ergebnis für einen historischen Druck mit mittelkomplexer Struktur inkl. Zweispaltigkeit vor. Er zeigt auch kurz den dahinterliegenden Prompt, der die Scans direkt verarbeitet hat.</li>
 <li>
-<p>Entwicklerdoku? ( Diskurs: nach Ansicht von Christoph Bartman sind Dokumentationsthemen wie Java-Version als Teil des Codes zu organisieren über PRs - weiterer Bedarf nicht zwingend für ihn erkennbar. Universelle Entscheidungen dann doch eher in den Bereich des Wikis <a href="https://github.com/kitodo/kitodo-production/wiki/Hinweise-f%C3%BCr-Entwickler">"Hinweise für Entwickler"</a> ?)</p>
-</li>
-<li></li>
-</ul>
-<h2 id="weitere-mogliche-themen-fur-dieses-treffen">weitere mögliche Themen für dieses Treffen</h2>
+<p>erste Gedanken zu einer Einbindung in Kitodo.Production: </p>
 <ul>
-<li>TSL/ATS: https://github.com/kitodo/kitodo-production/discussions/6479</li>
-<li>Tiffwriter.conf - https://github.com/kitodo/kitodo-production/issues/7099</li>
+<li>als skriptgesteuernten Prozess in den Workflow integrieren - vergleichbar zum OCR-Thema</li>
+<li>Ergebnisse nicht direkt in die meta.xml schreiben - das Ergebnis aus der KI im JSON-Format ausgeben lassen, als Option im Metadateneditor visualieren lassen mit der Möglichkeit, das Ergebnis zu verwerfen und vollständig selbst tätig zu werden bei der Strukturierung</li>
+<li>Wie gut die LLMs mit Hierarchien in der Kapitelgestaltung umgehen können, gilt es auszuprobieren. Alternativ könnte man die Kapitel in flacher Hierarchie aufnehmen lassen und die Hierarchie dann über den Metadateneditor zügig umsetzen. Korrekturen an verunglückten Hierarchien erscheinen aufwändiger. </li>
+<li>Bei den vorzugebenden Strukturelementen ggf. auch stark vereinfacht vorgehen mit "Abschnitt".</li>
+<li>Die Übergabe von vorhandenen Metadaten zum Objekt (Dokumenttyp, Sprache, Erscheinungsjahr, Schrifttyp) verbessert ggf. das Ergebnis </li>
+<li>Welches Modell reicht aus für unser Anliegen? Mit kleinem Modell starten - trainieren mit vorhandenen Daten (Groundtruth)</li>
+<li>Konkrete (mehr technische) Fragestellungen ggf. unterstützend von Masterarbeit an HAW Hamburg bearbeiten lassen? (z.B. Welches Level an LLM wird benötigt?)</li>
+<li>Einbindung der AnwenderInnen und ihrer Erwartung aus der täglichen Praxis (Community-Treffen?)</li>
+</ul>
+</li>
+<li>
+<p><strong>Dokuthemen mit Arved besprochen</strong></p>
+</li>
+<li>Transformation der Anwenderdokumentation in GitHub zu einer durchsuchbaren Website (Idee von Daniel Opitz): Weiterarbeit an den Einzelseiten in GitHub in Verbindung mit Nutzung des Tools <a href="https://zensical.org/">Zensical</a> als static site generator. Die Grundlage für die Struktur der Website ist dazu in einer Markdown-Datei zu konfigurieren und anzupassen (s. https://github.com/danielopitz/kitodocs/blob/main/_nav.md). Die Verlinkung innerhalb der Dokumentation bleibt konsistent und das Tool ist in der Lage nicht funktionierende Links aufzudecken. </li>
+<li>
+<p>Arved unterstützt den Vorschlag uneingeschränkt. Christoph organisiert Verabredung mit Arved und Daniel zur konkreten Umsetzung.</p>
+</li>
+<li>
+<p><strong>Wege zur Aufgabe von überholten Features?</strong> </p>
+</li>
+<li>In der Sitzung wurde von André eine <a href="https://github.com/kitodo/kitodo-production/wiki/Liste-der-Funktionen-mit-unklarer-Anwendung">Liste</a> mit bekannten Features, die überholt oder mittlerweile problematisch sind, zusammengestellt und mit ihrem jeweiligen Status kommentiert. </li>
+<li>Frage: Welches Feature sollte als erstes angegangen werden?</li>
+<li>Wege der Kommunikation zur "Abkündigung": Praxistreffen, Community-Liste, Wiki, Elements</li>
+<li>Beim Zeitungsthema (Abschaffung der möglicherweise nie genutzten Aggregationsmöglichkeiten bei den Vorgängen) ist ggf. noch das Migrationsthema zu bedenken für Vorgänge, die zwar als Einzelvorgang angelegt wurden - aber die überflüssige Datenstruktur mit den Zwischenebenen aufweisen - siehe <a href="https://github.com/kitodo/kitodo-production/discussions/7250">Gesamtschau des Problems von Christoph</a></li>
+</ul>
+<h2 id="mogliche-themen-fur-das-nachste-treffen">mögliche Themen für das nächste Treffen</h2>
+<ul>
 <li>Metadatenupdate</li>
 <li><a href="https://github.com/kitodo/kitodo-production/wiki/Themensammlung-Community-Board">Themensichtung allg.</a></li>
 <li>Verfeinerung der Idee zu einem nächsten Community-Treffen: Dokumentation / Version 4 - Erfahrungen</li>
 </ul>
 <h2 id="nachstes-treffen">Nächstes Treffen</h2>
 <ul>
-<li>Moderation: Matthias Kissler</li>
-<li>Protokoll: </li>
+<li>Moderation: ??</li>
+<li>Protokoll: ??</li>
 </ul>
 
 
