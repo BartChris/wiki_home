@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mogliche-themen-in-dieser-sitzung" class="md-skip">
+        <a href="#automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-skip">
           Skip to content
         </a>
       
@@ -237,10 +237,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mogliche-themen-in-dieser-sitzung" class="md-nav__link">
+  <a href="#automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mögliche Themen in dieser Sitzung
+        Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausbau-von-uberholten-features-zeitungen-untypisierte-elemente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beauftragungen-sbb-pk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beauftragungen SBB-PK
       
     </span>
   </a>
@@ -252,6 +274,17 @@
     <span class="md-ellipsis">
       
         Nächstes Treffen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflektion-der-impulse-aus-dem-barcamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflektion der Impulse aus dem Barcamp
       
     </span>
   </a>
@@ -277,23 +310,107 @@
 
   <h1>2026‐11‐16 Community Board (Kitodo.Production)</h1>
 
-<p><strong>Teilnehmende</strong>: André Hohmann, Anja Piller, Armin Möller, Christoph Bartmann, Katharina Gart, Kerstin Wendt (M), Matthias Kissler (P), Nils Reichert -</p>
-<h2 id="mogliche-themen-in-dieser-sitzung">Mögliche Themen in dieser Sitzung</h2>
+<p><strong>Teilnehmende</strong>: André Hohmann (P), Anja Piller, Armin Möller, Christoph Bartmann, Katharina Gart, Kerstin Wendt (M), Lole Westedt, Matthias Kissler (E), Nils Reichert (bis 14:30) (P)</p>
+<h2 id="automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms">Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs</h2>
 <ul>
-<li><strong>Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs</strong></li>
-<li>neue Gedanken / Erkenntnisse? - siehe auch bisherige Überlegungen aus der <a href="https://github.com/kitodo/kitodo-production/wiki/2026%E2%80%9010%E2%80%9005-Community-Board-%28Kitodo.Production%29">letzten Sitzung</a></li>
-<li><strong>Ausbauen von [überholgen Features] (https://github.com/kitodo/kitodo-production/wiki/Liste-der-Funktionen-mit-unklarer-Anwendung): Zeitungsfeature als erstes angehen? Nächste Schritte für das Abschaffung der möglicherweise nie genutzten Aggregationsmöglichkeiten bei den Vorgängen?</strong></li>
-<li><strong>Metadatenupdate in Masse</strong></li>
-<li><strong><a href="https://github.com/kitodo/kitodo-production/wiki/Themensammlung-Community-Board">Themensichtung allg.</a></strong></li>
-<li><strong>Verfeinerung der Idee zu einem nächsten Community-Treffen: Dokumentation / Version 4 - Erfahrungen</strong></li>
-<li><strong>Reflektion der Impulse aus dem Barcamp:</strong> 
-<img width="2154" height="2807" alt="Kitodo.Production Anwenderrunde" src="https://github.com/user-attachments/assets/9507d2ab-6c9d-496a-86f1-278f5341e7fa" />
-<img width="2081" height="2785" alt="Verschieben von Bildern zwischen Vorgängen" src="https://github.com/user-attachments/assets/61cc1141-b569-4c0c-85bd-828fc29a0aa2" /></li>
+<li>
+<p>siehe Notizen aus der <a href="https://github.com/kitodo/kitodo-production/wiki/2026%E2%80%9010%E2%80%9005-Community-Board-%28Kitodo.Production%29">letzten Sitzung</a></p>
+</li>
+<li>
+<p>Fortschritte bei Christoph Bartmann und Kerstin Wendt</p>
+</li>
+<li>Christoph hatte dies in Mannheim auf dem Kitodo-Praxistreffen für einen alten Druck vorgestellt</li>
+<li>Kerstin hat mit „Drucksachen der Bürgerschaft“ (200.000 Seiten) experimentiert<ul>
+<li>Das Vorgehen mit der Vorlage von Christoph und mehreren Änderungen war nicht erfolgreich. </li>
+<li>Der Schlüssel war ein Artikel von Daniel van Strien. Danach wurde mit korrekten Vorbildern (Bilddateien mit Erklärung) angelernt. Anschließend konnte Claude die Sachen (bis auf wenige Ausnahmen, wo auch das Fehlen einer Vorlage gemeldet wurde) sehr gut verarbeiten.</li>
 </ul>
+</li>
+</ul>
+<p>Mit welchen freien/lokalen Modellen kann gearbeitet werden. Christoph hatte gute Ergebnisse mit Qwen.</p>
+<p>Offene Fragen: 
+- welche sind gute Ausgabeformate? 
+  - bisher wurde mit flachem JSON gearbeitet, das die Strukturhierarchie und Metadaten enthält.
+- Wie können aus Kitodo heraus Prompts erstellt werden?
+  - Wird zunächst zurückgestellt
+- Wird eine Verarbeitung in Batches durch Kitodo verwaltet?
+- Wie werden Ergebnisse gegen das Ruleset validiert?
+- Wie lässt sich die Zeit, die das Generieren von Strukturdaten benötigt stark verringern?</p>
+<p>Austauschformate
+- Als Gesamtergebnis oder pro Bild
+- Ggf. noch einmal durch LLM konvertiert
+- Grundsätzlich sollte der Umgang von Kitodo mit den resultiernden Dateien möglichst analog zum Vorgehen bei der OCR sein
+- Die technische Umsetzung ginge auf Basis einer klar vorgegebene Ordnerstruktur
+- Ein Vorschlag wird nach der Analyse abgelegt und dann per Kitodo angenommen oder verworfen
+- Christoph hat implementiert, dass die Funktion zum Schreiben von XML aus dem Metadateneditor zum Speichern im XML verwendet, wodurch die Daten im Metadateneditor sichtbar und durch die Suche auffindbar sind.
+- derzeitiges JSON enthält drei Elemente zur Beschreibung von Strukturdaten:
+  - <code>page</code> -&gt; Image-Nummer - Beispiel: <em>00000011</em>
+  - <code>type</code> -&gt; Bezeichnung Strukturelement-Typ - Beispiel: <em>chapter</em>
+  - <code>label</code> -&gt; Metadatum des Strukturelment - Beispiel: <em>DISPUTATIO I. De materiali objecto Pœnitentiæ.</em>
+- Zu entscheiden: welches Element soll für die Übertragung der Metadaten verwendet werden? LABEL? TITLE?
+  - LABEL ist naheliegend, kann beim Exportieren umgewandelt werden.
+- Generell soll die Umsetzung zunächst so einfach wie möglich sein
+  - In der JSON-Datei wird derzeit nur <code>label</code> angewendet; Perspektivisch könnte auch <code>metadata</code> hinzugefügt werden
+    - In Kitodo.Production wäre eine Konfigurationsmöglichkeit sinnvoll, um Titelinformationen in das jeweils am häufigsten Metadatum einzutragen 
+      - Köln: <code>LABEL</code>
+      - SLUB/SUB: <code>TitelDocMain</code>
+  - Keine Abbildung von Struktur-Hierarchien
+  - Keine Berücksichtigung von Metadatengruppen</p>
+<p>Um Klarheiten über die nötigen Anforderungen zu erhalten, wird eine GitHub-Diskussion erstellt</p>
+<h2 id="ausbau-von-uberholten-features-zeitungen-untypisierte-elemente">Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)</h2>
+<ul>
+<li>
+<p>Siehe: https://github.com/kitodo/kitodo-production/wiki/Liste-der-Funktionen-mit-unklarer-Anwendung</p>
+</li>
+<li>
+<p>Hauptziele (Einführung neuer Funktionen)</p>
+</li>
+<li>Umsetzung des Anlegens von Vorgängen für einzelne Ausgaben ohne untypisierte Elemente für <code>Monat</code> und <code>Tag</code>. </li>
+<li>Anpassung Export: <ul>
+<li>Erstellung der benötigten <code>&lt;mets:div&gt;</code> für Monat und Tag in die METS-Datei der Ausgabe</li>
+<li>Ermittlung den Datum-Werte aus der Jahresdatei (via Kitodo-ID des Vorgangs) und Eintrag in die erstellten <code>&lt;mets:div&gt;</code></li>
+</ul>
+</li>
+<li>Kitodo.Production muss zunächst beide Varianten verarbeiten können</li>
+<li>Dadurch besteht kein Druck bezüglich Anpassung der Altdaten</li>
+<li>Dadurch muss die Funktion für die Granularität/Vorgangsaggregierung nicht ausgebaut werden</li>
+<li>Umgang mit bestehender Funktion Granularität/Vorgangsaggregierung </li>
+<li>Das Interface für die Erstellung der Granularität/Vorgangsaggregierung wird zunächst nur ausgeblendet, nicht ausgebaut</li>
+<li>Es kann nicht zuverlässig ermittelt werden, ob die Funktion benötigt wird - durch eine Deaktivierung der Funktion kann geprüft werden, ob das Fehlen Beunruhigung auslöst. </li>
+<li>Dadurch kann die Bearbeitung der Hauptziele konzentriert werden</li>
+<li>Migration/Korrektur der bestehenden Vorgänge</li>
+<li>Dies kann erst später erfolgen</li>
+<li>
+<p>Bezieht sich nur auf das Entfernen der untypisierte Elemente in den Vorgängen der Ausgaben</p>
+</li>
+<li>
+<p>Weiteres Vorgehen</p>
+</li>
+<li>Christoph kontaktiert Arved hinsichtlich technischer Abstimmung und </li>
+<li>Organisation Treffen einer Kleingruppe. Unter Umständen im nächsten Treffen des Kitodo.Community Board</li>
+</ul>
+<h2 id="beauftragungen-sbb-pk">Beauftragungen SBB-PK</h2>
+<p>Die Ausschreibung der Bearbeitung der folgenden Issues werden derzeit vorbereitet:
+- OCR: https://github.com/kitodo/kitodo-production/issues/5600
+- Platzhalter: https://github.com/kitodo/kitodo-production/issues/7330 </p>
 <h2 id="nachstes-treffen">Nächstes Treffen</h2>
 <ul>
-<li>Moderation: ??</li>
-<li>Protokoll: ??</li>
+<li>Es wurden wegen Abwesenheiten im Dezember zwei Folge-Termine bestimmt</li>
+<li>14.12.2026 13:30-15:00 (Geplant: Schwerpunkt Zeitungen)</li>
+<li>18.01.2027 13:30-15:00</li>
+<li>Kerstin ermittelt Teilnahme der heute nicht anwesenden Personen</li>
+<li>
+<p>Kerstin ermittelt mögliche Teilnahme von Arved am 14.12.2026</p>
+</li>
+<li>
+<p>Moderation: Nils Reichert</p>
+</li>
+<li>Protokoll: André Hohmann</li>
+</ul>
+<h2 id="reflektion-der-impulse-aus-dem-barcamp">Reflektion der Impulse aus dem Barcamp</h2>
+<ul>
+<li>Vertagt
+<img width="2154" height="2807" alt="Kitodo.Production Anwenderrunde" src="https://github.com/user-attachments/assets/9507d2ab-6c9d-496a-86f1-278f5341e7fa" />
+<img width="2081" height="2785" alt="Verschieben von Bildern zwischen Vorgängen" src="https://github.com/user-attachments/assets/61cc1141-b569-4c0c-85bd-828fc29a0aa2" /></li>
 </ul>
 
 
