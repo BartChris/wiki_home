@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-skip">
+        <a href="#top-1-automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-skip">
           Skip to content
         </a>
       
@@ -237,10 +237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-nav__link">
+  <a href="#top-1-automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs
+        TOP 1 Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs
       
     </span>
   </a>
@@ -248,10 +248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ausbau-von-uberholten-features-zeitungen-untypisierte-elemente" class="md-nav__link">
+  <a href="#top-2-ausbau-von-uberholten-features-zeitungen-untypisierte-elemente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)
+        TOP 2 Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)
       
     </span>
   </a>
@@ -259,10 +259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beauftragungen-sbb-pk" class="md-nav__link">
+  <a href="#top-3-beauftragungen-sbb-pk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Beauftragungen SBB-PK
+        TOP 3 Beauftragungen SBB-PK
       
     </span>
   </a>
@@ -311,14 +311,10 @@
   <h1>2026‐11‐16 Community Board (Kitodo.Production)</h1>
 
 <p><strong>Teilnehmende</strong>: André Hohmann (P), Anja Piller, Armin Möller, Christoph Bartmann, Katharina Gart, Kerstin Wendt (M), Lole Westedt, Matthias Kissler (E), Nils Reichert (bis 14:30) (P)</p>
-<h2 id="automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms">Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs</h2>
+<h2 id="top-1-automatische-strukturierung-in-kitodoproduction-mit-der-hilfe-von-llms">TOP 1 Automatische Strukturierung in Kitodo.Production mit der Hilfe von LLMs</h2>
 <ul>
-<li>
-<p>siehe Notizen aus der <a href="https://github.com/kitodo/kitodo-production/wiki/2026%E2%80%9010%E2%80%9005-Community-Board-%28Kitodo.Production%29">letzten Sitzung</a></p>
-</li>
-<li>
-<p>Fortschritte bei Christoph Bartmann und Kerstin Wendt</p>
-</li>
+<li>siehe Notizen aus der <a href="https://github.com/kitodo/kitodo-production/wiki/2026%E2%80%9010%E2%80%9005-Community-Board-%28Kitodo.Production%29">letzten Sitzung</a></li>
+<li>Fortschritte bei Christoph Bartmann und Kerstin Wendt</li>
 <li>Christoph hatte dies in Mannheim auf dem Kitodo-Praxistreffen für einen alten Druck vorgestellt</li>
 <li>Kerstin hat mit „Drucksachen der Bürgerschaft“ (200.000 Seiten) experimentiert<ul>
 <li>Das Vorgehen mit der Vorlage von Christoph und mehreren Änderungen war nicht erfolgreich. </li>
@@ -346,17 +342,51 @@
   - <code>page</code> -&gt; Image-Nummer - Beispiel: <em>00000011</em>
   - <code>type</code> -&gt; Bezeichnung Strukturelement-Typ - Beispiel: <em>chapter</em>
   - <code>label</code> -&gt; Metadatum des Strukturelment - Beispiel: <em>DISPUTATIO I. De materiali objecto Pœnitentiæ.</em>
-- Zu entscheiden: welches Element soll für die Übertragung der Metadaten verwendet werden? LABEL? TITLE?
-  - LABEL ist naheliegend, kann beim Exportieren umgewandelt werden.
-- Generell soll die Umsetzung zunächst so einfach wie möglich sein
-  - In der JSON-Datei wird derzeit nur <code>label</code> angewendet; Perspektivisch könnte auch <code>metadata</code> hinzugefügt werden
-    - In Kitodo.Production wäre eine Konfigurationsmöglichkeit sinnvoll, um Titelinformationen in das jeweils am häufigsten Metadatum einzutragen 
-      - Köln: <code>LABEL</code>
-      - SLUB/SUB: <code>TitelDocMain</code>
-  - Keine Abbildung von Struktur-Hierarchien
-  - Keine Berücksichtigung von Metadatengruppen</p>
-<p>Um Klarheiten über die nötigen Anforderungen zu erhalten, wird eine GitHub-Diskussion erstellt</p>
-<h2 id="ausbau-von-uberholten-features-zeitungen-untypisierte-elemente">Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)</h2>
+  - <em>Klicken auf Details für Beispiel JSON</em></p>
+<details>
+
+
+<pre><code class="language-json">[
+  {
+    &quot;page&quot;: &quot;00000003&quot;,
+    &quot;type&quot;: &quot;title&quot;,
+    &quot;label&quot;: &quot;CURSUS THEOLOGICUS P. DOMINICI VIVA SOCIETATIS JESU. PARS OCTAVA DE POENITENTIA UT VIRTUTE, ET UT SACRAMENTO.&quot;
+  },
+  {
+    &quot;page&quot;: &quot;00000005&quot;,
+    &quot;type&quot;: &quot;other&quot;,
+    &quot;label&quot;: &quot;NOI REFFORMATORI Dello Studio di Padoa.&quot;
+  },
+  {
+    &quot;page&quot;: &quot;00000009&quot;,
+    &quot;type&quot;: &quot;index&quot;,
+    &quot;label&quot;: &quot;INDEX QUÆSTIONUM De Pœnitentia ut Virtute, &amp; ut Sacramento.&quot;
+  },
+  {
+    &quot;page&quot;: &quot;00000011&quot;,
+    &quot;type&quot;: &quot;part&quot;,
+    &quot;label&quot;: &quot;PARS OCTAVA DE POENITENTIA UT VIRTUTE, ET UT SACRAMENTO.&quot;
+  }
+]
+</code></pre>
+
+</details>
+
+<ul>
+<li>Zu entscheiden: welches Element soll für die Übertragung der Metadaten verwendet werden? LABEL? TITLE?</li>
+<li>LABEL ist naheliegend, kann beim Exportieren umgewandelt werden.</li>
+<li>Generell soll die Umsetzung zunächst so einfach wie möglich sein</li>
+<li>In der JSON-Datei wird derzeit nur <code>label</code> angewendet; Perspektivisch könnte auch <code>metadata</code> hinzugefügt werden<ul>
+<li>In Kitodo.Production wäre eine Konfigurationsmöglichkeit sinnvoll, um Titelinformationen in das jeweils am häufigsten Metadatum einzutragen </li>
+<li>Köln: <code>LABEL</code></li>
+<li>SLUB/SUB: <code>TitelDocMain</code></li>
+</ul>
+</li>
+<li>Keine Abbildung von Struktur-Hierarchien</li>
+<li>Keine Berücksichtigung von Metadatengruppen</li>
+</ul>
+<p>Für die Zusammenführung und Spezifizierung der Anforderungen wird eine GitHub-Diskussion erstellt.</p>
+<h2 id="top-2-ausbau-von-uberholten-features-zeitungen-untypisierte-elemente">TOP 2 Ausbau von überholten Features - Zeitungen (Untypisierte Elemente)</h2>
 <ul>
 <li>
 <p>Siehe: https://github.com/kitodo/kitodo-production/wiki/Liste-der-Funktionen-mit-unklarer-Anwendung</p>
@@ -388,10 +418,10 @@
 <li>Christoph kontaktiert Arved hinsichtlich technischer Abstimmung und </li>
 <li>Organisation Treffen einer Kleingruppe. Unter Umständen im nächsten Treffen des Kitodo.Community Board</li>
 </ul>
-<h2 id="beauftragungen-sbb-pk">Beauftragungen SBB-PK</h2>
+<h2 id="top-3-beauftragungen-sbb-pk">TOP 3 Beauftragungen SBB-PK</h2>
 <p>Die Ausschreibung der Bearbeitung der folgenden Issues werden derzeit vorbereitet:
-- OCR: https://github.com/kitodo/kitodo-production/issues/5600
-- Platzhalter: https://github.com/kitodo/kitodo-production/issues/7330 </p>
+- <a href="https://github.com/kitodo/kitodo-production/issues/5600">Support for OCR results and maybe also OCR-D processing control from the Kitodo side #5600</a>
+- <a href="https://github.com/kitodo/kitodo-production/issues/7330">Flexible Erweiterung der Platzhalter (Metadaten-Skripte) #7330</a></p>
 <h2 id="nachstes-treffen">Nächstes Treffen</h2>
 <ul>
 <li>Es wurden wegen Abwesenheiten im Dezember zwei Folge-Termine bestimmt</li>
